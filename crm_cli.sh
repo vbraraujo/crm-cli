@@ -34,27 +34,35 @@ menu_inicial(){
 
 menu_edicao(){
     #Argumentos: 1 CPF
-    menu_edicao="Editar Nome\nEditar CPF\nEditar Telefone\nEditar E-mail\nIncluir Histórico\nIncluir Negócio\nIncluir Pendência\nVoltar"
+    conteudo_atual="$(egrep "\|${1}\|" "$PATH_CLIENTES_LISTA")"
+    me_nome="$(echo "$conteudo_atual" | cut -d\| -f1)"
+    me_cpf="$(echo "$conteudo_atual" | cut -d\| -f2)"
+    me_telefone="$(echo "$conteudo_atual" | cut -d\| -f3)"
+    me_email="$(echo "$conteudo_atual" | cut -d\| -f4)"
+    me_etiquetas="$(echo "$conteudo_atual" | cut -d\| -f5)"
+
+    menu_edicao="Editar Nome\nEditar CPF\nEditar Telefone\nEditar E-mail\nIncluir Histórico\nIncluir Negócio\nIncluir Pendência\nConcluir Pendência\nVoltar"
+
     selected="$(echo -e $menu_edicao | fzf --height=30% --layout=default --prompt 'Selecione uma opção: ')"
     case "$selected" in
         "Editar Nome")
-            read -p "Informe o novo nome: " novo_valor
+            read -e -p "Informe o novo nome: " -i "${me_nome}" novo_valor
             editar_cliente "${1}" "nome" "${novo_valor}"
             ;;
         "Editar Telefone")
-            read -p "Informe o novo telefone: " novo_valor
+            read -e -p "Informe o novo telefone: " -i "${me_telefone}" novo_valor
             editar_cliente "${1}" "telefone" "${novo_valor}"
             ;;
         "Editar E-mail")
-            read -p "Informe o novo e-mail: " novo_valor
+            read -e -p "Informe o novo e-mail: " -i "${me_email}" novo_valor
             editar_cliente "${1}" "email" "${novo_valor}"
             ;;
         "Editar CPF")
-            read -p "Informe o novo CPF: " novo_valor
+            read -e -p "Informe o novo CPF: " -i "${1}" novo_valor
             editar_cliente "${1}" "cpf" "${novo_valor}"
             ;;
         "Editar Etiquetas")
-            read -p "Informe as novas etiquetas: " novo_valor
+            read -e -p "Informe as novas etiquetas: " -i "${me_etiquetas}" novo_valor
             editar_cliente "${1}" "etiquetas" "${novo_valor}"
             ;;
         "Incluir Histórico")
@@ -67,6 +75,13 @@ menu_edicao(){
         "Incluir Pendência")
             read -p "Informe a pendência: " novo_valor
             cadastra_pendencia "${1}" "${DATA_UMA_SEMANA}" "manual" "${novo_valor}"
+            ;;
+        "Concluir Pendência")
+            path_pend="${PATH_BASE}/clientes/${1}/pendencias"
+            cp_lista="Voltar\n"
+            cp_lista+="$(cat "${path_pend}" | cut -d\| -f1,3,6)"
+            cp_id="$(echo -e "$cp_lista" | fzf --height=30% --layout=default --prompt 'Selecione pendencia a ser concluída: ' | cut -d\| -f1)"
+            [[ $cp_id == "Voltar" ]] && pesquisar_cliente ${1} || concluir_pendencia "${1}" "${cp_id}"
             ;;
         *)
             default
@@ -98,22 +113,39 @@ cadastra_pendencia(){
     if [ "$#" -eq 4 ]
         then
             path_pend="${PATH_BASE}/clientes/${1}/pendencias"
+            cp_id="$(awk '{id=$1+1}END{print id}' ${path_pend})"
+            [[ ${cp_id} == "" ]] && ${cp_id}=1
             #Linha: data | limite | origem | cpf | descrição
-            linha="${DATA_HOJE}|${2}|${3}|${1}|${4}"
+            linha="${cp_id}|${DATA_HOJE}|${2}|${3}|${1}|${4}"
             echo -e "$linha" >> "$path_pend"
-            cadastra_historico "${1}" "Criada pendência (${4})" "#auto"
+            cadastra_historico "${1}" "Criada pendência [${4}]" "#auto"
             pesquisar_cliente ${1}
 
         else
             echo "Não foi possível criar pendência automática. Favor informar os dados a seguir."
             read -p "Descrição: " descricao
             read -p "CPF: " cpf
-            path_pend="${PATH_BASE}/clientes/${1}/pendencias"
-            linha="${DATA_HOJE}|${DATA_UMA_SEMANA}|manual|${cpf}|${descricao}"
+            path_pend="${PATH_BASE}/clientes/${cpf}/pendencias"
+            cp_id="$(awk '{id=$1+1}END{print id}' ${path_pend})"
+            [[ ${cp_id} == "" ]] && ${cp_id}=1
+            linha="${cp_id}|${DATA_HOJE}|${DATA_UMA_SEMANA}|manual|${cpf}|${descricao}"
             echo -e "$linha" >> "$path_pend"
-            cadastra_historico "${1}" "Criada pendência (${descricao})" "#manual"
+            cadastra_historico "${1}" "Criada pendência [${descricao}]" "#manual"
             pesquisar_cliente ${1}
     fi
+}
+
+concluir_pendencia(){
+    #Argumentos: 1 CPF, 2 Id da pendência
+    if [ "$#" -eq 2 ]
+        then
+            path_pend="${PATH_BASE}/clientes/${1}/pendencias"
+            cp_descricao="$(egrep "^${2}\|" ${path_pend} | cut -d\| -f 6)"
+            sed -i -E "/^${2}\|/d" "${path_pend}"
+            cadastra_historico "${1}" "Concluída pendência [${cp_descricao}]" "#auto"
+            pesquisar_cliente ${1}
+    fi
+
 }
 
 pesquisar_cliente(){
@@ -130,7 +162,7 @@ pesquisar_cliente(){
     cat "${path_cliente}cadastro"
     divider
     echo "PENDÊNCIAS"
-    cat "${path_cliente}pendencias" | cut -d\| -f 2,5 | sed "s/|/: /g"
+    cat "${path_cliente}pendencias" | cut -d\| -f 3,6 | sed "s/|/: /g"
     divider
     echo "NEGÓCIOS"
     divider
@@ -184,7 +216,7 @@ editar_cliente(){
             conteudo_novo="${3}|${ec_cpf}|${ec_telefone}|${ec_email}|${ec_etiquetas}"
             sed -i "/${ec_cpf}/c\\${conteudo_novo}" "${PATH_CLIENTES_LISTA}"
             sed -i -E "/^Nome: /c\\Nome: ${3}" "${path_cliente}"
-            cadastra_historico "${ec_cpf}" "Nome alterado de ${ec_nome} para ${3}" "#auto"
+            cadastra_historico "${ec_cpf}" "Nome alterado de [${ec_nome}] para [${3}]" "#auto"
             pesquisar_cliente "${ec_cpf}"
             ;;
         "cpf")
@@ -192,28 +224,28 @@ editar_cliente(){
             sed -i "/${ec_cpf}/c\\${conteudo_novo}" "${PATH_CLIENTES_LISTA}"
             sed -i -e "/^CPF: /c\\CPF: ${3}" "${path_cliente}"
             mv "${PATH_BASE}/clientes/${1}" "${PATH_BASE}/clientes/${3}"
-            cadastra_historico "${3}" "CPF alterado de ${ec_cpf} para ${3}" "#auto"
+            cadastra_historico "${3}" "CPF alterado de [${ec_cpf}] para [${3}]" "#auto"
             pesquisar_cliente "${3}"
             ;;
         "telefone")
             conteudo_novo="${ec_nome}|${ec_cpf}|${3}|${ec_email}|${ec_etiquetas}"
             sed -i "/${ec_cpf}/c\\${conteudo_novo}" "${PATH_CLIENTES_LISTA}"
-            sed -i -E "/^Telefone: /c\\^Telefone: ${3}" "${path_cliente}"
-            cadastra_historico "${ec_cpf}" "Telefone alterado de ${ec_telefone} para ${3}" "#auto"
+            sed -i -E "/^Telefone: /c\\Telefone: ${3}" "${path_cliente}"
+            cadastra_historico "${ec_cpf}" "Telefone alterado de [${ec_telefone}] para [${3}]" "#auto"
             pesquisar_cliente "${ec_cpf}"
             ;;
         "email")
             conteudo_novo="${ec_nome}|${ec_cpf}|${ec_telefone}|${3}|${ec_etiquetas}"
             sed -i "/${ec_cpf}/c\\${conteudo_novo}" "${PATH_CLIENTES_LISTA}"
             sed -i -E "/^E-mail: /c\\E-mail: ${3}" "${path_cliente}"
-            cadastra_historico "${ec_cpf}" "E-mail alterado de ${ec_email} para ${3}" "#auto"
+            cadastra_historico "${ec_cpf}" "E-mail alterado de [${ec_email}] para [${3}]" "#auto"
             pesquisar_cliente "${ec_cpf}"
             ;;
         "etiquetas")
             conteudo_novo="${ec_nome}|${ec_cpf}|${ec_telefone}|${ec_email}|${3}"
             sed -i "/${ec_cpf}/c\\${conteudo_novo}" "${PATH_CLIENTES_LISTA}"
             sed -i -E "/^Etiquetas: /c\\Etiquetas: ${3}" "${path_cliente}"
-            cadastra_historico "${ec_cpf}" "Etiquetas alteradas de ${ec_etiquetas} para ${3}" "#auto"
+            cadastra_historico "${ec_cpf}" "Etiquetas alteradas de [${ec_etiquetas}] para [${3}]" "#auto"
             pesquisar_cliente "${ec_cpf}"
             ;;
 
@@ -227,7 +259,7 @@ default () {
         echo "$(tput setaf 2)CRM - Seja bem vindo.$(tput sgr0)"
         divider
         echo "PENDÊNCIAS"
-        cat ${PATH_BASE}/*/*/pendencias | cut -d\| -f 2,4,5 | sed "s/|/: /g"
+        cat ${PATH_BASE}/*/*/pendencias | cut -d\| -f 3,5,6 | sed "s/|/: /g"
         divider
         menu_inicial
         read -n1
