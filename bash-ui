@@ -1,0 +1,256 @@
+#!/usr/bin/env bash
+
+# --- Funções auxiliares ------------------------------------------------------
+
+char_repeat() {
+    local c
+    printf -v c "%${2}s"
+    echo "${c// /$1}"
+}
+
+# --- Controle do terminal e do cursor ----------------------------------------
+
+# Manda o cursor para a linha e coluna desejadas.
+set_pos() {
+    load_globals
+    local row
+    local col
+    local cmax=$(($TERM_COLS - 1))
+    local rmax=$(($TERM_ROWS - 1))
+
+    [[ $1 -gt $rmax ]] && row=$rmax || row=$1
+    [[ $2 -gt $cmax ]] && col=$cmax || col=$2
+
+    tput cup $row $col
+
+    CURRENT_ROW=$row
+    CURRENT_COL=$col
+}
+
+# Manda o cursor para o início da linha desejada.
+set_line() {
+    load_globals
+    local max=$(($TERM_ROWS - 1))
+
+    if [[ $1 -gt $max ]]; then
+        set_bottom
+    else
+        tput cup $1 0
+        CURRENT_ROW=$1
+    fi
+
+    CURRENT_COL=0
+}
+
+# Manda o cursor para a coluna desejada na linha corrente.
+set_col() {
+    load_globals
+    local col
+    local max=$(($TERM_COLS - 1))
+
+    [[ $1 -gt max ]] && col=$max || col=$1
+
+    tput cup $CURRENT_ROW $col
+
+    CURRENT_COL=$col
+}
+
+# Manda o cursor para o fim da linha corrente.
+set_last_col() {
+    load_globals
+    local max=$(($TERM_COLS - 1))
+    set_col $max
+}
+
+# Manda o cursor para o inicio da linha corrente.
+set_first_col() {
+    load_globals
+    set_col 0
+}
+
+# Manda o cursor para a linha 0 e coluna 0.
+set_home() {
+    load_globals
+    tput home
+    CURRENT_ROW=0
+    CURRENT_COL=0
+}
+
+# Manda o cursor para a última linha.
+set_bottom() {
+    load_globals
+    CURRENT_ROW=$(($TERM_ROWS - 1))
+    CURRENT_COL=0
+    tput cup $CURRENT_ROW 0
+}
+
+cls() {
+    clear
+    set_home
+}
+
+# Move cursor para a tabulação 'n' na linha.
+set_tab() {
+    load_globals
+    local tabs
+    local col
+    [[ $1 -gt $TAB_MAX ]] && tabs=$TAB_MAX || tabs=$1
+    col=$(($TAB_STEP * $tabs))
+    set_col $col
+}
+
+# Calcula os passos de tabulação de acordo
+# com o número de colunas da tabela.
+tab_step() {
+    load_globals
+    TAB_STEP=$(($TERM_COLS / $1))
+    TAB_MAX=$(($1 - 1))
+#    echo $TAB_STEP
+}
+
+
+# --- Desenho de elementos da interface ---------------------------------------
+
+# Desenha uma linha de qualquer caractere ao longo do terminal
+draw_line() {
+    local char=${1::1}
+    local line
+    printf -v line "%${TERM_COLS}s"
+    echo -n ${line// /${char:--}}
+}
+
+# Desenha uma linha simples
+single_line() { draw_line; }
+
+# Desenha uma linha dupla
+double_line() { draw_line '='; }
+
+# Desenha as linhas da barra de título.
+draw_title() {
+    if [[ $1 == 'compact' ]]; then
+        set_line 1
+    else
+        set_home
+        double_line
+        set_line 2
+    fi
+    single_line
+}
+
+# Desenha as linhas da barra de rodapé.
+draw_footer() {
+    if [[ $1 == 'compact' ]]; then
+        set_line $(($TERM_ROWS - 2))
+        single_line
+    else
+        set_line $(($TERM_ROWS - 3))
+        single_line
+        set_bottom
+        double_line
+    fi
+}
+
+# Desenha janela.
+draw_window() {
+        draw_title $2
+        draw_footer $2
+
+        [[ $2 ]] && set_home || set_line 1
+        text_center "$1"
+}
+
+# Janela de mensagens
+box_msg() {
+    local msg_array
+    local lines
+    local len
+    local i
+    local bw
+    local bh
+    local box
+
+    readarray -t msg_array <<< "$1"
+
+    lines=${#msg_array[@]}
+
+    bh=$(( $lines + 4 ))
+
+    for i in ${!msg_array[@]}; do
+        [[ $len -lt ${#msg_array[$i]} ]] && len=${#msg_array[$i]}
+    done
+
+    bw=$(($len + 4))
+
+    center_fill=$( char_repeat ' ' $(( ($TERM_COLS - $bw) / 2 )) )
+
+    set_line $(( ($TERM_ROWS - $bh) / 2 ))
+
+    box="$center_fill+$(char_repeat '-' $(($bw - 2)) )+"$'\n'
+    for i in ${!msg_array[@]}; do
+        line_len=${#msg_array[$i]}
+        line_fill=$(( $len - $line_len ))
+        box+="$center_fill| ${msg_array[$i]}$(char_repeat ' '  $line_fill ) |"$'\n'
+    done
+    box+="$center_fill+$(char_repeat '-' $(($bw - 2)) )+"$'\n'
+
+    echo -e "$box"
+}
+
+dialog_msg() {
+    box_msg "$1"
+    show_command ' Tecle algo para continuar... ' $2
+}
+
+dialog_menu() {
+    box_msg "$1"
+    show_command ' Tecle a sua opção: ' $2
+}
+
+dialog_yn() {
+    box_msg "$1"
+    show_command ' [S]im [N]ão [C]ancelar ' $2
+}
+
+# --- Linha de comando --------------------------------------------------------
+
+show_command() {
+    [[ $2 == 'compact' ]] && set_bottom || set_line $(( $TERM_ROWS - 2 ))
+    echo -n "${1:-': '}"
+    read -sn1
+}
+
+# --- Elementos em texto ------------------------------------------------------
+
+text_center() {
+    local len=${#1}
+    local col=$(( ($TERM_COLS - $len) / 2 ))
+    set_col $col
+    echo -n $1
+}
+
+text_left() {
+    set_col 1
+    echo -n $1
+}
+
+text_right() {
+    local len=${#1}
+    local col=$(( $TERM_COLS - $len - 2 ))
+    set_col $col
+    echo -n $1
+}
+
+# --- Globais auxiliares -----------------------------------------------------
+
+# Recarrega informações do terminal
+load_globals() {
+    TERM_COLS=$(tput cols)
+    TERM_ROWS=$(tput lines)
+}
+
+# Linha e coluna correntes.
+CURRENT_ROW=0
+CURRENT_COL=0
+
+# Inicia as globais de tabulação TAB_STEP e TAB_MAX
+tab_step 5

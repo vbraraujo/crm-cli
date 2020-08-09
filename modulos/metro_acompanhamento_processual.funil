@@ -1,0 +1,27 @@
+#! /bin/bash
+# Módulo para inclusão de funil.
+source "$HOME/Dropbox/RA-Compartilhamento/crm-cli/biblioteca_funcoes"
+
+# Variáveis do sistema
+TITULO="Acompanhamento processual"
+TIPO="Diversos"
+COMPETENCIA="Diversos"
+ARQUIVO="${0##*/}"
+REFERENCIA="${ARQUIVO}|${TITULO}|${TIPO}|${COMPETENCIA}"
+PATH_FUNIL_CLIENTE="${PATH_BASE}/clientes/${1}/funis"
+
+# Etapas
+cadastrar_funil(){
+    # Etapa 01: Conhecimento pessoal : DATA_HOJE
+    cadastrar_pendencia "${1}" "$(printf '%(%Y-%m-%d)T\n' -1)" "funil" "Apresentação pessoal e informe inicial"
+    # Etapa 02: Atualizações de rotina : 60 dias
+    cadastrar_pendencia "${1}" "$(date --date="60 day" +"%Y-%m-%d")" "funil" "Atualizar sobre ação"
+    cadastrar_pendencia "${1}" "$(date --date="120 day" +"%Y-%m-%d")" "funil" "Atualizar sobre ação"
+    cadastrar_pendencia "${1}" "$(date --date="180 day" +"%Y-%m-%d")" "funil" "Atualizar sobre ação"
+    cadastrar_pendencia "${1}" "$(date --date="210 day" +"%Y-%m-%d")" "funil" "Atualizar sobre ação"
+
+    echo -e "${REFERENCIA}" >> ${PATH_FUNIL_CLIENTE}
+}
+
+cadastrar_funil "${1}"
+pesquisar_cliente "${1}"

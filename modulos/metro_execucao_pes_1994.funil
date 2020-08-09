@@ -1,0 +1,40 @@
+#! /bin/bash
+# Módulo para inclusão de funil.
+source "$HOME/Dropbox/RA-Compartilhamento/crm-cli/biblioteca_funcoes"
+
+# Variáveis do sistema
+TITULO="Execução PES 1994"
+TIPO="Cumprimento de sentença"
+COMPETECNIA="TRT10"
+ARQUIVO="${0##*/}"
+REFERENCIA="${ARQUIVO}|${TITULO}|${TIPO}|${COMPETECNIA}"
+PATH_FUNIL_CLIENTE="${PATH_BASE}/clientes/${1}/funis"
+
+# Etapas
+cadastrar_funil(){
+    # Etapa 01: Conhecimento pessoal : DATA_HOJE
+    cadastrar_pendencia "${1}" "$(printf '%(%Y-%m-%d)T\n' -1)" "funil" "Apresentação pessoal"
+    # Etapa 02: Apresentação de problema e solução: 7 dias
+    cadastrar_pendencia "${1}" "$(date --date="7 day" +"%Y-%m-%d")" "funil" "Apresentar ação de execução PES 1994"
+    # Etapa 03: Confirmação de interesse : 10 dias
+    cadastrar_pendencia "${1}" "$(date --date="10 day" +"%Y-%m-%d")" "funil" "Confirmar interesse em ação de execução PES 1994"
+    # Etapa 04: PDC : 11 dias
+    cadastrar_pendencia "${1}" "$(date --date="11 day" +"%Y-%m-%d")" "funil" "Enviar PDC ação de execução PES 1994"
+    # Etapa 05: Coletar documentos : 12 dias
+    cadastrar_pendencia "${1}" "$(date --date="12 day" +"%Y-%m-%d")" "funil" "Coletar docs. ação de execução PES 1994"
+    # Etapa 06: Preparar inicial : 14 dias
+    cadastrar_pendencia "${1}" "$(date --date="14 day" +"%Y-%m-%d")" "funil" "Preparar inicial ação de execução PES 1994"
+    # Etapa 07: Enviar para protocolo : 16 dias
+    cadastrar_pendencia "${1}" "$(date --date="16 day" +"%Y-%m-%d")" "funil" "Enviar ação de execução PES 1994 para protocolo"
+    # Etapa 08: Informar cliente sobre protocolo : 18 dias
+    cadastrar_pendencia "${1}" "$(date --date="18 day" +"%Y-%m-%d")" "funil" "Informar protocolo ação de execução PES 1994"
+    # Etapa 09: Atualizações de rotina : 60 dias
+    cadastrar_pendencia "${1}" "$(date --date="60 day" +"%Y-%m-%d")" "funil" "Atualizar sobre ação de execução PES 1994"
+    cadastrar_pendencia "${1}" "$(date --date="120 day" +"%Y-%m-%d")" "funil" "Atualizar sobre ação de execução PES 1994"
+    cadastrar_pendencia "${1}" "$(date --date="180 day" +"%Y-%m-%d")" "funil" "Atualizar sobre ação de execução PES 1994"
+
+    echo -e "${REFERENCIA}" >> ${PATH_FUNIL_CLIENTE}
+}
+
+cadastrar_funil "${1}"
+pesquisar_cliente "${1}"
