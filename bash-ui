@@ -8,6 +8,10 @@ char_repeat() {
     echo "${c// /$1}"
 }
 
+text_color() {
+    echo "$(tput setaf ${2:-3})${1}$(tput sgr0)"
+}
+
 # --- Controle do terminal e do cursor ----------------------------------------
 
 # Manda o cursor para a linha e coluna desejadas.

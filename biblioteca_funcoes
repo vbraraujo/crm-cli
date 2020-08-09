@@ -3,9 +3,12 @@
 
 # Variáveis do sistema
 PATH_BASE="$HOME/Dropbox/RA-Compartilhamento/crm-cli"
+
+source "${PATH_BASE}/bash-ui"
+
 PATH_CLIENTES_LISTA="${PATH_BASE}/clientes/.lista"
 PATH_FUNIS="${PATH_BASE}/modulos"
-MENU_INICIAL="Pesquisar cliente\nCadastrar cliente\nSair"
+MENU_INICIAL="Pesquisar cliente\nCadastrar cliente\nRelatórios\nSair"
 DATA_HOJE="$(printf '%(%Y-%m-%d)T\n' -1)"
 DATA_UMA_SEMANA="$(date --date="1 week" +"%Y-%m-%d")"
 LISTA_FUNIL="$(find "${PATH_FUNIS}/" -name "*.funil" -printf "%f\n")"
@@ -18,6 +21,8 @@ divider(){
 }
 
 verifica_amb(){
+    # Folders: clientes, modulos
+    # arquivos: bash-ui crm_cli.sh clientes/.lista modulos/.funis
     echo "[info] Verificando ambiente..."
     echo "[info] "
     echo "[info] Preparando lista de funis de venda..."
@@ -33,22 +38,23 @@ menu_inicial(){
         "Cadastrar cliente")
             cadastrar_cliente
             ;;
+        "Relatórios")
+            relatorios
+            ;;
         *)
             exit
             ;;
     esac
 }
 
-menu_confirmacao(){
-    selected="$(echo -e "Sim\nNão" | fzf --height=30% --layout=default --prompt 'Tem certeza que deseja continuar? ')"
-    case "$selected" in
-        "Sim")
-            return "sim"
-            ;;
-        *)
-            return "nao"
-            ;;
-    esac
+copiar_dados(){
+    local cd_cadastro="$(cat ${PATH_BASE}/clientes/${1}/cadastro)"
+    local cd_processos="$(awk -F "|" '{print $2":",$5}' "${PATH_BASE}/clientes/${1}/funis")"
+    local cd_menu="${cd_cadastro}\n${cd_processos}"
+    local selected="$(echo -e "${cd_menu}" | fzf --height=30% --layout=default --prompt 'Selecione dado a ser copiado ')"
+    [ "$selected" != "" ] || exit
+    echo "${selected#*: }" | xclip -selection clipboard
+    notify-send "CRM-CLI" "Texto copiado no clipboard." -u low &
 }
 
 menu_edicao(){
@@ -60,7 +66,7 @@ menu_edicao(){
     me_email="$(echo "$conteudo_atual" | cut -d\| -f4)"
     me_etiquetas="$(echo "$conteudo_atual" | cut -d\| -f5)"
 
-    menu_edicao="Editar Nome\nEditar CPF\nEditar Telefone\nEditar E-mail\nEditar Status\nIncluir Histórico\nIncluir Funil\nIncluir Pendência\nVer Histórico\nVer Pendências\nConcluir Pendência\nVoltar"
+    menu_edicao="Editar Nome\nEditar CPF\nEditar Telefone\nEditar E-mail\nEditar Status\nCopiar dados\nIncluir Histórico\nIncluir Funil\nIncluir Pendência\nVer Histórico\nVer Pendências\nConcluir Pendência\nVoltar/Sair"
 
     selected="$(echo -e $menu_edicao | fzf --height=5% --layout=default --prompt 'Selecione uma opção: ')"
     case "$selected" in
@@ -88,6 +94,10 @@ menu_edicao(){
             read -e -p "Informe as novas etiquetas: " -i "${me_etiquetas}" novo_valor
             editar_cliente "${1}" "etiquetas" "${novo_valor}"
             ;;
+        "Copiar dados")
+            copiar_dados "${1}"
+            pesquisar_cliente "${1}"
+            ;;
         "Incluir Histórico")
             read -p "Informe o histórico: " novo_valor
             cadastrar_historico "${1}" "${novo_valor}" "#manual"
@@ -103,10 +113,10 @@ menu_edicao(){
             ;;
         "Concluir Pendência")
             path_pend="${PATH_BASE}/clientes/${1}/pendencias"
-            cp_lista="Voltar\n"
+            cp_lista="Voltar/Sair\n"
             cp_lista+="$(cat "${path_pend}" | cut -d\| -f1,3,6)"
             cp_id="$(echo -e "$cp_lista" | fzf --height=30% --layout=default --prompt 'Selecione pendencia a ser concluída: ' | cut -d\| -f1)"
-            [[ $cp_id == "Voltar" ]] && pesquisar_cliente ${1} || concluir_pendencia "${1}" "${cp_id}"
+            [[ $cp_id == "Voltar/Sair" ]] && pesquisar_cliente ${1} || concluir_pendencia "${1}" "${cp_id}"
             ;;
         "Ver Pendências")
             vim "${PATH_BASE}/clientes/${1}/pendencias"
@@ -227,16 +237,16 @@ pesquisar_cliente(){
 
     path_cliente="${PATH_BASE}/clientes/${cpf}"
     clear
-    echo "$(tput setaf 3)DADOS DO CLIENTE$(tput sgr0)"
+    text_color "DADOS DO CLIENTE"
     cat "${path_cliente}/cadastro"
     divider
-    echo "$(tput setaf 3)PENDÊNCIAS$(tput sgr0)"
+    text_color "PENDENCIAS"
     cat "${path_cliente}/pendencias" | cut -d\| -f 3,6 | sed "s/|/: /g" | sort | head -n5
     divider
-    echo "$(tput setaf 3)FUNIS$(tput sgr0)"
+    text_color "FUNIS"
     cat "${path_cliente}/funis" | cut -d\| -f 2 | sed "s/|/: /g"
     divider
-    echo "$(tput setaf 3)HISTÓRICO$(tput sgr0)"
+    text_color "HISTÓRICO"
     tail -n10 "${path_cliente}/historico"
     divider
     menu_edicao "${cpf}"
@@ -266,6 +276,10 @@ cadastrar_cliente(){
 
     touch "${destino}/pendencias"
     touch "${destino}/funis"
+
+    mkdir "${destino}/mails"
+    mkdir "${destino}/mails/pendentes"
+    mkdir "${destino}/mails/enviados"
 
     echo "$(tput setaf 2)[info] Cliente cadastrado com sucesso.$(tput sgr0)"
     #sleep 3
@@ -330,14 +344,29 @@ editar_cliente(){
     esac
 }
 
+relatorios () {
+    local clientes="$(wc -l ${PATH_BASE}/clientes/.lista | xargs echo | cut -d' ' -f1)"
+    local pendencias="$(wc -l ${PATH_BASE}/*/*/pendencias | egrep 'total' | xargs echo | cut -d' ' -f1)"
+
+    clear
+    text_color "CRM - Seja bem vindo" 2
+    divider
+    text_color "RELATÓRIO"
+    echo "Cliente cadastrados: ${clientes}"
+    echo "Pendencias: ${pendencias}"
+    echo "Funis: "
+    divider
+    menu_inicial
+}
+
 default () {
     #verifica_amb
     while true
     do
         clear
-        echo "$(tput setaf 2)CRM - Seja bem vindo.$(tput sgr0)"
+        text_color "CRM - Seja bem vindo" 2
         divider
-        echo "$(tput setaf 3)PENDÊNCIAS$(tput sgr0)"
+        text_color "PENDÊNCIAS" 3
         cat ${PATH_BASE}/*/*/pendencias | cut -d\| -f 3,5,6 | sed "s/|/: /g" | sort | head -n10
         divider
         menu_inicial

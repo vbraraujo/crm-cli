@@ -5,9 +5,10 @@ source "$HOME/Dropbox/RA-Compartilhamento/crm-cli/biblioteca_funcoes"
 # Variáveis do sistema
 TITULO="Reclamação trabalhista"
 TIPO="Reclamação Trabalhista"
-COMPETECNIA="TRT10"
+COMPETENCIA="TRT10"
 ARQUIVO="${0##*/}"
-REFERENCIA="${ARQUIVO}|${TITULO}|${TIPO}|${COMPETECNIA}"
+PROCESSO=""
+REFERENCIA="${ARQUIVO}|${TITULO}|${TIPO}|${COMPETENCIA}|${PROCESSO}|${1}"
 PATH_FUNIL_CLIENTE="${PATH_BASE}/clientes/${1}/funis"
 
 # Etapas
