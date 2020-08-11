@@ -48,13 +48,19 @@ menu_inicial(){
 }
 
 copiar_dados(){
+    #Argumentos: 1 cpf
     local cd_cadastro="$(cat ${PATH_BASE}/clientes/${1}/cadastro)"
-    local cd_processos="$(awk -F "|" '{print $2":",$5}' "${PATH_BASE}/clientes/${1}/funis")"
+    local cd_processos="$(awk -F "|" '{print $3":",$6}' "${PATH_BASE}/clientes/${1}/funis")"
     local cd_menu="${cd_cadastro}\n${cd_processos}"
     local selected="$(echo -e "${cd_menu}" | fzf --height=30% --layout=default --prompt 'Selecione dado a ser copiado ')"
     [ "$selected" != "" ] || exit
     echo "${selected#*: }" | xclip -selection clipboard
     notify-send "CRM-CLI" "Texto copiado no clipboard." -u low &
+}
+
+cadastrar_processo(){
+    #argumentos: 1 cpf
+    echo
 }
 
 menu_edicao(){
@@ -66,7 +72,7 @@ menu_edicao(){
     me_email="$(echo "$conteudo_atual" | cut -d\| -f4)"
     me_etiquetas="$(echo "$conteudo_atual" | cut -d\| -f5)"
 
-    menu_edicao="Editar Nome\nEditar CPF\nEditar Telefone\nEditar E-mail\nEditar Status\nCopiar dados\nIncluir Histórico\nIncluir Funil\nIncluir Pendência\nVer Histórico\nVer Pendências\nConcluir Pendência\nVoltar/Sair"
+    menu_edicao="Voltar/Sair\nEditar Nome\nEditar CPF\nEditar Telefone\nEditar E-mail\nEditar Status\nCopiar dados\nIncluir Histórico\nIncluir Funil\nIncluir Pendência\nVer Histórico\nVer Pendências\nConcluir Pendência\nExcluir Funil"
 
     selected="$(echo -e $menu_edicao | fzf --height=5% --layout=default --prompt 'Selecione uma opção: ')"
     case "$selected" in
@@ -106,6 +112,13 @@ menu_edicao(){
             if_arquivo="$(echo -e "$LISTA_FUNIL" | fzf --height=30% --layout=default --prompt 'Selecione funil a incluir: ')"
             cadastrar_funil "${1}" "${if_arquivo}"
             ;;
+        "Excluir Funil")
+            ef_lista="Voltar/Sair\n"
+            ef_lista+="$(awk -F "|" '{print $3,"-",$2}' "${PATH_BASE}/clientes/${1}/funis")"
+            ef_arquivo="$(echo -e "$ef_lista" | fzf --height=30% --layout=default --prompt 'Selecione funil a excluir: ')"
+            ef_arquivo="$(echo ${ef_arquivo#*- })"
+            [[ $ef_arquivo == "Voltar/Sair" ]] && pesquisar_cliente ${1} || excluir_funil "${1}" "${ef_arquivo}"
+            ;;
         "Incluir Pendência")
             read -p "Informe a pendência: " novo_valor
             cadastrar_pendencia "${1}" "${DATA_UMA_SEMANA}" "manual" "${novo_valor}"
@@ -133,10 +146,24 @@ menu_edicao(){
 }
 
 cadastrar_funil(){
-    #Argumentos: 1 CPF, 2 arquivo do funil, 3 Etapa
+    #Argumentos: 1 CPF, 2 arquivo do funil
     if [ "$#" -eq 2 ]
         then
            "$PATH_FUNIS/${2}" "${1}"
+    fi
+}
+
+excluir_funil(){
+    #Argumentos: 1 CPF, 2 arquivo do funil
+    if [ "$#" -eq 2 ]
+        then
+            path_funil="${PATH_BASE}/clientes/${1}/funis"
+            path_pend="${PATH_BASE}/clientes/${1}/pendencias"
+            ef_descricao="$(egrep "${2}" ${path_funil} | cut -d\| -f 3)"
+            sed -i -E "/${2}/d" "${path_funil}"
+            sed -i -E "/${2}/d" "${path_pend}"
+            cadastrar_historico "${1}" "Excluído funil [${ef_descricao}]" "#manual"
+            pesquisar_cliente ${1}
     fi
 }
 
@@ -244,7 +271,7 @@ pesquisar_cliente(){
     cat "${path_cliente}/pendencias" | cut -d\| -f 3,6 | sed "s/|/: /g" | sort | head -n5
     divider
     text_color "FUNIS"
-    cat "${path_cliente}/funis" | cut -d\| -f 2 | sed "s/|/: /g"
+    cat "${path_cliente}/funis" | cut -d\| -f 3 | sed "s/|/: /g"
     divider
     text_color "HISTÓRICO"
     tail -n10 "${path_cliente}/historico"

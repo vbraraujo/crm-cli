@@ -8,21 +8,25 @@ TIPO="Diversos"
 COMPETENCIA="Diversos"
 ARQUIVO="${0##*/}"
 PROCESSO=""
-REFERENCIA="${ARQUIVO}|${TITULO}|${TIPO}|${COMPETENCIA}|${PROCESSO}|${1}"
+
 PATH_FUNIL_CLIENTE="${PATH_BASE}/clientes/${1}/funis"
 
+FUNIL_ID="$(awk -F "|" '{id=$1+1}END{print id}' ${PATH_FUNIL_CLIENTE})"
+[[ -z "${FUNIL_ID}" ]] && FUNIL_ID=1
+REFERENCIA="${FUNIL_ID}|${ARQUIVO}|${TITULO}|${TIPO}|${COMPETENCIA}|${PROCESSO}|${1}"
+
 # Etapas
-cadastrar_funil(){
+cadastrar_etapas(){
     # Etapa 01: Conhecimento pessoal : DATA_HOJE
-    cadastrar_pendencia "${1}" "$(printf '%(%Y-%m-%d)T\n' -1)" "funil" "Apresentação pessoal e informe inicial"
+    cadastrar_pendencia "${1}" "$(printf '%(%Y-%m-%d)T\n' -1)" "${ARQUIVO}" "Apresentação pessoal e informe inicial"
     # Etapa 02: Atualizações de rotina : 60 dias
-    cadastrar_pendencia "${1}" "$(date --date="60 day" +"%Y-%m-%d")" "funil" "Atualizar sobre ação"
-    cadastrar_pendencia "${1}" "$(date --date="120 day" +"%Y-%m-%d")" "funil" "Atualizar sobre ação"
-    cadastrar_pendencia "${1}" "$(date --date="180 day" +"%Y-%m-%d")" "funil" "Atualizar sobre ação"
-    cadastrar_pendencia "${1}" "$(date --date="210 day" +"%Y-%m-%d")" "funil" "Atualizar sobre ação"
+    cadastrar_pendencia "${1}" "$(date --date="60 day" +"%Y-%m-%d")" "${ARQUIVO}" "Atualizar sobre ação"
+    cadastrar_pendencia "${1}" "$(date --date="120 day" +"%Y-%m-%d")" "${ARQUIVO}" "Atualizar sobre ação"
+    cadastrar_pendencia "${1}" "$(date --date="180 day" +"%Y-%m-%d")" "${ARQUIVO}" "Atualizar sobre ação"
+    cadastrar_pendencia "${1}" "$(date --date="210 day" +"%Y-%m-%d")" "${ARQUIVO}" "Atualizar sobre ação"
 
     echo -e "${REFERENCIA}" >> ${PATH_FUNIL_CLIENTE}
 }
 
-cadastrar_funil "${1}"
+cadastrar_etapas "${1}"
 pesquisar_cliente "${1}"

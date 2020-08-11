@@ -8,34 +8,38 @@ TIPO="Ação de cumprimento"
 COMPETENCIA="TRT10"
 ARQUIVO="${0##*/}"
 PROCESSO=""
-REFERENCIA="${ARQUIVO}|${TITULO}|${TIPO}|${COMPETENCIA}|${PROCESSO}|${1}"
+
 PATH_FUNIL_CLIENTE="${PATH_BASE}/clientes/${1}/funis"
 
+FUNIL_ID="$(awk -F "|" '{id=$1+1}END{print id}' ${PATH_FUNIL_CLIENTE})"
+[[ -z "${FUNIL_ID}" ]] && FUNIL_ID=1
+REFERENCIA="${FUNIL_ID}|${ARQUIVO}|${TITULO}|${TIPO}|${COMPETENCIA}|${PROCESSO}|${1}"
+
 # Etapas
-cadastrar_funil(){
+cadastrar_etapas(){
     # Etapa 01: Conhecimento pessoal : DATA_HOJE
-    cadastrar_pendencia "${1}" "$(printf '%(%Y-%m-%d)T\n' -1)" "funil" "Apresentação pessoal"
+    cadastrar_pendencia "${1}" "$(printf '%(%Y-%m-%d)T\n' -1)" "${ARQUIVO}" "Apresentação pessoal"
     # Etapa 02: Apresentação de problema e solução: 7 dias
-    cadastrar_pendencia "${1}" "$(date --date="7 day" +"%Y-%m-%d")" "funil" "Apresentar ação de rest. 2019"
+    cadastrar_pendencia "${1}" "$(date --date="7 day" +"%Y-%m-%d")" "${ARQUIVO}" "Apresentar ação de rest. 2019"
     # Etapa 03: Confirmação de interesse : 10 dias
-    cadastrar_pendencia "${1}" "$(date --date="10 day" +"%Y-%m-%d")" "funil" "Confirmar interesse em ação de rest. 2019"
+    cadastrar_pendencia "${1}" "$(date --date="10 day" +"%Y-%m-%d")" "${ARQUIVO}" "Confirmar interesse em ação de rest. 2019"
     # Etapa 04: PDC : 11 dias
-    cadastrar_pendencia "${1}" "$(date --date="11 day" +"%Y-%m-%d")" "funil" "Enviar PDC ação de rest. 2019"
+    cadastrar_pendencia "${1}" "$(date --date="11 day" +"%Y-%m-%d")" "${ARQUIVO}" "Enviar PDC ação de rest. 2019"
     # Etapa 05: Coletar documentos : 12 dias
-    cadastrar_pendencia "${1}" "$(date --date="12 day" +"%Y-%m-%d")" "funil" "Coletar docs. ação de rest. 2019"
+    cadastrar_pendencia "${1}" "$(date --date="12 day" +"%Y-%m-%d")" "${ARQUIVO}" "Coletar docs. ação de rest. 2019"
     # Etapa 06: Preparar inicial : 14 dias
-    cadastrar_pendencia "${1}" "$(date --date="14 day" +"%Y-%m-%d")" "funil" "Preparar inicial ação de rest. 2019"
+    cadastrar_pendencia "${1}" "$(date --date="14 day" +"%Y-%m-%d")" "${ARQUIVO}" "Preparar inicial ação de rest. 2019"
     # Etapa 07: Enviar para protocolo : 16 dias
-    cadastrar_pendencia "${1}" "$(date --date="16 day" +"%Y-%m-%d")" "funil" "Enviar ação de rest. 2019 para protocolo"
+    cadastrar_pendencia "${1}" "$(date --date="16 day" +"%Y-%m-%d")" "${ARQUIVO}" "Enviar ação de rest. 2019 para protocolo"
     # Etapa 08: Informar cliente sobre protocolo : 18 dias
-    cadastrar_pendencia "${1}" "$(date --date="18 day" +"%Y-%m-%d")" "funil" "Informar protocolo ação de rest. 2019"
+    cadastrar_pendencia "${1}" "$(date --date="18 day" +"%Y-%m-%d")" "${ARQUIVO}" "Informar protocolo ação de rest. 2019"
     # Etapa 09: Atualizações de rotina : 60 dias
-    cadastrar_pendencia "${1}" "$(date --date="60 day" +"%Y-%m-%d")" "funil" "Atualizar sobre ação de rest. 2019"
-    cadastrar_pendencia "${1}" "$(date --date="120 day" +"%Y-%m-%d")" "funil" "Atualizar sobre ação de rest. 2019"
-    cadastrar_pendencia "${1}" "$(date --date="180 day" +"%Y-%m-%d")" "funil" "Atualizar sobre ação de rest. 2019"
+    cadastrar_pendencia "${1}" "$(date --date="60 day" +"%Y-%m-%d")" "${ARQUIVO}" "Atualizar sobre ação de rest. 2019"
+    cadastrar_pendencia "${1}" "$(date --date="120 day" +"%Y-%m-%d")" "${ARQUIVO}" "Atualizar sobre ação de rest. 2019"
+    cadastrar_pendencia "${1}" "$(date --date="180 day" +"%Y-%m-%d")" "${ARQUIVO}" "Atualizar sobre ação de rest. 2019"
 
     echo -e "${REFERENCIA}" >> ${PATH_FUNIL_CLIENTE}
 }
 
-cadastrar_funil "${1}"
+cadastrar_etapas "${1}"
 pesquisar_cliente "${1}"
