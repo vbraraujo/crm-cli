@@ -141,8 +141,9 @@ menu_edicao(){
         "Concluir Pendência")
             path_pend="${PATH_BASE}/clientes/${1}/pendencias"
             cp_lista="Voltar/Sair\n"
-            cp_lista+="$(cat "${path_pend}" | cut -d\| -f1,3,6)"
-            cp_id="$(echo -e "$cp_lista" | fzf --height=30% --layout=default --prompt 'Selecione pendencia a ser concluída: ' | cut -d\| -f1)"
+            #cp_lista+="$(cat "${path_pend}" | cut -d\| -f1,3,6 | sort)"
+            cp_lista+="$(awk -F "|" '{print $3"|"$1"|"$6}' "${path_pend}" | sort)"
+            cp_id="$(echo -e "$cp_lista" | fzf --height=30% --layout=default --prompt 'Selecione pendencia a ser concluída: ' | cut -d\| -f2)"
             [[ $cp_id == "Voltar/Sair" ]] && pesquisar_cliente ${1} || concluir_pendencia "${1}" "${cp_id}"
             ;;
         "Ver Pendências")
@@ -242,7 +243,7 @@ concluir_pendencia(){
             path_pend="${PATH_BASE}/clientes/${1}/pendencias"
             cp_descricao="$(egrep "^${2}\|" ${path_pend} | cut -d\| -f 6)"
             sed -i -E "/^${2}\|/d" "${path_pend}"
-            cadastrar_historico "${1}" "Concluída pendência [${cp_descricao}]" "#auto"
+            cadastrar_historico "${1}" "Concluída pendência [${cp_descricao}]" "#manual"
             pesquisar_cliente ${1}
     fi
 
@@ -268,7 +269,7 @@ pesquisar_cliente(){
     cat "${path_cliente}/funis" | cut -d\| -f 3,6 | sed "s/|/: /g"
     divider
     text_color "HISTÓRICO"
-    tail -n10 "${path_cliente}/historico"
+    egrep -v "#auto" "${path_cliente}/historico" | tail -n10
     divider
     menu_edicao "${cpf}"
 }
@@ -294,7 +295,7 @@ cadastrar_cliente(){
     mkdir "${destino}/"
     echo -e "$arquivo_principal" > "${destino}/cadastro"
     echo -e "$cliente_lista" >> "${PATH_BASE}/clientes/.lista"
-    cadastrar_historico "$cpf" "Cliente cadastrado" "#auto"
+    cadastrar_historico "$cpf" "Cliente cadastrado" "#manual"
 
     touch "${destino}/pendencias"
     touch "${destino}/funis"
@@ -332,7 +333,7 @@ editar_cliente(){
             sed -i "/${ec_cpf}/c\\${conteudo_novo}" "${PATH_CLIENTES_LISTA}"
             sed -i -e "/^CPF: /c\\CPF: ${3}" "${path_cliente}"
             mv "${PATH_BASE}/clientes/${1}" "${PATH_BASE}/clientes/${3}"
-            cadastrar_historico "${3}" "CPF alterado de [${ec_cpf}] para [${3}]" "#auto"
+            cadastrar_historico "${3}" "CPF alterado de [${ec_cpf}] para [${3}]" "#importante"
             pesquisar_cliente "${3}"
             ;;
         "telefone")
@@ -360,7 +361,7 @@ editar_cliente(){
             conteudo_novo="${ec_nome}|${ec_cpf}|${ec_telefone}|${ec_email}|${ec_etiquetas}|${3}"
             sed -i "/${ec_cpf}/c\\${conteudo_novo}" "${PATH_CLIENTES_LISTA}"
             sed -i -E "/^Status: /c\\Status: ${3}" "${path_cliente}"
-            cadastrar_historico "${ec_cpf}" "Status alterado de [${ec_status}] para [${3}]" "#auto"
+            cadastrar_historico "${ec_cpf}" "Status alterado de [${ec_status}] para [${3}]" "#importante"
             pesquisar_cliente "${ec_cpf}"
             ;;
     esac
