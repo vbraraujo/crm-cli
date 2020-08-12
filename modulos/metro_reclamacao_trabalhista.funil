@@ -17,25 +17,25 @@ REFERENCIA="${FUNIL_ID}|${ARQUIVO}|${TITULO}|${TIPO}|${COMPETENCIA}|${PROCESSO}|
 # Etapas
 cadastrar_etapas(){
     # Etapa 01: Conhecimento pessoal : DATA_HOJE
-    cadastrar_pendencia "${1}" "$(printf '%(%Y-%m-%d)T\n' -1)" "${ARQUIVO}" "Apresentação pessoal"
+    cadastrar_pendencia "${1}" "$(printf '%(%Y-%m-%d)T\n' -1)" "funil_id${FUNIL_ID}" "Apresentação pessoal"
     # Etapa 02: Apresentação de problema e solução: 7 dias
-    cadastrar_pendencia "${1}" "$(date --date="7 day" +"%Y-%m-%d")" "${ARQUIVO}" "Atendimento inicial"
+    cadastrar_pendencia "${1}" "$(date --date="7 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atendimento inicial"
     # Etapa 03: Confirmação de interesse : 10 dias
-    cadastrar_pendencia "${1}" "$(date --date="10 day" +"%Y-%m-%d")" "${ARQUIVO}" "Confirmar interesse em ação"
+    cadastrar_pendencia "${1}" "$(date --date="10 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Confirmar interesse em ação"
     # Etapa 04: PDC : 11 dias
-    cadastrar_pendencia "${1}" "$(date --date="11 day" +"%Y-%m-%d")" "${ARQUIVO}" "Enviar PDC"
+    cadastrar_pendencia "${1}" "$(date --date="11 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Enviar PDC"
     # Etapa 05: Coletar documentos : 12 dias
-    cadastrar_pendencia "${1}" "$(date --date="12 day" +"%Y-%m-%d")" "${ARQUIVO}" "Coletar docs."
+    cadastrar_pendencia "${1}" "$(date --date="12 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Coletar docs."
     # Etapa 06: Preparar inicial : 14 dias
-    cadastrar_pendencia "${1}" "$(date --date="14 day" +"%Y-%m-%d")" "${ARQUIVO}" "Preparar inicial"
+    cadastrar_pendencia "${1}" "$(date --date="14 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Preparar inicial"
     # Etapa 07: Enviar para protocolo : 16 dias
-    cadastrar_pendencia "${1}" "$(date --date="16 day" +"%Y-%m-%d")" "${ARQUIVO}" "Enviar ação para protocolo"
+    cadastrar_pendencia "${1}" "$(date --date="16 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Enviar ação para protocolo"
     # Etapa 08: Informar cliente sobre protocolo : 18 dias
-    cadastrar_pendencia "${1}" "$(date --date="18 day" +"%Y-%m-%d")" "${ARQUIVO}" "Informar protocolo de ação"
+    cadastrar_pendencia "${1}" "$(date --date="18 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Informar protocolo de ação"
     # Etapa 09: Atualizações de rotina : 60 dias
-    cadastrar_pendencia "${1}" "$(date --date="60 day" +"%Y-%m-%d")" "${ARQUIVO}" "Atualizar sobre ação"
-    cadastrar_pendencia "${1}" "$(date --date="120 day" +"%Y-%m-%d")" "${ARQUIVO}" "Atualizar sobre ação"
-    cadastrar_pendencia "${1}" "$(date --date="180 day" +"%Y-%m-%d")" "${ARQUIVO}" "Atualizar sobre ação"
+    cadastrar_pendencia "${1}" "$(date --date="60 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação"
+    cadastrar_pendencia "${1}" "$(date --date="120 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação"
+    cadastrar_pendencia "${1}" "$(date --date="180 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação"
 
     echo -e "${REFERENCIA}" >> ${PATH_FUNIL_CLIENTE}
 }
