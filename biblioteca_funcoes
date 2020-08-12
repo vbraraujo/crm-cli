@@ -20,6 +20,11 @@ divider(){
     echo "${div// /${2:-_}}"
 }
 
+limpa_numeros(){
+    local tmp=${1//./}
+    echo ${tmp//-/}
+}
+
 verifica_amb(){
     # Folders: clientes, modulos
     # arquivos: bash-ui crm_cli.sh clientes/.lista modulos/.funis
@@ -58,11 +63,6 @@ copiar_dados(){
     notify-send "CRM-CLI" "Texto copiado no clipboard." -u low &
 }
 
-cadastrar_processo(){
-    #argumentos: 1 cpf
-    echo
-}
-
 menu_edicao(){
     #Argumentos: 1 CPF
     conteudo_atual="$(egrep "\|${1}\|" "$PATH_CLIENTES_LISTA")"
@@ -90,6 +90,7 @@ menu_edicao(){
             ;;
         "Editar CPF")
             read -e -p "Informe o novo CPF: " -i "${1}" novo_valor
+            novo_valor=$(limpa_numeros $novo_valor)
             editar_cliente "${1}" "cpf" "${novo_valor}"
             ;;
         "Editar Status")
@@ -128,6 +129,7 @@ menu_edicao(){
             cp_processo="$(egrep -E "^${cp_id}" "${path_funil}" | cut -d\| -f 6)"
             cp_descricao="$(egrep -E "^${cp_id}" "${path_funil}" | cut -d\| -f 3)"
             read -e -p "Informe o número do processo: " -i "${cp_processo}" cp_novo_processo
+            cp_novo_processo=$(limpa_numeros $cp_novo_processo)
             read -e -p "Informe a nova descrição: " -i "${cp_descricao}" cp_nova_descricao
             [[ $ef_id == "Voltar/Sair" ]] && pesquisar_cliente ${1} || editar_processo "${1}" "${cp_id}" "${cp_novo_processo}" "${cp_nova_descricao}"
             ;;
@@ -278,6 +280,7 @@ cadastrar_cliente(){
     while [[ -z ${cpf} ]]; do
         read -p "CPF: " cpf && [ -z "$cpf" ]
     done
+    cpf=$(limpa_numeros $cpf)
     read -p "Telefone: " telefone
     read -p "E-mail: " email
     read -p "Etiquetas: " etiquetas
