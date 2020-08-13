@@ -373,6 +373,8 @@ editar_cliente(){
 relatorios () {
     local clientes="$(wc -l ${PATH_BASE}/clientes/.lista | xargs echo | cut -d' ' -f1)"
     local pendencias="$(wc -l ${PATH_BASE}/*/*/pendencias | egrep 'total' | xargs echo | cut -d' ' -f1)"
+    local path_funis="$(cat ${PATH_BASE}/clientes/*/funis)"
+    local funis="$(echo -e "${path_funis}" | cut -d\| -f2 | uniq -c | sort -bgr)"
 
     clear
     text_color "CRM - Seja bem vindo" 2
@@ -381,6 +383,7 @@ relatorios () {
     echo "Cliente cadastrados: ${clientes}"
     echo "Pendencias: ${pendencias}"
     echo "Funis: "
+    echo -e "$funis"
     divider
     menu_inicial
 }
