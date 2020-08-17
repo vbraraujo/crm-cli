@@ -36,6 +36,10 @@ cadastrar_etapas(){
     cadastrar_pendencia "${1}" "$(date --date="60 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação"
     cadastrar_pendencia "${1}" "$(date --date="120 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação"
     cadastrar_pendencia "${1}" "$(date --date="180 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação"
+    cadastrar_pendencia "${1}" "$(date --date="210 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação"
+    cadastrar_pendencia "${1}" "$(date --date="240 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação"
+    cadastrar_pendencia "${1}" "$(date --date="270 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação"
+    cadastrar_pendencia "${1}" "$(date --date="300 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação"
 
     echo -e "${REFERENCIA}" >> ${PATH_FUNIL_CLIENTE}
 }

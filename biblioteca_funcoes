@@ -10,8 +10,10 @@ PATH_CLIENTES_LISTA="${PATH_BASE}/clientes/.lista"
 PATH_FUNIS="${PATH_BASE}/modulos"
 MENU_INICIAL="Pesquisar cliente\nCadastrar cliente\nRelatórios\nSair"
 DATA_HOJE="$(printf '%(%Y-%m-%d)T\n' -1)"
+DATA_AGORA="$(printf '%(%Y-%m-%d_%H%M)T\n' -1)"
 DATA_UMA_SEMANA="$(date --date="1 week" +"%Y-%m-%d")"
 LISTA_FUNIL="$(find "${PATH_FUNIS}/" -name "*.funil" -printf "%f\n")"
+FZF_OPT="--height=30% --layout=default"
 
 # Funções
 divider(){
@@ -35,7 +37,7 @@ verifica_amb(){
 }
 
 menu_inicial(){
-    selected="$(echo -e $MENU_INICIAL | fzf --height=30% --layout=default --prompt 'Selecione uma opção: ')"
+    selected="$(echo -e $MENU_INICIAL | fzf $FZF_OPT --prompt 'Selecione uma opção: ')"
     case "$selected" in
         "Pesquisar cliente")
             pesquisar_cliente
@@ -52,12 +54,49 @@ menu_inicial(){
     esac
 }
 
+enviar_email(){
+    #Argumentos: 1 nome, 2 cpf, 3 mail, 4 assunto, 5 modelo, 6 processo_id
+    local path_mail="${PATH_BASE}/mails"
+    local to_name="$1"
+    local to_cpf="$2"
+    local to_mail="$3"
+    local subj="$4"
+    local modelo="${5:-default}"
+    local mail_file_pend="${PATH_BASE}/clientes/${to_cpf}/mails/pendentes/${DATA_AGORA}_${subj}"
+    local mail_file_sent="${PATH_BASE}/clientes/${to_cpf}/mails/enviados/${DATA_AGORA}_${subj}"
+    local path_funil="${PATH_BASE}/clientes/${to_cpf}/funis"
+
+    case "$modelo" in
+        "processo")
+            body="$(cat "${path_mail}/processo")"
+            ee_processo="$(egrep -E "^${ee_id}" "${path_funil}" | cut -d\| -f 6)"
+            ee_descricao="$(egrep -E "^${ee_id}" "${path_funil}" | cut -d\| -f 3)"
+            ee_tipo="$(egrep -E "^${ee_id}" "${path_funil}" | cut -d\| -f 4)"
+            ee_local="$(egrep -E "^${ee_id}" "${path_funil}" | cut -d\| -f 5)"
+            body="${body/:numero:/"${ee_processo}"}"
+            body="${body/:local:/"${ee_local}"}"
+            body="${body/:tipo:/"${ee_tipo}"}"
+            body="${body/:descricao:/"${ee_descricao}"}"
+            ;;
+        *)
+            body="$(cat "${path_mail}/default")"
+            ;;
+    esac
+    body="${body/:to_name:/"$to_name"}"
+    echo -e "$body" > "${mail_file_pend}"
+
+    neomutt -EF ~/.config/mutt/accounts/victorbruno-cajatysantiago/settings -s "${subj}" -i "${mail_file_pend}" -- "${to_mail}"
+    mv "${mail_file_pend}" "${mail_file_sent}"
+    cadastrar_historico "${to_cpf}" "Enviado e-mail [$subj]" "#email"
+    pesquisar_cliente "${to_cpf}"
+}
+
 copiar_dados(){
     #Argumentos: 1 cpf
     local cd_cadastro="$(cat ${PATH_BASE}/clientes/${1}/cadastro)"
     local cd_processos="$(awk -F "|" '{print $3":",$6}' "${PATH_BASE}/clientes/${1}/funis")"
     local cd_menu="${cd_cadastro}\n${cd_processos}"
-    local selected="$(echo -e "${cd_menu}" | fzf --height=30% --layout=default --prompt 'Selecione dado a ser copiado ')"
+    local selected="$(echo -e "${cd_menu}" | fzf $FZF_OPT --prompt 'Selecione dado a ser copiado ')"
     [ "$selected" != "" ] || exit
     echo "${selected#*: }" | xclip -selection clipboard
     notify-send "CRM-CLI" "Texto copiado no clipboard." -u low &
@@ -72,7 +111,7 @@ menu_edicao(){
     me_email="$(echo "$conteudo_atual" | cut -d\| -f4)"
     me_etiquetas="$(echo "$conteudo_atual" | cut -d\| -f5)"
 
-    menu_edicao="Voltar/Sair\nEditar Nome\nEditar CPF\nEditar Telefone\nEditar E-mail\nEditar Status\nCopiar dados\nIncluir Histórico\nIncluir Funil\nIncluir Pendência\nVer Histórico\nVer Pendências\nConcluir Pendência\nExcluir Funil\nCadastrar Processo"
+    menu_edicao="Voltar/Sair\nEditar Nome\nEditar CPF\nEditar Telefone\nEditar E-mail\nEditar Status\nCopiar dados\nIncluir Histórico\nIncluir Funil\nIncluir Pendência\nVer Histórico\nVer Pendências\nConcluir Pendência\nExcluir Funil\nCadastrar Processo\nEnviar E-mail"
 
     selected="$(echo -e $menu_edicao | fzf --height=5% --layout=default --prompt 'Selecione uma opção: ')"
     case "$selected" in
@@ -94,12 +133,32 @@ menu_edicao(){
             editar_cliente "${1}" "cpf" "${novo_valor}"
             ;;
         "Editar Status")
-            novo_valor="$(echo -e "Quente\nNeutro\nFrio" | fzf --height=30% --layout=default --prompt 'Selecione o status atual: ')"
+            novo_valor="$(echo -e "Quente\nNeutro\nFrio" | fzf $FZF_OPT --prompt 'Selecione o status atual: ')"
             editar_cliente "${1}" "status" "${novo_valor}"
             ;;
         "Editar Etiquetas")
             read -e -p "Informe as novas etiquetas: " -i "${me_etiquetas}" novo_valor
             editar_cliente "${1}" "etiquetas" "${novo_valor}"
+            ;;
+        "Enviar E-mail")
+            [[ -z $me_email ]] && cls && dialog_msg "Cliente não possui e-mail cadastrado" && pesquisar_cliente "${me_cpf}"
+            path_funil="${PATH_BASE}/clientes/${1}/funis"
+            ee_lista="Novo\nVoltar/Sair\n"
+            ee_lista+="$(awk -F "|" '{print $1,$3,$6,"-",$2}' "${path_funil}")"
+            ee_id="$(echo -e "$ee_lista" | fzf $FZF_OPT --prompt 'Selecione o modelo do e-mail: ')"
+            ee_id="$(echo ${ee_id%% *})"
+            case "$ee_id" in
+                "Voltar/Sair")
+                    pesquisar_cliente "${1}"
+                    ;;
+                "Novo")
+                    enviar_email "${me_nome}" "${me_cpf}" "${me_email}" "[CS] Informações" "default"
+                    ;;
+                *)
+                    ee_descricao="$(egrep -E "^${ee_id}" "${path_funil}" | cut -d\| -f 3)"
+                    enviar_email "${me_nome}" "${me_cpf}" "${me_email}" "[CS] Informações sobre ${ee_descricao}" "processo" "${ee_id}"
+                    ;;
+            esac
             ;;
         "Copiar dados")
             copiar_dados "${1}"
@@ -110,13 +169,13 @@ menu_edicao(){
             cadastrar_historico "${1}" "${novo_valor}" "#manual"
             ;;
         "Incluir Funil")
-            if_arquivo="$(echo -e "$LISTA_FUNIL" | fzf --height=30% --layout=default --prompt 'Selecione funil a incluir: ')"
+            if_arquivo="$(echo -e "$LISTA_FUNIL" | fzf $FZF_OPT --prompt 'Selecione funil a incluir: ')"
             cadastrar_funil "${1}" "${if_arquivo}"
             ;;
         "Excluir Funil")
             ef_lista="Voltar/Sair\n"
             ef_lista+="$(awk -F "|" '{print $1,$3,$6,"-",$2}' "${PATH_BASE}/clientes/${1}/funis")"
-            ef_id="$(echo -e "$ef_lista" | fzf --height=30% --layout=default --prompt 'Selecione funil a excluir: ')"
+            ef_id="$(echo -e "$ef_lista" | fzf $FZF_OPT --prompt 'Selecione funil a excluir: ')"
             ef_id="$(echo ${ef_id%% *})"
             [[ $ef_id == "Voltar/Sair" ]] && pesquisar_cliente ${1} || excluir_funil "${1}" "${ef_id}"
             ;;
@@ -124,7 +183,7 @@ menu_edicao(){
             path_funil="${PATH_BASE}/clientes/${1}/funis"
             cp_lista="Voltar/Sair\n"
             cp_lista+="$(awk -F "|" '{print $1,$3,$6,"-",$2}' "${path_funil}")"
-            cp_id="$(echo -e "$cp_lista" | fzf --height=30% --layout=default --prompt 'Selecione funil a cadastrar/alterar processo: ')"
+            cp_id="$(echo -e "$cp_lista" | fzf $FZF_OPT --prompt 'Selecione funil a cadastrar/alterar processo: ')"
             cp_id="$(echo ${cp_id%% *})"
             cp_processo="$(egrep -E "^${cp_id}" "${path_funil}" | cut -d\| -f 6)"
             cp_descricao="$(egrep -E "^${cp_id}" "${path_funil}" | cut -d\| -f 3)"
@@ -143,7 +202,7 @@ menu_edicao(){
             cp_lista="Voltar/Sair\n"
             #cp_lista+="$(cat "${path_pend}" | cut -d\| -f1,3,6 | sort)"
             cp_lista+="$(awk -F "|" '{print $3"|"$1"|"$6}' "${path_pend}" | sort)"
-            cp_id="$(echo -e "$cp_lista" | fzf --height=30% --layout=default --prompt 'Selecione pendencia a ser concluída: ' | cut -d\| -f2)"
+            cp_id="$(echo -e "$cp_lista" | fzf $FZF_OPT --prompt 'Selecione pendencia a ser concluída: ' | cut -d\| -f2)"
             [[ $cp_id == "Voltar/Sair" ]] && pesquisar_cliente ${1} || concluir_pendencia "${1}" "${cp_id}"
             ;;
         "Ver Pendências")
@@ -177,7 +236,7 @@ excluir_funil(){
             ef_id="$(egrep "${2}" ${path_funil} | cut -d\| -f 1)"
             sed -i -E "/^${2}\|/d" "${path_funil}"
             sed -i -E "/funil_id${2}/d" "${path_pend}"
-            cadastrar_historico "${1}" "Excluído funil [${ef_descricao}]" "#manual"
+            cadastrar_historico "${1}" "Excluído funil [${ef_descricao}]" "#funil"
             pesquisar_cliente ${1}
     fi
 }
@@ -254,10 +313,20 @@ pesquisar_cliente(){
     then
         cpf="${1}"
     else
-        local pc_lista="Voltar/Sair\n"
+        local pc_lista="Voltar/Sair\nCadastrar novo cliente\n"
         local pc_lista+="$(cat ${PATH_BASE}/clientes/.lista | cut -d\| -f 1-3)"
-        local selected="$(echo -e "$pc_lista" | fzf --height=30% --layout=default --prompt 'Pesquisar: ')"
-        [[ $selected == "Voltar/Sair" ]] && default || cpf="$(echo "$selected" | cut -d\| -f2 )"
+        local selected="$(echo -e "$pc_lista" | fzf $FZF_OPT --prompt 'Pesquisar: ')"
+        case "$selected" in
+            "Voltar/Sair")
+                default
+                ;;
+            "Cadastrar novo cliente")
+                cadastrar_cliente
+                ;;
+            *)
+                cpf="$(echo "$selected" | cut -d\| -f2 )"
+            ;;
+        esac
     fi
 
     path_cliente="${PATH_BASE}/clientes/${cpf}"
@@ -280,6 +349,7 @@ pesquisar_cliente(){
 cadastrar_cliente(){
     echo Cadastrar cliente
     read -p "Nome: " nome
+    [[ -z ${nome} ]] && dialog_msg "Nome não informando" && default
     unset cpf
     while [[ -z ${cpf} ]]; do
         read -p "CPF: " cpf && [ -z "$cpf" ]
@@ -288,7 +358,7 @@ cadastrar_cliente(){
     read -p "Telefone: " telefone
     read -p "E-mail: " email
     read -p "Etiquetas: " etiquetas
-    status="$(echo -e "Quente\nNeutro\nFrio" | fzf --height=30% --layout=default --prompt 'Selecione o status atual: ')"
+    status="$(echo -e "Quente\nNeutro\nFrio" | fzf $FZF_OPT --prompt 'Selecione o status atual: ')"
 
     # Organiza e cria estrutura para pasta do cliente
     destino="${PATH_BASE}/clientes/${cpf}"
@@ -308,8 +378,7 @@ cadastrar_cliente(){
     mkdir "${destino}/mails/enviados"
 
     echo "$(tput setaf 2)[info] Cliente cadastrado com sucesso.$(tput sgr0)"
-    #sleep 3
-    menu_inicial
+    pesquisar_cliente "${cpf}"
 }
 
 editar_cliente(){

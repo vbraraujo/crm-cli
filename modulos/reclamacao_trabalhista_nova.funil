@@ -1,0 +1,48 @@
+#! /bin/bash
+# Módulo para inclusão de funil.
+source "$HOME/Dropbox/RA-Compartilhamento/crm-cli/biblioteca_funcoes"
+
+# Variáveis do sistema
+TITULO="RT - nova"
+TIPO="Reclamação Trabalhista"
+COMPETENCIA="TRT10"
+ARQUIVO="${0##*/}"
+PROCESSO=""
+PATH_FUNIL_CLIENTE="${PATH_BASE}/clientes/${1}/funis"
+
+FUNIL_ID="$(awk -F "|" '{id=$1+1}END{print id}' ${PATH_FUNIL_CLIENTE})"
+[[ -z "${FUNIL_ID}" ]] && FUNIL_ID=1
+REFERENCIA="${FUNIL_ID}|${ARQUIVO}|${TITULO}|${TIPO}|${COMPETENCIA}|${PROCESSO}|${1}"
+
+# Etapas
+cadastrar_etapas(){
+    # Etapa 01: Conhecimento pessoal : DATA_HOJE
+    cadastrar_pendencia "${1}" "$(printf '%(%Y-%m-%d)T\n' -1)" "funil_id${FUNIL_ID}" "Apresentação pessoal"
+    # Etapa 02: Apresentação de problema e solução: 7 dias
+    cadastrar_pendencia "${1}" "$(date --date="7 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atendimento inicial"
+    # Etapa 03: Confirmação de interesse : 10 dias
+    cadastrar_pendencia "${1}" "$(date --date="10 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Confirmar interesse em ação"
+    # Etapa 04: PDC : 11 dias
+    cadastrar_pendencia "${1}" "$(date --date="11 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Enviar PDC"
+    # Etapa 05: Coletar documentos : 12 dias
+    cadastrar_pendencia "${1}" "$(date --date="12 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Coletar docs."
+    # Etapa 06: Preparar inicial : 14 dias
+    cadastrar_pendencia "${1}" "$(date --date="14 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Preparar inicial"
+    # Etapa 07: Enviar para protocolo : 16 dias
+    cadastrar_pendencia "${1}" "$(date --date="16 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Enviar ação para protocolo"
+    # Etapa 08: Informar cliente sobre protocolo : 18 dias
+    cadastrar_pendencia "${1}" "$(date --date="18 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Informar protocolo de ação"
+    # Etapa 09: Atualizações de rotina : 60 dias
+    cadastrar_pendencia "${1}" "$(date --date="60 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação"
+    cadastrar_pendencia "${1}" "$(date --date="120 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação"
+    cadastrar_pendencia "${1}" "$(date --date="180 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação"
+    cadastrar_pendencia "${1}" "$(date --date="240 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação"
+    cadastrar_pendencia "${1}" "$(date --date="300 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação"
+    cadastrar_pendencia "${1}" "$(date --date="360 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação"
+    cadastrar_pendencia "${1}" "$(date --date="400 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação"
+
+    echo -e "${REFERENCIA}" >> ${PATH_FUNIL_CLIENTE}
+}
+
+cadastrar_etapas "${1}"
+pesquisar_cliente "${1}"
