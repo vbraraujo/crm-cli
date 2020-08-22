@@ -1,0 +1,38 @@
+#! /bin/bash
+# Módulo para inclusão de funil.
+source "$HOME/Dropbox/RA-Compartilhamento/crm-cli/biblioteca_funcoes"
+
+# Variáveis do sistema
+TITULO="RT - Anuênio"
+TIPO="Reclamação trabalhista"
+COMPETENCIA="TRT10"
+ARQUIVO="${0##*/}"
+PROCESSO=""
+
+PATH_FUNIL_CLIENTE="${PATH_BASE}/clientes/${1}/funis"
+
+FUNIL_ID="$(awk -F "|" '{id=$1+1}END{print id}' ${PATH_FUNIL_CLIENTE})"
+[[ -z "${FUNIL_ID}" ]] && FUNIL_ID=1
+REFERENCIA="${FUNIL_ID}|${ARQUIVO}|${TITULO}|${TIPO}|${COMPETENCIA}|${PROCESSO}|${1}"
+
+# Etapas
+cadastrar_etapas(){
+    cadastrar_pendencia "${1}" "$(date --date="7 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Apresentar ação do Anuênio"
+    cadastrar_pendencia "${1}" "$(date --date="10 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Confirmar interesse em ação do Anuênio"
+    cadastrar_pendencia "${1}" "$(date --date="11 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Enviar PDC ação do Anuêncio"
+    cadastrar_pendencia "${1}" "$(date --date="12 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Coletar docs. ação do Anuênio"
+    cadastrar_pendencia "${1}" "$(date --date="14 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Preparar cálculos e inicial para ação do Anuênio"
+    cadastrar_pendencia "${1}" "$(date --date="18 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Informar protocolo ação do Anuênio"
+    cadastrar_pendencia "${1}" "$(date --date="60 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação do Anuênio"
+    cadastrar_pendencia "${1}" "$(date --date="120 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação do Anuêncio"
+    cadastrar_pendencia "${1}" "$(date --date="180 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação do Anuêncio"
+    cadastrar_pendencia "${1}" "$(date --date="210 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação do Anuêncio"
+    cadastrar_pendencia "${1}" "$(date --date="240 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação do Anuêncio"
+    cadastrar_pendencia "${1}" "$(date --date="270 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação do Anuêncio"
+    cadastrar_pendencia "${1}" "$(date --date="300 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação do Anuêncio"
+
+    echo -e "${REFERENCIA}" >> ${PATH_FUNIL_CLIENTE}
+}
+
+cadastrar_etapas "${1}"
+pesquisar_cliente "${1}"

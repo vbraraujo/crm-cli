@@ -3,7 +3,7 @@
 source "$HOME/Dropbox/RA-Compartilhamento/crm-cli/biblioteca_funcoes"
 
 # Variáveis do sistema
-TITULO="Restituição descontos 2019"
+TITULO="RT - Descontos 2019"
 TIPO="Ação de cumprimento"
 COMPETENCIA="TRT10"
 ARQUIVO="${0##*/}"
@@ -30,13 +30,17 @@ cadastrar_etapas(){
     # Etapa 06: Preparar inicial : 14 dias
     cadastrar_pendencia "${1}" "$(date --date="14 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Preparar inicial ação de rest. 2019"
     # Etapa 07: Enviar para protocolo : 16 dias
-    cadastrar_pendencia "${1}" "$(date --date="16 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Enviar ação de rest. 2019 para protocolo"
+    # cadastrar_pendencia "${1}" "$(date --date="16 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Enviar ação de rest. 2019 para protocolo"
     # Etapa 08: Informar cliente sobre protocolo : 18 dias
     cadastrar_pendencia "${1}" "$(date --date="18 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Informar protocolo ação de rest. 2019"
     # Etapa 09: Atualizações de rotina : 60 dias
     cadastrar_pendencia "${1}" "$(date --date="60 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação de rest. 2019"
     cadastrar_pendencia "${1}" "$(date --date="120 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação de rest. 2019"
     cadastrar_pendencia "${1}" "$(date --date="180 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação de rest. 2019"
+    cadastrar_pendencia "${1}" "$(date --date="210 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação de rest. 2019"
+    cadastrar_pendencia "${1}" "$(date --date="240 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação de rest. 2019"
+    cadastrar_pendencia "${1}" "$(date --date="270 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação de rest. 2019"
+    cadastrar_pendencia "${1}" "$(date --date="300 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre ação de rest. 2019"
 
     echo -e "${REFERENCIA}" >> ${PATH_FUNIL_CLIENTE}
 }
