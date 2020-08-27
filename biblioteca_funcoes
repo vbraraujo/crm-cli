@@ -3,25 +3,22 @@
 
 # Variáveis do sistema
 PATH_BASE="$HOME/Dropbox/RA-Compartilhamento/crm-cli"
+PATH_DOCUMENTOS="${HOME}/Downloads"
 
 source "${PATH_BASE}/bash-ui"
 
 PATH_CLIENTES_LISTA="${PATH_BASE}/clientes/.lista"
 PATH_FUNIS="${PATH_BASE}/modulos"
+PATH_MODELOS="${PATH_BASE}/documentos/modelos"
 MENU_INICIAL="Pesquisar cliente\nCadastrar cliente\nRelatórios\nSair"
 DATA_HOJE="$(printf '%(%Y-%m-%d)T\n' -1)"
 DATA_AGORA="$(printf '%(%Y-%m-%d_%H%M)T\n' -1)"
 DATA_UMA_SEMANA="$(date --date="1 week" +"%Y-%m-%d")"
 LISTA_FUNIL="$(find "${PATH_FUNIS}/" -name "*.funil" -printf "%f\n")"
+LISTA_MODELOS="$(find "${PATH_MODELOS}/" -name "*.html" -printf "%f\n")"
 FZF_OPT="--height=30% --layout=default"
 
 # Funções
-divider(){
-    local div
-    printf -v div "%$(tput cols)s\n"
-    echo "${div// /${2:-_}}"
-}
-
 limpa_numeros(){
     local tmp=${1//./}
     echo ${tmp//-/}
@@ -102,6 +99,65 @@ copiar_dados(){
     notify-send "CRM-CLI" "Texto copiado no clipboard." -u low &
 }
 
+gerar_documento(){
+    local path_tmp="${PATH_BASE}/documentos"
+    local novo_tmp_html="${path_tmp}/tmp/${2}.tmp.html"
+    local novo_tmp_pdf="${path_tmp}/tmp/${2}.tmp.pdf"
+    local novo_pdf="${PATH_DOCUMENTOS}/${2}.pdf"
+    local modelo="${path_tmp}/modelos/${1}"
+    local timbrado="${path_tmp}/timbrado.pdf"
+    local data="$(date "+%d de %B de %Y")"
+
+    cp "$modelo" "$novo_tmp_html"
+
+    sed -i "
+        s~::nome::~${2}~g
+        s~::estado_civil::~${3}~g
+        s~::profissao::~${4}~g
+        s~::rg::~${5}~g
+        s~::cpf::~${6}~g
+        s~::endereco::~${7}~g
+        s~::cep::~${8}~g
+        s~::telefone::~${9}~g
+        s~::email::~${10}~g
+        s~::objeto::~${11}~g
+        s~::data::~${data}~g
+    " "${novo_tmp_html}"    
+    pushd "${path_tmp}/tmp"
+    libreoffice --convert-to "pdf" "${novo_tmp_html}"
+    pdftk "${novo_tmp_pdf}" stamp "${timbrado}" output "${novo_pdf}"    
+    rm "$novo_tmp_html" "$novo_tmp_pdf"
+    pushd
+}
+
+qualificacao(){
+    local q_file="${PATH_BASE}/clientes/${1}/cadastro"
+    local content="$(echo -e "$(<"${q_file}")")"
+    q_nome="$(sed -n 's/Nome: //g;1p' <<< "${content}")"
+    q_cpf="$(sed -n 's/CPF: //g;2p' <<< "${content}")"
+    q_telefone="$(sed -n 's/Telefone: //g;3p' <<< "${content}")"
+    q_email="$(sed -n 's/E-mail: //g;4p' <<< "${content}")"
+    q_estado_civil="$(sed -n 's/Estado civil: //g;7p' <<< "${content}")"
+    q_profissao="$(sed -n 's/Profissão: //g;8p' <<< "${content}")"
+    q_rg="$(sed -n 's/RG: //g;9p' <<< "${content}")"
+    q_endereco="$(sed -n 's/Endereço: //g;10p' <<< "${content}")"
+    q_cep="$(sed -n 's/CEP: //g;11p' <<< "${content}")"
+}
+
+verificar_qualificacao(){
+    qualificacao "${1}"
+    [[ -z "${q_estado_civil}" ]] && cls && dialog_msg "Qualificação incompleta" && editar_qualificacao "${1}"
+}
+
+preparar_doc(){
+    cls
+    text_color "GERAR DOCUMENTO" 2
+    single_line
+    qualificacao "${1}"
+    read -e -p "Informe o objeto do contrato: " -i "Reclamação trabalhista em face do Metrô-DF" gd_objeto
+    gerar_documento "${modelo_selected}" "${q_nome}" "${q_estado_civil}" "${q_profissao}" "${q_rg}" "${q_cpf}" "${q_endereco}" "${q_cep}" "${q_telefone}" "${q_email}" "${gd_objeto}" 
+}
+
 menu_edicao(){
     #Argumentos: 1 CPF
     conteudo_atual="$(egrep "\|${1}\|" "$PATH_CLIENTES_LISTA")"
@@ -111,7 +167,7 @@ menu_edicao(){
     me_email="$(echo "$conteudo_atual" | cut -d\| -f4)"
     me_etiquetas="$(echo "$conteudo_atual" | cut -d\| -f5)"
 
-    menu_edicao="Voltar/Sair\nEditar Nome\nEditar CPF\nEditar Telefone\nEditar E-mail\nEditar Status\nEditar Etiquetas\nCopiar dados\nIncluir Histórico\nIncluir Funil\nIncluir Pendência\nVer Histórico\nVer Pendências\nConcluir Pendência\nExcluir Funil\nCadastrar Processo\nEnviar E-mail\nEditar Qualificação"
+    menu_edicao="Voltar/Sair\nEditar Nome\nEditar CPF\nEditar Telefone\nEditar E-mail\nEditar Status\nEditar Etiquetas\nCopiar dados\nIncluir Histórico\nIncluir Funil\nIncluir Pendência\nVer Histórico\nVer Pendências\nConcluir Pendência\nExcluir Funil\nCadastrar Processo\nEnviar E-mail\nEditar Qualificação\nGerar Documento"
 
     selected="$(echo -e $menu_edicao | fzf --height=5% --layout=default --prompt 'Selecione uma opção: ')"
     case "$selected" in
@@ -142,6 +198,7 @@ menu_edicao(){
             ;;
         "Editar Qualificação")
             editar_qualificacao "${1}"
+            pesquisar_cliente "${1}"
             ;;
         "Enviar E-mail")
             [[ -z $me_email ]] && cls && dialog_msg "Cliente não possui e-mail cadastrado" && pesquisar_cliente "${me_cpf}"
@@ -170,6 +227,7 @@ menu_edicao(){
         "Incluir Histórico")
             read -p "Informe o histórico: " novo_valor
             cadastrar_historico "${1}" "${novo_valor}" "#manual"
+            pesquisar_cliente ${1}
             ;;
         "Incluir Funil")
             if_arquivo="$(echo -e "$LISTA_FUNIL" | fzf $FZF_OPT --prompt 'Selecione funil a incluir: ')"
@@ -214,6 +272,12 @@ menu_edicao(){
             ;;
         "Ver Histórico")
             vim "${PATH_BASE}/clientes/${1}/historico"
+            pesquisar_cliente "${1}"
+            ;;
+        "Gerar Documento")
+            modelo_selected="$(echo -e "${LISTA_MODELOS}" | fzf $FZF_OPT --prompt 'Selecione o modelo: ')"
+            verificar_qualificacao "${1}"
+            preparar_doc "${1}"
             pesquisar_cliente "${1}"
             ;;
         *)
@@ -336,16 +400,16 @@ pesquisar_cliente(){
     clear
     text_color "DADOS DO CLIENTE"
     head -n6 "${path_cliente}/cadastro"
-    divider
+    single_line
     text_color "PENDENCIAS"
     cat "${path_cliente}/pendencias" | cut -d\| -f 3,6 | sed "s/|/: /g" | sort | head -n5
-    divider
+    single_line
     text_color "FUNIS"
     cat "${path_cliente}/funis" | cut -d\| -f 3,6 | sed "s/|/: /g"
-    divider
+    single_line
     text_color "HISTÓRICO"
     egrep -v "#auto" "${path_cliente}/historico" | tail -n10
-    divider
+    single_line
     menu_edicao "${cpf}"
 }
 
@@ -365,7 +429,7 @@ cadastrar_cliente(){
 
     # Organiza e cria estrutura para pasta do cliente
     destino="${PATH_BASE}/clientes/${cpf}"
-    arquivo_principal="Nome: ${nome}\nCPF: ${cpf}\nTelefone: ${telefone}\nE-mail: ${email}\nStatus: ${status}\nEtiquetas: ${etiquetas}"
+    arquivo_principal="Nome: ${nome}\nCPF: ${cpf}\nTelefone: ${telefone}\nE-mail: ${email}\nStatus: ${status}\nEtiquetas: ${etiquetas}\nEstado civil: \nProfissão: \nRG: \nEndereço: \nCEP: \n"
     cliente_lista="${nome}|${cpf}|${telefone}|${email}|${etiquetas}|${status}"
 
     mkdir "${destino}/"
@@ -373,8 +437,8 @@ cadastrar_cliente(){
     echo -e "$cliente_lista" >> "${PATH_BASE}/clientes/.lista"
     cadastrar_historico "$cpf" "Cliente cadastrado" "#manual"
 
-    touch "${destino}/pendencias"
-    touch "${destino}/funis"
+    > "${destino}/pendencias"
+    > "${destino}/funis"
 
     mkdir "${destino}/mails"
     mkdir "${destino}/mails/pendentes"
@@ -384,22 +448,30 @@ cadastrar_cliente(){
     pesquisar_cliente "${cpf}"
 }
 
+editar_qualificacao_especifica(){
+    # Argumentos: 1 CPF, 2 nome da variavel, 3 Titulo
+    local path_cliente="${PATH_BASE}/clientes/${1}/cadastro"
+    
+    read -e -p "${3}: " novo_valor
+
+    sed -i -E "/^${3}: /c\\${3}: ${novo_valor}" "${path_cliente}"
+}
+
 editar_qualificacao(){
     path_cliente="${PATH_BASE}/clientes/${1}/cadastro"
+    qualificacao "${1}"
 
-    estado_civil="$(echo -e "Solteiro(a)\nCasado(a)\nUnião Estável" | fzf $FZF_OPT --prompt 'Estado civil: ')"
-    read -e -p "Profissão: " -i "metroviário" profissao
-    read -e -p "RG: " rg
-    read -e -p "Endereço: " endereco
-    read -e -p "CEP: " cep
+    estado_civil="$(echo -e "solteiro(a)\ncasado(a)\nunião estável\nviúvo" | fzf $FZF_OPT --prompt 'Estado civil: ')"
+    read -e -p "Profissão: " -i "${q_profissao}" -i "metroviário(a)" profissao
+    read -e -p "RG: " -i "${q_rg}" rg
+    read -e -p "Endereço: " -i "${q_endereco}" endereco
+    read -e -p "CEP: " -i "${q_cep}" cep
 
     sed -i -E "/^Estado civil: /c\\Estado civil: ${estado_civil}" "${path_cliente}"
     sed -i -E "/^Profissão: /c\\Profissão: ${profissao}" "${path_cliente}"
     sed -i -E "/^RG: /c\\RG: ${rg}" "${path_cliente}"
     sed -i -E "/^Endereço: /c\\Endereço: ${endereco}" "${path_cliente}"
     sed -i -E "/^CEP: /c\\CEP: ${cep}" "${path_cliente}"
-
-    pesquisar_cliente "${1}"
 }
 
 editar_cliente(){
@@ -464,17 +536,17 @@ relatorios () {
     local clientes="$(wc -l ${PATH_BASE}/clientes/.lista | xargs echo | cut -d' ' -f1)"
     local pendencias="$(wc -l ${PATH_BASE}/*/*/pendencias | egrep 'total' | xargs echo | cut -d' ' -f1)"
     local path_funis="$(cat ${PATH_BASE}/clientes/*/funis)"
-    local funis="$(echo -e "${path_funis}" | cut -d\| -f2 | uniq -c | sort -bgr)"
+    local funis="$(echo -e "${path_funis}" | cut -d\| -f2 | sort -bgr | uniq -c)"
 
     clear
     text_color "CRM - Seja bem vindo" 2
-    divider
+    single_line
     text_color "RELATÓRIO"
     echo "Cliente cadastrados: ${clientes}"
     echo "Pendencias: ${pendencias}"
     echo "Funis: "
     echo -e "$funis"
-    divider
+    single_line
     menu_inicial
 }
 
@@ -484,10 +556,10 @@ default () {
     do
         clear
         text_color "CRM - Seja bem vindo" 2
-        divider
+        single_line
         text_color "PENDÊNCIAS" 3
         cat ${PATH_BASE}/*/*/pendencias | cut -d\| -f 3,5,6 | sed "s/|/: /g" | sort | head -n10
-        divider
+        single_line
         menu_inicial
         read -n1
     done
