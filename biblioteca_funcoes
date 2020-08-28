@@ -1,10 +1,11 @@
 #! /bin/bash
 # Script para controle e acompanhamento de relacionamento com cliente
 
-# Variáveis do sistema
+# Variáveis do usuário
 PATH_BASE="$HOME/Dropbox/RA-Compartilhamento/crm-cli"
 PATH_DOCUMENTOS="${HOME}/Downloads"
 
+# Variáveis do sistema
 source "${PATH_BASE}/bash-ui"
 
 PATH_CLIENTES_LISTA="${PATH_BASE}/clientes/.lista"
@@ -128,6 +129,7 @@ gerar_documento(){
     pdftk "${novo_tmp_pdf}" stamp "${timbrado}" output "${novo_pdf}"    
     rm "$novo_tmp_html" "$novo_tmp_pdf"
     pushd
+    nohup xdg-open "$PATH_DOCUMENTOS" & 
 }
 
 qualificacao(){
@@ -167,7 +169,7 @@ menu_edicao(){
     me_email="$(echo "$conteudo_atual" | cut -d\| -f4)"
     me_etiquetas="$(echo "$conteudo_atual" | cut -d\| -f5)"
 
-    menu_edicao="Voltar/Sair\nEditar Nome\nEditar CPF\nEditar Telefone\nEditar E-mail\nEditar Status\nEditar Etiquetas\nCopiar dados\nIncluir Histórico\nIncluir Funil\nIncluir Pendência\nVer Histórico\nVer Pendências\nConcluir Pendência\nExcluir Funil\nCadastrar Processo\nEnviar E-mail\nEditar Qualificação\nGerar Documento"
+    menu_edicao="Voltar/Sair\nEditar Nome\nEditar CPF\nEditar Telefone\nEditar E-mail\nEditar Status\nEditar Etiquetas\nCopiar dados\nIncluir Histórico\nIncluir Funil\nIncluir Pendência\nVer Histórico\nVer Pendências\nConcluir Pendência\nExcluir Funil\nCadastrar Processo\nEnviar E-mail\nEditar Qualificação\nGerar Documento\nVer Arquivos"
 
     selected="$(echo -e $menu_edicao | fzf --height=5% --layout=default --prompt 'Selecione uma opção: ')"
     case "$selected" in
@@ -280,6 +282,13 @@ menu_edicao(){
             preparar_doc "${1}"
             pesquisar_cliente "${1}"
             ;;
+
+        "Ver Arquivos")
+            local path_docs="${PATH_BASE}/clientes/${1}/documentos"
+            [[ -d "${path_docs}" ]] || mkdir "${path_docs}" && mkdir "${path_docs}/fichas_financeiras" 
+            nohup xdg-open "${path_docs}" & 
+            pesquisar_cliente "${1}"
+            ;;
         *)
             default
             ;;
@@ -375,6 +384,21 @@ concluir_pendencia(){
 
 }
 
+verificar_diretorio_vazio(){
+    if [ -z "$(find "${1}" -type f -empty 2>/dev/null)" ]; then
+        echo "vazio"
+    fi
+}
+
+exibir_icones_docs(){
+    local path_cli_doc="${PATH_BASE}/clientes/${1}/documentos"
+    local check_fichas="$(verificar_diretorio_vazio "${path_cli_doc}/fichas_financeiras")"
+    pc_files=""
+    [[ -f "${path_cli_doc}/documentos_pessoais.pdf" ]] && pc_files+="|  "
+    [[ -f "${path_cli_doc}/comprovante_de_residencia.cpdf" ]] && pc_files+="|  "
+    [[ ${check_fichas} != "vazio" ]] && pc_files+="| ﴝ "
+}
+
 pesquisar_cliente(){
     if [ "$#" -eq 1 ]
     then
@@ -397,8 +421,9 @@ pesquisar_cliente(){
     fi
 
     path_cliente="${PATH_BASE}/clientes/${cpf}"
-    clear
-    text_color "DADOS DO CLIENTE"
+    cls
+    exibir_icones_docs "${cpf}"
+    text_color "DADOS DO CLIENTE ${pc_files}"
     head -n6 "${path_cliente}/cadastro"
     single_line
     text_color "PENDENCIAS"
@@ -440,9 +465,9 @@ cadastrar_cliente(){
     > "${destino}/pendencias"
     > "${destino}/funis"
 
-    mkdir "${destino}/mails"
-    mkdir "${destino}/mails/pendentes"
-    mkdir "${destino}/mails/enviados"
+    mkdir "${destino}/mails" && mkdir "${destino}/mails/pendentes" && mkdir "${destino}/mails/enviados"
+
+    mkdir "${destino}/documentos" && mkdir "${destino}/documentos/fichas_financeiras" 
 
     echo "$(tput setaf 2)[info] Cliente cadastrado com sucesso.$(tput sgr0)"
     pesquisar_cliente "${cpf}"
