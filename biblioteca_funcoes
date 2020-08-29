@@ -129,7 +129,7 @@ gerar_documento(){
     pdftk "${novo_tmp_pdf}" stamp "${timbrado}" output "${novo_pdf}"    
     rm "$novo_tmp_html" "$novo_tmp_pdf"
     pushd
-    nohup xdg-open "$PATH_DOCUMENTOS" & 
+    nohup xdg-open "$PATH_DOCUMENTOS" >/dev/null 2>&1 
 }
 
 qualificacao(){
@@ -286,7 +286,7 @@ menu_edicao(){
         "Ver Arquivos")
             local path_docs="${PATH_BASE}/clientes/${1}/documentos"
             mkdir -p "${path_docs}" && mkdir -p "${path_docs}/fichas_financeiras" 
-            nohup xdg-open "${path_docs}" & 
+            nohup xdg-open "${path_docs}" >/dev/null 2>&1
             pesquisar_cliente "${1}"
             ;;
         *)
