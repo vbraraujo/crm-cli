@@ -285,7 +285,7 @@ menu_edicao(){
 
         "Ver Arquivos")
             local path_docs="${PATH_BASE}/clientes/${1}/documentos"
-            [[ -d "${path_docs}" ]] || mkdir "${path_docs}" && mkdir "${path_docs}/fichas_financeiras" 
+            mkdir -p "${path_docs}" && mkdir -p "${path_docs}/fichas_financeiras" 
             nohup xdg-open "${path_docs}" & 
             pesquisar_cliente "${1}"
             ;;
@@ -385,7 +385,7 @@ concluir_pendencia(){
 }
 
 verificar_diretorio_vazio(){
-    if [ -z "$(find "${1}" -type f -empty 2>/dev/null)" ]; then
+    if [ -z "$(find "${1}" -type f 2>/dev/null)" ]; then
         echo "vazio"
     fi
 }
@@ -395,7 +395,7 @@ exibir_icones_docs(){
     local check_fichas="$(verificar_diretorio_vazio "${path_cli_doc}/fichas_financeiras")"
     pc_files=""
     [[ -f "${path_cli_doc}/documentos_pessoais.pdf" ]] && pc_files+="|  "
-    [[ -f "${path_cli_doc}/comprovante_de_residencia.cpdf" ]] && pc_files+="|  "
+    [[ -f "${path_cli_doc}/comprovante_de_residencia.pdf" ]] && pc_files+="|  "
     [[ ${check_fichas} != "vazio" ]] && pc_files+="| ﴝ "
 }
 
@@ -486,7 +486,7 @@ editar_qualificacao(){
     path_cliente="${PATH_BASE}/clientes/${1}/cadastro"
     qualificacao "${1}"
 
-    estado_civil="$(echo -e "solteiro(a)\ncasado(a)\nunião estável\nviúvo" | fzf $FZF_OPT --prompt 'Estado civil: ')"
+    estado_civil="$(echo -e "solteiro(a)\ncasado(a)\nunião estável\nviúvo(a)\ndivorciado(a)" | fzf $FZF_OPT --prompt 'Estado civil: ')"
     read -e -p "Profissão: " -i "${q_profissao}" -i "metroviário(a)" profissao
     read -e -p "RG: " -i "${q_rg}" rg
     read -e -p "Endereço: " -i "${q_endereco}" endereco
