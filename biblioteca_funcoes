@@ -91,9 +91,11 @@ enviar_email(){
 
 copiar_dados(){
     #Argumentos: 1 cpf
+    qualificacao "${1}"
+    local cd_qualificacao="Qualificação: ${q_nome}, brasileiro(a), ${q_estado_civil}, ${q_profissao}, inscrito sob RG n. ${q_rg} e CPF n. ${q_cpf}, residente e domiciliado à ${q_endereco}, CEP ${q_cep}"
     local cd_cadastro="$(cat ${PATH_BASE}/clientes/${1}/cadastro)"
     local cd_processos="$(awk -F "|" '{print $3":",$6}' "${PATH_BASE}/clientes/${1}/funis")"
-    local cd_menu="${cd_cadastro}\n${cd_processos}"
+    local cd_menu="${cd_qualificacao}\n${cd_cadastro}\n${cd_processos}"
     local selected="$(echo -e "${cd_menu}" | fzf $FZF_OPT --prompt 'Selecione dado a ser copiado ')"
     [ "$selected" != "" ] || exit
     echo "${selected#*: }" | xclip -selection clipboard
@@ -124,11 +126,14 @@ gerar_documento(){
         s~::objeto::~${11}~g
         s~::data::~${data}~g
     " "${novo_tmp_html}"    
-    pushd "${path_tmp}/tmp"
-    libreoffice --convert-to "pdf" "${novo_tmp_html}"
-    pdftk "${novo_tmp_pdf}" stamp "${timbrado}" output "${novo_pdf}"    
-    rm "$novo_tmp_html" "$novo_tmp_pdf"
-    pushd
+    pushd "${path_tmp}/tmp" >/dev/null 2>&1
+    echo "Gerando arquivo..."
+    libreoffice --convert-to "pdf" "${novo_tmp_html}" >/dev/null 2>&1 
+    pdftk "${novo_tmp_pdf}" stamp "${timbrado}" output "${novo_pdf}" >/dev/null 2>&1 
+    echo "Limpando arquivos temporários..."
+    rm "$novo_tmp_html" "$novo_tmp_pdf" >/dev/null 2>&1
+    pushd >/dev/null 2>&1
+    echo "Concluído com sucesso"
     nohup xdg-open "$PATH_DOCUMENTOS" >/dev/null 2>&1 
 }
 
@@ -152,12 +157,13 @@ verificar_qualificacao(){
 }
 
 preparar_doc(){
+    #Argumentos: 1 CPF, 2 Modelo
     cls
     text_color "GERAR DOCUMENTO" 2
     single_line
     qualificacao "${1}"
-    read -e -p "Informe o objeto do contrato: " -i "Reclamação trabalhista em face do Metrô-DF" gd_objeto
-    gerar_documento "${modelo_selected}" "${q_nome}" "${q_estado_civil}" "${q_profissao}" "${q_rg}" "${q_cpf}" "${q_endereco}" "${q_cep}" "${q_telefone}" "${q_email}" "${gd_objeto}" 
+    [[ "${2}" != "modelo_procuracao.html" ]] && read -e -p "Informe o objeto do contrato: " -i "Reclamação trabalhista em face do Metrô-DF" gd_objeto
+    gerar_documento "${2}" "${q_nome}" "${q_estado_civil}" "${q_profissao}" "${q_rg}" "${q_cpf}" "${q_endereco}" "${q_cep}" "${q_telefone}" "${q_email}" "${gd_objeto}" 
 }
 
 menu_edicao(){
@@ -279,7 +285,7 @@ menu_edicao(){
         "Gerar Documento")
             modelo_selected="$(echo -e "${LISTA_MODELOS}" | fzf $FZF_OPT --prompt 'Selecione o modelo: ')"
             verificar_qualificacao "${1}"
-            preparar_doc "${1}"
+            preparar_doc "${1}" "${modelo_selected}"
             pesquisar_cliente "${1}"
             ;;
 
@@ -405,7 +411,7 @@ pesquisar_cliente(){
         cpf="${1}"
     else
         local pc_lista="Voltar/Sair\nCadastrar novo cliente\n"
-        local pc_lista+="$(cat ${PATH_BASE}/clientes/.lista | cut -d\| -f 1-3)"
+        local pc_lista+="$(awk -F\| '{ print $1"|"$2"|"$3 }' ${PATH_BASE}/clientes/.lista )"
         local selected="$(echo -e "$pc_lista" | fzf $FZF_OPT --prompt 'Pesquisar: ')"
         case "$selected" in
             "Voltar/Sair")
@@ -583,7 +589,7 @@ default () {
         text_color "CRM - Seja bem vindo" 2
         single_line
         text_color "PENDÊNCIAS" 3
-        cat ${PATH_BASE}/*/*/pendencias | cut -d\| -f 3,5,6 | sed "s/|/: /g" | sort | head -n10
+        cat ${PATH_BASE}/*/*/pendencias | cut -d\| -f 3,5,6 | sed "s/|/: /g" | sort | head -n20
         single_line
         menu_inicial
         read -n1
