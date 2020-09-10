@@ -126,15 +126,15 @@ gerar_documento(){
         s~::objeto::~${11}~g
         s~::data::~${data}~g
     " "${novo_tmp_html}"    
-    pushd "${path_tmp}/tmp" >/dev/null 2>&1
+    pushd "${path_tmp}/tmp" &>/dev/null 2>&1
     echo "Gerando arquivo..."
-    libreoffice --convert-to "pdf" "${novo_tmp_html}" >/dev/null 2>&1 
-    pdftk "${novo_tmp_pdf}" stamp "${timbrado}" output "${novo_pdf}" >/dev/null 2>&1 
+    libreoffice --convert-to "pdf" "${novo_tmp_html}" &>/dev/null 2>&1 
+    pdftk "${novo_tmp_pdf}" stamp "${timbrado}" output "${novo_pdf}" &>/dev/null 2>&1 
     echo "Limpando arquivos temporários..."
-    rm "$novo_tmp_html" "$novo_tmp_pdf" >/dev/null 2>&1
-    pushd >/dev/null 2>&1
+    rm "$novo_tmp_html" "$novo_tmp_pdf" &>/dev/null 2>&1
+    pushd &>/dev/null 2>&1
     echo "Concluído com sucesso"
-    nohup xdg-open "$PATH_DOCUMENTOS" >/dev/null 2>&1 
+    nohup xdg-open "$PATH_DOCUMENTOS" &>/dev/null 2>&1 
 }
 
 qualificacao(){
@@ -292,7 +292,8 @@ menu_edicao(){
         "Ver Arquivos")
             local path_docs="${PATH_BASE}/clientes/${1}/documentos"
             mkdir -p "${path_docs}" && mkdir -p "${path_docs}/fichas_financeiras" 
-            nohup xdg-open "${path_docs}" >/dev/null 2>&1
+            #nohup xdg-open "${path_docs}" &>/dev/null 2>&1
+            xdg-open "${path_docs}" &
             pesquisar_cliente "${1}"
             ;;
         *)
