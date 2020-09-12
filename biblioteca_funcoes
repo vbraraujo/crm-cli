@@ -89,6 +89,19 @@ enviar_email(){
     pesquisar_cliente "${to_cpf}"
 }
 
+criar_cartao_trello(){
+    #Argumentos: 1 CPF, 2 Destino, 3 Tag
+    local mutt_perfil="$HOME/.config/mutt/accounts/victorbruno-cajatysantiago/settings"
+    local to_mail="${2}"
+
+    qualificacao "${1}"
+
+    local mail_subj="${q_nome} #${3}"
+    local mail_body="${q_nome}, brasileiro(a), ${q_estado_civil}, ${q_profissao}, inscrito sob RG n. ${q_rg} e CPF n. ${q_cpf}, residente e domiciliado à ${q_endereco}, CEP ${q_cep}"
+    
+    echo ${mail_body} | neomutt -F "${mutt_perfil}" -s "${mail_subj}" -- "${to_mail}"
+}
+
 copiar_dados(){
     #Argumentos: 1 cpf
     qualificacao "${1}"
@@ -126,15 +139,15 @@ gerar_documento(){
         s~::objeto::~${11}~g
         s~::data::~${data}~g
     " "${novo_tmp_html}"    
-    pushd "${path_tmp}/tmp" &>/dev/null 2>&1
+    pushd "${path_tmp}/tmp" &> /dev/null
     echo "Gerando arquivo..."
-    libreoffice --convert-to "pdf" "${novo_tmp_html}" &>/dev/null 2>&1 
-    pdftk "${novo_tmp_pdf}" stamp "${timbrado}" output "${novo_pdf}" &>/dev/null 2>&1 
+    libreoffice --convert-to "pdf" "${novo_tmp_html}" &> /dev/null 
+    pdftk "${novo_tmp_pdf}" stamp "${timbrado}" output "${novo_pdf}" &> /dev/null 
     echo "Limpando arquivos temporários..."
-    rm "$novo_tmp_html" "$novo_tmp_pdf" &>/dev/null 2>&1
-    pushd &>/dev/null 2>&1
+    rm "$novo_tmp_html" "$novo_tmp_pdf" &> /dev/null
+    pushd &> /dev/null
     echo "Concluído com sucesso"
-    nohup xdg-open "$PATH_DOCUMENTOS" &>/dev/null 2>&1 
+    xdg-open "$PATH_DOCUMENTOS" &> /dev/null & 
 }
 
 qualificacao(){
@@ -292,8 +305,7 @@ menu_edicao(){
         "Ver Arquivos")
             local path_docs="${PATH_BASE}/clientes/${1}/documentos"
             mkdir -p "${path_docs}" && mkdir -p "${path_docs}/fichas_financeiras" 
-            #nohup xdg-open "${path_docs}" &>/dev/null 2>&1
-            xdg-open "${path_docs}" &
+            xdg-open "${path_docs}" &>/dev/null &
             pesquisar_cliente "${1}"
             ;;
         *)

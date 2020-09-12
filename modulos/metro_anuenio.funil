@@ -8,12 +8,15 @@ TIPO="Reclamação trabalhista"
 COMPETENCIA="TRT10"
 ARQUIVO="${0##*/}"
 PROCESSO=""
+MAIL_TRELLO="victorbra+ykgrr4ds1afohiqdh9c1@boards.trello.com"
 
 PATH_FUNIL_CLIENTE="${PATH_BASE}/clientes/${1}/funis"
 
 FUNIL_ID="$(awk -F "|" '{id=$1+1}END{print id}' ${PATH_FUNIL_CLIENTE})"
 [[ -z "${FUNIL_ID}" ]] && FUNIL_ID=1
 REFERENCIA="${FUNIL_ID}|${ARQUIVO}|${TITULO}|${TIPO}|${COMPETENCIA}|${PROCESSO}|${1}"
+
+criar_cartao_trello "${1}" "${MAIL_TRELLO}" "Anuênio"
 
 # Etapas
 cadastrar_etapas(){
