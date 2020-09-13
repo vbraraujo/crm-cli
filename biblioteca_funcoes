@@ -98,7 +98,7 @@ criar_cartao_trello(){
 
     local mail_subj="${q_nome} #${3}"
     local mail_body="${q_nome}, brasileiro(a), ${q_estado_civil}, ${q_profissao}, inscrito sob RG n. ${q_rg} e CPF n. ${q_cpf}, residente e domiciliado à ${q_endereco}, CEP ${q_cep}"
-    
+    echo "[info]  Criando cartão no Trello..."
     echo ${mail_body} | neomutt -F "${mutt_perfil}" -s "${mail_subj}" -- "${to_mail}"
 }
 
@@ -188,7 +188,7 @@ menu_edicao(){
     me_email="$(echo "$conteudo_atual" | cut -d\| -f4)"
     me_etiquetas="$(echo "$conteudo_atual" | cut -d\| -f5)"
 
-    menu_edicao="Voltar/Sair\nEditar Nome\nEditar CPF\nEditar Telefone\nEditar E-mail\nEditar Status\nEditar Etiquetas\nCopiar dados\nIncluir Histórico\nIncluir Funil\nIncluir Pendência\nVer Histórico\nVer Pendências\nConcluir Pendência\nExcluir Funil\nCadastrar Processo\nEnviar E-mail\nEditar Qualificação\nGerar Documento\nVer Arquivos"
+    menu_edicao="Voltar/Sair\nEditar Nome\nEditar CPF\nEditar Telefone\nEditar E-mail\nEditar Status\nEditar Etiquetas\nCopiar dados\nIncluir Histórico\nIncluir Funil\nIncluir Pendência\nVer Histórico\nVer Pendências\nConcluir Pendência\nExcluir Funil\nCadastrar Processo\nEnviar E-mail\nEditar Qualificação\nGerar Documento\nVer Arquivos\nIncluir comunicação por Whatsapp\nIncluir comunicação por Telegram\nIncluir comunicação por E-Mail\nIncluir comunicação por Telefone"
 
     selected="$(echo -e $menu_edicao | fzf --height=5% --layout=default --prompt 'Selecione uma opção: ')"
     case "$selected" in
@@ -246,8 +246,23 @@ menu_edicao(){
             pesquisar_cliente "${1}"
             ;;
         "Incluir Histórico")
-            read -p "Informe o histórico: " novo_valor
             cadastrar_historico "${1}" "${novo_valor}" "#manual"
+            pesquisar_cliente ${1}
+            ;;
+        "Incluir comunicação por Whatsapp")
+            cadastrar_historico "${1}" "Contato por Whatsapp " "#manual"
+            pesquisar_cliente ${1}
+            ;;
+        "Incluir comunicação por Telegram")
+            cadastrar_historico "${1}" "Contato por Telegram " "#manual"
+            pesquisar_cliente ${1}
+            ;;
+        "Incluir comunicação por E-Mail")
+            cadastrar_historico "${1}" "Contato por E-Mail " "#manual"
+            pesquisar_cliente ${1}
+            ;;
+        "Incluir comunicação por Telefone")
+            cadastrar_historico "${1}" "Contato por Telefone " "#manual"
             pesquisar_cliente ${1}
             ;;
         "Incluir Funil")
