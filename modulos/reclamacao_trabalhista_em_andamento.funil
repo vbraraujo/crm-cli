@@ -2,6 +2,7 @@
 # Módulo para inclusão de funil.
 source "$HOME/Dropbox/RA-Compartilhamento/crm-cli/biblioteca_funcoes"
 
+single_line
 read -e -p "Informe o número do processo: " PROCESSO
 read -e -p "Informe o título da ação: " -i "RT - " TITULO
 

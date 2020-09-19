@@ -17,7 +17,7 @@ FUNIL_ID="$(awk -F "|" '{id=$1+1}END{print id}' ${PATH_FUNIL_CLIENTE})"
 REFERENCIA="${FUNIL_ID}|${ARQUIVO}|${TITULO}|${TIPO}|${COMPETENCIA}|${PROCESSO}|${1}"
 
 criar_cartao_trello "${1}" "${MAIL_TRELLO}" "Descontos2019"
-
+echo "[info] Criando tarefas..."
 # Etapas
 cadastrar_etapas(){
     # Etapa 01: Conhecimento pessoal : DATA_HOJE
