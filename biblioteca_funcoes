@@ -420,7 +420,7 @@ cadastrar_pendencia(){
             [[ ${cp_id} == "" ]] && ${cp_id}=1
             linha="${cp_id}|${DATA_HOJE}|${DATA_UMA_SEMANA}|manual|${cpf}|${descricao}"
             echo -e "$linha" >> "$path_pend"
-            cadastrar_historico "${1}" "Criada pendência [${descricao}]" "#manual"
+            cadastrar_historico "${1}" "Criada pendência [${descricao}]" "#auto"
             pesquisar_cliente ${1}
     fi
 }
@@ -432,7 +432,7 @@ concluir_pendencia(){
             path_pend="${PATH_BASE}/clientes/${1}/pendencias"
             cp_descricao="$(egrep "^${2}\|" ${path_pend} | cut -d\| -f 6)"
             sed -i -E "/^${2}\|/d" "${path_pend}"
-            cadastrar_historico "${1}" "Concluída pendência [${cp_descricao}]" "#manual"
+            cadastrar_historico "${1}" "Concluída pendência [${cp_descricao}]" "#auto"
             pesquisar_cliente ${1}
     fi
 
@@ -629,6 +629,30 @@ relatorios () {
     menu_inicial
 }
 
+exibir_pendencias () {
+    awk -F '|' '
+    {
+        data = ""
+
+        if ($1 != strdata) {
+            strdata = $1
+            gsub("-", " ", $1)
+            data = strftime("%d de %B de %Y", mktime($1" 0 0 0"))
+            if (NR > 1) {
+                data = "\n" data
+                linha = linha "\n"
+            }
+        }
+
+        linha = linha data "\n- " $2 ": " $3
+    }
+
+    END {
+        print linha
+    }
+    ' <<< "$1"
+}
+
 default () {
     #verifica_amb
     while true
@@ -637,7 +661,8 @@ default () {
         text_color "CRM - Seja bem vindo" 2
         single_line
         text_color "PENDÊNCIAS" 3
-        cat ${PATH_BASE}/*/*/pendencias | cut -d\| -f 3,5,6 | sed "s/|/: /g" | sort | head -n20
+        local pendencias="$(cat ${PATH_BASE}/*/*/pendencias | cut -d\| -f 3,5,6 | sort | head -n12)"
+        exibir_pendencias "$pendencias"
         single_line
         menu_inicial
         read -n1
