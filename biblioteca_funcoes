@@ -195,7 +195,7 @@ menu_edicao(){
     me_email="$(echo "$conteudo_atual" | cut -d\| -f4)"
     me_etiquetas="$(echo "$conteudo_atual" | cut -d\| -f5)"
 
-    menu_edicao="Voltar/Sair\nEditar Nome\nEditar CPF\nEditar Telefone\nEditar E-mail\nEditar Status\nEditar Etiquetas\nCopiar dados\nIncluir Anotação\nIncluir Funil\nIncluir Pendência\nVer Histórico\nVer Pendências\nConcluir Pendência\nExcluir Funil\nCadastrar Processo\nEnviar E-mail\nEditar Qualificação\nGerar Documento\nVer Arquivos\nIncluir comunicação por Whatsapp\nIncluir comunicação por Telegram\nIncluir comunicação por E-Mail\nIncluir comunicação por Telefone\nIncluir comunicação Pessoal"
+    menu_edicao="Voltar/Sair\nEditar Nome\nEditar CPF\nEditar Telefone\nEditar E-mail\nEditar Status\nEditar Etiquetas\nCopiar dados\nIncluir Anotação\nIncluir Funil\nIncluir Pendência\nVer Histórico\nVer Pendências\nConcluir Pendência\nExcluir Funil\nCadastrar Processo\nEnviar E-mail\nEditar Qualificação\nGerar Documento\nVer Arquivos\nIncluir comunicação por Whatsapp\nIncluir comunicação por Telegram\nIncluir comunicação por E-Mail\nIncluir comunicação por Telefone\nIncluir comunicação Pessoal\nAdiar Pendências"
 
     selected="$(echo -e $menu_edicao | fzf $FZF_OPT --prompt 'Selecione uma opção: ')"
     case "$selected" in
@@ -322,10 +322,18 @@ menu_edicao(){
         "Concluir Pendência")
             path_pend="${PATH_BASE}/clientes/${1}/pendencias"
             cp_lista="Voltar/Sair\n"
-            #cp_lista+="$(cat "${path_pend}" | cut -d\| -f1,3,6 | sort)"
             cp_lista+="$(awk -F "|" '{print $3"|"$1"|"$6}' "${path_pend}" | sort)"
             cp_id="$(echo -e "$cp_lista" | fzf $FZF_OPT --prompt 'Selecione pendencia a ser concluída: ' | cut -d\| -f2)"
             [[ $cp_id == "Voltar/Sair" ]] && pesquisar_cliente ${1} || concluir_pendencia "${1}" "${cp_id}"
+            ;;
+        "Adiar Pendências")
+            path_pend="${PATH_BASE}/clientes/${1}/pendencias"
+            ap_lista="Voltar/Sair\n"
+            ap_lista+="$(awk -F "|" '{print $3"|"$4"|"$6}' "${path_pend}" | sort)"
+            ap_funil_id="$(echo -e "$ap_lista" | fzf $FZF_OPT --prompt 'Selecione pendencia a ser concluída: ' | cut -d\| -f2)"
+            single_line
+            read -p "Informe a quantidade de dias a serem acrescidos: " dias
+            [[ $ap_funil_id == "Voltar/Sair" ]] && pesquisar_cliente ${1} || adiar_pendencias "${1}" "${ap_funil_id}" "${dias}"
             ;;
         "Ver Pendências")
             vim "${PATH_BASE}/clientes/${1}/pendencias"
@@ -440,6 +448,18 @@ concluir_pendencia(){
             cp_descricao="$(egrep "^${2}\|" ${path_pend} | cut -d\| -f 6)"
             sed -i -E "/^${2}\|/d" "${path_pend}"
             cadastrar_historico "${1}" "Concluída pendência [${cp_descricao}]" "#auto"
+            pesquisar_cliente ${1}
+    fi
+
+}
+
+adiar_pendencias(){
+    #Argumentos: 1 CPF, 2 Id do funil da pendência, 3 Quantidade de dias a acrescentar
+    if [ "$#" -eq 3 ]
+        then
+            path_pend="${PATH_BASE}/clientes/${1}/pendencias"
+            awk -v funil="$2" -v dias="$3" -i inplace -F\| '$4 == funil { cmd = "date -d \""$3" "dias" days\" \"+%Y-%m-%d\"";cmd|getline D; close(cmd); $3=D } 1' OFS="|" "${path_pend}"
+            cadastrar_historico "${1}" "Pendências cadastradas sob [${2}] adiadas em $3 dias" "#auto"
             pesquisar_cliente ${1}
     fi
 
