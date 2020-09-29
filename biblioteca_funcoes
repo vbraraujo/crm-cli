@@ -519,7 +519,9 @@ pesquisar_cliente(){
 }
 
 cadastrar_cliente(){
-    echo Cadastrar cliente
+    cls
+    text_color "CADASTRAR CLIENTE"
+    single_line
     read -p "Nome: " nome
     [[ -z ${nome} ]] && dialog_msg "Nome não informando" && default
     unset cpf
