@@ -657,7 +657,7 @@ relatorios () {
     menu_inicial
 }
 
-exibir_pendencias () {
+old_exibir_pendencias () {
     local c_lista="${PATH_BASE}/clientes/.lista"
     local primeira_linha="true"
 
@@ -683,10 +683,13 @@ exibir_pendencias () {
     printf "${linha}"
 }
 
-old_exibir_pendencias () {
-    local c_lista="${PATH_BASE}/clientes/.lista"
-    # Esta opção possui uma melhor performance, mas não consegui substituir o CPF pelo nome
+exibir_pendencias () {
+    cat ${PATH_BASE}/clientes/*/pendencias | cut -d\| -f 3,5,6 | sort | head -n12 > "${PATH_BASE}/tmp/.pendencias"
+    local p_lista="${PATH_BASE}/clientes/.lista"
+    local p_pendencias="${PATH_BASE}/tmp/.pendencias"
+
     awk -F\| '
+        NR == FNR { cliente[$2] = substr($1,0,20); next }
         {
             data = ""
 
@@ -694,18 +697,18 @@ old_exibir_pendencias () {
                 strdata = $1
                 gsub("-", " ", $1)
                 data = strftime("%d de %B de %Y", mktime($1" 0 0 0"))
-                if (NR > 1) {
+                if (FNR > 1) {
                     data = "\n" data
                     linha = linha "\n"
                 }
             }
-            linha = linha data "\n- " $2 ": " $3
+            linha = linha data "\n- " cliente[$2] ": " $3
         }
 
         END {
             print linha
         }
-    ' <<< "$1"
+    ' "$p_lista" "$p_pendencias"
 }
 
 default () {
@@ -716,8 +719,7 @@ default () {
         text_color "CRM - Seja bem vindo" 2
         single_line
         text_color "PENDÊNCIAS" 3
-        pendencias="$(cat ${PATH_BASE}/*/*/pendencias | cut -d\| -f 3,5,6 | sort | head -n12)"
-        exibir_pendencias "$pendencias"
+        exibir_pendencias
         menu_inicial
         read -n1
     done
