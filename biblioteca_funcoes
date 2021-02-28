@@ -2,7 +2,7 @@
 # Script para controle e acompanhamento de relacionamento com cliente
 
 # Variáveis do usuário
-PATH_BASE="$HOME/Dropbox/RA-Compartilhamento/crm-cli"
+PATH_BASE="/mnt/Arquivos/Nextcloud/RochaAraujo/RA-Compartilhamento/crm-cli"
 PATH_DOCUMENTOS="${HOME}/Downloads"
 
 # Variáveis do sistema
@@ -111,7 +111,16 @@ copiar_dados(){
     local cd_menu="${cd_qualificacao}\n${cd_cadastro}\n${cd_processos}"
     local selected="$(echo -e "${cd_menu}" | fzf $FZF_OPT --prompt 'Selecione dado a ser copiado ')"
     [ "$selected" != "" ] || exit
-    echo "${selected#*: }" | xclip -selection clipboard
+    echo "${selected#*: }" | xclip -selection clipboard && \
+    notify-send "CRM-CLI" "Texto copiado no clipboard." -u low &
+}
+
+informar_processos(){
+    #Argumentos: 1 cpf, 2 titulo
+    local titulo="$2"
+    texto="$(awk -F"|" -v titulo="$titulo" 'BEGIN{ line = titulo } { line = line "\n"$3 " (" $6 "): " } END{ print line }' "$PATH_BASE/clientes/$1/funis")"
+
+    echo "$texto" | xclip -selection clipboard && \
     notify-send "CRM-CLI" "Texto copiado no clipboard." -u low &
 }
 
@@ -195,7 +204,7 @@ menu_edicao(){
     me_email="$(echo "$conteudo_atual" | cut -d\| -f4)"
     me_etiquetas="$(echo "$conteudo_atual" | cut -d\| -f5)"
 
-    menu_edicao="Voltar/Sair\nEditar Nome\nEditar CPF\nEditar Telefone\nEditar E-mail\nEditar Status\nEditar Etiquetas\nCopiar dados\nIncluir Anotação\nIncluir Funil\nIncluir Pendência\nVer Histórico\nVer Pendências\nConcluir Pendência\nExcluir Funil\nCadastrar Processo\nEnviar E-mail\nEditar Qualificação\nGerar Documento\nVer Arquivos\nIncluir comunicação por Whatsapp\nIncluir comunicação por Telegram\nIncluir comunicação por E-Mail\nIncluir comunicação por Telefone\nIncluir comunicação Pessoal\nAdiar Pendências"
+    menu_edicao="Voltar/Sair\nEditar Nome\nEditar CPF\nEditar Telefone\nEditar E-mail\nEditar Status\nEditar Etiquetas\nCopiar dados\nIncluir Anotação\nIncluir Funil\nIncluir Pendência\nVer Histórico\nVer Pendências\nConcluir Pendência\nExcluir Funil\nCadastrar Processo\nEnviar E-mail\nEditar Qualificação\nGerar Documento\nVer Arquivos\nIncluir comunicação por Whatsapp\nIncluir comunicação por Telegram\nIncluir comunicação por E-Mail\nIncluir comunicação por Telefone\nIncluir comunicação Pessoal\nAdiar Pendências\nAtualização de andamentos"
 
     selected="$(echo -e $menu_edicao | fzf $FZF_OPT --prompt 'Selecione uma opção: ')"
     case "$selected" in
@@ -355,6 +364,11 @@ menu_edicao(){
             local path_docs="${PATH_BASE}/clientes/${1}/documentos"
             mkdir -p "${path_docs}" && mkdir -p "${path_docs}/fichas_financeiras" 
             xdg-open "${path_docs}" &>/dev/null &
+            pesquisar_cliente "${1}"
+            ;;
+
+        "Atualização de andamentos")
+            informar_processos "${1}" "Atualização de andamentos:"
             pesquisar_cliente "${1}"
             ;;
         *)

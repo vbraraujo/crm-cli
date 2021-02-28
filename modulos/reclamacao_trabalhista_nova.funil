@@ -1,6 +1,6 @@
 #! /bin/bash
 # Módulo para inclusão de funil.
-source "$HOME/Dropbox/RA-Compartilhamento/crm-cli/biblioteca_funcoes"
+source "/mnt/Arquivos/Nextcloud/RochaAraujo/RA-Compartilhamento/crm-cli/biblioteca_funcoes"
 
 # Variáveis do sistema
 single_line

@@ -1,6 +1,6 @@
 #! /bin/bash
 # Script para controle e acompanhamento de relacionamento com cliente
-source "$HOME/Dropbox/RA-Compartilhamento/crm-cli/biblioteca_funcoes"
+source "/mnt/Arquivos/Nextcloud/RochaAraujo/RA-Compartilhamento/crm-cli/biblioteca_funcoes"
 
 # Execução
 default
