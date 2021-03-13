@@ -17,7 +17,7 @@ DATA_AGORA="$(printf '%(%Y-%m-%d_%H%M)T\n' -1)"
 DATA_UMA_SEMANA="$(date --date="1 week" +"%Y-%m-%d")"
 LISTA_FUNIL="$(find "${PATH_FUNIS}/" -name "*.funil" -printf "%f\n")"
 LISTA_MODELOS="$(find "${PATH_MODELOS}/" -name "*.html" -printf "%f\n")"
-FZF_OPT="--height=20% --layout=default --border"
+FZF_OPT="-i --height=20% --layout=default --border"
 
 # Funções
 limpa_numeros(){
@@ -111,7 +111,7 @@ copiar_dados(){
     local cd_menu="${cd_qualificacao}\n${cd_cadastro}\n${cd_processos}"
     local selected="$(echo -e "${cd_menu}" | fzf $FZF_OPT --prompt 'Selecione dado a ser copiado ')"
     [ "$selected" != "" ] || exit
-    echo "${selected#*: }" | xclip -selection clipboard && \
+    echo "${selected#*: }" | tr -d '\n' | xclip -selection clipboard && \
     notify-send "CRM-CLI" "Texto copiado no clipboard." -u low &
 }
 
