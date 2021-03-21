@@ -329,23 +329,23 @@ menu_edicao(){
             pesquisar_cliente "${1}"
             ;;
         "Concluir Pendência")
-            path_pend="${PATH_BASE}/clientes/${1}/pendencias"
+            path_pend="${PATH_BASE}/clientes/.pendencias"
             cp_lista="Voltar/Sair\n"
-            cp_lista+="$(awk -F "|" '{print $3"|"$1"|"$6}' "${path_pend}" | sort)"
+            cp_lista+="$(awk -F "|" -v cpf="$1" '$5==cpf {print $3"|"$1"|"$6}' "${path_pend}" | sort)"
             cp_id="$(echo -e "$cp_lista" | fzf $FZF_OPT --prompt 'Selecione pendencia a ser concluída: ' | cut -d\| -f2)"
             [[ $cp_id == "Voltar/Sair" ]] && pesquisar_cliente ${1} || concluir_pendencia "${1}" "${cp_id}"
             ;;
         "Adiar Pendências")
-            path_pend="${PATH_BASE}/clientes/${1}/pendencias"
+            path_pend="${PATH_BASE}/clientes/.pendencias"
             ap_lista="Voltar/Sair\n"
-            ap_lista+="$(awk -F "|" '{print $3"|"$4"|"$6}' "${path_pend}" | sort)"
+            ap_lista+="$(awk -F "|" -v cpf="$1" '$5==cpf {print $3"|"$4"|"$6}' "${path_pend}" | sort)"
             ap_funil_id="$(echo -e "$ap_lista" | fzf $FZF_OPT --prompt 'Selecione pendencia a ser concluída: ' | cut -d\| -f2)"
             single_line
             read -p "Informe a quantidade de dias a serem acrescidos: " dias
             [[ $ap_funil_id == "Voltar/Sair" ]] && pesquisar_cliente ${1} || adiar_pendencias "${1}" "${ap_funil_id}" "${dias}"
             ;;
         "Ver Pendências")
-            vim "${PATH_BASE}/clientes/${1}/pendencias"
+            vim "${PATH_BASE}/clientes/.pendencias"
             pesquisar_cliente "${1}"
             ;;
         "Ver Histórico")
@@ -390,7 +390,7 @@ excluir_funil(){
     if [ "$#" -eq 2 ]
         then
             path_funil="${PATH_BASE}/clientes/${1}/funis"
-            path_pend="${PATH_BASE}/clientes/${1}/pendencias"
+            path_pend="${PATH_BASE}/clientes/.pendencias"
             ef_id="$(egrep "${2}" ${path_funil} | cut -d\| -f 1)"
             ef_descricao="$(egrep "${2}" ${path_funil} | cut -d\| -f 3)"
             sed -i -E "/^${2}\|/d" "${path_funil}"
@@ -432,7 +432,7 @@ cadastrar_pendencia(){
     #Argumentos: 1 CPF, 2 limite, 3 origem, 4 descrição
     if [ "$#" -eq 4 ]
         then
-            path_pend="${PATH_BASE}/clientes/${1}/pendencias"
+            path_pend="${PATH_BASE}/clientes/.pendencias"
             cp_id="$(awk '{id=$1+1}END{print id}' ${path_pend})"
             [[ -z "${cp_id}" ]] && cp_id=1
             #Linha: data | limite | origem | cpf | descrição
@@ -444,7 +444,7 @@ cadastrar_pendencia(){
             echo "Não foi possível criar pendência automática. Favor informar os dados a seguir."
             read -p "Descrição: " descricao
             read -p "CPF: " cpf
-            path_pend="${PATH_BASE}/clientes/${cpf}/pendencias"
+            path_pend="${PATH_BASE}/clientes/.pendencias"
             cp_id="$(awk '{id=$1+1}END{print id}' ${path_pend})"
             [[ ${cp_id} == "" ]] && ${cp_id}=1
             linha="${cp_id}|${DATA_HOJE}|${DATA_UMA_SEMANA}|manual|${cpf}|${descricao}"
@@ -458,7 +458,7 @@ concluir_pendencia(){
     #Argumentos: 1 CPF, 2 Id da pendência
     if [ "$#" -eq 2 ]
         then
-            path_pend="${PATH_BASE}/clientes/${1}/pendencias"
+            path_pend="${PATH_BASE}/clientes/.pendencias"
             cp_descricao="$(egrep "^${2}\|" ${path_pend} | cut -d\| -f 6)"
             sed -i -E "/^${2}\|/d" "${path_pend}"
             cadastrar_historico "${1}" "Concluída pendência [${cp_descricao}]" "#auto"
@@ -471,7 +471,7 @@ adiar_pendencias(){
     #Argumentos: 1 CPF, 2 Id do funil da pendência, 3 Quantidade de dias a acrescentar
     if [ "$#" -eq 3 ]
         then
-            path_pend="${PATH_BASE}/clientes/${1}/pendencias"
+            path_pend="${PATH_BASE}/clientes/.pendencias"
             awk -v funil="$2" -v dias="$3" -i inplace -F\| '$4 == funil { cmd = "date -d \""$3" "dias" days\" \"+%Y-%m-%d\"";cmd|getline D; close(cmd); $3=D } 1' OFS="|" "${path_pend}"
             cadastrar_historico "${1}" "Pendências cadastradas sob [${2}] adiadas em $3 dias" "#auto"
             pesquisar_cliente ${1}
@@ -522,7 +522,7 @@ pesquisar_cliente(){
     head -n6 "${path_cliente}/cadastro"
     single_line
     text_color "PENDENCIAS"
-    cat "${path_cliente}/pendencias" | cut -d\| -f 3,6 | sed "s/|/: /g" | sort | head -n5
+    grep ${cpf} "${PATH_BASE}/clientes/.pendencias" | cut -d\| -f 3,6 | sed "s/|/: /g" | sort | head -n5
     single_line
     text_color "FUNIS"
     cat "${path_cliente}/funis" | cut -d\| -f 3,6 | sed "s/|/: /g"
@@ -558,7 +558,6 @@ cadastrar_cliente(){
     echo -e "$cliente_lista" >> "${PATH_BASE}/clientes/.lista"
     cadastrar_historico "$cpf" "Cliente cadastrado" "#manual"
 
-    > "${destino}/pendencias"
     > "${destino}/funis"
 
     mkdir "${destino}/mails" && mkdir "${destino}/mails/pendentes" && mkdir "${destino}/mails/enviados"
@@ -655,7 +654,7 @@ editar_cliente(){
 
 relatorios () {
     local clientes="$(wc -l ${PATH_BASE}/clientes/.lista | xargs echo | cut -d' ' -f1)"
-    local pendencias="$(wc -l ${PATH_BASE}/*/*/pendencias | egrep 'total' | xargs echo | cut -d' ' -f1)"
+    local pendencias="$(wc -l ${PATH_BASE}/clientes/.pendencias | egrep 'total' | xargs echo | cut -d' ' -f1)"
     local path_funis="$(cat ${PATH_BASE}/clientes/*/funis)"
     local funis="$(echo -e "${path_funis}" | cut -d\| -f2 | sort -bgr | uniq -c)"
 
@@ -698,7 +697,7 @@ old_exibir_pendencias () {
 }
 
 exibir_pendencias () {
-    cat ${PATH_BASE}/clientes/*/pendencias | cut -d\| -f 3,5,6 | sort | head -n12 > "${PATH_BASE}/tmp/.pendencias"
+    cat ${PATH_BASE}/clientes/.pendencias | cut -d\| -f 3,5,6 | sort | head -n12 > "${PATH_BASE}/tmp/.pendencias"
     local p_lista="${PATH_BASE}/clientes/.lista"
     local p_pendencias="${PATH_BASE}/tmp/.pendencias"
 
