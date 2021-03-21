@@ -204,7 +204,7 @@ menu_edicao(){
     me_email="$(echo "$conteudo_atual" | cut -d\| -f4)"
     me_etiquetas="$(echo "$conteudo_atual" | cut -d\| -f5)"
 
-    menu_edicao="Voltar/Sair\nEditar Nome\nEditar CPF\nEditar Telefone\nEditar E-mail\nEditar Status\nEditar Etiquetas\nCopiar dados\nIncluir Anotação\nIncluir Funil\nIncluir Pendência\nVer Histórico\nVer Pendências\nConcluir Pendência\nExcluir Funil\nCadastrar Processo\nEnviar E-mail\nEditar Qualificação\nGerar Documento\nVer Arquivos\nIncluir comunicação por Whatsapp\nIncluir comunicação por Telegram\nIncluir comunicação por E-Mail\nIncluir comunicação por Telefone\nIncluir comunicação Pessoal\nAdiar Pendências\nAtualização de andamentos"
+    menu_edicao="Voltar/Sair\nEditar Nome\nEditar CPF\nEditar Telefone\nEditar E-mail\nEditar Status\nEditar Etiquetas\nCopiar dados\nIncluir Anotação\nIncluir Funil\nIncluir Pendência\nVer Cadastro\nVer Histórico\nVer Pendências\nConcluir Pendência\nExcluir Funil\nCadastrar Processo\nEnviar E-mail\nEditar Qualificação\nGerar Documento\nVer Arquivos\nIncluir comunicação por Whatsapp\nIncluir comunicação por Telegram\nIncluir comunicação por E-Mail\nIncluir comunicação por Telefone\nIncluir comunicação Pessoal\nAdiar Pendências\nAtualização de andamentos"
 
     selected="$(echo -e $menu_edicao | fzf $FZF_OPT --prompt 'Selecione uma opção: ')"
     case "$selected" in
@@ -343,6 +343,10 @@ menu_edicao(){
             single_line
             read -p "Informe a quantidade de dias a serem acrescidos: " dias
             [[ $ap_funil_id == "Voltar/Sair" ]] && pesquisar_cliente ${1} || adiar_pendencias "${1}" "${ap_funil_id}" "${dias}"
+            ;;
+        "Ver Cadastro")
+            vim "${PATH_BASE}/clientes/${1}/cadastro"
+            pesquisar_cliente "${1}"
             ;;
         "Ver Pendências")
             vim "${PATH_BASE}/clientes/.pendencias"

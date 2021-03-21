@@ -12,7 +12,6 @@ limpa_numeros(){
 }
 
 criar_ficha_cadastro(){
-
     while read line; do
         cadastro_content="$(echo "$line" | awk -F"';'" '{ if ( $11 == "DESLIGADO" ) { tag = "ex-metro" }
         else { tag = "metro" }
@@ -20,8 +19,14 @@ criar_ficha_cadastro(){
         }')"
         cpf="$( awk -F"';'" '{ print $27 }' <<< "$line" )"
         destino="$HOME/Downloads/fichas/clientes/${cpf}"
+        #destino="/mnt/Arquivos/Nextcloud/RochaAraujo/RA-Compartilhamento/crm-cli/clientes/${cpf}"
         echo "$destino"
-        [[ -d $destino ]] && echo -e "$cadastro_content" > "${destino}/cadastro"
+        #[[ -d $destino ]] && echo -e "$cadastro_content" > "${destino}/cadastro"
+
+        mkdir "$destino" && echo -e "$cadastro_content" > "${destino}/cadastro"
+        mkdir -p "${destino}/documentos/fichas_financeiras"
+        > "${destino}/funis"
+        echo "2021-03-19: Cliente cadastrado #auto" > "${destino}/historico"
     done < "${1}"
 }
 
@@ -31,5 +36,15 @@ completar_cadastro () {
     done 
 }
 
-completar_cadastro
+mover_ficha () {
+    for file in *.pdf ;
+    do
+        cpf=${file%%_*}
+        #destino="/mnt/Arquivos/Nextcloud/RochaAraujo/RA-Compartilhamento/crm-cli/clientes/${cpf}/documentos/"
+        destino="$HOME/Downloads/fichas/clientes/${cpf}/documentos/"
+        [[ -d "${destino}" ]] && mv $file $destino && echo "[info] $file movido com sucesso"
+    done
+}
+#criar_ficha_cadastro "$@"
+mover_ficha
 echo "$(tput setaf 2)[info] Cliente cadastrado com sucesso.$(tput sgr0)"
