@@ -2,12 +2,10 @@
 # Script para controle e acompanhamento de relacionamento com cliente
 
 # Variáveis do usuário
-PATH_BASE="/mnt/Arquivos/Nextcloud/RochaAraujo/RA-Compartilhamento/crm-cli"
-PATH_DOCUMENTOS="${HOME}/Downloads"
+#PATH_BASE="/mnt/Arquivos/Nextcloud/RochaAraujo/RA-Compartilhamento/crm-cli"
+#PATH_DOCUMENTOS="${HOME}/Downloads"
 
 # Variáveis do sistema
-source "${PATH_BASE}/bash-ui"
-
 PATH_CLIENTES_LISTA="${PATH_BASE}/clientes/.lista"
 PATH_FUNIS="${PATH_BASE}/modulos"
 PATH_MODELOS="${PATH_BASE}/documentos/modelos"
