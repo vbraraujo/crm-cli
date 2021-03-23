@@ -1,8 +1,8 @@
 #! /bin/bash
 # Módulo para inclusão de funil.
-source "/mnt/Arquivos/Nextcloud/RochaAraujo/RA-Compartilhamento/crm-cli/biblioteca_funcoes"
-
 single_line
+echo "INCLUIR FUNIL" 
+
 read -e -p "Informe o número do processo: " PROCESSO
 read -e -p "Informe o título da ação: " -i "RT - " TITULO
 

@@ -97,7 +97,7 @@ criar_cartao_trello(){
     local mail_subj="${q_nome} #${3}"
     local mail_body="${q_nome}, brasileiro(a), ${q_estado_civil}, ${q_profissao}, inscrito sob RG n. ${q_rg} e CPF n. ${q_cpf}, residente e domiciliado à ${q_endereco}, CEP ${q_cep}"
     echo "[info]  Criando cartão no Trello..."
-    echo ${mail_body} | neomutt -F "${mutt_perfil}" -s "${mail_subj}" -- "${to_mail}"
+    echo ${mail_body} | neomutt -F "${mutt_perfil}" -s "${mail_subj}" -- "${to_mail}" &> /dev/null
 }
 
 copiar_dados(){
@@ -383,7 +383,7 @@ cadastrar_funil(){
     #Argumentos: 1 CPF, 2 arquivo do funil
     if [ "$#" -eq 2 ]
         then
-           "$PATH_FUNIS/${2}" "${1}"
+           source "$PATH_FUNIS/${2}"
     fi
 }
 

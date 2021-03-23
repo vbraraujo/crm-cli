@@ -1,6 +1,7 @@
 #! /bin/bash
 # Módulo para inclusão de funil.
-source "/mnt/Arquivos/Nextcloud/RochaAraujo/RA-Compartilhamento/crm-cli/biblioteca_funcoes"
+single_line
+echo "INCLUIR FUNIL" 
 
 # Variáveis do sistema
 TITULO="Acompanhamento processual"
