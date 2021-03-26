@@ -279,7 +279,6 @@
 673|2020-12-16|2021-10-12|funil_id3|46182160187|Atualizar sobre RT - Retroativo 2015
 674|2020-12-16|2021-12-11|funil_id3|46182160187|Atualizar sobre RT - Retroativo 2015
 675|2020-12-16|2022-01-20|funil_id3|46182160187|Atualizar sobre RT - Retroativo 2015
-688|2020-09-25|2021-03-24|funil_id2|48427349149|Atualizar sobre RT - PES 1994
 689|2020-09-25|2021-05-23|funil_id2|48427349149|Atualizar sobre RT - PES 1994
 690|2020-09-25|2021-07-22|funil_id2|48427349149|Atualizar sobre RT - PES 1994
 691|2020-09-25|2021-09-20|funil_id2|48427349149|Atualizar sobre RT - PES 1994
@@ -325,9 +324,6 @@
 765|2021-02-24|2021-10-22|funil_id3|50439499372|Atualizar sobre ação de Desc. 2019
 766|2021-02-24|2021-11-21|funil_id3|50439499372|Atualizar sobre ação de Desc. 2019
 767|2021-02-24|2021-12-21|funil_id3|50439499372|Atualizar sobre ação de Desc. 2019
-795|2021-03-17|2021-03-29|funil_id2|52355640149|Coletar docs. ação do Anuênio
-796|2021-03-17|2021-03-31|funil_id2|52355640149|Preparar cálculos e inicial para ação do Anuênio
-797|2021-03-17|2021-04-04|funil_id2|52355640149|Informar protocolo ação do Anuênio
 798|2021-03-17|2021-05-16|funil_id2|52355640149|Atualizar sobre ação do Anuênio
 799|2021-03-17|2021-07-15|funil_id2|52355640149|Atualizar sobre ação do Anuêncio
 800|2021-03-17|2021-09-13|funil_id2|52355640149|Atualizar sobre ação do Anuêncio
@@ -335,12 +331,6 @@
 802|2021-03-17|2021-11-12|funil_id2|52355640149|Atualizar sobre ação do Anuêncio
 803|2021-03-17|2021-12-12|funil_id2|52355640149|Atualizar sobre ação do Anuêncio
 804|2021-03-17|2022-01-11|funil_id2|52355640149|Atualizar sobre ação do Anuêncio
-805|2021-03-17|2021-03-17|funil_id3|52355640149|Apresentação pessoal
-806|2021-03-17|2021-03-24|funil_id3|52355640149|Apresentar ação de Desc. 2019
-807|2021-03-17|2021-03-27|funil_id3|52355640149|Confirmar interesse em ação de Desc. 2019
-808|2021-03-17|2021-03-28|funil_id3|52355640149|Enviar PDC ação de Desc. 2019
-809|2021-03-17|2021-03-29|funil_id3|52355640149|Coletar docs. ação de Desc. 2019
-810|2021-03-17|2021-03-31|funil_id3|52355640149|Preparar inicial ação de Desc. 2019
 811|2021-03-17|2021-04-04|funil_id3|52355640149|Informar protocolo ação de rest. 2019
 812|2021-03-17|2021-05-16|funil_id3|52355640149|Atualizar sobre ação de Desc. 2019
 813|2021-03-17|2021-07-15|funil_id3|52355640149|Atualizar sobre ação de Desc. 2019
@@ -515,8 +505,6 @@
 1223|2020-09-13|2021-05-11|funil_id2|76565947104|Atualizar sobre ação do Anuêncio
 1224|2020-09-13|2021-06-10|funil_id2|76565947104|Atualizar sobre ação do Anuêncio
 1225|2020-09-13|2021-07-10|funil_id2|76565947104|Atualizar sobre ação do Anuêncio
-1234|2021-03-13|2021-03-27|funil_id2|77008839120|Preparar inicial ação de Desc. 2019
-1235|2021-03-13|2021-03-31|funil_id2|77008839120|Informar protocolo ação de rest. 2019
 1236|2021-03-13|2021-05-12|funil_id2|77008839120|Atualizar sobre ação de Desc. 2019
 1237|2021-03-13|2021-07-11|funil_id2|77008839120|Atualizar sobre ação de Desc. 2019
 1238|2021-03-13|2021-09-09|funil_id2|77008839120|Atualizar sobre ação de Desc. 2019
@@ -667,3 +655,52 @@
 1540|2021-03-22|2021-11-17|funil_id2|00573327114|Atualizar sobre ação de Desc. 2019
 1541|2021-03-22|2021-12-17|funil_id2|00573327114|Atualizar sobre ação de Desc. 2019
 1542|2021-03-22|2022-01-16|funil_id2|00573327114|Atualizar sobre ação de Desc. 2019
+1544|2021-03-24|2021-05-23|funil_id1|02224759193|Atualizar sobre RT - PES 1994
+1545|2021-03-24|2021-07-22|funil_id1|02224759193|Atualizar sobre RT - PES 1994
+1546|2021-03-24|2021-09-20|funil_id1|02224759193|Atualizar sobre RT - PES 1994
+1547|2021-03-24|2021-11-19|funil_id1|02224759193|Atualizar sobre RT - PES 1994
+1548|2021-03-24|2022-01-18|funil_id1|02224759193|Atualizar sobre RT - PES 1994
+1549|2021-03-24|2022-03-19|funil_id1|02224759193|Atualizar sobre RT - PES 1994
+1550|2021-03-24|2022-04-28|funil_id1|02224759193|Atualizar sobre RT - PES 1994
+1552|2021-03-25|2021-05-24|funil_id1|24899295855|Atualizar sobre RT - Multa atestados
+1553|2021-03-25|2021-07-23|funil_id1|24899295855|Atualizar sobre RT - Multa atestados
+1554|2021-03-25|2021-09-21|funil_id1|24899295855|Atualizar sobre RT - Multa atestados
+1555|2021-03-25|2021-11-20|funil_id1|24899295855|Atualizar sobre RT - Multa atestados
+1556|2021-03-25|2022-01-19|funil_id1|24899295855|Atualizar sobre RT - Multa atestados
+1557|2021-03-25|2022-03-20|funil_id1|24899295855|Atualizar sobre RT - Multa atestados
+1558|2021-03-25|2022-04-29|funil_id1|24899295855|Atualizar sobre RT - Multa atestados
+1560|2021-03-25|2021-05-24|funil_id1|00594280150|Atualizar sobre RT - Multa atestados
+1561|2021-03-25|2021-07-23|funil_id1|00594280150|Atualizar sobre RT - Multa atestados
+1562|2021-03-25|2021-09-21|funil_id1|00594280150|Atualizar sobre RT - Multa atestados
+1563|2021-03-25|2021-11-20|funil_id1|00594280150|Atualizar sobre RT - Multa atestados
+1564|2021-03-25|2022-01-19|funil_id1|00594280150|Atualizar sobre RT - Multa atestados
+1565|2021-03-25|2022-03-20|funil_id1|00594280150|Atualizar sobre RT - Multa atestados
+1566|2021-03-25|2022-04-29|funil_id1|00594280150|Atualizar sobre RT - Multa atestados
+1568|2021-03-26|2021-05-25|funil_id1|50460331191|Atualizar sobre RT - Descontos 2019
+1569|2021-03-26|2021-07-24|funil_id1|50460331191|Atualizar sobre RT - Descontos 2019
+1570|2021-03-26|2021-09-22|funil_id1|50460331191|Atualizar sobre RT - Descontos 2019
+1571|2021-03-26|2021-11-21|funil_id1|50460331191|Atualizar sobre RT - Descontos 2019
+1572|2021-03-26|2022-01-20|funil_id1|50460331191|Atualizar sobre RT - Descontos 2019
+1573|2021-03-26|2022-03-21|funil_id1|50460331191|Atualizar sobre RT - Descontos 2019
+1574|2021-03-26|2022-04-30|funil_id1|50460331191|Atualizar sobre RT - Descontos 2019
+1576|2021-03-26|2021-05-25|funil_id1|03611681601|Atualizar sobre RT - Multa atestados
+1577|2021-03-26|2021-07-24|funil_id1|03611681601|Atualizar sobre RT - Multa atestados
+1578|2021-03-26|2021-09-22|funil_id1|03611681601|Atualizar sobre RT - Multa atestados
+1579|2021-03-26|2021-11-21|funil_id1|03611681601|Atualizar sobre RT - Multa atestados
+1580|2021-03-26|2022-01-20|funil_id1|03611681601|Atualizar sobre RT - Multa atestados
+1581|2021-03-26|2022-03-21|funil_id1|03611681601|Atualizar sobre RT - Multa atestados
+1582|2021-03-26|2022-04-30|funil_id1|03611681601|Atualizar sobre RT - Multa atestados
+1583|2021-03-26|2021-03-26|funil_id1|00209345136|Apresentação pessoal
+1584|2021-03-26|2021-04-02|funil_id1|00209345136|Apresentar ação de ACumpDCG 2019
+1585|2021-03-26|2021-04-05|funil_id1|00209345136|Confirmar interesse em ação de ACumpDCG 2019
+1586|2021-03-26|2021-04-06|funil_id1|00209345136|Enviar PDC ação de ACumpDCG 2019
+1587|2021-03-26|2021-04-07|funil_id1|00209345136|Coletar docs. ação de ACumpDCG 2019
+1588|2021-03-26|2021-04-09|funil_id1|00209345136|Preparar inicial ação de ACumpDCG 2019
+1589|2021-03-26|2021-04-13|funil_id1|00209345136|Informar protocolo ação de ACumpDCG 2019
+1590|2021-03-26|2021-05-25|funil_id1|00209345136|Atualizar sobre ação de ACumpDCG 2019
+1591|2021-03-26|2021-07-24|funil_id1|00209345136|Atualizar sobre ação de ACumpDCG 2019
+1592|2021-03-26|2021-09-22|funil_id1|00209345136|Atualizar sobre ação de ACumpDCG 2019
+1593|2021-03-26|2021-10-22|funil_id1|00209345136|Atualizar sobre ação de ACumpDCG 2019
+1594|2021-03-26|2021-11-21|funil_id1|00209345136|Atualizar sobre ação de ACumpDCG 2019
+1595|2021-03-26|2021-12-21|funil_id1|00209345136|Atualizar sobre ação de ACumpDCG 2019
+1596|2021-03-26|2022-01-20|funil_id1|00209345136|Atualizar sobre ação de ACumpDCG 2019

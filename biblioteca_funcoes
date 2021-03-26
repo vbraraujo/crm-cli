@@ -7,13 +7,14 @@
 
 # Variáveis do sistema
 PATH_CLIENTES_LISTA="${PATH_BASE}/clientes/.lista"
-PATH_FUNIS="${PATH_BASE}/modulos"
+PATH_MODULOS="${PATH_BASE}/modulos"
 PATH_MODELOS="${PATH_BASE}/documentos/modelos"
 MENU_INICIAL="Pesquisar cliente\nCadastrar cliente\nRelatórios\nSair"
 DATA_HOJE="$(printf '%(%Y-%m-%d)T\n' -1)"
 DATA_AGORA="$(printf '%(%Y-%m-%d_%H%M)T\n' -1)"
 DATA_UMA_SEMANA="$(date --date="1 week" +"%Y-%m-%d")"
-LISTA_FUNIL="$(find "${PATH_FUNIS}/" -name "*.funil" -printf "%f\n")"
+LISTA_FUNIL="$(find "${PATH_MODULOS}/" -name "*.funil" -printf "%f\n")"
+LISTA_CALCULOS="$(find "${PATH_MODULOS}/" -name "*.calculos" -printf "%f\n")"
 LISTA_MODELOS="$(find "${PATH_MODELOS}/" -name "*.html" -printf "%f\n")"
 FZF_OPT="-i --height=20% --layout=default --border"
 
@@ -202,7 +203,7 @@ menu_edicao(){
     me_email="$(echo "$conteudo_atual" | cut -d\| -f4)"
     me_etiquetas="$(echo "$conteudo_atual" | cut -d\| -f5)"
 
-    menu_edicao="Voltar/Sair\nEditar Nome\nEditar CPF\nEditar Telefone\nEditar E-mail\nEditar Status\nEditar Etiquetas\nCopiar dados\nIncluir Anotação\nIncluir Funil\nIncluir Pendência\nVer Cadastro\nVer Histórico\nVer Pendências\nConcluir Pendência\nExcluir Funil\nCadastrar Processo\nEnviar E-mail\nEditar Qualificação\nGerar Documento\nVer Arquivos\nIncluir comunicação por Whatsapp\nIncluir comunicação por Telegram\nIncluir comunicação por E-Mail\nIncluir comunicação por Telefone\nIncluir comunicação Pessoal\nAdiar Pendências\nAtualização de andamentos"
+    menu_edicao="Voltar/Sair\nEditar Nome\nEditar CPF\nEditar Telefone\nEditar E-mail\nEditar Status\nEditar Etiquetas\nCopiar dados\nIncluir Anotação\nIncluir Funil\nIncluir Pendência\nVer Cadastro\nVer Histórico\nVer Pendências\nConcluir Pendência\nExcluir Funil\nCadastrar Processo\nEnviar E-mail\nEditar Qualificação\nGerar Documento\nVer Arquivos\nIncluir comunicação por Whatsapp\nIncluir comunicação por Telegram\nIncluir comunicação por E-Mail\nIncluir comunicação por Telefone\nIncluir comunicação Pessoal\nAdiar Pendências\nAtualização de andamentos\nCálculos"
 
     selected="$(echo -e $menu_edicao | fzf $FZF_OPT --prompt 'Selecione uma opção: ')"
     case "$selected" in
@@ -298,6 +299,11 @@ menu_edicao(){
             if_arquivo="$(echo -e "$LISTA_FUNIL" | fzf $FZF_OPT --prompt 'Selecione funil a incluir: ')"
             cadastrar_funil "${1}" "${if_arquivo}"
             ;;
+        "Cálculos")
+            single_line
+            calc_arquivo="$(echo -e "$LISTA_CALCULOS" | fzf $FZF_OPT --prompt 'Selecione o cálculos a ser feito: ')"
+            fazer_calculo "${1}" "${calc_arquivo}"
+            ;;
         "Excluir Funil")
             single_line
             ef_lista="Voltar/Sair\n"
@@ -383,7 +389,21 @@ cadastrar_funil(){
     #Argumentos: 1 CPF, 2 arquivo do funil
     if [ "$#" -eq 2 ]
         then
-           source "$PATH_FUNIS/${2}"
+            single_line
+            echo "INCLUIR FUNIL"
+            source "$PATH_MODULOS/${2}"
+            pesquisar_cliente "${1}"
+    fi
+}
+
+fazer_calculo(){
+    #Argumentos: 1 CPF, 2 arquivo do funil
+    if [ "$#" -eq 2 ]
+        then
+            single_line
+            echo "FAZER CALCULO"
+            source "$PATH_MODULOS/${2}"
+            pesquisar_cliente "${1}"
     fi
 }
 
@@ -521,7 +541,7 @@ pesquisar_cliente(){
     cls
     exibir_icones_docs "${cpf}"
     text_color "DADOS DO CLIENTE ${pc_files}"
-    head -n6 "${path_cliente}/cadastro"
+    head -n13 "${path_cliente}/cadastro"
     single_line
     text_color "PENDENCIAS"
     grep ${cpf} "${PATH_BASE}/clientes/.pendencias" | cut -d\| -f 3,6 | sed "s/|/: /g" | sort | head -n5
@@ -670,32 +690,6 @@ relatorios () {
     echo -e "$funis"
     single_line
     menu_inicial
-}
-
-old_exibir_pendencias () {
-    local c_lista="${PATH_BASE}/clientes/.lista"
-    local primeira_linha="true"
-
-    while IFS= read -r line; do
-        local data=""
-        local strdata=""
-        local limite="$(echo ${line%%|*})"
-        local cpf="$(echo ${line#*|})"
-        local cpf="$(echo ${cpf%%|*})"
-        local nome="$(awk -F\| -v cpf="$cpf" '$2==cpf { print substr($1,0,15) }' "$c_lista")"
-        local tarefa="$(echo ${line##*|})"
-
-        if [ "$limite" != "$strdata" ]
-            then
-            strdata=$limite
-            data="$(date -d"${limite}" +"%d de %B de %Y")"
-            [[ "$primeira_linha" == "false" ]] && data="\n${data}" && linha+="\n"
-            primeira_linha="false"
-        fi
-        local linha+="${data} \n- ${nome}: ${tarefa}"
-
-    done <<< "$1"
-    printf "${linha}"
 }
 
 exibir_pendencias () {

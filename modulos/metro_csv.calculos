@@ -1,0 +1,66 @@
+#!/bin/bash
+# Módulo para geração de arquivo csv com base nas fichas financeiras do Metrô-DF
+
+path_cliente="${PATH_BASE}/clientes/$1"
+path_destino="${PATH_DOCUMENTOS}/pjecalc/csv/$1"
+
+pesquisar_valores (){
+    pesquisa=$(pdfgrep -H "$1" ${path_cliente}/documentos/fichas_financeiras/*.pdf)
+        awk 'NF > 14 {
+            split($0,ano,"."); 
+            print ano[1]"\t" $(NF-12)"\t" $(NF-11)"\t" $(NF-10)"\t" $(NF-9)"\t" $(NF-8)"\t" $(NF-7)"\t" $(NF-6)"\t" $(NF-5)"\t" $(NF-4)"\t" $(NF-3)"\t" $(NF-2)"\t" $(NF-1)
+        }' <<< "${pesquisa}" | sed 's/\.//g'| datamash -g 1 sum 2-13
+}
+
+
+gerar_csv () {
+    declare -A pago
+
+    pago[salario]="10002|20002"
+    pago[funcao]="10018|10012|10178"
+    pago[titulalacao]="10677|20677|10390"
+    pago[anuenio]="10502|20502"
+    pago[he]="10805 20805|10839"
+    pago[noturno]="10814|20814"
+    pago[periculosidade]="10802"
+    pago[quebra]="10019"
+    pago[transporte]="10473"
+    pago[saude]="10682"
+    pago[dsr]="10849|20849"
+    pago[13o]="10891|10892"
+    pago[ferias]="10631|10866|10870"
+
+    mkdir -p "$path_destino"
+
+    for cod in "${!pago[@]}";
+    do
+        resultado="$(pesquisar_valores "${pago[$cod]}")"
+        if [ ! -z "$resultado" ]; then
+            awk 'BEGIN { 
+                texto = "" 
+                head_txt="\"MES_ANO\";\"VALOR\";\"FGTS\";\"FGTS_REC.\";\"CONTRIBUICAO_SOCIAL\";\"CONTRIBUICAO_SOCIAL_REC.\""
+                line_txt=";N;N;N;N" } "NF > 12"{
+                text = text "01/"$1";"$2 line_txt"\n02/"$1";"$3 line_txt"\n03/"$1";"$4 line_txt"\n"
+                text = text "04/"$1";"$5 line_txt"\n05/"$1";"$6 line_txt"\n06/"$1";"$7 line_txt"\n"
+                text = text "07/"$1";"$8 line_txt"\n08/"$1";"$9 line_txt"\n09/"$1";"$10 line_txt"\n"
+                text = text "10/"$1";"$11 line_txt"\n11/"$1";"$12 line_txt"\n12/"$1";"$13 line_txt"\n"
+            }END{
+                print head_txt 
+                print text
+            }' <<< "$resultado" | sed '/^$/d' > ${path_destino}/${cod}.csv
+        fi
+    done
+}
+
+
+default () {
+    pdf_files="$(find "${path_cliente}/documentos/fichas_financeiras" -name "*.pdf")"
+    echo "[info] Analisando fichas financeiras..."
+    if [[ ! -z "$pdf_files" ]] ; then 
+        gerar_csv "$1" && notify-send -i null "CRM-CLI" "Arquivos .csv gerados com sucesso"
+    else
+        notify-send -i null "CRM-CLI" "Falha. Fichas financeiras não encontradas."
+    fi
+}
+
+default "$1"

@@ -1,8 +1,5 @@
 #! /bin/bash
 # Módulo para inclusão de funil.
-single_line
-echo "INCLUIR FUNIL" 
-
 # Variáveis do sistema
 TITULO="RT - ACump DCG 2019"
 TIPO="Ação de cumprimento"
@@ -48,4 +45,3 @@ cadastrar_etapas(){
 }
 
 cadastrar_etapas "${1}"
-pesquisar_cliente "${1}"
