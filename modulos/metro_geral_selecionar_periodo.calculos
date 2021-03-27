@@ -1,0 +1,38 @@
+#!/bin/bash
+# Módulo para apuração de valores constantes nas fichas financeiras do Metrô-DF
+
+local path_cliente="${PATH_BASE}/clientes/$1"
+
+read -p "Informe o ano inicial para apuração: " ano_inicio
+read -p "Informe o ano final para apuração: " ano_inicio
+ano_fim=$(date +%Y)
+ano_inicio=$((${ano_fim}-5))
+arquivos_pdf=$(eval echo ${path_cliente}/documentos/fichas_financeiras/{${ano_inicio}..${ano_fim}}.pdf)
+
+REFERENCIAS="10002 20002 10018 10012 10178 10677 20677 10390 10849 20849 10502 20502 10805 20805 10839 10814 20814 10802 10862 10866 10870 10631 10892 10891 10924"
+
+n1=$'\x0a';
+
+pesquisa_valores (){
+    for n in ${@:2};
+    do
+        PESQUISA=$(pdfgrep -m 1 "$1" "$n")
+
+        if [ -n "$PESQUISA" ];
+        then
+            echo "${PESQUISA}" | awk '{print $(NF-12)"\n"$(NF-11)"\n"$(NF-10)"\n"$(NF-9)"\n"$(NF-8)"\n"$(NF-7)"\n"$(NF-6)"\n"$(NF-5)"\n"$(NF-4)"\n"$(NF-3)"\n"$(NF-2)"\n"$(NF-1)}'
+
+        else
+            printf "0,00\n0,00\n0,00\n0,00\n0,00\n0,00\n0,00\n0,00\n0,00\n0,00\n0,00\n0,00\n"
+        fi
+    done
+}
+
+compila_dados () {
+for ref in $REFERENCIAS; do
+    result=$(pesquisa_valores "$ref" $arquivos_pdf | tr '\n' ' ')
+    echo $result
+done
+}
+
+compila_dados | datamash transpose -W | xclip -selection clipboard && notify-send -i null  "CRM CLI" "Resultado da pesquisa copiado no clipboard."
