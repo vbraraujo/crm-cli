@@ -402,8 +402,8 @@ fazer_calculo(){
         then
             single_line
             echo "FAZER CALCULO"
-            source "$PATH_MODULOS/${2}"
-            pesquisar_cliente "${1}"
+            source "$PATH_MODULOS/${2}" 
+            pesquisar_cliente ${1}
     fi
 }
 

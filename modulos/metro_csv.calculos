@@ -40,6 +40,7 @@ gerar_csv () {
                 texto = "" 
                 head_txt="\"MES_ANO\";\"VALOR\";\"FGTS\";\"FGTS_REC.\";\"CONTRIBUICAO_SOCIAL\";\"CONTRIBUICAO_SOCIAL_REC.\""
                 line_txt=";N;N;N;N" } "NF > 12"{
+                $1=substr($1,length($1)-3)
                 text = text "01/"$1";"$2 line_txt"\n02/"$1";"$3 line_txt"\n03/"$1";"$4 line_txt"\n"
                 text = text "04/"$1";"$5 line_txt"\n05/"$1";"$6 line_txt"\n06/"$1";"$7 line_txt"\n"
                 text = text "07/"$1";"$8 line_txt"\n08/"$1";"$9 line_txt"\n09/"$1";"$10 line_txt"\n"

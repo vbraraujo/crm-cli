@@ -1,0 +1,30 @@
+#!/bin/bash
+# Módulo para cálculo do valores a ser pedido em ação de restituição dos descontos de 2019, com base nas fichas financeiras do Metrô-DF
+
+local path_cliente="${PATH_BASE}/clientes/$1"
+
+pesquisar_valores (){
+    local termo="40003|50003|40004|40029"
+    local pesquisa=$(pdfgrep "$termo" ${path_cliente}/documentos/fichas_financeiras/2019.pdf | sed 's/\.//g; s/,/./g')
+
+    awk 'NF > 14 { 
+    if ( $1 == "40003" ) rubrica = "FALTAS PARALISAÇÃO"
+    if ( $1 == "40004" ) rubrica = "HORAS NÃO TRABALHADAS"
+    if ( $1 == "40029" ) rubrica = "DSR"
+    if ( $1 == "50003" ) rubrica = "DIF FALTAS PARALISAÇÃO"
+    total = ($(NF-12)+$(NF-11)+$(NF-10)+$(NF-9)+$(NF-8)+$(NF-7)+ $(NF-6)+$(NF-5)+$(NF-4)+$(NF-3)+$(NF-2)+$(NF-1)) 
+    printf "%s: R$ %.2f\n", rubrica, total
+    }' <<< "${pesquisa}" | sed 's/\./,/g'
+}
+
+calcular () {
+    pdf_files="$(find "${path_cliente}/documentos/fichas_financeiras" -name "2019.pdf")"
+    echo "[info] Analisando fichas financeiras..."
+    if [[ ! -z "$pdf_files" ]] ; then 
+        pesquisar_valores "$1" | xclip -selection clipboard && notify-send -i null "CRM-CLI" "Valores copiado para o clipboard."
+    else
+        notify-send -i null "CRM-CLI" "Falha. Ficha financeira de 2019 não encontrada."
+    fi
+}
+
+calcular "$1"
