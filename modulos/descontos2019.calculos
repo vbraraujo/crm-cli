@@ -12,8 +12,18 @@ pesquisar_valores (){
     if ( $1 == "40004" ) rubrica = "HORAS NÃO TRABALHADAS"
     if ( $1 == "40029" ) rubrica = "DSR"
     if ( $1 == "50003" ) rubrica = "DIF FALTAS PARALISAÇÃO"
-    total = ($(NF-12)+$(NF-11)+$(NF-10)+$(NF-9)+$(NF-8)+$(NF-7)+ $(NF-6)+$(NF-5)+$(NF-4)+$(NF-3)+$(NF-2)+$(NF-1)) 
-    printf "%s: R$ %.2f\n", rubrica, total
+    subtotal = ($(NF-12)+$(NF-11)+$(NF-10)+$(NF-9)+$(NF-8)+$(NF-7)+ $(NF-6)+$(NF-5)+$(NF-4)+$(NF-3)+$(NF-2)+$(NF-1)) 
+    total = total + subtotal
+    printf "%s: R$ %.2f\n", rubrica, subtotal
+    } END{
+    printf "DANO MORAL: R$ %.2f\n", total
+    total = (total + total)
+    honorarios = (total * 0.15)
+    printf "HONORÁRIOS: R$ %.2f\n", honorarios
+    total = (total + honorarios)
+    printf "-------------------------------------------\n"
+    printf "TOTAL: R$ %.2f", total
+
     }' <<< "${pesquisa}" | sed 's/\./,/g'
 }
 
