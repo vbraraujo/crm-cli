@@ -8,4 +8,14 @@ source "${PATH_BASE}/bash-ui"
 source "${PATH_BASE}/biblioteca_funcoes"
 
 # Execução
-default
+case $1 in
+    "-p")
+        pesquisar_cliente $2
+        ;;
+    "-c")
+        cadastrar_cliente
+        ;;
+    *)
+        default
+        ;;
+esac

@@ -1,2 +1,3 @@
 # Variáveis do usuário
 PATH_DOCUMENTOS="${HOME}/Downloads"
+TERMINAL='terminator'

@@ -582,8 +582,6 @@
 1378|2020-09-10|2021-07-07|funil_id3|87598760187|Atualizar sobre RT - Retroativo 2015
 1379|2020-09-10|2021-09-05|funil_id3|87598760187|Atualizar sobre RT - Retroativo 2015
 1380|2020-09-10|2021-10-15|funil_id3|87598760187|Atualizar sobre RT - Retroativo 2015
-1388|2021-02-26|2021-03-12|funil_id2|88292150153|Preparar inicial ação de Desc. 2019
-1389|2021-02-26|2021-03-16|funil_id2|88292150153|Informar protocolo ação de rest. 2019
 1390|2021-02-26|2021-04-27|funil_id2|88292150153|Atualizar sobre ação de Desc. 2019
 1391|2021-02-26|2021-06-26|funil_id2|88292150153|Atualizar sobre ação de Desc. 2019
 1392|2021-02-26|2021-08-25|funil_id2|88292150153|Atualizar sobre ação de Desc. 2019
@@ -704,3 +702,55 @@
 1594|2021-03-26|2021-11-21|funil_id1|00209345136|Atualizar sobre ação de ACumpDCG 2019
 1595|2021-03-26|2021-12-21|funil_id1|00209345136|Atualizar sobre ação de ACumpDCG 2019
 1596|2021-03-26|2022-01-20|funil_id1|00209345136|Atualizar sobre ação de ACumpDCG 2019
+1598|2021-03-29|2021-05-28|funil_id1|34073469304|Atualizar sobre RT - PES - 1994
+1599|2021-03-29|2021-07-27|funil_id1|34073469304|Atualizar sobre RT - PES - 1994
+1600|2021-03-29|2021-09-25|funil_id1|34073469304|Atualizar sobre RT - PES - 1994
+1601|2021-03-29|2021-11-24|funil_id1|34073469304|Atualizar sobre RT - PES - 1994
+1602|2021-03-29|2022-01-23|funil_id1|34073469304|Atualizar sobre RT - PES - 1994
+1603|2021-03-29|2022-03-24|funil_id1|34073469304|Atualizar sobre RT - PES - 1994
+1604|2021-03-29|2022-05-03|funil_id1|34073469304|Atualizar sobre RT - PES - 1994
+1608|2021-03-29|2021-04-10|funil_id2|34073469304|Coletar docs. ação do Anuênio
+1609|2021-03-29|2021-04-12|funil_id2|34073469304|Preparar cálculos e inicial para ação do Anuênio
+1610|2021-03-29|2021-04-16|funil_id2|34073469304|Informar protocolo ação do Anuênio
+1611|2021-03-29|2021-05-28|funil_id2|34073469304|Atualizar sobre ação do Anuênio
+1612|2021-03-29|2021-07-27|funil_id2|34073469304|Atualizar sobre ação do Anuêncio
+1613|2021-03-29|2021-09-25|funil_id2|34073469304|Atualizar sobre ação do Anuêncio
+1614|2021-03-29|2021-10-25|funil_id2|34073469304|Atualizar sobre ação do Anuêncio
+1615|2021-03-29|2021-11-24|funil_id2|34073469304|Atualizar sobre ação do Anuêncio
+1616|2021-03-29|2021-12-24|funil_id2|34073469304|Atualizar sobre ação do Anuêncio
+1617|2021-03-29|2022-01-23|funil_id2|34073469304|Atualizar sobre ação do Anuêncio
+1619|2021-03-30|2021-05-29|funil_id1|72147350168|Atualizar sobre RT - PES 1994
+1620|2021-03-30|2021-07-28|funil_id1|72147350168|Atualizar sobre RT - PES 1994
+1621|2021-03-30|2021-09-26|funil_id1|72147350168|Atualizar sobre RT - PES 1994
+1622|2021-03-30|2021-11-25|funil_id1|72147350168|Atualizar sobre RT - PES 1994
+1623|2021-03-30|2022-01-24|funil_id1|72147350168|Atualizar sobre RT - PES 1994
+1624|2021-03-30|2022-03-25|funil_id1|72147350168|Atualizar sobre RT - PES 1994
+1625|2021-03-30|2022-05-04|funil_id1|72147350168|Atualizar sobre RT - PES 1994
+1627|2021-04-01|2021-05-31|funil_id1|26832585268|Atualizar sobre RT - Gratificação de função
+1628|2021-04-01|2021-07-30|funil_id1|26832585268|Atualizar sobre RT - Gratificação de função
+1629|2021-04-01|2021-09-28|funil_id1|26832585268|Atualizar sobre RT - Gratificação de função
+1630|2021-04-01|2021-11-27|funil_id1|26832585268|Atualizar sobre RT - Gratificação de função
+1631|2021-04-01|2022-01-26|funil_id1|26832585268|Atualizar sobre RT - Gratificação de função
+1632|2021-04-01|2022-03-27|funil_id1|26832585268|Atualizar sobre RT - Gratificação de função
+1633|2021-04-01|2022-05-06|funil_id1|26832585268|Atualizar sobre RT - Gratificação de função
+1635|2021-04-01|2021-05-31|funil_id1|89631242153|Atualizar sobre RT - PES 1994
+1636|2021-04-01|2021-07-30|funil_id1|89631242153|Atualizar sobre RT - PES 1994
+1637|2021-04-01|2021-09-28|funil_id1|89631242153|Atualizar sobre RT - PES 1994
+1638|2021-04-01|2021-11-27|funil_id1|89631242153|Atualizar sobre RT - PES 1994
+1639|2021-04-01|2022-01-26|funil_id1|89631242153|Atualizar sobre RT - PES 1994
+1640|2021-04-01|2022-03-27|funil_id1|89631242153|Atualizar sobre RT - PES 1994
+1641|2021-04-01|2022-05-06|funil_id1|89631242153|Atualizar sobre RT - PES 1994
+1643|2021-04-01|2021-05-31|funil_id1|00367471140|Atualizar sobre RT - Multa atestados
+1644|2021-04-01|2021-07-30|funil_id1|00367471140|Atualizar sobre RT - Multa atestados
+1645|2021-04-01|2021-09-28|funil_id1|00367471140|Atualizar sobre RT - Multa atestados
+1646|2021-04-01|2021-11-27|funil_id1|00367471140|Atualizar sobre RT - Multa atestados
+1647|2021-04-01|2022-01-26|funil_id1|00367471140|Atualizar sobre RT - Multa atestados
+1648|2021-04-01|2022-03-27|funil_id1|00367471140|Atualizar sobre RT - Multa atestados
+1649|2021-04-01|2022-05-06|funil_id1|00367471140|Atualizar sobre RT - Multa atestados
+1651|2021-04-05|2021-06-04|funil_id1|91916224172|Atualizar sobre RT - Alteração de funções
+1652|2021-04-05|2021-08-03|funil_id1|91916224172|Atualizar sobre RT - Alteração de funções
+1653|2021-04-05|2021-10-02|funil_id1|91916224172|Atualizar sobre RT - Alteração de funções
+1654|2021-04-05|2021-12-01|funil_id1|91916224172|Atualizar sobre RT - Alteração de funções
+1655|2021-04-05|2022-01-30|funil_id1|91916224172|Atualizar sobre RT - Alteração de funções
+1656|2021-04-05|2022-03-31|funil_id1|91916224172|Atualizar sobre RT - Alteração de funções
+1657|2021-04-05|2022-05-10|funil_id1|91916224172|Atualizar sobre RT - Alteração de funções
