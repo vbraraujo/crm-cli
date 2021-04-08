@@ -455,7 +455,7 @@ cadastrar_pendencia(){
             [[ -z "${cp_id}" ]] && cp_id=1
             #Linha: data | limite | origem | cpf | descrição
             linha="${cp_id}|${DATA_HOJE}|${2}|${3}|${1}|${4}"
-            printf "$linha" >> "$path_pend"
+            printf "$linha\n" >> "$path_pend"
             cadastrar_historico "${1}" "Criada pendência [${4}]" "#auto"
 
         else
