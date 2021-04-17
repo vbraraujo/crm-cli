@@ -433,7 +433,7 @@ cadastrar_historico(){
         then
             path_hist="${PATH_BASE}/clientes/${1}/historico"
             linha="$DATA_HOJE: $2 $3"
-            printf "$linha" >> "$path_hist"
+            printf "$linha\n" >> "$path_hist"
 
         else
             echo "Não foi possível criar anotação automática. Favor informar os dados a seguir."
@@ -442,7 +442,7 @@ cadastrar_historico(){
             read -p "Tags: " tags
             path_hist="${PATH_BASE}/clientes/${cpf}/historico"
             linha="$DATA_HOJE: $descricao $tags"
-            printf "$linha" >> "$path_hist"
+            printf "$linha\n" >> "$path_hist"
     fi
 }
 
@@ -466,7 +466,7 @@ cadastrar_pendencia(){
             cp_id="$(awk '{id=$1+1}END{print id}' ${path_pend})"
             [[ ${cp_id} == "" ]] && ${cp_id}=1
             linha="${cp_id}|${DATA_HOJE}|${DATA_UMA_SEMANA}|manual|${cpf}|${descricao}"
-            printf "$linha" >> "$path_pend"
+            printf "$linha\n" >> "$path_pend"
             cadastrar_historico "${1}" "Criada pendência [${descricao}]" "#auto"
             pesquisar_cliente ${1}
     fi
@@ -575,7 +575,7 @@ cadastrar_cliente(){
 
     mkdir "${destino}/"
     printf "$arquivo_principal" > "${destino}/cadastro"
-    printf "$cliente_lista" >> "${PATH_BASE}/clientes/.lista"
+    printf "$cliente_lista\n" >> "${PATH_BASE}/clientes/.lista"
     cadastrar_historico "$cpf" "Cliente cadastrado" "#manual"
 
     > "${destino}/funis"

@@ -1,0 +1,52 @@
+#!/bin/bash
+# Módulo para cálculo do valores a ser pedido em reclamação trabalhista para cobrança dos reflexos da quebra de caixa, com base nas fichas financeiras do Metrô-DF
+
+#local path_cliente="${PATH_BASE}/clientes/$1"
+path_cliente="/mnt/Arquivos/Nextcloud/RochaAraujo/RA-Compartilhamento/crm-cli/clientes/$1"
+ano_fim=$(date +%Y)
+ano_inicio=$((${ano_fim}-6))
+declare -a periodo
+
+pesquisar_valores (){
+    local termo="10019"
+    declare -a pesquisa
+    
+    i=$ano_fim
+    while [[ $i > $ano_inicio ]] ; do periodo+=($i) && ((i--)); done
+
+    for ano in ${periodo[@]}; do
+        pesquisa+=($(pdfgrep "$termo" ${path_cliente}/documentos/fichas_financeiras/${ano}.pdf | sed 's/\.//g; s/,/./g' | awk 'NF > 14 { print $(NF) }'))
+    done
+
+    if [[ ${#pesquisa[@]} > 0 ]] ; then
+        quebra_paga=$(IFS="+"; bc <<< "${pesquisa[*]}") 
+        ferias=$(bc <<< $quebra_paga/12*1.333)
+        decimo=$(bc <<< $quebra_paga/12)
+        fgts=$(bc <<< $quebra_paga*0.08)
+        subtotal=$(bc <<< $ferias+$decimo+$fgts)
+        honorarios=$(bc <<< $subtotal*0.15)
+        total=$(bc <<< $subtotal+$honorarios)
+        resultado="$(printf "REFLEXOS SOBRE FÉRIAS + 1/3: R$ %s\n" $ferias
+        printf "REFLEXOS SOBRE 13o SALÁRIO: R$ %s\n" $decimo
+        printf "REFLEXOS SOBRE FGTS: R$ %s\n" $fgts
+        printf "HONORÁRIOS: R$ %s\n" $honorarios
+        echo "-----------------------------------------------------------"
+        printf "TOTAL: R$ %s" $total)"
+
+        printf "$resultado" | xclip -selection clipboard && notify-send -i null "CRM-CLI" "Valores copiado para o clipboard." && printf "${resultado}\n\nPressione ENTER para continuar..." && read
+    else
+        notify-send -i null -u critical "CRM-CLI" "Nenhuma quebra de caixa paga."
+    fi
+}
+
+calcular () {
+    local pdf_files="${path_cliente}/documentos/fichas_financeiras/${ano_inicio}.pdf"
+    echo "[info] Analisando fichas financeiras..."
+    if [[ ! -z "$pdf_files" ]] ; then 
+        pesquisar_valores "$1"
+    else
+        notify-send -i null -u critical "CRM-CLI" "Falha. Fichas financeiras não encontradas."
+    fi
+}
+
+calcular

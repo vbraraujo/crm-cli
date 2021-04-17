@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Script para pesquisa de clientes usando o dmenu
 
-DMENU_OPT="-sb #e60053 -i -l 15"
+DMENU_OPT="-sb #e60053 -l 15"
 PATH_BASE="$(dirname $(realpath $0))"
 
 pc_lista="Cadastrar novo cliente\n"
