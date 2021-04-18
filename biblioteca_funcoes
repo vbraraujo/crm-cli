@@ -548,7 +548,7 @@ pesquisar_cliente(){
     cat "${path_cliente}/funis" | cut -d\| -f 3,6 | sed "s/|/: /g"
     single_line
     text_color "HISTÓRICO"
-    egrep -v "#auto" "${path_cliente}/historico" | tail -n10
+    egrep -v "#auto" "${path_cliente}/historico" | tail -n8
     menu_edicao "${cpf}"
 }
 

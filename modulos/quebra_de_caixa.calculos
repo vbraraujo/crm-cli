@@ -10,32 +10,47 @@ declare -a periodo
 pesquisar_valores (){
     local termo="10019"
     declare -a pesquisa
+    declare -a noturno
+    declare -a salario
     
     i=$ano_fim
     while [[ $i > $ano_inicio ]] ; do periodo+=($i) && ((i--)); done
 
     for ano in ${periodo[@]}; do
         pesquisa+=($(pdfgrep "$termo" ${path_cliente}/documentos/fichas_financeiras/${ano}.pdf | sed 's/\.//g; s/,/./g' | awk 'NF > 14 { print $(NF) }'))
+        noturno+=($(pdfgrep "10814 " ${path_cliente}/documentos/fichas_financeiras/${ano}.pdf | sed 's/\.//g; s/,/./g' | awk 'NF > 14 { print $(NF) }'))
+        salario+=($(pdfgrep "10002 " ${path_cliente}/documentos/fichas_financeiras/${ano}.pdf | sed 's/\.//g; s/,/./g' | awk 'NF > 14 { print $(NF) }'))
     done
 
     if [[ ${#pesquisa[@]} > 0 ]] ; then
         quebra_paga=$(IFS="+"; bc <<< "${pesquisa[*]}") 
+        ad_noturno='0'
+
+        if [[ ${#noturno[@]} > 0 ]] ; then
+            salario_pago=$(IFS="+"; bc <<< "${salario[*]}") 
+            noturno_pago=$(IFS="+"; bc <<< "${noturno[*]}") 
+            ad_noturno=$(echo "((($salario_pago+$quebra_paga)*$noturno_pago)/$salario_pago)-$noturno_pago" | bc)
+        fi 
+
         ferias=$(bc <<< $quebra_paga/12*1.333)
         decimo=$(bc <<< $quebra_paga/12)
         fgts=$(bc <<< $quebra_paga*0.08)
-        subtotal=$(bc <<< $ferias+$decimo+$fgts)
+        previdencia=$(bc <<< $quebra_paga*0.06)
+        subtotal=$(bc <<< $ferias+$decimo+$fgts+$previdencia+$ad_noturno)
         honorarios=$(bc <<< $subtotal*0.15)
         total=$(bc <<< $subtotal+$honorarios)
         resultado="$(printf "REFLEXOS SOBRE FÉRIAS + 1/3: R$ %s\n" $ferias
         printf "REFLEXOS SOBRE 13o SALÁRIO: R$ %s\n" $decimo
         printf "REFLEXOS SOBRE FGTS: R$ %s\n" $fgts
+        [[ -z $ad_noturno ]] || printf "REFLEXOS SOBRE AD. NOTURNO: R$ %s\n" $ad_noturno
+        printf "PREVIDÊNCIA PRIVADA: R$ %s\n" $previdencia
         printf "HONORÁRIOS: R$ %s\n" $honorarios
         echo "-----------------------------------------------------------"
         printf "TOTAL: R$ %s" $total)"
 
         printf "$resultado" | xclip -selection clipboard && notify-send -i null "CRM-CLI" "Valores copiado para o clipboard." && printf "${resultado}\n\nPressione ENTER para continuar..." && read
     else
-        notify-send -i null -u critical "CRM-CLI" "Nenhuma quebra de caixa paga."
+        notify-send -t 6000 -i null -u critical "CRM-CLI" "Nenhuma quebra de caixa paga."
     fi
 }
 
@@ -45,7 +60,7 @@ calcular () {
     if [[ ! -z "$pdf_files" ]] ; then 
         pesquisar_valores "$1"
     else
-        notify-send -i null -u critical "CRM-CLI" "Falha. Fichas financeiras não encontradas."
+        notify-send -t 6000 -i null -u critical "CRM-CLI" "Falha. Fichas financeiras não encontradas."
     fi
 }
 

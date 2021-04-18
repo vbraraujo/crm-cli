@@ -37,7 +37,7 @@ pesquisar_valores (){
 
         printf "$resultado" | xclip -selection clipboard && notify-send -i null "CRM-CLI" "Valores copiado para o clipboard." && printf "${resultado}\n\nPressione ENTER para continuar..." && read
     else
-        notify-send -i null -u critical "CRM-CLI" "Nenhum desconto encontrado."
+        notify-send -t 6000 -i null -u critical "CRM-CLI" "Nenhum desconto encontrado."
     fi
 }
 
@@ -47,7 +47,7 @@ calcular () {
     if [[ ! -z "$pdf_files" ]] ; then 
         pesquisar_valores "$1"
     else
-        notify-send -i null -u critical "CRM-CLI" "Falha. Ficha financeira de 2019 não encontrada."
+        notify-send -t 6000 -i null -u critical "CRM-CLI" "Falha. Ficha financeira de 2019 não encontrada."
     fi
 }
 
