@@ -437,9 +437,6 @@
 1076|2020-09-05|2021-05-03|funil_id2|71416170197|Atualizar sobre ação do Anuêncio
 1077|2020-09-05|2021-06-02|funil_id2|71416170197|Atualizar sobre ação do Anuêncio
 1078|2020-09-05|2021-07-02|funil_id2|71416170197|Atualizar sobre ação do Anuêncio
-1086|2020-09-04|2020-11-03|funil_id2|71492666149|Atualizar sobre RT - Retroativo 2015
-1087|2020-09-04|2021-01-02|funil_id2|71492666149|Atualizar sobre RT - Retroativo 2015
-1088|2020-09-04|2021-03-03|funil_id2|71492666149|Atualizar sobre RT - Retroativo 2015
 1089|2020-09-04|2021-05-02|funil_id2|71492666149|Atualizar sobre RT - Retroativo 2015
 1090|2020-09-04|2021-07-01|funil_id2|71492666149|Atualizar sobre RT - Retroativo 2015
 1091|2020-09-04|2021-08-30|funil_id2|71492666149|Atualizar sobre RT - Retroativo 2015
@@ -608,7 +605,6 @@
 1440|2020-08-17|2021-06-13|funil_id2|91757029591|Atualizar sobre ação
 1441|2020-08-17|2021-08-12|funil_id2|91757029591|Atualizar sobre ação
 1442|2020-08-17|2021-09-21|funil_id2|91757029591|Atualizar sobre ação
-1471|2020-12-16|2021-04-15|funil_id2|95474285191|Atualizar sobre ação de Desc. 2019
 1472|2020-12-16|2021-06-14|funil_id2|95474285191|Atualizar sobre ação de Desc. 2019
 1473|2020-12-16|2021-07-14|funil_id2|95474285191|Atualizar sobre ação de Desc. 2019
 1474|2020-12-16|2021-08-13|funil_id2|95474285191|Atualizar sobre ação de Desc. 2019
@@ -837,3 +833,105 @@
 1833|2021-04-15|2022-02-09|funil_id1|01313688185|Atualizar sobre RT - Multa atestados
 1834|2021-04-15|2022-04-10|funil_id1|01313688185|Atualizar sobre RT - Multa atestados
 1835|2021-04-15|2022-05-20|funil_id1|01313688185|Atualizar sobre RT - Multa atestados
+1837|2021-04-17|2021-04-24|funil_id1|01574535102|Apresentar ação de Quebra de Caixa
+1838|2021-04-17|2021-04-27|funil_id1|01574535102|Confirmar interesse em ação de Quebra de Caixa
+1839|2021-04-17|2021-04-28|funil_id1|01574535102|Enviar PDC ação de Quebra de Caixa
+1840|2021-04-17|2021-04-29|funil_id1|01574535102|Coletar docs. ação de Quebra de Caixa
+1841|2021-04-17|2021-05-01|funil_id1|01574535102|Preparar inicial ação de Quebra de Caixa
+1842|2021-04-17|2021-05-05|funil_id1|01574535102|Informar protocolo ação de rest. 2019
+1843|2021-04-17|2021-06-16|funil_id1|01574535102|Atualizar sobre ação de Quebra de Caixa
+1844|2021-04-17|2021-08-15|funil_id1|01574535102|Atualizar sobre ação de Quebra de Caixa
+1845|2021-04-17|2021-10-14|funil_id1|01574535102|Atualizar sobre ação de Quebra de Caixa
+1846|2021-04-17|2021-11-13|funil_id1|01574535102|Atualizar sobre ação de Quebra de Caixa
+1847|2021-04-17|2021-12-13|funil_id1|01574535102|Atualizar sobre ação de Quebra de Caixa
+1848|2021-04-17|2022-01-12|funil_id1|01574535102|Atualizar sobre ação de Quebra de Caixa
+1849|2021-04-17|2022-02-11|funil_id1|01574535102|Atualizar sobre ação de Quebra de Caixa
+1851|2021-04-19|2021-06-18|funil_id1|00345058143|Atualizar sobre RT - Descontos 2019
+1852|2021-04-19|2021-08-17|funil_id1|00345058143|Atualizar sobre RT - Descontos 2019
+1853|2021-04-19|2021-10-16|funil_id1|00345058143|Atualizar sobre RT - Descontos 2019
+1854|2021-04-19|2021-12-15|funil_id1|00345058143|Atualizar sobre RT - Descontos 2019
+1855|2021-04-19|2022-02-13|funil_id1|00345058143|Atualizar sobre RT - Descontos 2019
+1856|2021-04-19|2022-04-14|funil_id1|00345058143|Atualizar sobre RT - Descontos 2019
+1857|2021-04-19|2022-05-24|funil_id1|00345058143|Atualizar sobre RT - Descontos 2019
+1859|2021-04-19|2021-06-18|funil_id1|18646360172|Atualizar sobre RT - PES 1994
+1860|2021-04-19|2021-08-17|funil_id1|18646360172|Atualizar sobre RT - PES 1994
+1861|2021-04-19|2021-10-16|funil_id1|18646360172|Atualizar sobre RT - PES 1994
+1862|2021-04-19|2021-12-15|funil_id1|18646360172|Atualizar sobre RT - PES 1994
+1863|2021-04-19|2022-02-13|funil_id1|18646360172|Atualizar sobre RT - PES 1994
+1864|2021-04-19|2022-04-14|funil_id1|18646360172|Atualizar sobre RT - PES 1994
+1865|2021-04-19|2022-05-24|funil_id1|18646360172|Atualizar sobre RT - PES 1994
+1866|2021-04-19|2021-04-26|funil_id2|88640264104|Apresentar ação do Anuênio
+1867|2021-04-19|2021-04-29|funil_id2|88640264104|Confirmar interesse em ação do Anuênio
+1868|2021-04-19|2021-04-30|funil_id2|88640264104|Enviar PDC ação do Anuêncio
+1869|2021-04-19|2021-05-01|funil_id2|88640264104|Coletar docs. ação do Anuênio
+1870|2021-04-19|2021-05-03|funil_id2|88640264104|Preparar cálculos e inicial para ação do Anuênio
+1871|2021-04-19|2021-05-07|funil_id2|88640264104|Informar protocolo ação do Anuênio
+1872|2021-04-19|2021-06-18|funil_id2|88640264104|Atualizar sobre ação do Anuênio
+1873|2021-04-19|2021-08-17|funil_id2|88640264104|Atualizar sobre ação do Anuêncio
+1874|2021-04-19|2021-10-16|funil_id2|88640264104|Atualizar sobre ação do Anuêncio
+1875|2021-04-19|2021-11-15|funil_id2|88640264104|Atualizar sobre ação do Anuêncio
+1876|2021-04-19|2021-12-15|funil_id2|88640264104|Atualizar sobre ação do Anuêncio
+1877|2021-04-19|2022-01-14|funil_id2|88640264104|Atualizar sobre ação do Anuêncio
+1878|2021-04-19|2022-02-13|funil_id2|88640264104|Atualizar sobre ação do Anuêncio
+1879|2021-04-19|2021-04-19|funil_id2|70248087134|Apresentação pessoal
+1880|2021-04-19|2021-04-26|funil_id2|70248087134|Apresentar ação de Quebra de Caixa
+1881|2021-04-19|2021-04-29|funil_id2|70248087134|Confirmar interesse em ação de Quebra de Caixa
+1882|2021-04-19|2021-04-30|funil_id2|70248087134|Enviar PDC ação de Quebra de Caixa
+1883|2021-04-19|2021-05-01|funil_id2|70248087134|Coletar docs. ação de Quebra de Caixa
+1884|2021-04-19|2021-05-03|funil_id2|70248087134|Preparar inicial ação de Quebra de Caixa
+1885|2021-04-19|2021-05-07|funil_id2|70248087134|Informar protocolo ação de rest. 2019
+1886|2021-04-19|2021-06-18|funil_id2|70248087134|Atualizar sobre ação de Quebra de Caixa
+1887|2021-04-19|2021-08-17|funil_id2|70248087134|Atualizar sobre ação de Quebra de Caixa
+1888|2021-04-19|2021-10-16|funil_id2|70248087134|Atualizar sobre ação de Quebra de Caixa
+1889|2021-04-19|2021-11-15|funil_id2|70248087134|Atualizar sobre ação de Quebra de Caixa
+1890|2021-04-19|2021-12-15|funil_id2|70248087134|Atualizar sobre ação de Quebra de Caixa
+1891|2021-04-19|2022-01-14|funil_id2|70248087134|Atualizar sobre ação de Quebra de Caixa
+1892|2021-04-19|2022-02-13|funil_id2|70248087134|Atualizar sobre ação de Quebra de Caixa
+1893|2021-04-19|2021-04-19|funil_id2|00345058143|Apresentação pessoal
+1894|2021-04-19|2021-04-26|funil_id2|00345058143|Apresentar ação de Quebra de Caixa
+1895|2021-04-19|2021-04-29|funil_id2|00345058143|Confirmar interesse em ação de Quebra de Caixa
+1896|2021-04-19|2021-04-30|funil_id2|00345058143|Enviar PDC ação de Quebra de Caixa
+1897|2021-04-19|2021-05-01|funil_id2|00345058143|Coletar docs. ação de Quebra de Caixa
+1898|2021-04-19|2021-05-03|funil_id2|00345058143|Preparar inicial ação de Quebra de Caixa
+1899|2021-04-19|2021-05-07|funil_id2|00345058143|Informar protocolo ação de rest. 2019
+1900|2021-04-19|2021-06-18|funil_id2|00345058143|Atualizar sobre ação de Quebra de Caixa
+1901|2021-04-19|2021-08-17|funil_id2|00345058143|Atualizar sobre ação de Quebra de Caixa
+1902|2021-04-19|2021-10-16|funil_id2|00345058143|Atualizar sobre ação de Quebra de Caixa
+1903|2021-04-19|2021-11-15|funil_id2|00345058143|Atualizar sobre ação de Quebra de Caixa
+1904|2021-04-19|2021-12-15|funil_id2|00345058143|Atualizar sobre ação de Quebra de Caixa
+1905|2021-04-19|2022-01-14|funil_id2|00345058143|Atualizar sobre ação de Quebra de Caixa
+1906|2021-04-19|2022-02-13|funil_id2|00345058143|Atualizar sobre ação de Quebra de Caixa
+1907|2021-04-19|2021-04-19|funil_id3|39353567149|Apresentação pessoal
+1908|2021-04-19|2021-04-26|funil_id3|39353567149|Apresentar ação de Desc. 2019
+1909|2021-04-19|2021-04-29|funil_id3|39353567149|Confirmar interesse em ação de Desc. 2019
+1910|2021-04-19|2021-04-30|funil_id3|39353567149|Enviar PDC ação de Desc. 2019
+1911|2021-04-19|2021-05-01|funil_id3|39353567149|Coletar docs. ação de Desc. 2019
+1912|2021-04-19|2021-05-03|funil_id3|39353567149|Preparar inicial ação de Desc. 2019
+1913|2021-04-19|2021-05-07|funil_id3|39353567149|Informar protocolo ação de rest. 2019
+1914|2021-04-19|2021-06-18|funil_id3|39353567149|Atualizar sobre ação de Desc. 2019
+1915|2021-04-19|2021-08-17|funil_id3|39353567149|Atualizar sobre ação de Desc. 2019
+1916|2021-04-19|2021-10-16|funil_id3|39353567149|Atualizar sobre ação de Desc. 2019
+1917|2021-04-19|2021-11-15|funil_id3|39353567149|Atualizar sobre ação de Desc. 2019
+1918|2021-04-19|2021-12-15|funil_id3|39353567149|Atualizar sobre ação de Desc. 2019
+1919|2021-04-19|2022-01-14|funil_id3|39353567149|Atualizar sobre ação de Desc. 2019
+1920|2021-04-19|2022-02-13|funil_id3|39353567149|Atualizar sobre ação de Desc. 2019
+1921|2021-04-20|2021-04-27|funil_id1|95458450663|Apresentar ação do Anuênio
+1922|2021-04-20|2021-04-30|funil_id1|95458450663|Confirmar interesse em ação do Anuênio
+1923|2021-04-20|2021-05-01|funil_id1|95458450663|Enviar PDC ação do Anuêncio
+1924|2021-04-20|2021-05-02|funil_id1|95458450663|Coletar docs. ação do Anuênio
+1925|2021-04-20|2021-05-04|funil_id1|95458450663|Preparar cálculos e inicial para ação do Anuênio
+1926|2021-04-20|2021-05-08|funil_id1|95458450663|Informar protocolo ação do Anuênio
+1927|2021-04-20|2021-06-19|funil_id1|95458450663|Atualizar sobre ação do Anuênio
+1928|2021-04-20|2021-08-18|funil_id1|95458450663|Atualizar sobre ação do Anuêncio
+1929|2021-04-20|2021-10-17|funil_id1|95458450663|Atualizar sobre ação do Anuêncio
+1930|2021-04-20|2021-11-16|funil_id1|95458450663|Atualizar sobre ação do Anuêncio
+1931|2021-04-20|2021-12-16|funil_id1|95458450663|Atualizar sobre ação do Anuêncio
+1932|2021-04-20|2022-01-15|funil_id1|95458450663|Atualizar sobre ação do Anuêncio
+1933|2021-04-20|2022-02-14|funil_id1|95458450663|Atualizar sobre ação do Anuêncio
+1935|2021-04-20|2021-06-19|funil_id3|95474285191|Atualizar sobre RT - PES 1994
+1936|2021-04-20|2021-08-18|funil_id3|95474285191|Atualizar sobre RT - PES 1994
+1937|2021-04-20|2021-10-17|funil_id3|95474285191|Atualizar sobre RT - PES 1994
+1938|2021-04-20|2021-12-16|funil_id3|95474285191|Atualizar sobre RT - PES 1994
+1939|2021-04-20|2022-02-14|funil_id3|95474285191|Atualizar sobre RT - PES 1994
+1940|2021-04-20|2022-04-15|funil_id3|95474285191|Atualizar sobre RT - PES 1994
+1941|2021-04-20|2022-05-25|funil_id3|95474285191|Atualizar sobre RT - PES 1994

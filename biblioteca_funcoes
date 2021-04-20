@@ -131,15 +131,15 @@ gerar_documento(){
     cp "$modelo" "$novo_tmp_html"
 
     sed -i "
-        s~::nome::~${2}~g
-        s~::estado_civil::~${3}~g
-        s~::profissao::~${4}~g
+        s~::nome::~${2^^}~g
+        s~::estado_civil::~${3,,}~g
+        s~::profissao::~${4,,}~g
         s~::rg::~${5}~g
         s~::cpf::~${6}~g
         s~::endereco::~${7}~g
         s~::cep::~${8}~g
         s~::telefone::~${9}~g
-        s~::email::~${10}~g
+        s~::email::~${10,,}~g
         s~::objeto::~${11}~g
         s~::data::~${data}~g
     " "${novo_tmp_html}"    
