@@ -9,7 +9,7 @@ read -e -p "Informe o título da ação: " -i "RT - " TITULO
 
 TIPO="Reclamação Trabalhista"
 COMPETENCIA="TRT10"
-ARQUIVO="${0##*/}"
+ARQUIVO="$(basename ${BASH_SOURCE[0]})"
 PROCESSO=""
 MAIL_TRELLO="victorbra+ykgrr4ds1afohiqdh9c1@boards.trello.com"
 PATH_FUNIL_CLIENTE="${PATH_BASE}/clientes/${1}/funis"

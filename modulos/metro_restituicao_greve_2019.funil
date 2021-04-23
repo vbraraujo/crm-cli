@@ -7,7 +7,7 @@ echo "INCLUIR FUNIL"
 TITULO="RT - Descontos 2019"
 TIPO="Ação de cumprimento"
 COMPETENCIA="TRT10"
-ARQUIVO="${0##*/}"
+ARQUIVO="$(basename ${BASH_SOURCE[0]})"
 PROCESSO=""
 MAIL_TRELLO="victorbra+ykgrr4ds1afohiqdh9c1@boards.trello.com"
 

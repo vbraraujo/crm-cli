@@ -9,7 +9,7 @@ read -e -p "Informe o título da ação: " -i "RT - " TITULO
 # Variáveis do sistema
 TIPO="Reclamação Trabalhista"
 COMPETENCIA="TRT10"
-ARQUIVO="${0##*/}"
+ARQUIVO="$(basename ${BASH_SOURCE[0]})"
 PATH_FUNIL_CLIENTE="${PATH_BASE}/clientes/${1}/funis"
 PROCESSO="$(limpa_numeros ${PROCESSO})"
 FUNIL_ID="$(awk -F "|" '{id=$1+1}END{print id}' ${PATH_FUNIL_CLIENTE})"

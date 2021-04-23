@@ -7,7 +7,7 @@ echo "INCLUIR FUNIL"
 TITULO="Execução PES 1994"
 TIPO="Cumprimento de sentença"
 COMPETENCIA="TRT10"
-ARQUIVO="${0##*/}"
+ARQUIVO="$(basename ${BASH_SOURCE[0]})"
 PROCESSO=""
 MAIL_TRELLO="victorbra+ykgrr4ds1afohiqdh9c1@boards.trello.com"
 

@@ -412,7 +412,7 @@ excluir_funil(){
             ef_id="$(egrep "${2}" ${path_funil} | cut -d\| -f 1)"
             ef_descricao="$(egrep "${2}" ${path_funil} | cut -d\| -f 3)"
             sed -i -E "/^${2}\|/d" "${path_funil}"
-            sed -i -E "/funil_id${2}/d" "${path_pend}"
+            sed -i -E "/funil_id${2}\|${1}/d" "${path_pend}"
             cadastrar_historico "${1}" "Excluído funil [${ef_descricao}]" "#funil"
             pesquisar_cliente ${1}
     fi
@@ -673,10 +673,10 @@ editar_cliente(){
 }
 
 relatorios () {
-    local clientes="$(wc -l ${PATH_BASE}/clientes/.lista | xargs echo | cut -d' ' -f1)"
-    local pendencias="$(wc -l ${PATH_BASE}/clientes/.pendencias | egrep 'total' | xargs echo | cut -d' ' -f1)"
+    local clientes="$(wc -l ${PATH_BASE}/clientes/.lista | cut -d' ' -f1)"
+    local pendencias="$(wc -l ${PATH_BASE}/clientes/.pendencias | cut -d' ' -f1)"
     local path_funis="$(cat ${PATH_BASE}/clientes/*/funis)"
-    local funis="$(printf "${path_funis}" | cut -d\| -f2 | sort -bgr | uniq -c)"
+    local funis="$(printf "${path_funis}" | cut -d\| -f3| sort -bgr | uniq -c)"
 
     clear
     text_color "CRM - Seja bem vindo" 2
@@ -685,7 +685,7 @@ relatorios () {
     echo "Cliente cadastrados: ${clientes}"
     echo "Pendencias: ${pendencias}"
     echo "Funis: "
-    printf "$funis"
+    printf "$funis\n"
     single_line
     menu_inicial
 }

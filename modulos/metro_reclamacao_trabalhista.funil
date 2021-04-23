@@ -7,7 +7,7 @@ echo "INCLUIR FUNIL"
 TITULO="Reclamação trabalhista"
 TIPO="Reclamação Trabalhista"
 COMPETENCIA="TRT10"
-ARQUIVO="${0##*/}"
+ARQUIVO="$(basename ${BASH_SOURCE[0]})"
 PROCESSO=""
 PATH_FUNIL_CLIENTE="${PATH_BASE}/clientes/${1}/funis"
 

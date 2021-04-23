@@ -7,7 +7,7 @@ echo "INCLUIR FUNIL"
 TITULO="Acompanhamento processual"
 TIPO="Diversos"
 COMPETENCIA="Diversos"
-ARQUIVO="${0##*/}"
+ARQUIVO="$(basename ${BASH_SOURCE[0]})"
 PROCESSO=""
 
 PATH_FUNIL_CLIENTE="${PATH_BASE}/clientes/${1}/funis"

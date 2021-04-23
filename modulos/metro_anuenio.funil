@@ -7,7 +7,7 @@ echo "INCLUIR FUNIL"
 TITULO="RT - Anuênio"
 TIPO="Reclamação trabalhista"
 COMPETENCIA="TRT10"
-ARQUIVO="${0##*/}"
+ARQUIVO="$(basename ${BASH_SOURCE[0]})"
 PROCESSO=""
 MAIL_TRELLO="victorbra+ykgrr4ds1afohiqdh9c1@boards.trello.com"
 
