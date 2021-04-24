@@ -1,5 +1,15 @@
-#! /bin/bash
-# Script para controle e acompanhamento de relacionamento com cliente
+#!/bin/bash
+# --------------------------------------------------
+# Projeto   : crm_cli
+# Arquivo   : biblioteca_funcoes
+# Descrição : Conjunto de funções principais usadas pelo crm_cli
+# Versão    : 1.0.0
+# Data      : 2021-04-23
+# Autor     : Victor Araujo <victorbra@gmail.com>
+# Licença   : GNU/GPL v3.0
+# --------------------------------------------------
+# Uso: crm_cli
+# --------------------------------------------------
 
 # Variáveis do sistema
 PATH_CLIENTES_LISTA="${PATH_BASE}/clientes/.lista"
@@ -15,6 +25,14 @@ LISTA_MODELOS="$(find "${PATH_MODELOS}/" -name "*.html" -printf "%f\n")"
 FZF_OPT="-i --height=20% --layout=default --border"
 
 # Funções
+get_text() {
+    local text
+    while [[ -z $text ]]; do
+        read -ep "$1: " -i "$2" text
+    done
+    printf "$text"
+}
+
 limpa_numeros(){
     local tmp=${1//./}
     echo ${tmp//-/}
@@ -100,7 +118,7 @@ criar_cartao_trello(){
 copiar_dados(){
     #Argumentos: 1 cpf
     qualificacao "${1}"
-    local cd_qualificacao="Qualificação: ${q_nome}, brasileiro(a), ${q_estado_civil}, ${q_profissao}, inscrito sob RG n. ${q_rg} e CPF n. ${q_cpf}, residente e domiciliado à ${q_endereco}, CEP ${q_cep}"
+    local cd_qualificacao="Qualificação: ${q_nome}, brasileiro(a), ${q_estado_civil}, ${q_profissao}, inscrito(a) sob RG n. ${q_rg} e CPF n. ${q_cpf}, residente e domiciliado(a) à ${q_endereco}, CEP ${q_cep}"
     local cd_cadastro="$(cat ${PATH_BASE}/clientes/${1}/cadastro)"
     local cd_processos="$(awk -F "|" '{print $3":",$6}' "${PATH_BASE}/clientes/${1}/funis")"
     local cd_menu="${cd_qualificacao}\n${cd_cadastro}\n${cd_processos}"
@@ -186,7 +204,7 @@ preparar_doc(){
     text_color "GERAR DOCUMENTO" 2
     single_line
     qualificacao "${1}"
-    [[ "${2}" != "modelo_procuracao.html" ]] && read -e -p "Informe o objeto do contrato: " -i "Reclamação trabalhista em face do Metrô-DF" gd_objeto
+    [[ "${2}" != "modelo_procuracao.html" ]] && read -e -p "Informe o objeto do contrato: " -i "Reclamação trabalhista em face do Metrô-DF " gd_objeto
     gerar_documento "${2}" "${q_nome}" "${q_estado_civil}" "${q_profissao}" "${q_rg}" "${q_cpf}" "${q_endereco}" "${q_cep}" "${q_telefone}" "${q_email}" "${gd_objeto}" 
 }
 
@@ -205,22 +223,22 @@ menu_edicao(){
     case "$selected" in
         "Editar Nome")
             single_line
-            read -e -p "Informe o novo nome: " -i "${me_nome}" novo_valor
+            novo_valor=$(get_text "Novo nome" "$me_nome")
             editar_cliente "${1}" "nome" "${novo_valor}"
             ;;
         "Editar Telefone")
             single_line
-            read -e -p "Informe o novo telefone: " -i "${me_telefone}" novo_valor
+            novo_valor=$(get_text "Novo telefone" "$me_telefone")
             editar_cliente "${1}" "telefone" "${novo_valor}"
             ;;
         "Editar E-mail")
             single_line
-            read -e -p "Informe o novo e-mail: " -i "${me_email}" novo_valor
+            novo_valor=$(get_text "Novo e-mail" "$me_email")
             editar_cliente "${1}" "email" "${novo_valor}"
             ;;
         "Editar CPF")
             single_line
-            read -e -p "Informe o novo CPF: " -i "${1}" novo_valor
+            novo_valor=$(get_text "Novo CPF" "$1")
             novo_valor=$(limpa_numeros $novo_valor)
             editar_cliente "${1}" "cpf" "${novo_valor}"
             ;;
@@ -231,7 +249,7 @@ menu_edicao(){
             ;;
         "Editar Etiquetas")
             single_line
-            read -e -p "Informe as novas etiquetas: " -i "${me_etiquetas}" novo_valor
+            novo_valor=$(get_text "Novas etiquetas" "$me_etiquetas")
             editar_cliente "${1}" "etiquetas" "${novo_valor}"
             ;;
         "Editar Qualificação")
@@ -266,7 +284,7 @@ menu_edicao(){
             cls
             text_color "INCLUIR NOVA ANOTAÇÃO" 2
             single_line
-            read -p "Informe a nova anotação: " novo_valor
+            novo_valor=$(get_text "Anotação")
             cadastrar_historico "${1}" "${novo_valor}" "#anotação"
             pesquisar_cliente ${1}
             ;;
@@ -317,14 +335,14 @@ menu_edicao(){
             cp_id="$(echo ${cp_id%% *})"
             cp_processo="$(egrep -E "^${cp_id}" "${path_funil}" | cut -d\| -f 6)"
             cp_descricao="$(egrep -E "^${cp_id}" "${path_funil}" | cut -d\| -f 3)"
-            read -e -p "Informe o número do processo: " -i "${cp_processo}" cp_novo_processo
+            cp_novo_processo=$(get_text "Número do processo" "$cp_processo")
             cp_novo_processo=$(limpa_numeros $cp_novo_processo)
-            read -e -p "Informe a nova descrição: " -i "${cp_descricao}" cp_nova_descricao
+            cp_nova_descricao=$(get_text "Nova descrição" "$cp_descricao")
             [[ $ef_id == "Voltar/Sair" ]] && pesquisar_cliente ${1} || editar_processo "${1}" "${cp_id}" "${cp_novo_processo}" "${cp_nova_descricao}"
             ;;
         "Incluir Pendência")
             single_line
-            read -p "Informe a pendência: " novo_valor
+            novo_valor=$(get_text "Pendência")
             cadastrar_pendencia "${1}" "${DATA_UMA_SEMANA}" "manual" "${novo_valor}"
             pesquisar_cliente "${1}"
             ;;
@@ -349,7 +367,7 @@ menu_edicao(){
             pesquisar_cliente "${1}"
             ;;
         "Ver Pendências")
-            vim "${PATH_BASE}/clientes/.pendencias"
+            grep "${1}" "${PATH_BASE}/clientes/.pendencias" | less
             pesquisar_cliente "${1}"
             ;;
         "Ver Histórico")
@@ -367,7 +385,7 @@ menu_edicao(){
         "Ver Arquivos")
             local path_docs="${PATH_BASE}/clientes/${1}/documentos"
             mkdir -p "${path_docs}" && mkdir -p "${path_docs}/fichas_financeiras" 
-            xdg-open "${path_docs}" &>/dev/null &
+            nohup xdg-open "${path_docs}" &>/dev/null &
             pesquisar_cliente "${1}"
             ;;
 
@@ -437,9 +455,9 @@ cadastrar_historico(){
 
         else
             echo "Não foi possível criar anotação automática. Favor informar os dados a seguir."
-            read -p "Descrição: " descricao
-            read -p "CPF: " cpf
-            read -p "Tags: " tags
+            descicao=$(get_text "Descrição")
+            cpf=$(get_text "CPF")
+            tags=$(get_text "Tags")
             path_hist="${PATH_BASE}/clientes/${cpf}/historico"
             linha="$DATA_HOJE: $descricao $tags"
             printf "$linha\n" >> "$path_hist"
@@ -460,8 +478,8 @@ cadastrar_pendencia(){
 
         else
             echo "Não foi possível criar pendência automática. Favor informar os dados a seguir."
-            read -p "Descrição: " descricao
-            read -p "CPF: " cpf
+            descicao=$(get_text "Descrição")
+            cpf=$(get_text "CPF")
             path_pend="${PATH_BASE}/clientes/.pendencias"
             cp_id="$(awk '{id=$1+1}END{print id}' ${path_pend})"
             [[ ${cp_id} == "" ]] && ${cp_id}=1
@@ -563,9 +581,9 @@ cadastrar_cliente(){
         read -p "CPF: " cpf && [ -z "$cpf" ]
     done
     cpf=$(limpa_numeros $cpf)
-    read -p "Telefone: " telefone
-    read -p "E-mail: " email
-    read -p "Etiquetas: " etiquetas
+    telefone=$(get_text "Telefone")
+    email=$(get_text "E-mail")
+    etiquetas=$(get_text "Etiquetas")
     status="$(printf "Quente\nNeutro\nFrio" | fzf $FZF_OPT --prompt 'Selecione o status atual: ')"
 
     # Organiza e cria estrutura para pasta do cliente
@@ -592,8 +610,7 @@ editar_qualificacao_especifica(){
     # Argumentos: 1 CPF, 2 nome da variavel, 3 Titulo
     local path_cliente="${PATH_BASE}/clientes/${1}/cadastro"
     
-    read -e -p "${3}: " novo_valor
-
+    novo_valor=$(get_text "$3")
     sed -i -E "/^${3}: /c\\${3}: ${novo_valor}" "${path_cliente}"
 }
 
@@ -602,10 +619,10 @@ editar_qualificacao(){
     qualificacao "${1}"
 
     estado_civil="$(printf "solteiro(a)\ncasado(a)\nunião estável\nviúvo(a)\ndivorciado(a)" | fzf $FZF_OPT --prompt 'Estado civil: ')"
-    read -e -p "Profissão: " -i "${q_profissao}" -i "metroviário(a)" profissao
-    read -e -p "RG: " -i "${q_rg}" rg
-    read -e -p "Endereço: " -i "${q_endereco}" endereco
-    read -e -p "CEP: " -i "${q_cep}" cep
+    profissao=$(get_text "Profissão" "$q_profissao" )
+    rg=$(get_text "RG" "$q_rg" )
+    endereco=$(get_text "Endereço" "$q_endereco" )
+    cep=$(get_text "CEP" "$q_cep" )
 
     sed -i -E "/^Estado civil: /c\\Estado civil: ${estado_civil}" "${path_cliente}"
     sed -i -E "/^Profissão: /c\\Profissão: ${profissao}" "${path_cliente}"
@@ -720,9 +737,8 @@ exibir_pendencias () {
 
 default () {
     #verifica_amb
-    while true
-    do
-        clear
+    while :; do
+        cls
         text_color "CRM - Seja bem vindo" 2
         single_line
         text_color "PENDÊNCIAS" 3

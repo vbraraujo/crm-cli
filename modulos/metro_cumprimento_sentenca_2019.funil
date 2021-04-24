@@ -18,21 +18,12 @@ criar_cartao_trello "${1}" "${MAIL_TRELLO}" "CumpSentDC2019"
 echo "[info] Criando tarefas..."
 # Etapas
 cadastrar_etapas(){
-    # Etapa 01: Conhecimento pessoal : DATA_HOJE
-    cadastrar_pendencia "${1}" "$(printf '%(%Y-%m-%d)T\n' -1)" "funil_id${FUNIL_ID}" "Apresentação pessoal"
-    # Etapa 02: Apresentação de problema e solução: 7 dias
     cadastrar_pendencia "${1}" "$(date --date="7 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Apresentar CumpSentDC 2019"
-    # Etapa 03: Confirmação de interesse : 10 dias
     cadastrar_pendencia "${1}" "$(date --date="10 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Confirmar interesse em CumpSentDC 2019"
-    # Etapa 04: PDC : 11 dias
     cadastrar_pendencia "${1}" "$(date --date="11 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Enviar PDC CumpSentDC 2019"
-    # Etapa 05: Coletar documentos : 12 dias
     cadastrar_pendencia "${1}" "$(date --date="12 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Coletar docs. CumpSentDC 2019"
-    # Etapa 06: Preparar inicial : 14 dias
     cadastrar_pendencia "${1}" "$(date --date="14 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Preparar inicial CumpSentDC 2019"
-    # Etapa 07: Informar cliente sobre protocolo : 18 dias
     cadastrar_pendencia "${1}" "$(date --date="18 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Informar protocolo CumpSentDC 2019"
-    # Etapa 08: Atualizações de rotina : 60 dias
     cadastrar_pendencia "${1}" "$(date --date="60 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre CumpSentDC 2019"
     cadastrar_pendencia "${1}" "$(date --date="120 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre CumpSentDC 2019"
     cadastrar_pendencia "${1}" "$(date --date="180 day" +"%Y-%m-%d")" "funil_id${FUNIL_ID}" "Atualizar sobre CumpSentDC 2019"
