@@ -211,11 +211,11 @@ preparar_doc(){
 menu_edicao(){
     #Argumentos: 1 CPF
     conteudo_atual="$(egrep "\|${1}\|" "$PATH_CLIENTES_LISTA")"
-    me_nome="$(echo "$conteudo_atual" | cut -d\| -f1)"
-    me_cpf="$(echo "$conteudo_atual" | cut -d\| -f2)"
-    me_telefone="$(echo "$conteudo_atual" | cut -d\| -f3)"
-    me_email="$(echo "$conteudo_atual" | cut -d\| -f4)"
-    me_etiquetas="$(echo "$conteudo_atual" | cut -d\| -f5)"
+    me_nome="$( cut -d\| -f1 <<< "$conteudo_atual" )"
+    me_cpf="$( cut -d\| -f2 <<< "$conteudo_atual" )"
+    me_telefone="$( cut -d\| -f3 <<< "$conteudo_atual" )"
+    me_email="$( cut -d\| -f4 <<< "$conteudo_atual" )"
+    me_etiquetas="$( cut -d\| -f5 <<< "$conteudo_atual" )"
 
     menu_edicao="Voltar/Sair\nEditar Nome\nEditar CPF\nEditar Telefone\nEditar E-mail\nEditar Status\nEditar Etiquetas\nCopiar dados\nIncluir Anotação\nIncluir Funil\nIncluir Pendência\nVer Cadastro\nVer Histórico\nVer Pendências\nConcluir Pendência\nExcluir Funil\nCadastrar Processo\nEnviar E-mail\nEditar Qualificação\nGerar Documento\nVer Arquivos\nIncluir comunicação por Whatsapp\nIncluir comunicação por Telegram\nIncluir comunicação por E-Mail\nIncluir comunicação por Telefone\nIncluir comunicação Pessoal\nAdiar Pendências\nAtualização de andamentos\nCálculos"
 
@@ -546,7 +546,7 @@ pesquisar_cliente(){
                 cadastrar_cliente
                 ;;
             *)
-                cpf="$(echo "$selected" | cut -d\| -f2 )"
+                cpf="$( cut -d\| -f2 <<< $selected)"
             ;;
         esac
     fi
@@ -566,7 +566,7 @@ pesquisar_cliente(){
     cat "${path_cliente}/funis" | cut -d\| -f 3,6 | sed "s/|/: /g"
     single_line
     text_color "HISTÓRICO"
-    egrep -v "#auto" "${path_cliente}/historico" | tail -n8
+    egrep -v "#auto" "${path_cliente}/historico" | tail -n7
     menu_edicao "${cpf}"
 }
 
@@ -635,12 +635,12 @@ editar_cliente(){
     #Argumentos: 1 cpf, 2 campo a ser editado, 3 novo valor
     path_cliente="${PATH_BASE}/clientes/${1}/cadastro"
     conteudo_atual="$(egrep "\|${1}\|" "$PATH_CLIENTES_LISTA")"
-    ec_nome="$(echo "$conteudo_atual" | cut -d\| -f1)"
-    ec_cpf="$(echo "$conteudo_atual" | cut -d\| -f2)"
-    ec_telefone="$(echo "$conteudo_atual" | cut -d\| -f3)"
-    ec_email="$(echo "$conteudo_atual" | cut -d\| -f4)"
-    ec_etiquetas="$(echo "$conteudo_atual" | cut -d\| -f5)"
-    ec_status="$(echo "$conteudo_atual" | cut -d\| -f6)"
+    ec_nome="$( cut -d\| -f1 <<< "$conteudo_atual" )"
+    ec_cpf="$( cut -d\| -f2 <<< "$conteudo_atual" )"
+    ec_telefone="$( cut -d\| -f3 <<< "$conteudo_atual" )"
+    ec_email="$( cut -d\| -f4 <<< "$conteudo_atual" )"
+    ec_etiquetas="$( cut -d\| -f5 <<< "$conteudo_atual" )"
+    ec_status="$( cut -d\| -f6 <<< "$conteudo_atual" )"
 
     case "$2" in
         "nome")
