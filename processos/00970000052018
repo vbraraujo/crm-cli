@@ -1,0 +1,19 @@
+titulo="Chervison Rodrigues de Souza x Metro/DF - PAD"
+autor=(
+    "Chervison Rodrigues de Souza"
+)
+reu=(
+    "Metrô-DF"
+)
+juiz=()
+relator=()
+perito_jud=()
+perito_part=()
+valor_da_causa="R$ 0,00"
+distribuido=""
+condenacao=()
+pagamentos=()
+etiquetas=()
+tramitacao=""
+anotacoes=()
+status="ativo"

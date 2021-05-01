@@ -1,0 +1,19 @@
+titulo="Alexandre Erhardt dos Santos Amaral de Souza x Metro/DF - PAD"
+autor=(
+    "Alexandre Erhardt dos Santos Amaral de Souza"
+)
+reu=(
+    "Metrô-DF"
+)
+juiz=()
+relator=()
+perito_jud=()
+perito_part=()
+valor_da_causa="R$ 0,00"
+distribuido=""
+condenacao=()
+pagamentos=()
+etiquetas=()
+tramitacao=""
+anotacoes=()
+status="ativo"

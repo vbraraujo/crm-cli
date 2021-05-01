@@ -3,7 +3,7 @@
 # Projeto   : crm_cli
 # Arquivo   : biblioteca_funcoes
 # Descrição : Conjunto de funções principais usadas pelo crm_cli
-# Versão    : 1.0.0
+# Versão    : 1.0.1
 # Data      : 2021-04-23
 # Autor     : Victor Araujo <victorbra@gmail.com>
 # Licença   : GNU/GPL v3.0
@@ -14,8 +14,15 @@
 # Variáveis do sistema
 PATH_CLIENTES_LISTA="${PATH_BASE}/clientes/.lista"
 PATH_MODULOS="${PATH_BASE}/modulos"
+PATH_PROCESSOS="${PATH_BASE}/processos"
+PATH_MODULOS="${PATH_BASE}/modulos"
 PATH_MODELOS="${PATH_BASE}/documentos/modelos"
-MENU_INICIAL="Pesquisar cliente\nCadastrar cliente\nRelatórios\nSair\n"
+MENU_INICIAL=("Pesquisar cliente"
+    "Pesquisar processo"
+    "Cadastrar cliente"
+    "Relatórios"
+    "Sair"
+)
 DATA_HOJE="$(printf '%(%Y-%m-%d)T\n' -1)"
 DATA_AGORA="$(printf '%(%Y-%m-%d_%H%M)T\n' -1)"
 DATA_UMA_SEMANA="$(date --date="1 week" +"%Y-%m-%d")"
@@ -48,10 +55,13 @@ verifica_amb(){
 }
 
 menu_inicial(){
-    selected="$(printf "$MENU_INICIAL" | fzf $FZF_OPT --prompt 'Selecione uma opção: ')"
+    selected="$(printf '%s\n' "${MENU_INICIAL[@]}" | fzf $FZF_OPT --prompt 'Selecione uma opção: ')"
     case "$selected" in
         "Pesquisar cliente")
             pesquisar_cliente
+            ;;
+        "Pesquisar processo")
+            pesquisar_processo
             ;;
         "Cadastrar cliente")
             cadastrar_cliente
@@ -63,6 +73,123 @@ menu_inicial(){
             exit
             ;;
     esac
+}
+
+pesquisar_processo(){
+    #Argumentos 1 processo 2 CPF
+    #Se existem argumentos, sabemos onde queremos ir, caso contrário, será necessário pesquisar.
+    if [[ "$#" > 0 ]]
+    then
+        local processo="$1"        
+        [[ ! -f "${PATH_PROCESSOS}/$1" ]] && cadastrar_processo "$1" "$2"
+    else
+        local pp_menu="Voltar\n"
+        local pp_menu+="$(find ${PATH_PROCESSOS}/* -type f -printf "%f\n")"
+        local selected="$(printf "$pp_menu" | fzf $FZF_OPT --prompt 'Pesquisar: ')"
+        
+        case "$selected" in
+            "Voltar")
+                default
+                ;;
+            *)
+                local processo="$selected"
+                ;;
+        esac        
+    fi
+
+    exibir_processo "$processo" "$2"
+}
+
+cadastrar_processo(){
+    #Argumentos: 1 Processo 2 CPF 3 Nome do cliente 4 Título
+    local processo="${PATH_PROCESSOS}/$1"
+
+    if [[ ! -f "$processo" ]] ; then
+        local hoje="$(date +%d/%m/%Y)"
+        echo "titulo=\"${4}\"
+autor=(
+    \"${3}\"
+)
+reu=()
+juiz=()
+relator=()
+perito_jud=()
+perito_part=()
+valor_da_causa=\"\"
+ditribuido=\"${hoje}\"
+condenacao=()
+pagamentos=()
+etiquetas=()
+tramitacao=\"\"
+anotacoes=()
+status=\"ativo\"" > "$processo"
+
+    fi
+}
+
+menu_processo(){
+    #Argumentos: 1 Processo 2 CPF
+    [[ "$#" > 1 ]] && local menu=("Voltar")
+    local menu+=("Início"
+        "Copiar dados"
+        "Editar status"
+        "Editar tramitação"
+        "Editar título"
+        "Editar valor da causa"
+        "Editar distribuído"
+        "Incluir juiz"
+        "Incluir relator"
+        "Incluir perito judicial"
+        "Incluir perito particular"
+        "Incluir réu"
+        "Incluir autor"
+        "Incluir anotação"
+        )
+
+    local selected="$(printf '%s\n' "${menu[@]}" | fzf $FZF_OPT --prompt 'Selecione uma opção: ')"
+
+    case "$selected" in
+        "Início")
+            default
+            ;;
+        "Voltar")
+            pesquisar_cliente "$2"
+            ;;
+    esac
+}
+
+exibir_processo(){
+    [[ $# -eq 0 ]] && pesquisar_processo
+
+    processo_num="${1}"
+    cls
+    text_color "DADOS DO PROCESSO"
+    source "${PATH_PROCESSOS}/${processo_num}"
+
+    echo "Processo: $processo_num
+Título: $titulo
+Autor: ${autor[@]}
+Réu: ${reu[@]}
+Tramitação: $tramitacao
+Juiz:
+Relator:
+Perito judicial: 
+Perito particular: 
+Valor da causa: 
+Distribuído: $distribuido
+Status: $status
+Etiquetas: $etiquetas"
+
+    single_line
+    text_color "FINANCEIRO"
+    echo "Condenação: 
+Pagamentos:"
+
+    single_line
+    text_color "ANOTAÇÕES"
+    echo "${anotacoes[@]}"
+
+    menu_processo "$processo_num" "$2"
 }
 
 enviar_email(){
@@ -208,7 +335,7 @@ preparar_doc(){
     gerar_documento "${2}" "${q_nome}" "${q_estado_civil}" "${q_profissao}" "${q_rg}" "${q_cpf}" "${q_endereco}" "${q_cep}" "${q_telefone}" "${q_email}" "${gd_objeto}" 
 }
 
-menu_edicao(){
+menu_cliente(){
     #Argumentos: 1 CPF
     conteudo_atual="$(grep -E "\|${1}\|" "$PATH_CLIENTES_LISTA")"
     me_nome="$( cut -d\| -f1 <<< "$conteudo_atual" )"
@@ -217,9 +344,9 @@ menu_edicao(){
     me_email="$( cut -d\| -f4 <<< "$conteudo_atual" )"
     me_etiquetas="$( cut -d\| -f5 <<< "$conteudo_atual" )"
 
-    menu_edicao="Voltar/Sair\nEditar Nome\nEditar CPF\nEditar Telefone\nEditar E-mail\nEditar Status\nEditar Etiquetas\nCopiar dados\nIncluir Anotação\nIncluir Funil\nIncluir Pendência\nVer Cadastro\nVer Histórico\nVer Pendências\nConcluir Pendência\nExcluir Funil\nCadastrar Processo\nEnviar E-mail\nEditar Qualificação\nGerar Documento\nVer Arquivos\nIncluir comunicação por Whatsapp\nIncluir comunicação por Telegram\nIncluir comunicação por E-Mail\nIncluir comunicação por Telefone\nIncluir comunicação Pessoal\nAdiar Pendências\nAtualização de andamentos\nCálculos"
+    menu_cliente=("Voltar/Sair" "Editar Nome" "Editar CPF" "Editar Telefone" "Editar E-mail" "Editar Status" "Editar Etiquetas" "Copiar dados" "Incluir Anotação" "Incluir Funil" "Incluir Pendência" "Ver Cadastro" "Ver Histórico" "Ver Pendências" "Concluir Pendência" "Excluir Funil" "Cadastrar Processo" "Enviar E-mail" "Editar Qualificação" "Gerar Documento" "Ver Arquivos" "Incluir comunicação por Whatsapp" "Incluir comunicação por Telegram" "Incluir comunicação por E-Mail" "Incluir comunicação por Telefone" "Incluir comunicação Pessoal" "Adiar Pendências" "Atualização de andamentos" "Cálculos" "Ver Processo")
 
-    selected="$(printf "$menu_edicao" | fzf $FZF_OPT --prompt 'Selecione uma opção: ')"
+    selected="$(printf '%s\n' "${menu_cliente[@]}" | fzf $FZF_OPT --prompt 'Selecione uma opção: ')"
     case "$selected" in
         "Editar Nome")
             single_line
@@ -319,15 +446,25 @@ menu_edicao(){
             fazer_calculo "${1}" "${calc_arquivo}"
             ;;
         "Excluir Funil")
-            single_line
             ef_lista="Voltar/Sair\n"
             ef_lista+="$(awk -F "|" '{print $1,$3,$6,"-",$2}' "${PATH_BASE}/clientes/${1}/funis")"
             ef_id="$(printf "$ef_lista" | fzf $FZF_OPT --prompt 'Selecione funil a excluir: ')"
             ef_id="$(echo ${ef_id%% *})"
             [[ $ef_id == "Voltar/Sair" ]] && pesquisar_cliente ${1} || excluir_funil "${1}" "${ef_id}"
             ;;
+        "Ver Processo")
+            local path_funil="${PATH_BASE}/clientes/${1}/funis"
+            local vp_lista="Voltar/Sair\n"
+            local vp_lista+="$(awk -F "|" '{ print $1"|"$3"|"$6 }' "${path_funil}")"
+            local vp_selected="$(printf "$vp_lista" | fzf $FZF_OPT --prompt 'Selecione processo: ' )" 
+            if [[ $vp_selected == "Voltar/Sair" ]] ; then
+                pesquisar_cliente "${1}"
+            else
+                local vp_processo=$(awk -F "|" '{ print $3 }' <<< "${vp_selected}")
+                pesquisar_processo "${vp_processo}" "${me_cpf}"
+            fi
+            ;;
         "Cadastrar Processo")
-            single_line
             path_funil="${PATH_BASE}/clientes/${1}/funis"
             cp_lista="Voltar/Sair\n"
             cp_lista+="$(awk -F "|" '{print $1,$3,$6,"-",$2}' "${path_funil}")"
@@ -338,7 +475,12 @@ menu_edicao(){
             cp_novo_processo=$(get_text "Número do processo" "$cp_processo")
             cp_novo_processo=$(limpa_numeros $cp_novo_processo)
             cp_nova_descricao=$(get_text "Nova descrição" "$cp_descricao")
-            [[ $ef_id == "Voltar/Sair" ]] && pesquisar_cliente ${1} || editar_processo "${1}" "${cp_id}" "${cp_novo_processo}" "${cp_nova_descricao}"
+            if [[ $cp_id == "Voltar/Sair" ]] ; then
+               pesquisar_cliente ${1} 
+           else
+               cadastrar_processo "${cp_novo_processo}" "${me_cpf}" "${me_nome}" "${cp_nova_descricao}"
+               editar_funil "${1}" "${cp_id}" "${cp_novo_processo}" "${cp_nova_descricao}"
+            fi
             ;;
         "Incluir Pendência")
             single_line
@@ -394,7 +536,7 @@ menu_edicao(){
             pesquisar_cliente "${1}"
             ;;
         *)
-            default
+            pesquisar_cliente
             ;;
     esac
 }
@@ -436,7 +578,7 @@ excluir_funil(){
     fi
 }
 
-editar_processo(){
+editar_funil(){
     #Argumentos: 1 cpf, 2 funil id, 3 número do processo, 4 descrição 
     path_funil="${PATH_BASE}/clientes/${1}/funis"
     sed -i -E '/^'"$2"'\|/s/[^|]*/'"$3"'/6' "$path_funil"
@@ -570,7 +712,7 @@ pesquisar_cliente(){
     single_line
     text_color "HISTÓRICO"
     grep -E -v "#auto|#anotação" "${path_cliente}/historico" | tail -n4
-    menu_edicao "${cpf}"
+    menu_cliente "${cpf}"
 }
 
 cadastrar_cliente(){

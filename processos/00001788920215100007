@@ -1,0 +1,19 @@
+titulo="L. G. C. R. A. x C. M. D. F. M. D."
+autor=(
+    "L. G. C. R. A."
+)
+reu=(
+    "Metrô-DF"
+)
+juiz=()
+relator=()
+perito_jud=()
+perito_part=()
+valor_da_causa="R$ 0,00"
+distribuido=""
+condenacao=()
+pagamentos=()
+etiquetas=()
+tramitacao="10ª Vara do Trabalho de Brasília - DF"
+anotacoes=()
+status="ativo"

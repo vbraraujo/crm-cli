@@ -1,0 +1,19 @@
+titulo="Reclamação Trabalhista (Adicional noturno e outros)"
+autor=(
+    "Sindicato dos Trabalhadores em Empresas de Transportes Metroviarios do DF - SINDMETRÔ-DF"
+)
+reu=(
+    "Metrô-DF"
+)
+juiz=()
+relator=()
+perito_jud=()
+perito_part=()
+valor_da_causa="R$ 0,00"
+distribuido="09/07/2014"
+condenacao=()
+pagamentos=()
+etiquetas=()
+tramitacao="6 Vara do Trabalho de Brasília - DF"
+anotacoes=()
+status="ativo"

@@ -1,0 +1,19 @@
+titulo="KELLY GLEICY DA SILVA"
+autor=(
+    "KELLY GLEICY DA SILVA                                       "
+)
+reu=(
+    "Metrô-DF"
+)
+juiz=()
+relator=()
+perito_jud=()
+perito_part=()
+valor_da_causa="R$ 0,00"
+distribuido=""
+condenacao=()
+pagamentos=()
+etiquetas=()
+tramitacao="10ª Vara do Trabalho de Brasília - DF"
+anotacoes=()
+status="ativo"
