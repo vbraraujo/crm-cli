@@ -1,10 +1,6 @@
 titulo="ROBSON BRANDAO SANTOS x Metrô - Descontos 2019"
-autor=(
-    "ROBSON BRANDAO SANTOS"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ROBSON BRANDAO SANTOS")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

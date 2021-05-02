@@ -1,10 +1,6 @@
 titulo="MIRTES RODRIGUES DE SOUSA x Metrô - Retroativo 2015"
-autor=(
-    "MIRTES RODRIGUES DE SOUSA                                   "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("MIRTES RODRIGUES DE SOUSA                                   ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="Vanderlan Medeiros Cunha x Metro/DF - PAD"
-autor=(
-    "Vanderlan Medeiros Cunha"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Vanderlan Medeiros Cunha")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

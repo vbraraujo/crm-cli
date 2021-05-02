@@ -1,10 +1,6 @@
 titulo="Janicio Silva dos Santos x Metrô - Anuênio"
-autor=(
-    "Janicio Silva dos Santos"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Janicio Silva dos Santos")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

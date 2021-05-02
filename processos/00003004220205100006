@@ -1,10 +1,6 @@
 titulo="ROMIR GONCALVES x Metrô - Retroativo 2015"
-autor=(
-    "ROMIR GONCALVES"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ROMIR GONCALVES")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

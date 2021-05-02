@@ -1,10 +1,6 @@
 titulo="GUSTAVO ANDRADE DE ALMEIDA"
-autor=(
-    "GUSTAVO ANDRADE DE ALMEIDA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("GUSTAVO ANDRADE DE ALMEIDA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

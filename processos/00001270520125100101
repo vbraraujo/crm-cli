@@ -1,10 +1,6 @@
 titulo="CESAR JUNIO SAMPAIO MOREIRA"
-autor=(
-    "CESAR JUNIO SAMPAIO MOREIRA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("CESAR JUNIO SAMPAIO MOREIRA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

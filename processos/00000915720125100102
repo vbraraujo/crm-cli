@@ -1,10 +1,6 @@
 titulo="MARCIO BATISTA BARBOZA x Metro-DF - PES 94"
-autor=(
-    "MARCIO BATISTA BARBOZA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("MARCIO BATISTA BARBOZA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

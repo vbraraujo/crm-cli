@@ -1,10 +1,6 @@
 titulo="Jose Airton Rodrigues de Morais x Metrô - PES 1994"
-autor=(
-    "Jose Airton Rodrigues de Morais"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Jose Airton Rodrigues de Morais")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

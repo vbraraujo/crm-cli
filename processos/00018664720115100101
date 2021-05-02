@@ -1,10 +1,6 @@
 titulo="Moises Alves x Metro - PES/94"
-autor=(
-    "Moises Alves da Silveira Neto"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Moises Alves da Silveira Neto")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

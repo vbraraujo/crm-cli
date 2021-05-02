@@ -1,10 +1,6 @@
 titulo="Nubyana de Oliveira Machado x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Nubyana de Oliveira Machado"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Nubyana de Oliveira Machado")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

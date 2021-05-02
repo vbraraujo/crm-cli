@@ -1,10 +1,6 @@
 titulo="Maria de Lourdes Galvão"
-autor=(
-    "Maria de Lourdes Galvão"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Maria de Lourdes Galvão")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

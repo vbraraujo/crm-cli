@@ -1,10 +1,6 @@
 titulo="CARLOS FREDERICO BARROS x Metrô - Reintegração aposentados"
-autor=(
-    "CARLOS FREDERICO BARROS                                     "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("CARLOS FREDERICO BARROS                                     ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

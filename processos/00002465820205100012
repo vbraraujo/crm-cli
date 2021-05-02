@@ -1,10 +1,6 @@
 titulo="RENATA DOS SANTOS DIAS"
-autor=(
-    "RENATA DOS SANTOS DIAS                                      "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("RENATA DOS SANTOS DIAS                                      ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

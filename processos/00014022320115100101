@@ -1,10 +1,6 @@
 titulo="Marcondes Ribeiro dos Santos x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Marcondes Ribeiro dos Santos"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Marcondes Ribeiro dos Santos")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="HELENE ANDREA MORAES MARCANTH"
-autor=(
-    "HELENE ANDREA MORAES MARCANTH                               "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("HELENE ANDREA MORAES MARCANTH                               ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

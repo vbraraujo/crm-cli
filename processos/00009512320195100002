@@ -1,10 +1,6 @@
 titulo="FERNANDO BIJOS RABELLO"
-autor=(
-    "FERNANDO BIJOS RABELLO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("FERNANDO BIJOS RABELLO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

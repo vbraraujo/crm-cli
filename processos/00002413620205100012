@@ -1,10 +1,6 @@
 titulo="NEIVA LOPES SOUSA"
-autor=(
-    "NEIVA LOPES SOUSA                                           "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("NEIVA LOPES SOUSA                                           ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

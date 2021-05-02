@@ -1,10 +1,6 @@
 titulo="EVERTON DA SILVA RIBEIRO x Metrô - Retroativo 2015"
-autor=(
-    "EVERTON DA SILVA RIBEIRO                                    "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("EVERTON DA SILVA RIBEIRO                                    ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

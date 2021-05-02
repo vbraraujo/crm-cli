@@ -1,10 +1,6 @@
 titulo="Anderson Vasconcelos Pereira x Metrô - PES 1994"
-autor=(
-    "Anderson Vasconcelos Pereira"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Anderson Vasconcelos Pereira")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

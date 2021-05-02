@@ -1,10 +1,6 @@
 titulo="Maria de Lourdes Galvão x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Maria de Lourdes Galvão"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Maria de Lourdes Galvão")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

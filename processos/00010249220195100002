@@ -1,10 +1,6 @@
 titulo="TALITA PENA VERAS x Metrô - Multa atestados"
-autor=(
-    "TALITA PENA VERAS"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("TALITA PENA VERAS")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

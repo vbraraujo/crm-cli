@@ -1,10 +1,6 @@
 titulo="EDIVALDO SIMPLICIO BARBOSA x Metrô - Descontos 2019"
-autor=(
-    "Edivaldo Simplicio Barbosa"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Edivaldo Simplicio Barbosa")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

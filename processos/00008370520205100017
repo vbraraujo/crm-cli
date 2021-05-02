@@ -1,10 +1,6 @@
 titulo="HELYKA BERNARDES GOMES x Metrô - Anuênio"
-autor=(
-    "HELYKA BERNARDES GOMES"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("HELYKA BERNARDES GOMES")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

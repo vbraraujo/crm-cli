@@ -1,10 +1,6 @@
 titulo="ULCENO LUIZ DE OLIVEIRA"
-autor=(
-    "ULCENO LUIZ DE OLIVEIRA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ULCENO LUIZ DE OLIVEIRA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="Pedro Oldemar Lima Ataide x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Pedro Oldemar Lima Ataide"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Pedro Oldemar Lima Ataide")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

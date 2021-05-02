@@ -1,10 +1,6 @@
 titulo="PATRICIA AQUEMI ARIYOSHI PORTILHO x Metro - Multa atestados"
-autor=(
-    "PATRICIA AQUEMI ARIYOSHI PORTILHO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("PATRICIA AQUEMI ARIYOSHI PORTILHO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

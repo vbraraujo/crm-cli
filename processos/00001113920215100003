@@ -1,10 +1,6 @@
 titulo="VANIA MARIA DIAS DE ARAUJO AZEVEDO x Metrô - Anuênio"
-autor=(
-    "VANIA MARIA DIAS DE ARAUJO AZEVEDO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("VANIA MARIA DIAS DE ARAUJO AZEVEDO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

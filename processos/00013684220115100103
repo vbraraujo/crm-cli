@@ -1,10 +1,6 @@
 titulo="Antonio Ferreira Chaves Filho x Companhia do Metropolitano do Distrito Federal - METRO/DF"
-autor=(
-    "Antonio Ferreira Chaves Filho"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Antonio Ferreira Chaves Filho")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

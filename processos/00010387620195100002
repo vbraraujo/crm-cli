@@ -1,10 +1,6 @@
 titulo="FERNANDO ANTONIO DOS SANTOS"
-autor=(
-    "FERNANDO ANTONIO DOS SANTOS                                 "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("FERNANDO ANTONIO DOS SANTOS                                 ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

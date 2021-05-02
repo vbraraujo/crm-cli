@@ -1,10 +1,6 @@
 titulo="Renato Marcos Mourao Barbosa x Metrô - PES 1994"
-autor=(
-    "Renato Marcos Mourao Barbosa"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Renato Marcos Mourao Barbosa")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

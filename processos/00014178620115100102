@@ -1,10 +1,6 @@
 titulo="LIGIA BERNADETE DE SOUSA SOARES MARTINS"
-autor=(
-    "LIGIA BERNADETE DE SOUSA SOARES MARTINS"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("LIGIA BERNADETE DE SOUSA SOARES MARTINS")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

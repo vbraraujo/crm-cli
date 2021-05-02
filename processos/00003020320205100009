@@ -1,10 +1,6 @@
 titulo="MICHAEL REISMANN GOMES DE PAULA x Metrô - Retroativo 2015"
-autor=(
-    "MICHAEL REISMANN GOMES DE PAULA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("MICHAEL REISMANN GOMES DE PAULA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

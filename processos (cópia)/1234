@@ -11,5 +11,5 @@ condenacao=()
 pagamentos=()
 etiquetas=()
 tramitacao="Vara de Brasília"
-anotacoes=( "Teste de anotação" "2021-05-02: Mais uma anotação")
+anotacoes=()
 status="inativo"

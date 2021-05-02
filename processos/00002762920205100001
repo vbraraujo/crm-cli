@@ -1,10 +1,6 @@
 titulo="JADER SOUZA DE GODOY"
-autor=(
-    "JADER SOUZA DE GODOY                                        "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("JADER SOUZA DE GODOY                                        ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

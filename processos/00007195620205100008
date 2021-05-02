@@ -1,10 +1,6 @@
 titulo="DANIELA LOPES DOS SANTOS x Metrô - Descontos 2019"
-autor=(
-    "DANIELA LOPES DOS SANTOS DIAS                               "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("DANIELA LOPES DOS SANTOS DIAS                               ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

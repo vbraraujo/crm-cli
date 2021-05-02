@@ -1,10 +1,6 @@
 titulo="MARCIANA MEIRY x Metrô - Pagamento de salários"
-autor=(
-    "MARCIANA MEIRY RODRIGUES SANTOS"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("MARCIANA MEIRY RODRIGUES SANTOS")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

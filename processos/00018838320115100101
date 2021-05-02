@@ -1,10 +1,6 @@
 titulo="Fernando de Abreu Machado x Metrô - PES 1994"
-autor=(
-    "Fernando de Abreu Machado"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Fernando de Abreu Machado")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

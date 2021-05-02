@@ -1,10 +1,6 @@
 titulo="DARLAN SILVIO BATISTA PRADO JUNIOR"
-autor=(
-    "DARLAN SILVIO BATISTA PRADO JUNIOR"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("DARLAN SILVIO BATISTA PRADO JUNIOR")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

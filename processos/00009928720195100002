@@ -1,10 +1,6 @@
 titulo="GUILHERME RODRIGUES THAUMATURGO"
-autor=(
-    "GUILHERME RODRIGUES THAUMATURGO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("GUILHERME RODRIGUES THAUMATURGO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

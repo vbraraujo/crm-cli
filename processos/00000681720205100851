@@ -1,10 +1,6 @@
 titulo="ANTONIO CARLOS WOLFGRANN MONTEIRO"
-autor=(
-    "ANTONIO CARLOS WOLFGRANN MONTEIRO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ANTONIO CARLOS WOLFGRANN MONTEIRO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

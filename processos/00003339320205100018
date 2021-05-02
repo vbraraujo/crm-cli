@@ -1,10 +1,6 @@
 titulo="JOSE NATANAEL MARTINS TAUMATURGO x Metro - Retroativo 2015"
-autor=(
-    "JOSE NATANAEL MARTINS TAUMATURGO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("JOSE NATANAEL MARTINS TAUMATURGO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

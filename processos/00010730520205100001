@@ -1,10 +1,6 @@
 titulo="PEDRO HENRIQUE DE MENDONCA SENA x Metrô - Descontos 2019"
-autor=(
-    "PEDRO HENRIQUE DE MENDONCA SENA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("PEDRO HENRIQUE DE MENDONCA SENA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

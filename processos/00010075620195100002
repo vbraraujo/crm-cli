@@ -1,10 +1,6 @@
 titulo="WANDERSON DOS SANTOS SOUZA"
-autor=(
-    "Wanderson dos Santos Souza"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Wanderson dos Santos Souza")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

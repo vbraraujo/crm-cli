@@ -1,10 +1,6 @@
 titulo="JOSE NATANAEL MARTINS TAUMATURGO x Metrô - MS Reintegração"
-autor=(
-    "JOSE NATANAEL MARTINS TAUMATURGO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("JOSE NATANAEL MARTINS TAUMATURGO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

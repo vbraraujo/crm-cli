@@ -1,10 +1,6 @@
 titulo="AGAMENON SETEMBRINO DE JESUS DOS PASSOS"
-autor=(
-    "AGAMENON SETEMBRINO DE JESUS DOS PASSOS"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("AGAMENON SETEMBRINO DE JESUS DOS PASSOS")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

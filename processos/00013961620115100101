@@ -1,10 +1,6 @@
 titulo="Ana Carolina Neves Coelho de Assis x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Ana Carolina Neves Coelho de Assis"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Ana Carolina Neves Coelho de Assis")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

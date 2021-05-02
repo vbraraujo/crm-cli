@@ -1,10 +1,6 @@
 titulo="JADSON RODRIGUES AGUIAR x Metrô - Anuênio"
-autor=(
-    "JADSON RODRIGUES AGUIAR"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("JADSON RODRIGUES AGUIAR")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

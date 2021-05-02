@@ -1,10 +1,6 @@
 titulo="THIAGO MARQUES DOS SANTOS x Metrô/DF"
-autor=(
-    "THIAGO MARQUES DOS SANTOS"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("THIAGO MARQUES DOS SANTOS")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

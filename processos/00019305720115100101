@@ -1,10 +1,6 @@
 titulo="Aurea Mota Santana x Companhia do Metropolitano do Distrito Federal - METRO/DF"
-autor=(
-    "Aurea Mota Santana"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Aurea Mota Santana")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

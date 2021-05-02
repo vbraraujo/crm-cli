@@ -1,10 +1,6 @@
 titulo="CLAUDIO FERNANDO BENICIO ARAUJO x Metrô - Retroativo 2015"
-autor=(
-    "Claudio Fernando Benicio Araujo"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Claudio Fernando Benicio Araujo")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

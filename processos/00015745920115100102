@@ -1,10 +1,6 @@
 titulo="LINCOLN VELOSO DE OLIVEIRA COSTA x Metro - PES 1994"
-autor=(
-    "LINCOLN VELOSO DE OLIVEIRA COSTA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("LINCOLN VELOSO DE OLIVEIRA COSTA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

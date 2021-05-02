@@ -1,10 +1,6 @@
 titulo="Andre Charrua da Silva x Metrô - PES 1994"
-autor=(
-    "Andre Charrua da Silva"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Andre Charrua da Silva")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

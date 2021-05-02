@@ -1,10 +1,6 @@
 titulo="JOAO BATISTA LEAL DA SILVA"
-autor=(
-    "JOAO BATISTA LEAL DA SILVA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("JOAO BATISTA LEAL DA SILVA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

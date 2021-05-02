@@ -1,10 +1,6 @@
 titulo="ISRAEL ALMEIDA PEREIRA"
-autor=(
-    "ISRAEL ALMEIDA PEREIRA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ISRAEL ALMEIDA PEREIRA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

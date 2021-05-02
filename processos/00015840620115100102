@@ -1,10 +1,6 @@
 titulo="FERNANDO BIJOS RABELLO x Metrô - PES 1994"
-autor=(
-    "FERNANDO BIJOS RABELLO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("FERNANDO BIJOS RABELLO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="MARCONDES RIBEIRO DOS SANTOS x Metrô - Retroativo 2015"
-autor=(
-    "Marcondes Ribeiro dos Santos"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Marcondes Ribeiro dos Santos")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

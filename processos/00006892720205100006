@@ -1,10 +1,6 @@
 titulo="LILIA VIANA ALVES PEREIRA x Metro-DF - Descontos 2019"
-autor=(
-    "Lilia Viana Alves Pereira"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Lilia Viana Alves Pereira")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

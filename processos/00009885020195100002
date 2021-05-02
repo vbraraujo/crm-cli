@@ -1,10 +1,6 @@
 titulo="RENATA SANTOS DA SILVA SANTANA"
-autor=(
-    "RENATA SANTOS DA SILVA SANTANA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("RENATA SANTOS DA SILVA SANTANA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="Jairo Santos da Silva x Metrô - Retroativo 2015"
-autor=(
-    "Jairo Santos da Silva"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Jairo Santos da Silva")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

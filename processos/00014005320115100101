@@ -1,10 +1,6 @@
 titulo="JOSE FRANCISCO LACERDA DA SILVA JUNIOR x Metrô - PES 1994"
-autor=(
-    "JOSE FRANCISCO LACERDA DA SILVA JUNIOR"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("JOSE FRANCISCO LACERDA DA SILVA JUNIOR")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

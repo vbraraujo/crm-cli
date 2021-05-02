@@ -1,10 +1,6 @@
 titulo="ALEXSANDRO DE MELO LIMA"
-autor=(
-    "ALEXSANDRO DE MELO LIMA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ALEXSANDRO DE MELO LIMA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

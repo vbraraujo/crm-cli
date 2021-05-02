@@ -1,10 +1,6 @@
 titulo="LAIR LIMA DE BRITO X Metrô - Anuênio"
-autor=(
-    "LAIR LIMA DE BRITO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("LAIR LIMA DE BRITO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="VALDINEI FRANCISCO PINTO x Metrô - Base de calculo periculosidade"
-autor=(
-    "VALDINEI FRANCISCO PINTO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("VALDINEI FRANCISCO PINTO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

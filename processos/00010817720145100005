@@ -1,10 +1,6 @@
 titulo="BRUNA DOS SANTOS VIEIRA x Metrô/DF"
-autor=(
-    "BRUNA DOS SANTOS VIEIRA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("BRUNA DOS SANTOS VIEIRA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

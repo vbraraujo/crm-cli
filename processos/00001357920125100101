@@ -1,10 +1,6 @@
 titulo="Reginaldo Alves Reis x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Reginaldo Alves Reis"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Reginaldo Alves Reis")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

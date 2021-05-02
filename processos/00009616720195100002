@@ -1,10 +1,6 @@
 titulo="ANTONIO RAFAEL ALVES COELHO x Metrô - Multa atestados"
-autor=(
-    "ANTONIO RAFAEL ALVES COELHO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ANTONIO RAFAEL ALVES COELHO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

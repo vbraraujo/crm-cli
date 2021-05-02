@@ -1,10 +1,6 @@
 titulo="Francisco Willian Monteiro Lopes x Metrô - PES 1994"
-autor=(
-    "Francisco Willian Monteiro Lopes"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Francisco Willian Monteiro Lopes")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

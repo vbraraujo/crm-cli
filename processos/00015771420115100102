@@ -1,10 +1,6 @@
 titulo="Alex Almeida Gomes x Companhia do Metropolitano do Distrito Federal - METRO/DF"
-autor=(
-    "Alex Almeida Gomes"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Alex Almeida Gomes")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

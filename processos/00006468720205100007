@@ -1,10 +1,6 @@
 titulo="RENATA CAMPOS STRAFACCI x Metrô - Férias 2019"
-autor=(
-    "RENATA CAMPOS STRAFACCI"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("RENATA CAMPOS STRAFACCI")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="JOSE LUIS SEVERINO DE ARAUJO x Metro - MS"
-autor=(
-    "JOSE LUIS SEVERINO DE ARAUJO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("JOSE LUIS SEVERINO DE ARAUJO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="ANDRE LUIS STEFANELLI CONCEICAO x Metrô - PES 1994"
-autor=(
-    "ANDRE LUIS STEFANELLI CONCEICAO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ANDRE LUIS STEFANELLI CONCEICAO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

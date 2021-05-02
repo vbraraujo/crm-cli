@@ -1,10 +1,6 @@
 titulo="ANDERSON RICARDO DE ALMEIDA REIS x Metrô - Descontos 2019"
-autor=(
-    "ANDERSON RICARDO DE ALMEIDA REIS"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ANDERSON RICARDO DE ALMEIDA REIS")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

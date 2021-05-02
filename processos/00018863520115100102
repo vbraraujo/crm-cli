@@ -1,10 +1,6 @@
 titulo="JOSE JANILSON DA ROCHA CARVALHO x Metrô - PES 1994"
-autor=(
-    "JOSE JANILSON DA ROCHA CARVALHO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("JOSE JANILSON DA ROCHA CARVALHO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

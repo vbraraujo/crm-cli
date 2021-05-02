@@ -1,10 +1,6 @@
 titulo="Sindmetro x Metrô - Prescrição descontos de greve 2011/2012"
-autor=(
-    "Sindicato dos Trabalhadores em Empresas de Transportes Metroviarios do DF - SINDMETRÔ-DF"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Sindicato dos Trabalhadores em Empresas de Transportes Metroviarios do DF - SINDMETRÔ-DF")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

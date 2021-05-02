@@ -1,10 +1,6 @@
 titulo="ANDRESSA SOARES PEREIRA x Metrô - Multa atestados"
-autor=(
-    "ANDRESSA SOARES PEREIRA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ANDRESSA SOARES PEREIRA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

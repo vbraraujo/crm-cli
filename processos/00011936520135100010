@@ -1,10 +1,6 @@
 titulo="Wilson Lopes de Sousa x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Wilson Lopes de Sousa"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Wilson Lopes de Sousa")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

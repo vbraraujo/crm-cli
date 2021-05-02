@@ -1,10 +1,6 @@
 titulo="SHEILA DOS SANTOS DELLEZZOPOLLES"
-autor=(
-    "SHEILA DOS SANTOS DELLEZZOPOLLES"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("SHEILA DOS SANTOS DELLEZZOPOLLES")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

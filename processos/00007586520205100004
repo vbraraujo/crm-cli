@@ -1,10 +1,6 @@
 titulo="Alexandre Magno Ribeiro do Nascimento x Metrô - Anuênio"
-autor=(
-    "Alexandre Magno Ribeiro do Nascimento"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Alexandre Magno Ribeiro do Nascimento")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

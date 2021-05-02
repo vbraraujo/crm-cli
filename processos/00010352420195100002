@@ -1,10 +1,6 @@
 titulo="ADELIO AUGUSTO DE ARAUJO x Metro - Multa atestados"
-autor=(
-    "ADELIO AUGUSTO DE ARAUJO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ADELIO AUGUSTO DE ARAUJO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

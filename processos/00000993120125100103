@@ -1,10 +1,6 @@
 titulo="Aylton Azevedo de Melo x Metrô - PES 1994"
-autor=(
-    "Aylton Azevedo de Melo"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Aylton Azevedo de Melo")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

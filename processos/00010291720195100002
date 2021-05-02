@@ -1,10 +1,6 @@
 titulo="ANDRE FLAVIANO MANHAES D OLIVEIRA x Metrô - Multa atestados"
-autor=(
-    "ANDRE FLAVIANO MANHAES D OLIVEIRA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ANDRE FLAVIANO MANHAES D OLIVEIRA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

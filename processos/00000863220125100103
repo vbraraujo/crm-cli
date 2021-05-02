@@ -1,10 +1,6 @@
 titulo="Claudio Fernando Benicio Araujo x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Claudio Fernando Benicio Araujo"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Claudio Fernando Benicio Araujo")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

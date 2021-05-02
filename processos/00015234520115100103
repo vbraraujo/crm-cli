@@ -1,10 +1,6 @@
 titulo="Bruno Erckmam Fernandes de Araujo Sobrinho x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Bruno Erckmam Fernandes de Araujo Sobrinho"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Bruno Erckmam Fernandes de Araujo Sobrinho")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

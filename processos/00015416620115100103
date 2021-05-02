@@ -1,10 +1,6 @@
 titulo="SANDRA FERREIRA DA CRUZ TORREAO x Metrô - PES 1994"
-autor=(
-    "SANDRA FERREIRA DA CRUZ TORREAO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("SANDRA FERREIRA DA CRUZ TORREAO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

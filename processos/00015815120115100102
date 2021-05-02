@@ -1,10 +1,6 @@
 titulo="IRACINETE GUIMARAES BRITO x Metrô - PES 1994"
-autor=(
-    "IRACINETE GUIMARAES BRITO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("IRACINETE GUIMARAES BRITO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

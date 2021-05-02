@@ -1,10 +1,6 @@
 titulo="Euclides Jose Rios Nunes x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Euclides Jose Rios Nunes"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Euclides Jose Rios Nunes")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

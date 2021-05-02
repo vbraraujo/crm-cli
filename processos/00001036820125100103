@@ -1,10 +1,6 @@
 titulo="EDIVALDO CESAR DOS SANTOS"
-autor=(
-    "EDIVALDO CESAR DOS SANTOS                                   "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("EDIVALDO CESAR DOS SANTOS                                   ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

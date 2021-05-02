@@ -1,10 +1,6 @@
 titulo="TIAGO AFONSO SILVA x Metro - Rescisão indireta"
-autor=(
-    "TIAGO AFONSO SILVA                                          "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("TIAGO AFONSO SILVA                                          ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

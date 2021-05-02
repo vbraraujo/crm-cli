@@ -1,10 +1,6 @@
 titulo="MARLON BERNARDO"
-autor=(
-    "MARLON BERNARDO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("MARLON BERNARDO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

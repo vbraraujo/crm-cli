@@ -1,10 +1,6 @@
 titulo="Fernanda de Oliveira Soares e Sousa x Metrô - Anuênio"
-autor=(
-    "FERNANDA DE OLIVEIRA SOARES E SOUSA                         "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("FERNANDA DE OLIVEIRA SOARES E SOUSA                         ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

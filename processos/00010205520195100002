@@ -1,10 +1,6 @@
 titulo="CLAUDETE GOMES PEREIRA DE SOUSA"
-autor=(
-    "CLAUDETE GOMES PEREIRA DE SOUSA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("CLAUDETE GOMES PEREIRA DE SOUSA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

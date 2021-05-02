@@ -1,10 +1,6 @@
 titulo="PAULO ROBERTO ROSA"
-autor=(
-    "PAULO ROBERTO ROSA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("PAULO ROBERTO ROSA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

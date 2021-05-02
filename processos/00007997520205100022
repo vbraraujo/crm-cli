@@ -1,10 +1,6 @@
 titulo="GIVALDO SIQUEIRA BRANDAO x Metrô - Descontos 2019"
-autor=(
-    "GIVALDO SIQUEIRA BRANDAO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("GIVALDO SIQUEIRA BRANDAO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

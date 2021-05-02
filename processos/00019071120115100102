@@ -1,10 +1,6 @@
 titulo="LORRANY SANTANA DE SOUSA MEDEIROS x Metro-DF"
-autor=(
-    "LORRANY SANTANA DE SOUSA MEDEIROS"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("LORRANY SANTANA DE SOUSA MEDEIROS")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="Dalcir Jose Arenhart x Companhia do Metropolitano do Distrito Federal - METRO/DF"
-autor=(
-    "Dalcir Jose Arenhart"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Dalcir Jose Arenhart")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="David Augusto Bandeira dos Santos x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "David Augusto Bandeira dos Santos"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("David Augusto Bandeira dos Santos")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

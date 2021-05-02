@@ -1,10 +1,6 @@
 titulo="JAIRO OLIVEIRA FERREIRA JUNIOR x Metro-DF"
-autor=(
-    "JAIRO OLIVEIRA FERREIRA JUNIOR"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("JAIRO OLIVEIRA FERREIRA JUNIOR")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

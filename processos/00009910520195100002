@@ -1,10 +1,6 @@
 titulo="ALEXANDRE MATROSOV DE MOURA REGO"
-autor=(
-    "ALEXANDRE MATROSOV DE MOURA REGO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ALEXANDRE MATROSOV DE MOURA REGO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

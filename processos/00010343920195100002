@@ -1,10 +1,6 @@
 titulo="EDUARDO BAPTISTA GERMANO"
-autor=(
-    "Eduardo Baptista Germano"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Eduardo Baptista Germano")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

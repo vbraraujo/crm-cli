@@ -1,10 +1,6 @@
 titulo="C. M. D. F. M. D."
-autor=(
-    "Companhia do Metropolitano do Distrito Federal - METRO/DF"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Companhia do Metropolitano do Distrito Federal - METRO/DF")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

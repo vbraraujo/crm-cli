@@ -1,10 +1,6 @@
 titulo="Metrô x Rivanaldo Bezerra Maia - MS"
-autor=(
-    "RIVANALDO BEZERRA MAIA                                      "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("RIVANALDO BEZERRA MAIA                                      ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

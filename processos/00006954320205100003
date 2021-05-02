@@ -1,10 +1,6 @@
 titulo="SONIVALDO LIMA NASCIMENTO x Metrô - Complemento salarial"
-autor=(
-    "SONIVALDO LIMA NASCIMENTO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("SONIVALDO LIMA NASCIMENTO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

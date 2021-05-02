@@ -1,10 +1,6 @@
 titulo="MARCO ANTONIO FORTES ASSIS"
-autor=(
-    "MARCO ANTONIO FORTES ASSIS"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("MARCO ANTONIO FORTES ASSIS")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

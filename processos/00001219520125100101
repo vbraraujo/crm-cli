@@ -1,10 +1,6 @@
 titulo="Vansley Tavares Rocha x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Vansley Tavares Rocha"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Vansley Tavares Rocha")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

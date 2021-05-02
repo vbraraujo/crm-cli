@@ -1,10 +1,6 @@
 titulo="ROBSON PERRU BELISARIO x Metrô - Retroativo 2015"
-autor=(
-    "ROBSON PERRU BELISARIO                                      "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ROBSON PERRU BELISARIO                                      ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

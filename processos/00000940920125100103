@@ -1,10 +1,6 @@
 titulo="Andre Soares Alcantara x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Andre Soares Alcantara"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Andre Soares Alcantara")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="ANDERSON FERREIRA DOS SANTOS x Metrô - Retroativo 2015"
-autor=(
-    "ANDERSON FERREIRA DOS SANTOS"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ANDERSON FERREIRA DOS SANTOS")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

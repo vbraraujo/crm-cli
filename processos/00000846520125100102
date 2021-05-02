@@ -1,10 +1,6 @@
 titulo="ILORI FRANK SANTANA x Metrô-DF"
-autor=(
-    "ILORI FRANK SANTANA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ILORI FRANK SANTANA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

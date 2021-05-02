@@ -1,10 +1,6 @@
 titulo="Tiago Brasileiro x Metro-DF - Reintegração"
-autor=(
-    "TIAGO BRASILEIRO DA SILVA DA NOBREGA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("TIAGO BRASILEIRO DA SILVA DA NOBREGA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

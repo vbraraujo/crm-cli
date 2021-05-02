@@ -1,10 +1,6 @@
 titulo="Ricardo do Canto Fernandes x Metrô - Anuênio"
-autor=(
-    "Ricardo do Canto Fernandes"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Ricardo do Canto Fernandes")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

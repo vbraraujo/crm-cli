@@ -1,10 +1,6 @@
 titulo="LUCAS VERAS PRUDENTE DE ABREU"
-autor=(
-    "LUCAS VERAS PRUDENTE DE ABREU                               "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("LUCAS VERAS PRUDENTE DE ABREU                               ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="FRANCISCO DE ASSIS ARAUJO x Metrô - Retroativo 2015"
-autor=(
-    "Francisco de Assis Araujo"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Francisco de Assis Araujo")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

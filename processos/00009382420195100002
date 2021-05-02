@@ -1,10 +1,6 @@
 titulo="JOAO CARLOS ESTEVES"
-autor=(
-    "JOAO CARLOS ESTEVES"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("JOAO CARLOS ESTEVES")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

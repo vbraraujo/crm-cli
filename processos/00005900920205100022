@@ -1,10 +1,6 @@
 titulo="MARIA APARECIDA JARDIM SENA x Metrô - Reintegração aposentados"
-autor=(
-    "Maria Aparecida Jardim Sena"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Maria Aparecida Jardim Sena")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

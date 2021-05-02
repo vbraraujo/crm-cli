@@ -1,10 +1,6 @@
 titulo="Iran Nunes Martins x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Iran Nunes Martins"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Iran Nunes Martins")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

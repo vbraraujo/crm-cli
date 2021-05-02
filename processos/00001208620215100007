@@ -1,10 +1,6 @@
 titulo="MARIA DO SOCORRO MAGALY DE OLIVEIRA SANTOS x Metrô - Anuênio"
-autor=(
-    "MARIA DO SOCORRO MAGALY DE OLIVEIRA SANTOS"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("MARIA DO SOCORRO MAGALY DE OLIVEIRA SANTOS")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

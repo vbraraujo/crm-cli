@@ -1,10 +1,6 @@
 titulo="Edivaldo Vieira Cardoso"
-autor=(
-    "EDIVALDO VIEIRA CARDOSO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("EDIVALDO VIEIRA CARDOSO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

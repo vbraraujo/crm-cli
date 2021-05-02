@@ -1,10 +1,6 @@
 titulo="SERGIO ALVES SILVEIRA"
-autor=(
-    "SERGIO ALVES SILVEIRA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("SERGIO ALVES SILVEIRA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

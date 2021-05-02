@@ -1,10 +1,6 @@
 titulo="Arthur dos Santos Costa Pereira x Companhia do Metropolitano do Distrito Federal - METRO/DF"
-autor=(
-    "Arthur dos Santos Costa Pereira"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Arthur dos Santos Costa Pereira")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

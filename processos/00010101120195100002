@@ -1,10 +1,6 @@
 titulo="FRANCISCO DAS CHAGAS DE ARAUJO JUNIOR"
-autor=(
-    "FRANCISCO DAS CHAGAS DE ARAUJO JUNIOR"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("FRANCISCO DAS CHAGAS DE ARAUJO JUNIOR")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

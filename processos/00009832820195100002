@@ -1,10 +1,6 @@
 titulo="JORGE GUSTAVO ASSUNÇÃO x Metrô - Multa atestados"
-autor=(
-    "JORGE GUSTAVO ASSUNÇÃO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("JORGE GUSTAVO ASSUNÇÃO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

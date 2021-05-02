@@ -1,10 +1,6 @@
 titulo="WILLIAN SANTOS MELO x Metrô - Anuênio"
-autor=(
-    "WILLIAN SANTOS MELO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("WILLIAN SANTOS MELO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

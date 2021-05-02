@@ -1,10 +1,6 @@
 titulo="Adriana Rodrigues da Silva x Metrô - Titulação"
-autor=(
-    "Adriana Rodrigues da Silva"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Adriana Rodrigues da Silva")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

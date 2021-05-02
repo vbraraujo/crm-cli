@@ -1,10 +1,6 @@
 titulo="ANDRE LUIZ DE CASTRO NASCIMENTO"
-autor=(
-    "ANDRE LUIZ DE CASTRO NASCIMENTO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ANDRE LUIZ DE CASTRO NASCIMENTO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

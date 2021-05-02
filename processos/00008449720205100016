@@ -1,10 +1,6 @@
 titulo="ROGÉRIO BARBOSA"
-autor=(
-    "ROGÉRIO BARBOSA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ROGÉRIO BARBOSA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

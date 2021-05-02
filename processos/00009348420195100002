@@ -1,10 +1,6 @@
 titulo="EMERSON ALVES URANI"
-autor=(
-    "Emerson Alves Urani"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Emerson Alves Urani")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

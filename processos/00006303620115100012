@@ -1,10 +1,6 @@
 titulo="WILLIAN CARLOS DE ALENCAR"
-autor=(
-    "WILLIAN CARLOS DE ALENCAR"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("WILLIAN CARLOS DE ALENCAR")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

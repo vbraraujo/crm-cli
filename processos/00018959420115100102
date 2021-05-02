@@ -1,10 +1,6 @@
 titulo="ANDERSON MUNHOZ FERREIRA"
-autor=(
-    "ANDERSON MUNHOZ FERREIRA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ANDERSON MUNHOZ FERREIRA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

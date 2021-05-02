@@ -1,10 +1,6 @@
 titulo="Adalto Novaes dos Santos x Companhia do Metropolitano do Distrito Federal - METRO/DF"
-autor=(
-    "Adalto Novaes dos Santos"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Adalto Novaes dos Santos")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

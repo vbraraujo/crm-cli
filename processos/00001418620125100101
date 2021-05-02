@@ -1,10 +1,6 @@
 titulo="ALESSANDRO SILVA MATOS"
-autor=(
-    "ALESSANDRO SILVA MATOS                                      "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ALESSANDRO SILVA MATOS                                      ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

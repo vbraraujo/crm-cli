@@ -1,10 +1,6 @@
 titulo="HERACLITON ESMERALDO DA SILVA DE ANDRADE x Metrô - Retroativo 2015"
-autor=(
-    "HERACLITON ESMERALDO DA SILVA DE ANDRADE                    "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("HERACLITON ESMERALDO DA SILVA DE ANDRADE                    ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="GLAUDSTON SILVA DE SOUSA x Metrô - Descontos 2019"
-autor=(
-    "GLAUDSTON SILVA DE SOUSA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("GLAUDSTON SILVA DE SOUSA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

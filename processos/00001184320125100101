@@ -1,10 +1,6 @@
 titulo="Jefferson Ferreira Teles x Metrô - PES 1994"
-autor=(
-    "Jefferson Ferreira Teles"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Jefferson Ferreira Teles")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

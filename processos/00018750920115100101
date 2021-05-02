@@ -1,10 +1,6 @@
 titulo="Abdias de Caldas Lima Filho x Metro - PES 1994"
-autor=(
-    "Abdias de Caldas Lima Filho"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Abdias de Caldas Lima Filho")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

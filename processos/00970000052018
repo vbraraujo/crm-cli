@@ -1,10 +1,6 @@
 titulo="Chervison Rodrigues de Souza x Metro/DF - PAD"
-autor=(
-    "Chervison Rodrigues de Souza"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Chervison Rodrigues de Souza")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

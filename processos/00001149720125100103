@@ -1,10 +1,6 @@
 titulo="CLEYTON DOS ANJOS BESERRA"
-autor=(
-    "CLEYTON DOS ANJOS BESERRA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("CLEYTON DOS ANJOS BESERRA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

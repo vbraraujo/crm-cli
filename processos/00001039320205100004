@@ -1,10 +1,6 @@
 titulo="EDLA AMELIA ARAQUE DOS SANTOS x Metro - Reintegração aposentado"
-autor=(
-    "EDLA AMELIA ARAQUE DOS SANTOS                               "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("EDLA AMELIA ARAQUE DOS SANTOS                               ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

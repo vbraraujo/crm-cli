@@ -1,10 +1,6 @@
 titulo="VALMIR FRANCISCO MENDES x Metrô - Anuênio"
-autor=(
-    "VALMIR FRANCISCO MENDES"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("VALMIR FRANCISCO MENDES")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

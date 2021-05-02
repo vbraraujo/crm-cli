@@ -1,10 +1,6 @@
 titulo="Cesar Silas Ribeiro Lima x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Cesar Silas Ribeiro Lima"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Cesar Silas Ribeiro Lima")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

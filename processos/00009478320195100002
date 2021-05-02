@@ -1,10 +1,6 @@
 titulo="FRANCLIN DE SOUZA SANTOS"
-autor=(
-    "FRANCLIN DE SOUZA SANTOS"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("FRANCLIN DE SOUZA SANTOS")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

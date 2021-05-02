@@ -1,10 +1,6 @@
 titulo="GILVANETE DA SILVA XAVIER"
-autor=(
-    "Gilvanete da Silva Xavier"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Gilvanete da Silva Xavier")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

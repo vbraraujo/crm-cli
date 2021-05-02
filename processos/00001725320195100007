@@ -1,10 +1,6 @@
 titulo="JOAO DE SOUZA x Metrô - RT 02 -"
-autor=(
-    "JOAO DE SOUZA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("JOAO DE SOUZA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="DIONES DA MOTA RAMOS"
-autor=(
-    "DIONES DA MOTA RAMOS"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("DIONES DA MOTA RAMOS")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

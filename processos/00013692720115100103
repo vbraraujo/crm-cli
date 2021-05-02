@@ -1,10 +1,6 @@
 titulo="Augusto da Silva Costa x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Augusto da Silva Costa"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Augusto da Silva Costa")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="MONICA ARCHANJO CARNEIRO"
-autor=(
-    "MONICA ARCHANJO CARNEIRO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("MONICA ARCHANJO CARNEIRO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

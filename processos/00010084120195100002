@@ -1,10 +1,6 @@
 titulo="JAMES LUIZ MARQUES DE SOUSA"
-autor=(
-    "JAMES LUIZ MARQUES DE SOUSA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("JAMES LUIZ MARQUES DE SOUSA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

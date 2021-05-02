@@ -1,10 +1,6 @@
 titulo="HAROLDO WESLEY MOSES AGUIAR x Metrô - Retroativo 2015"
-autor=(
-    "HAROLDO WESLEY MOSES AGUIAR"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("HAROLDO WESLEY MOSES AGUIAR")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

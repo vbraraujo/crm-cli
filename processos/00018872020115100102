@@ -1,10 +1,6 @@
 titulo="ROGERIO RAMOS OLIVEIRA"
-autor=(
-    "ROGERIO RAMOS OLIVEIRA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ROGERIO RAMOS OLIVEIRA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

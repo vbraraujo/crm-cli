@@ -1,10 +1,6 @@
 titulo="MANUELA FURQUIM HENRIQUES x Metrô - Descontos 2019"
-autor=(
-    "Manuela Furquim Henriques"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Manuela Furquim Henriques")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

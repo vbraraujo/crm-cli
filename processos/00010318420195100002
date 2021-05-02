@@ -1,10 +1,6 @@
 titulo="ALENCAR BEZERRA DE FARIA"
-autor=(
-    "ALENCAR BEZERRA DE FARIA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ALENCAR BEZERRA DE FARIA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

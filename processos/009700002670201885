@@ -1,10 +1,6 @@
 titulo="John Pablo Sousa Barros x Metro/DF - PAD"
-autor=(
-    "John Pablo Sousa Barros"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("John Pablo Sousa Barros")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

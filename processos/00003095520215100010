@@ -1,10 +1,6 @@
 titulo="ARTHUR RODRIGUES BEZERRA x Metrô - Quebra de caixa"
-autor=(
-    "ARTHUR RODRIGUES BEZERRA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ARTHUR RODRIGUES BEZERRA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

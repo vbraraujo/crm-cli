@@ -1,10 +1,6 @@
 titulo="Rosilene de Oliveira de Sousa x Metro/DF - PAD"
-autor=(
-    "Rosilene de Oliveira de Sousa"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Rosilene de Oliveira de Sousa")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

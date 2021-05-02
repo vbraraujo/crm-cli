@@ -1,10 +1,6 @@
 titulo="Wesley Clemente Pereira x COMPANHIA DO METROPOLITANO DO DISTRITO FEDERAL METRO DF"
-autor=(
-    "Wesley Clemente Pereira"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Wesley Clemente Pereira")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

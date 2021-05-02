@@ -1,10 +1,6 @@
 titulo="Alex Gomes da Silva x Metro - PES 1994"
-autor=(
-    "Alex Gomes da Silva"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Alex Gomes da Silva")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

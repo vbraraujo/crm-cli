@@ -1,10 +1,6 @@
 titulo="SILVIA FERNANDES DA SILVA"
-autor=(
-    "SILVIA FERNANDES DA SILVA                                   "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("SILVIA FERNANDES DA SILVA                                   ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

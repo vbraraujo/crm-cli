@@ -1,10 +1,6 @@
 titulo="PAULO ROBERTO ROSA x Metrô - Retroativo 2015"
-autor=(
-    "PAULO ROBERTO ROSA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("PAULO ROBERTO ROSA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

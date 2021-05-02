@@ -1,10 +1,6 @@
 titulo="Jessé Pinto Moura x Metro/DF - PAD"
-autor=(
-    "Jessé Pinto Moura"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Jessé Pinto Moura")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

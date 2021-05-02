@@ -125,7 +125,30 @@ status=\"ativo\"" > "$processo"
     fi
 }
 
-editar_processo(){
+incluir_array_proc(){
+    #Argumentos: 1 Processo 2 Array editada
+    [[ "$#" < 2 ]] && echo "Não foi possível editar o arquivo, argumentos insuficientes." && read && return
+    
+    local variable="${2}"
+    local content
+    read -ep "Novo valor: " content
+    
+    [[ -z $content ]] && read && return
+
+    local file="${PATH_BASE}/processos/${1}"
+
+    if [ ! -f "${file}" ]; then
+        echo "Arquivo do processo não encontrado: ${file}"
+        read
+    else   
+        [[ "$variable" == "anotacoes" ]] && content="${DATA_HOJE}: ${content}"
+        old_value="$(grep -E "${variable}=" "$file")"
+        new_value="$(sed "s~)$~ \"${content}\")~" <<< "${old_value}")"
+        sed -i "s~${old_value}~${new_value}~" "${file}"
+    fi
+}
+
+editar_variable_proc(){
     #Argumentos: 1 Processo 2 Variável editada
     [[ "$#" < 2 ]] && echo "Não foi possível editar o arquivo, argumentos insuficientes." && read && return
        
@@ -171,25 +194,28 @@ menu_processo(){
             pesquisar_cliente "$2"
             ;;
         "Editar status")
-            editar_processo "${1}" "status" "${2}"
+            editar_variable_proc "${1}" "status" "${2}"
             pesquisar_processo "${1}" "${2}"
             ;;
         "Editar tramitação")
-            editar_processo "${1}" "tramitacao" "${2}"
+            editar_variable_proc "${1}" "tramitacao" "${2}"
             pesquisar_processo "${1}" "${2}"
             ;;
         "Editar título")
-            editar_processo "${1}" "titulo" "${2}" 
+            editar_variable_proc "${1}" "titulo" "${2}" 
             pesquisar_processo "${1}" "${2}"
             ;;
         "Editar valor da causa")
-            editar_processo "${1}" "valor_da_causa" "${2}"
+            editar_variable_proc "${1}" "valor_da_causa" "${2}"
             pesquisar_processo "${1}" "${2}"
             ;;
         "Editar distribuído") 
-            editar_processo "${1}" "distribuido" "${2}"
+            editar_variable_proc "${1}" "distribuido" "${2}"
             pesquisar_processo "${1}" "${2}"
             ;;
+        "Incluir anotação")
+            incluir_array_proc "${1}" "anotacoes" "${2}"
+            pesquisar_processo "${1}" "${2}"
     esac
 }
 
@@ -217,12 +243,14 @@ Etiquetas: $etiquetas"
 
     single_line
     text_color "FINANCEIRO"
-    echo "Condenação: 
-Pagamentos:"
+    echo "Condenação:"
+    printf '%s\n' "${condenacao[@]}"
+    echo "Pagamentos:"
+    printf '%s\n' "${pagamentos[@]}"
 
     single_line
     text_color "ANOTAÇÕES"
-    echo "${anotacoes[@]}"
+    printf '%s\n' "${anotacoes[@]}"
 
     menu_processo "$processo_num" "$2"
 }

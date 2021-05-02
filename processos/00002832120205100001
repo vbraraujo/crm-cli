@@ -1,10 +1,6 @@
 titulo="Nicolau Hamilton Lopes Marques"
-autor=(
-    "Nicolau Hamilton Lopes Marques"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Nicolau Hamilton Lopes Marques")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

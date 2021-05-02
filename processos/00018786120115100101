@@ -1,10 +1,6 @@
 titulo="Francisco das Chagas Pereira da Silva x Metrô - PES 1994"
-autor=(
-    "Francisco das Chagas Pereira da Silva"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Francisco das Chagas Pereira da Silva")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="HERICK NATAM DOS SANTOS CORREA x Metro/DF - PAD"
-autor=(
-    "HERICK NATAM DOS SANTOS CORREA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("HERICK NATAM DOS SANTOS CORREA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="DIOGO LOPES RODRIGUES x Metrô - Retroativo 2015"
-autor=(
-    "DIOGO LOPES RODRIGUES"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("DIOGO LOPES RODRIGUES")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

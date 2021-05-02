@@ -1,10 +1,6 @@
 titulo="ALEXANDRE ALONSO DE SOUZA x Metrô - Retroativo 2015"
-autor=(
-    "ALEXANDRE ALONSO DE SOUZA                                   "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ALEXANDRE ALONSO DE SOUZA                                   ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

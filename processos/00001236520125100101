@@ -1,10 +1,6 @@
 titulo="PEDRO GUSTAVO CARVALHO FEITOSA x Metrô - PES 1994"
-autor=(
-    "PEDRO GUSTAVO CARVALHO FEITOSA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("PEDRO GUSTAVO CARVALHO FEITOSA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="LUCIANO LIRMAN x Metrô - Retroativo 2015"
-autor=(
-    "LUCIANO LIRMAN                                              "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("LUCIANO LIRMAN                                              ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

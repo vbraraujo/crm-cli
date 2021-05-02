@@ -1,10 +1,6 @@
 titulo="RODRIGO DE OLIVEIRA FREIRE x Metrô - Descontos 2019"
-autor=(
-    "RODRIGO DE OLIVEIRA FREIRE"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("RODRIGO DE OLIVEIRA FREIRE")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

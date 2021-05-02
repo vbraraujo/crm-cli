@@ -1,10 +1,6 @@
 titulo="Ana Elisabete Holanda Vilela de Andrade x Metro - Reintegração aposentados"
-autor=(
-    "ANA ELISABETE HOLANDA VILELA DE ANDRADE                     "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ANA ELISABETE HOLANDA VILELA DE ANDRADE                     ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

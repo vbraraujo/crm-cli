@@ -1,10 +1,6 @@
 titulo="HEGLISSON GADELHA DE JESUS x Metrô - Multa atestados"
-autor=(
-    "HEGLISSON GADELHA DE JESUS"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("HEGLISSON GADELHA DE JESUS")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

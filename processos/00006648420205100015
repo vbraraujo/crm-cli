@@ -1,10 +1,6 @@
 titulo="Daniela Cunha Rodrigues x Metrô - Descontos 2019"
-autor=(
-    "DANIELA CUNHA RODRIGUES"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("DANIELA CUNHA RODRIGUES")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

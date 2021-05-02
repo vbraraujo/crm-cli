@@ -1,10 +1,6 @@
 titulo="PAULO MARCELO DE OLIVEIRA BRITO"
-autor=(
-    "PAULO MARCELO DE OLIVEIRA BRITO                             "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("PAULO MARCELO DE OLIVEIRA BRITO                             ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

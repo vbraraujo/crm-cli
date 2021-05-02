@@ -1,10 +1,6 @@
 titulo="C. C. S. S. Carla Carvalho Souza"
-autor=(
-    "C. C. S. S. Carla Carvalho Souza"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("C. C. S. S. Carla Carvalho Souza")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

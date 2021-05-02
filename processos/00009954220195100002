@@ -1,10 +1,6 @@
 titulo="JOHNNY XAVIER DOS REIS x Metro - Cump. Sentença"
-autor=(
-    "Johnny Xavier dos Reis"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Johnny Xavier dos Reis")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

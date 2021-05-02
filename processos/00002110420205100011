@@ -1,10 +1,6 @@
 titulo="DANILO SIVIERI BUENO x Metrô- Retroativo 2015"
-autor=(
-    "DANILO SIVIERI BUENO                                        "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("DANILO SIVIERI BUENO                                        ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

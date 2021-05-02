@@ -1,10 +1,6 @@
 titulo="ELIZA CRISTINA DE OLIVEIRA"
-autor=(
-    "ELIZA CRISTINA DE OLIVEIRA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ELIZA CRISTINA DE OLIVEIRA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

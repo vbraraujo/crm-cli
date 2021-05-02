@@ -1,10 +1,6 @@
 titulo="ANA PAULA PARANAGUA CHAVES x Metrô - Anuênio"
-autor=(
-    "ANA PAULA PARANAGUA CHAVES"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ANA PAULA PARANAGUA CHAVES")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

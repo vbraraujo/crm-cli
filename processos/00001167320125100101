@@ -1,10 +1,6 @@
 titulo="Regina Celia Couto Ribeiro x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Regina Celia Couto Ribeiro"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Regina Celia Couto Ribeiro")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

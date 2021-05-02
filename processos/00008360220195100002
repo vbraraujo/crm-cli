@@ -1,10 +1,6 @@
 titulo="ANTONIO FELIPE MONTEIRO DA SILVA x Metrô - Multa atestados"
-autor=(
-    "ANTONIO FELIPE MONTEIRO DA SILVA                            "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ANTONIO FELIPE MONTEIRO DA SILVA                            ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

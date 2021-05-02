@@ -1,10 +1,6 @@
 titulo="Ação de Cumprimento (52ª, 61ª, 63ª, 68ª e 73ª - ACT 2013/2015)"
-autor=(
-    "Sindicato dos Trabalhadores em Empresas de Transportes Metroviarios do DF - SINDMETRÔ-DF"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Sindicato dos Trabalhadores em Empresas de Transportes Metroviarios do DF - SINDMETRÔ-DF")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

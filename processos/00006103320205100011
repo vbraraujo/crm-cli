@@ -1,10 +1,6 @@
 titulo="JOÃO RONALDO FERREIRA DIAS X Metrô - Gratificação de função"
-autor=(
-    "JOÃO RONALDO FERREIRA DIAS"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("JOÃO RONALDO FERREIRA DIAS")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

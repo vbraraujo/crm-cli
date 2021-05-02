@@ -1,10 +1,6 @@
 titulo="ALESSANDRO LOPES CELESTINO x Metrô - Anuênio"
-autor=(
-    "ALESSANDRO LOPES CELESTINO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ALESSANDRO LOPES CELESTINO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

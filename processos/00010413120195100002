@@ -1,10 +1,6 @@
 titulo="FABIO GUEDES SANTANA"
-autor=(
-    "FABIO GUEDES SANTANA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("FABIO GUEDES SANTANA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

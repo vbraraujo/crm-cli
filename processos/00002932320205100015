@@ -1,10 +1,6 @@
 titulo="RENATO MAZIERO PEDROSA x Metro - Retroativo 2015"
-autor=(
-    "RENATO MAZIERO PEDROSA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("RENATO MAZIERO PEDROSA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

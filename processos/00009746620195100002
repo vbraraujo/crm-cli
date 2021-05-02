@@ -1,10 +1,6 @@
 titulo="WILLIANS DA SILVA CHAGAS x Metrô - Multa atestados"
-autor=(
-    "Willians da Silva Chagas"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Willians da Silva Chagas")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

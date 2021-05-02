@@ -1,10 +1,6 @@
 titulo="LUCAS CESAR PACHECO x Metrô - Descontos 2019"
-autor=(
-    "LUCAS CESAR PACHECO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("LUCAS CESAR PACHECO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

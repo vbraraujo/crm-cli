@@ -1,10 +1,6 @@
 titulo="SANDRO MOREIRA ALVES"
-autor=(
-    "SANDRO MOREIRA ALVES"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("SANDRO MOREIRA ALVES")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

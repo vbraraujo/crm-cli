@@ -1,10 +1,6 @@
 titulo="Daniel Carlos Sousa Almeida x Companhia do Metropolitano do Distrito Federal - METRO/DF"
-autor=(
-    "Daniel Carlos Sousa Almeida"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Daniel Carlos Sousa Almeida")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

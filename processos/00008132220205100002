@@ -1,10 +1,6 @@
 titulo="EDIVAN SOARES DA SILVA x Metrô - Anuênio"
-autor=(
-    "EDIVAN SOARES DA SILVA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("EDIVAN SOARES DA SILVA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

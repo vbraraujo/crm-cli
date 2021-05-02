@@ -1,10 +1,6 @@
 titulo="TULIO FERREIRA LINS x Metro - Retroativo 2015"
-autor=(
-    "TULIO FERREIRA LINS"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("TULIO FERREIRA LINS")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

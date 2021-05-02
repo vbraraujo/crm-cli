@@ -1,10 +1,6 @@
 titulo="UILSON ALVES VIEIRA x Metrô - Descontos 2019"
-autor=(
-    "UILSON ALVES VIEIRA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("UILSON ALVES VIEIRA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

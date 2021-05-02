@@ -1,10 +1,6 @@
 titulo="JOAO RONALDO FERREIRA DIAS x Metrô - Restroativo 2015"
-autor=(
-    "JOÃO RONALDO FERREIRA DIAS"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("JOÃO RONALDO FERREIRA DIAS")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

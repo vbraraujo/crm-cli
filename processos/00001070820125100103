@@ -1,10 +1,6 @@
 titulo="IRAGILDO LOPES DOS SANTOS x Metrô - PES 1994"
-autor=(
-    "IRAGILDO LOPES DOS SANTOS"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("IRAGILDO LOPES DOS SANTOS")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

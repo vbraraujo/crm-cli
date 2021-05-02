@@ -1,10 +1,6 @@
 titulo="EDSON FERREIRA DIAS"
-autor=(
-    "EDSON FERREIRA DIAS                                         "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("EDSON FERREIRA DIAS                                         ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

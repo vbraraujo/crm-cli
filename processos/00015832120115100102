@@ -1,10 +1,6 @@
 titulo="RAFAEL DA SILVA BELO LIMA x Metro-DF - PES/94"
-autor=(
-    "RAFAEL DA SILVA BELO LIMA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("RAFAEL DA SILVA BELO LIMA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

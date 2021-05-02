@@ -1,10 +1,6 @@
 titulo="MARIA CRISTINA FERNANDES VINHAS SILVA x Metrô - Anuênio"
-autor=(
-    "Maria Cristina Fernandes Vinhas Silva"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Maria Cristina Fernandes Vinhas Silva")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

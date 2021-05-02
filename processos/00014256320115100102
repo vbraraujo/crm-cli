@@ -1,10 +1,6 @@
 titulo="GEANE TEIXEIRA DE CASTRO x Metro"
-autor=(
-    "GEANE TEIXEIRA DE CASTRO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("GEANE TEIXEIRA DE CASTRO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

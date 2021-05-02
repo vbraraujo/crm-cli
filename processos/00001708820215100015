@@ -1,10 +1,6 @@
 titulo="PAULA ALMEIDA VALLE x Metrô - Anuênio"
-autor=(
-    "PAULA ALMEIDA VALLE                                         "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("PAULA ALMEIDA VALLE                                         ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

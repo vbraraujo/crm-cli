@@ -1,10 +1,6 @@
 titulo="VALDENIS FERNANDES DOS SANTOS LIMA - Convocação Metro"
-autor=(
-    "VALDENIS FERNANDES DOS SANTOS LIMA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("VALDENIS FERNANDES DOS SANTOS LIMA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

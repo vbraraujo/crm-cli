@@ -1,10 +1,6 @@
 titulo="D. C. R. x C. M. D. F. M. D."
-autor=(
-    "D. C. R."
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("D. C. R.")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

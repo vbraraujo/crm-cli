@@ -1,10 +1,6 @@
 titulo="Thiago Couto Cantuaria x Metrô - RT"
-autor=(
-    "Thiago Couto Cantuaria"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Thiago Couto Cantuaria")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

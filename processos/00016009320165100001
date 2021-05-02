@@ -1,10 +1,6 @@
 titulo="HAILTON DOS SANTOS LIMA x COMPANHIA DO METROPOLITANO DO DISTRITO FEDERAL METRO DF"
-autor=(
-    "HAILTON DOS SANTOS LIMA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("HAILTON DOS SANTOS LIMA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

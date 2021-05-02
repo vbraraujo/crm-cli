@@ -1,10 +1,6 @@
 titulo="Maximiliano dos Anjos de Sa x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Maximiliano dos Anjos de Sa"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Maximiliano dos Anjos de Sa")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

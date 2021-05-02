@@ -1,10 +1,6 @@
 titulo="FABIO DOS SANTOS DUARTE x Metrô - Multa atestados"
-autor=(
-    "FABIO DOS SANTOS DUARTE                                     "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("FABIO DOS SANTOS DUARTE                                     ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

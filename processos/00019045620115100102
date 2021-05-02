@@ -1,10 +1,6 @@
 titulo="EDMAR BATISTA ARAUJO x Metrô - PES 94"
-autor=(
-    "EDMAR BATISTA ARAUJO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("EDMAR BATISTA ARAUJO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

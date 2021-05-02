@@ -1,10 +1,6 @@
 titulo="Johnny Xavier dos Reis x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Johnny Xavier dos Reis"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Johnny Xavier dos Reis")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="GISLEY CARDOSO AQUINO DE ARAUJO"
-autor=(
-    "GISLEY CARDOSO AQUINO DE ARAUJO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("GISLEY CARDOSO AQUINO DE ARAUJO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

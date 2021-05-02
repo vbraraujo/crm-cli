@@ -1,10 +1,6 @@
 titulo="ALESSANDRA DO NASCIMENTO NOLETO"
-autor=(
-    "ALESSANDRA DO NASCIMENTO NOLETO                             "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ALESSANDRA DO NASCIMENTO NOLETO                             ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

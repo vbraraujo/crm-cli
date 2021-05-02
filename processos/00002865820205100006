@@ -1,10 +1,6 @@
 titulo="WILSON RODRIGUES BRANDAO"
-autor=(
-    "Wilson Rodrigues Brandao"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Wilson Rodrigues Brandao")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

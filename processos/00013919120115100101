@@ -1,10 +1,6 @@
 titulo="A. G. R. Agostinho Guimarães Rocha"
-autor=(
-    "A. G. R. Agostinho Guimarães Rocha"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("A. G. R. Agostinho Guimarães Rocha")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

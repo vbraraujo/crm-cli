@@ -1,10 +1,6 @@
 titulo="WALTER MARQUES SIQUEIRA DE LIMA"
-autor=(
-    "WALTER MARQUES SIQUEIRA DE LIMA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("WALTER MARQUES SIQUEIRA DE LIMA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

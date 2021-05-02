@@ -1,10 +1,6 @@
 titulo="SEVERO PAULO DE SOUZA JUNIOR"
-autor=(
-    "SEVERO PAULO DE SOUZA JUNIOR                                "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("SEVERO PAULO DE SOUZA JUNIOR                                ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

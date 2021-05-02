@@ -1,10 +1,6 @@
 titulo="Suely Aguiar de Godoy x Metrô - Retroativo 2015"
-autor=(
-    "Suely Aguiar de Godoy"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Suely Aguiar de Godoy")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

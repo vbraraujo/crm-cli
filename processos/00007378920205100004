@@ -1,10 +1,6 @@
 titulo="GIOVANNA DANTAS MAGNO x Metrô - Anuênio"
-autor=(
-    "GIOVANNA DANTAS MAGNO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("GIOVANNA DANTAS MAGNO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

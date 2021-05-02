@@ -1,10 +1,6 @@
 titulo="Selmar Nunes de Couto x Metrô - PES 1994"
-autor=(
-    "Selmar Nunes de Couto"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Selmar Nunes de Couto")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

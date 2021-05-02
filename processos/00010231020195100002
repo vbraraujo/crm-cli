@@ -1,10 +1,6 @@
 titulo="GLEIDSON MORAES DO NASCIMENTO"
-autor=(
-    "GLEIDSON MORAES DO NASCIMENTO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("GLEIDSON MORAES DO NASCIMENTO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="ADAILTON ALEXANDRE VIEIRA x Metrô - Multa atestados"
-autor=(
-    "ADAILTON ALEXANDRE VIEIRA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ADAILTON ALEXANDRE VIEIRA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="Eduardo Luis de Oliveira Lopes x Metrô - PES 1994"
-autor=(
-    "Eduardo Luis de Oliveira Lopes"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Eduardo Luis de Oliveira Lopes")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

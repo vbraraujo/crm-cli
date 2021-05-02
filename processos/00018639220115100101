@@ -1,10 +1,6 @@
 titulo="Flavio Lucena de Andrade x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Flavio Lucena de Andrade"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Flavio Lucena de Andrade")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="Anderson Lacerda Matheus x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Anderson Lacerda Matheus"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Anderson Lacerda Matheus")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

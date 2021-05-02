@@ -1,10 +1,6 @@
 titulo="Jorge Santos de Araujo x Metrô - Titulação"
-autor=(
-    "Jorge Santos de Araujo"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Jorge Santos de Araujo")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

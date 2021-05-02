@@ -1,10 +1,6 @@
 titulo="BRUNO SILVEIRA LACERDA ALVES x Metrô - Descontos 2019"
-autor=(
-    "BRUNO SILVEIRA LACERDA ALVES"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("BRUNO SILVEIRA LACERDA ALVES")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

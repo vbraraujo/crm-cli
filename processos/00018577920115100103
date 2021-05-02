@@ -1,10 +1,6 @@
 titulo="Ligia Marilia Pereira Itacarambi x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Ligia Marilia Pereira Itacarambi"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Ligia Marilia Pereira Itacarambi")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

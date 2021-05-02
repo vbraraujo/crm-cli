@@ -1,10 +1,6 @@
 titulo="Vantuel Tomaz de Souza Oliveira x Metrô - Multas atestados"
-autor=(
-    "Vantuel Tomaz de Souza Oliveira"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Vantuel Tomaz de Souza Oliveira")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

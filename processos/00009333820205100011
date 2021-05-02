@@ -1,10 +1,6 @@
 titulo="JAIRO SANTOS DA SILVA x Metrô - Anulação demissão"
-autor=(
-    "JAIRO SANTOS DA SILVA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("JAIRO SANTOS DA SILVA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

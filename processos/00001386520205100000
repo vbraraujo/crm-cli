@@ -1,10 +1,6 @@
 titulo="ANA ELISABETE HOLANDA VILELA DE ANDRADE"
-autor=(
-    "ANA ELISABETE HOLANDA VILELA DE ANDRADE                     "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ANA ELISABETE HOLANDA VILELA DE ANDRADE                     ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

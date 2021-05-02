@@ -1,10 +1,6 @@
 titulo="DALCIR JOSE ARENHART x Metrô - Retroativo 2015"
-autor=(
-    "DALCIR JOSE ARENHART"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("DALCIR JOSE ARENHART")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

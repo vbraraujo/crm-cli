@@ -1,10 +1,6 @@
 titulo="CESAR NERI EVANGELISTA MOTA x Metrô - PES 1994"
-autor=(
-    "CESAR NERI EVANGELISTA MOTA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("CESAR NERI EVANGELISTA MOTA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

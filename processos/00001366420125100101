@@ -1,10 +1,6 @@
 titulo="CLEBSON ALVES DE MOURA"
-autor=(
-    "CLEBSON ALVES DE MOURA                                      "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("CLEBSON ALVES DE MOURA                                      ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

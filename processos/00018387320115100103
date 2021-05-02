@@ -1,10 +1,6 @@
 titulo="PAULO VICTOR BARRETO TOME"
-autor=(
-    "PAULO VICTOR BARRETO TOME"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("PAULO VICTOR BARRETO TOME")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

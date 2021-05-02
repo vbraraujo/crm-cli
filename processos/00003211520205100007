@@ -1,10 +1,6 @@
 titulo="RENATA VIANA ANASTACIO"
-autor=(
-    "RENATA VIANA ANASTACIO                                      "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("RENATA VIANA ANASTACIO                                      ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

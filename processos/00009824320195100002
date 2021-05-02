@@ -1,10 +1,6 @@
 titulo="KILMER BEZERRA GARRÊTO X Metrô - Multa atestado"
-autor=(
-    "KILMER BEZERRA GARRÊTO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("KILMER BEZERRA GARRÊTO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

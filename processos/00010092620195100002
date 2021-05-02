@@ -1,10 +1,6 @@
 titulo="GRAZIELA DE SOUSA PORTELA"
-autor=(
-    "GRAZIELA DE SOUSA PORTELA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("GRAZIELA DE SOUSA PORTELA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

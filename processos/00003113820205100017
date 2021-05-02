@@ -1,10 +1,6 @@
 titulo="TANIA APARECIDA VIANA x Metrô - Retroativo 2015"
-autor=(
-    "TANIA APARECIDA VIANA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("TANIA APARECIDA VIANA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="Luiz Paulo x Metrô/DF - PES/94"
-autor=(
-    "LUIZ PAULO DOS SANTOS"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("LUIZ PAULO DOS SANTOS")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

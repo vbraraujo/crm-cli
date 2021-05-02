@@ -1,10 +1,6 @@
 titulo="ITALA ROSE BARBOSA MULATINHO x Metrô - Anuênio"
-autor=(
-    "ITALA ROSE BARBOSA MULATINHO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ITALA ROSE BARBOSA MULATINHO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

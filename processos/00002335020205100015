@@ -1,10 +1,6 @@
 titulo="Manuela Furquim Henriques x Metrô - Retroativo 2015"
-autor=(
-    "Manuela Furquim Henriques"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Manuela Furquim Henriques")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

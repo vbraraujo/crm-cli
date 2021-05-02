@@ -1,10 +1,6 @@
 titulo="ALEXANDRE MONTEIRO BEZERRA"
-autor=(
-    "ALEXANDRE MONTEIRO BEZERRA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ALEXANDRE MONTEIRO BEZERRA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

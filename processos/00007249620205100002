@@ -1,10 +1,6 @@
 titulo="GEORGE WALLACE CERQUEIRA DE SANTANA x Metrô - Retroativo 2015"
-autor=(
-    "GEORGE WALLACE CERQUEIRA DE SANTANA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("GEORGE WALLACE CERQUEIRA DE SANTANA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

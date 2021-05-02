@@ -1,10 +1,6 @@
 titulo="ANDERSON DE AZEVEDO SILVA x Metro"
-autor=(
-    "ANDERSON DE AZEVEDO SILVA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ANDERSON DE AZEVEDO SILVA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

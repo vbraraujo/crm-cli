@@ -1,10 +1,6 @@
 titulo="GEORGES ELIAS AZAR FILHO x Metrô - Multa atestados"
-autor=(
-    "GEORGES ELIAS AZAR FILHO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("GEORGES ELIAS AZAR FILHO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

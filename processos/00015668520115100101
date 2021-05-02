@@ -1,10 +1,6 @@
 titulo="Susie Sahori Saiki x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Susie Sahori Saiki"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Susie Sahori Saiki")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

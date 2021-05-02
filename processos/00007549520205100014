@@ -1,10 +1,6 @@
 titulo="AMILTON JOSE PEREIRA x Metrô - Anuênio"
-autor=(
-    "AMILTON JOSE PEREIRA                                        "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("AMILTON JOSE PEREIRA                                        ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

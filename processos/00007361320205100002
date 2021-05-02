@@ -1,10 +1,6 @@
 titulo="GEORGE WALACE CERQUEIRA DE SANTANA x Metrô - Descontos 2019"
-autor=(
-    "GEORGE WALACE CERQUEIRA DE SANTANA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("GEORGE WALACE CERQUEIRA DE SANTANA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

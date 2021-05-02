@@ -1,10 +1,6 @@
 titulo="Givaldo Siqueira Brandão x Metro - Anuênio"
-autor=(
-    "GIVALDO SIQUEIRA BRANDAO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("GIVALDO SIQUEIRA BRANDAO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

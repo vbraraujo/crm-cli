@@ -1,10 +1,6 @@
 titulo="LOURIVAL SOUZA ROCHA"
-autor=(
-    "LOURIVAL SOUZA ROCHA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("LOURIVAL SOUZA ROCHA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

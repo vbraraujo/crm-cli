@@ -1,10 +1,6 @@
 titulo="LUCIANA MARIA TEIXEIRA DE AZEVEDO"
-autor=(
-    "LUCIANA MARIA TEIXEIRA DE AZEVEDO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("LUCIANA MARIA TEIXEIRA DE AZEVEDO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="ALEXANDRE HENRIQUE SILVA x Metrô - Função gratificada"
-autor=(
-    "ALEXANDRE HENRIQUE SILVA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ALEXANDRE HENRIQUE SILVA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

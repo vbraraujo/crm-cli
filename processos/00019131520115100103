@@ -1,10 +1,6 @@
 titulo="DANIELA DE QUEIROZ MONTEIRO"
-autor=(
-    "DANIELA DE QUEIROZ MONTEIRO                                 "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("DANIELA DE QUEIROZ MONTEIRO                                 ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

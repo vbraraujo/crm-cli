@@ -1,10 +1,6 @@
 titulo="ANTONIO DE ARAUJO GONCALVES x Metrô - Reintegração"
-autor=(
-    "ANTONIO DE ARAUJO GONCALVES                                 "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ANTONIO DE ARAUJO GONCALVES                                 ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

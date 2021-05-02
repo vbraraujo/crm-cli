@@ -1,10 +1,6 @@
 titulo="DIVINA MARQUES x Metrô - Periculosidade"
-autor=(
-    "DIVINA MARQUES"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("DIVINA MARQUES")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="JOSE EDUARDO DUQUE MOREIRA"
-autor=(
-    "Jose Eduardo Duque Moreira"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Jose Eduardo Duque Moreira")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

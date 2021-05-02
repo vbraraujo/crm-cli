@@ -1,10 +1,6 @@
 titulo="ERASMO PEREIRA DE SOUZA"
-autor=(
-    "ERASMO PEREIRA DE SOUZA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ERASMO PEREIRA DE SOUZA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

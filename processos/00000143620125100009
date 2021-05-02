@@ -1,10 +1,6 @@
 titulo="PAULO EDUARDO MEDEIROS DE MOURA"
-autor=(
-    "PAULO EDUARDO MEDEIROS DE MOURA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("PAULO EDUARDO MEDEIROS DE MOURA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

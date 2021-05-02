@@ -1,10 +1,6 @@
 titulo="RUI JOAQUIM MARQUES MONTEIRO DE MENESES"
-autor=(
-    "RUI JOAQUIM MARQUES MONTEIRO DE MENESES"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("RUI JOAQUIM MARQUES MONTEIRO DE MENESES")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

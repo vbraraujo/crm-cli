@@ -1,10 +1,6 @@
 titulo="Bruna Erika Santiago Poeck x Metrô - PES 1994"
-autor=(
-    "Bruna Erika Santiago Poeck"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Bruna Erika Santiago Poeck")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

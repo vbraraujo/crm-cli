@@ -1,10 +1,6 @@
 titulo="Riceli Fabiana Galhardo Costa x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Riceli Fabiana Galhardo Costa"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Riceli Fabiana Galhardo Costa")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

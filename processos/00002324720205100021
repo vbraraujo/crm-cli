@@ -1,10 +1,6 @@
 titulo="MARCELLO RODRIGUES DE MELLO x Metrô - Retroativo 2015"
-autor=(
-    "MARCELLO RODRIGUES DE MELLO                                 "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("MARCELLO RODRIGUES DE MELLO                                 ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

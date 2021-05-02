@@ -1,10 +1,6 @@
 titulo="Daniel Alves dos Santos x Companhia do Metropolitano do Distrito Federal - METRO/DF"
-autor=(
-    "Daniel Alves dos Santos"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Daniel Alves dos Santos")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

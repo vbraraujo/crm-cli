@@ -1,10 +1,6 @@
 titulo="Diana Rejane Aleixo Alves x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Diana Rejane Aleixo Alves"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Diana Rejane Aleixo Alves")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

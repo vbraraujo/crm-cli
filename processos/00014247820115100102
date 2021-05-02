@@ -1,10 +1,6 @@
 titulo="MICHELLE DE FATIMA PEREIRA ARMOND"
-autor=(
-    "MICHELLE DE FATIMA PEREIRA ARMOND"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("MICHELLE DE FATIMA PEREIRA ARMOND")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

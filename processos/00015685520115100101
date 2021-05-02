@@ -1,10 +1,6 @@
 titulo="CHARLES MAGNO CAVALCANTI VITALINO"
-autor=(
-    "CHARLES MAGNO CAVALCANTI VITALINO                           "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("CHARLES MAGNO CAVALCANTI VITALINO                           ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

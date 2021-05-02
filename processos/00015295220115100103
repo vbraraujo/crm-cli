@@ -1,10 +1,6 @@
 titulo="Neilton Sobral de Araujo x Metrô - PES 1994"
-autor=(
-    "Neilton Sobral de Araujo"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Neilton Sobral de Araujo")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

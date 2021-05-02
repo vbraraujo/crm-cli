@@ -1,10 +1,6 @@
 titulo="Cleuber Franca Ferreira x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Cleuber Franca Ferreira"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Cleuber Franca Ferreira")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="A. C. P. Aci Costa Pereira"
-autor=(
-    "A. C. P. Aci Costa Pereira"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("A. C. P. Aci Costa Pereira")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

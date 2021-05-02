@@ -1,10 +1,6 @@
 titulo="Gilvanete da Silva Xavier x Metrô - Retroativo 2015"
-autor=(
-    "Gilvanete da Silva Xavier"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Gilvanete da Silva Xavier")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

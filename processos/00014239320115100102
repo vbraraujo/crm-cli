@@ -1,10 +1,6 @@
 titulo="YGO VIEIRA PEREIRA"
-autor=(
-    "YGO VIEIRA PEREIRA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("YGO VIEIRA PEREIRA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

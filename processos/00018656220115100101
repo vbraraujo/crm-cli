@@ -1,10 +1,6 @@
 titulo="A. P. C. S. Ana Paula de Castro Souza"
-autor=(
-    "A. P. C. S. Ana Paula de Castro Souza"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("A. P. C. S. Ana Paula de Castro Souza")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="Carlos Alberto de Fontes x Metro - Quebra de caixa"
-autor=(
-    "Carlos Alberto de Fontes"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Carlos Alberto de Fontes")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

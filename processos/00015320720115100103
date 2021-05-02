@@ -1,10 +1,6 @@
 titulo="Felipe de Andrade Reis x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Felipe de Andrade Reis"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Felipe de Andrade Reis")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

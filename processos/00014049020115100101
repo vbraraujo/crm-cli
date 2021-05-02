@@ -1,10 +1,6 @@
 titulo="Sidnei Augusto de Sousa x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Sidnei Augusto de Sousa"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Sidnei Augusto de Sousa")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="Luciano Magno Lima Rocha x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Luciano Magno Lima Rocha"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Luciano Magno Lima Rocha")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

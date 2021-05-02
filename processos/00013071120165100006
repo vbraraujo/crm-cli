@@ -1,10 +1,6 @@
 titulo="RICARDO RODRIGUES CAMARGO x Metrp-DF"
-autor=(
-    "RICARDO RODRIGUES CAMARGO x Metrp-DF"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("RICARDO RODRIGUES CAMARGO x Metrp-DF")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

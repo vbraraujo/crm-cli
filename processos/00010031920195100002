@@ -1,10 +1,6 @@
 titulo="JADSON BARROS DE LACERDA x Metro - Multa atestados"
-autor=(
-    "JADSON BARROS DE LACERDA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("JADSON BARROS DE LACERDA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

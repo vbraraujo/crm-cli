@@ -1,10 +1,6 @@
 titulo="EDICARLOS DE ALMEIDA BARBOSA"
-autor=(
-    "EDICARLOS DE ALMEIDA BARBOSA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("EDICARLOS DE ALMEIDA BARBOSA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

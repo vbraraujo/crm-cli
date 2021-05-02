@@ -1,10 +1,6 @@
 titulo="Sindmetrô x Metrô - Ação de cumprimento (Reajuste 8,4106% - ACT 2015/2017)"
-autor=(
-    "Sindicato dos Trabalhadores em Empresas de Transportes Metroviarios do DF - SINDMETRÔ-DF"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Sindicato dos Trabalhadores em Empresas de Transportes Metroviarios do DF - SINDMETRÔ-DF")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

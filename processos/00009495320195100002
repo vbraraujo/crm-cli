@@ -1,10 +1,6 @@
 titulo="CLAUDIO RODRIGUES LEME"
-autor=(
-    "CLAUDIO RODRIGUES LEME                                      "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("CLAUDIO RODRIGUES LEME                                      ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

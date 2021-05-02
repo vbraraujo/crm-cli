@@ -1,10 +1,6 @@
 titulo="NELSON IVAN MAGALHAES MESQUITA"
-autor=(
-    "NELSON IVAN MAGALHAES MESQUITA                              "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("NELSON IVAN MAGALHAES MESQUITA                              ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

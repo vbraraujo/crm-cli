@@ -1,10 +1,6 @@
 titulo="WANDENOR SOARES DA SILVA x Companhia do Metropolitano do Distrito Federal - METRO/DF"
-autor=(
-    "WANDENOR SOARES DA SILVA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("WANDENOR SOARES DA SILVA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="Marco Antonio Lino de Oliveira x Metrô - PES 1994"
-autor=(
-    "Marco Antonio Lino de Oliveira"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Marco Antonio Lino de Oliveira")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

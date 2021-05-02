@@ -1,10 +1,6 @@
 titulo="FABIANA COSTA DE SOUSA"
-autor=(
-    "FABIANA COSTA DE SOUSA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("FABIANA COSTA DE SOUSA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

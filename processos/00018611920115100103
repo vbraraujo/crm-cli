@@ -1,10 +1,6 @@
 titulo="Paulo da Silva Pereira x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Paulo da Silva Pereira"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Paulo da Silva Pereira")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

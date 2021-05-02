@@ -1,10 +1,6 @@
 titulo="Wanderlan Marcio da Silva Rodrigues x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Wanderlan Marcio da Silva Rodrigues"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Wanderlan Marcio da Silva Rodrigues")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

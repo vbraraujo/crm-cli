@@ -1,10 +1,6 @@
 titulo="HONNER DELLAMARE COSTA E SILVA"
-autor=(
-    "HONNER DELLAMARE COSTA E SILVA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("HONNER DELLAMARE COSTA E SILVA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

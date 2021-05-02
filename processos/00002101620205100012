@@ -1,10 +1,6 @@
 titulo="CARLOS ALBERTO CASSIANO SILVA x Metrô - Retroativo 2015"
-autor=(
-    "CARLOS ALBERTO CASSIANO SILVA                               "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("CARLOS ALBERTO CASSIANO SILVA                               ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="DARCIA DAMACENO OLIVEIRA x Metrô - Retroativo 2015"
-autor=(
-    "DARCIA DAMACENO OLIVEIRA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("DARCIA DAMACENO OLIVEIRA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

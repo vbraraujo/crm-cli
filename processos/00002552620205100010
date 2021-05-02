@@ -1,10 +1,6 @@
 titulo="KELLY GLEICY DA SILVA"
-autor=(
-    "KELLY GLEICY DA SILVA                                       "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("KELLY GLEICY DA SILVA                                       ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

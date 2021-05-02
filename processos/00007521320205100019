@@ -1,10 +1,6 @@
 titulo="EDIVALDO VIEIRA CARDOSO x Metrô - Descontos 2019"
-autor=(
-    "EDIVALDO VIEIRA CARDOSO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("EDIVALDO VIEIRA CARDOSO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="JAIRO JANSEN DE SOUSA ALVES"
-autor=(
-    "JAIRO JANSEN DE SOUSA ALVES"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("JAIRO JANSEN DE SOUSA ALVES")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="WESCLEY EMANUEL PASSOS COSTA x Metrô - Multa atestados"
-autor=(
-    "WESCLEY EMANUEL PASSOS COSTA                                "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("WESCLEY EMANUEL PASSOS COSTA                                ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

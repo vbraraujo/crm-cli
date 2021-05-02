@@ -1,10 +1,6 @@
 titulo="Poliane de Oliveira Costa x Metrô - Retroativo 2015"
-autor=(
-    "Poliane de Oliveira Costa"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Poliane de Oliveira Costa")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

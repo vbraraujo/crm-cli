@@ -1,10 +1,6 @@
 titulo="Aguina Fernanda Jose da Silva Peixoto x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Aguina Fernanda Jose da Silva Peixoto"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Aguina Fernanda Jose da Silva Peixoto")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

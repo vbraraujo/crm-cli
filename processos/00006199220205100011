@@ -1,10 +1,6 @@
 titulo="ITAMAR LOPES BATISTA x Metrô - Função de confiança"
-autor=(
-    "ITAMAR LOPES BATISTA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ITAMAR LOPES BATISTA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

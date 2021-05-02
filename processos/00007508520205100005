@@ -1,10 +1,6 @@
 titulo="ALEX PATROCINIO DE SOUZA x Metrô - Descontos 2019"
-autor=(
-    "ALEX PATROCINIO DE SOUZA                                    "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ALEX PATROCINIO DE SOUZA                                    ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="Sabrina Ribeiro Pinto x Metrô - Retroativo 2015"
-autor=(
-    "Sabrina Ribeiro Pinto"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Sabrina Ribeiro Pinto")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

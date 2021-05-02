@@ -1,10 +1,6 @@
 titulo="A. A. S.Alex Alves dos Santos"
-autor=(
-    "A. A. S.Alex Alves dos Santos"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("A. A. S.Alex Alves dos Santos")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

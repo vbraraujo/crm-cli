@@ -1,10 +1,6 @@
 titulo="Jose William Almeida dos Santos x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Jose William Almeida dos Santos"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Jose William Almeida dos Santos")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

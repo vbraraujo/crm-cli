@@ -1,10 +1,6 @@
 titulo="Luiz Carlos Estanislau Sampaio x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Luiz Carlos Estanislau Sampaio"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Luiz Carlos Estanislau Sampaio")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

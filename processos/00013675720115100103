@@ -1,10 +1,6 @@
 titulo="Andre Luiz Pereira Valentim x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Andre Luiz Pereira Valentim"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Andre Luiz Pereira Valentim")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

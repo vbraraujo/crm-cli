@@ -1,10 +1,6 @@
 titulo="RONALDO AMORIM DE SOUSA x Metro"
-autor=(
-    "RONALDO AMORIM DE SOUSA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("RONALDO AMORIM DE SOUSA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

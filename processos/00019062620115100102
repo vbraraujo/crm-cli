@@ -1,10 +1,6 @@
 titulo="TIAGO DE SOUZA OLIVEIRA"
-autor=(
-    "TIAGO DE SOUZA OLIVEIRA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("TIAGO DE SOUZA OLIVEIRA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

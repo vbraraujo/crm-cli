@@ -1,10 +1,6 @@
 titulo="CARLA CARVALHO SOUZA STUMPF x Metro - Titulação"
-autor=(
-    "CARLA CARVALHO SOUZA STUMPF"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("CARLA CARVALHO SOUZA STUMPF")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

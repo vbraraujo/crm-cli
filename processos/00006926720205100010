@@ -1,10 +1,6 @@
 titulo="MOISÉS DE MEDEIROS GUIMARÃES x Metrô - Anuênio"
-autor=(
-    "MOISES DE MEDEIROS GUIMARAES"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("MOISES DE MEDEIROS GUIMARAES")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="Rinaldo Hideki Inoue x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Rinaldo Hideki Inoue"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Rinaldo Hideki Inoue")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

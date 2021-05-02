@@ -1,10 +1,6 @@
 titulo="PAULO HENRIQUE PEREIRA LINO x Metro - Multa atestados"
-autor=(
-    "PAULO HENRIQUE PEREIRA LINO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("PAULO HENRIQUE PEREIRA LINO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

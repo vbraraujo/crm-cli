@@ -1,10 +1,6 @@
 titulo="ANDRE ERICSON COSTA"
-autor=(
-    "ANDRE ERICSON COSTA                                         "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ANDRE ERICSON COSTA                                         ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

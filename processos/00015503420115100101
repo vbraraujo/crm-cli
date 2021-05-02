@@ -1,10 +1,6 @@
 titulo="Gleidson Moraes do Nascimento x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Gleidson Moraes do Nascimento"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Gleidson Moraes do Nascimento")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

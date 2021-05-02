@@ -1,10 +1,6 @@
 titulo="Viviane Ferreira da Silva Rodrigues x Metro/DF - PAD"
-autor=(
-    "Viviane Ferreira da Silva Rodrigues"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Viviane Ferreira da Silva Rodrigues")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

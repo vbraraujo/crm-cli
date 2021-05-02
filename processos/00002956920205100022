@@ -1,10 +1,6 @@
 titulo="WELBERT DA SILVA SANTANA"
-autor=(
-    "WELBERT DA SILVA SANTANA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("WELBERT DA SILVA SANTANA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

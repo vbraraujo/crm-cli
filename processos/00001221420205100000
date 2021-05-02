@@ -1,10 +1,6 @@
 titulo="LUIZ FERNANDO ALVES"
-autor=(
-    "LUIZ FERNANDO ALVES"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("LUIZ FERNANDO ALVES")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

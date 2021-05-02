@@ -1,10 +1,6 @@
 titulo="EDVALDO JESUS DA SILVEIRA CAMPOS"
-autor=(
-    "EDVALDO JESUS DA SILVEIRA CAMPOS                            "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("EDVALDO JESUS DA SILVEIRA CAMPOS                            ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

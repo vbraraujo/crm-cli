@@ -1,10 +1,6 @@
 titulo="Sindmetro-DF - Ação de cumprimento dissídio 0000373-66.2019.5.10.000"
-autor=(
-    "Sindicato dos Trabalhadores em Empresas de Transportes Metroviarios do DF - SINDMETRÔ-DF"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Sindicato dos Trabalhadores em Empresas de Transportes Metroviarios do DF - SINDMETRÔ-DF")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

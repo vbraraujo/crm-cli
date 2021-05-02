@@ -1,10 +1,6 @@
 titulo="REVERSON GERALDO DOS ANJOS FERNANDES x Metrô - Descontos 2019"
-autor=(
-    "REVERSON GERALDO DOS ANJOS FERNANDES"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("REVERSON GERALDO DOS ANJOS FERNANDES")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="Claudia Rejane Sa Cesar x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Claudia Rejane Sa Cesar"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Claudia Rejane Sa Cesar")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="ALCEANDRO BENTO DE SOUZA"
-autor=(
-    "ALCEANDRO BENTO DE SOUZA                                    "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ALCEANDRO BENTO DE SOUZA                                    ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

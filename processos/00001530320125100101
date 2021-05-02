@@ -1,10 +1,6 @@
 titulo="OSIEL PINTO DE OLIVEIRA"
-autor=(
-    "OSIEL PINTO DE OLIVEIRA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("OSIEL PINTO DE OLIVEIRA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

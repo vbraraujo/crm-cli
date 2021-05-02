@@ -1,10 +1,6 @@
 titulo="Alex Raphael Lima Noleto x Metrô - PES 1994"
-autor=(
-    "Alex Raphael Lima Noleto"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Alex Raphael Lima Noleto")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

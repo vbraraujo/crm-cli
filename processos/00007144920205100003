@@ -1,10 +1,6 @@
 titulo="FERNANDO CAMARA OLIVIERI"
-autor=(
-    "FERNANDO CAMARA OLIVIERI"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("FERNANDO CAMARA OLIVIERI")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

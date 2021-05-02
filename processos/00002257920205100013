@@ -1,10 +1,6 @@
 titulo="HUGO LEONARDO LOPES DA SILVA x Metrô - Retroativo 2015"
-autor=(
-    "HUGO LEONARDO LOPES DA SILVA                                "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("HUGO LEONARDO LOPES DA SILVA                                ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

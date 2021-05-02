@@ -1,10 +1,6 @@
 titulo="Julio Santos Moraes x Metrô - Descontos 2019"
-autor=(
-    "Julio Santos Moraes"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Julio Santos Moraes")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

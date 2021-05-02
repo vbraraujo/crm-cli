@@ -1,10 +1,6 @@
 titulo="EBER VITOR FELIX DA SILVA"
-autor=(
-    "EBER VITOR FELIX DA SILVA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("EBER VITOR FELIX DA SILVA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

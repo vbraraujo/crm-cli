@@ -1,10 +1,6 @@
 titulo="SIGFREDO FARIAS ROCHA"
-autor=(
-    "SIGFREDO FARIAS ROCHA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("SIGFREDO FARIAS ROCHA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

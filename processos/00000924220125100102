@@ -1,10 +1,6 @@
 titulo="THIAGO DE ALENCAR DANTAS BARBOSA"
-autor=(
-    "THIAGO DE ALENCAR DANTAS BARBOSA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("THIAGO DE ALENCAR DANTAS BARBOSA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

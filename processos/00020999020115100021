@@ -1,10 +1,6 @@
 titulo="JEAN JORGE FERREIRA SILVA x Metro - PES 1994"
-autor=(
-    "JEAN JORGE FERREIRA SILVA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("JEAN JORGE FERREIRA SILVA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

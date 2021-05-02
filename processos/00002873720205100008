@@ -1,10 +1,6 @@
 titulo="DANIELA LOPES DOS SANTOS DIAS x Metrô - Retroativo 2015"
-autor=(
-    "DANIELA LOPES DOS SANTOS DIAS                               "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("DANIELA LOPES DOS SANTOS DIAS                               ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

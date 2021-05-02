@@ -1,10 +1,6 @@
 titulo="Bruno Lui Correia e Silva X Metrô - Multas atestados"
-autor=(
-    "Bruno Lui Correia e Silva"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Bruno Lui Correia e Silva")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

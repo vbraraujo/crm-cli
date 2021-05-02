@@ -1,10 +1,6 @@
 titulo="Pedro Ivo Araujo x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Pedro Ivo Araujo"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Pedro Ivo Araujo")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

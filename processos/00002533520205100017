@@ -1,10 +1,6 @@
 titulo="RINALDO HIDEKI INOUE"
-autor=(
-    "RINALDO HIDEKI INOUE"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("RINALDO HIDEKI INOUE")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

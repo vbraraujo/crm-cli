@@ -1,10 +1,6 @@
 titulo="DANIELA CAMPOS MENDES FERREIRA x Metrô - Multa atestados"
-autor=(
-    "DANIELA CAMPOS MENDES FERREIRA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("DANIELA CAMPOS MENDES FERREIRA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

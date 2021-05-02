@@ -1,10 +1,6 @@
 titulo="Carlos Alberto de Fontes x Metrô - Descontos 2019"
-autor=(
-    "Carlos Alberto de Fontes"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Carlos Alberto de Fontes")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

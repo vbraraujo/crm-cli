@@ -1,10 +1,6 @@
 titulo="Wellington de Souza Alves x Metrô - Retroativo 2015"
-autor=(
-    "Wellington de Souza Alves"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Wellington de Souza Alves")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

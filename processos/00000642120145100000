@@ -1,10 +1,6 @@
 titulo="C. M. B. O. Cátia Mendes Beirão de Oliveira"
-autor=(
-    "C. M. B. O. Cátia Mendes Beirão de Oliveira"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("C. M. B. O. Cátia Mendes Beirão de Oliveira")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

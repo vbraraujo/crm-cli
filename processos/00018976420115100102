@@ -1,10 +1,6 @@
 titulo="Liana Barquette Vasconcelos x Metrô - PES 1994"
-autor=(
-    "Liana Barquette Vasconcelos"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Liana Barquette Vasconcelos")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

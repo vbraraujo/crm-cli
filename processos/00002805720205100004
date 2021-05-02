@@ -1,10 +1,6 @@
 titulo="LAIR LIMA DE BRITO x Metrô - Retroativo 2015"
-autor=(
-    "LAIR LIMA DE BRITO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("LAIR LIMA DE BRITO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

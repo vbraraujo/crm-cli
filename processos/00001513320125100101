@@ -1,10 +1,6 @@
 titulo="Fabio Tellis Silva Neres x Metro - PES 1994"
-autor=(
-    "Fabio Tellis Silva Neres"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Fabio Tellis Silva Neres")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

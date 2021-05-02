@@ -1,10 +1,6 @@
 titulo="Francisco Jeovan da Silva Martins x Metrô - Retroativo 2015"
-autor=(
-    "Francisco Jeovan da Silva Martins"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Francisco Jeovan da Silva Martins")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

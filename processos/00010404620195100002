@@ -1,10 +1,6 @@
 titulo="EDERALDO DA MATA MACIEL"
-autor=(
-    "EDERALDO DA MATA MACIEL"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("EDERALDO DA MATA MACIEL")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

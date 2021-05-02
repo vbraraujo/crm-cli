@@ -1,10 +1,6 @@
 titulo="WILLIAM DE SOUZA VELOSO x Metrô - Função incorporada"
-autor=(
-    "WILLIAM DE SOUZA VELOSO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("WILLIAM DE SOUZA VELOSO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

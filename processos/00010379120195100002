@@ -1,10 +1,6 @@
 titulo="VITOR EMILIO BARROS DE BRITO"
-autor=(
-    "VITOR EMILIO BARROS DE BRITO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("VITOR EMILIO BARROS DE BRITO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

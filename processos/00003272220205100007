@@ -1,10 +1,6 @@
 titulo="CLEITON DE OLIVEIRA COSTA"
-autor=(
-    "CLEITON DE OLIVEIRA COSTA                                   "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("CLEITON DE OLIVEIRA COSTA                                   ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

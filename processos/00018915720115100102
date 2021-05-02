@@ -1,10 +1,6 @@
 titulo="FLAVIA REGINA CORREA BARRETO x Metro/DF"
-autor=(
-    "FLAVIA REGINA CORREA BARRETO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("FLAVIA REGINA CORREA BARRETO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

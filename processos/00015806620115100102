@@ -1,10 +1,6 @@
 titulo="BRUNO BATISTA RIBEIRO"
-autor=(
-    "BRUNO BATISTA RIBEIRO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("BRUNO BATISTA RIBEIRO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

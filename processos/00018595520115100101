@@ -1,10 +1,6 @@
 titulo="Jose Joacir de Souza Junior x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Jose Joacir de Souza Junior"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Jose Joacir de Souza Junior")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

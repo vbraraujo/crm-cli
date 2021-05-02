@@ -1,10 +1,6 @@
 titulo="THALITA MARIA CAMARGOS DA SILVA x Metrô - Descontos 2019"
-autor=(
-    "THALITA MARIA CAMARGOS DA SILVA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("THALITA MARIA CAMARGOS DA SILVA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

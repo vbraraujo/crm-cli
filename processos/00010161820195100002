@@ -1,10 +1,6 @@
 titulo="RODRIGO GONCALVES MARTIN CAVALCANTI x Metrô - Multa atestados"
-autor=(
-    "RODRIGO GONCALVES MARTIN CAVALCANTI                         "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("RODRIGO GONCALVES MARTIN CAVALCANTI                         ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

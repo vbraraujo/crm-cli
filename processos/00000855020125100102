@@ -1,10 +1,6 @@
 titulo="RUBENS FERNANDES DE SOUZA x Metrô - PES 1994"
-autor=(
-    "RUBENS FERNANDES DE SOUZA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("RUBENS FERNANDES DE SOUZA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

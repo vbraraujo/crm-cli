@@ -1,10 +1,6 @@
 titulo="Honorato Batista dos Santos Neto x Metrô - Rescisão indireta"
-autor=(
-    "HONORATO BATISTA DOS SANTOS NETO                            "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("HONORATO BATISTA DOS SANTOS NETO                            ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

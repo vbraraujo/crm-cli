@@ -1,10 +1,6 @@
 titulo="WILIAN SALES PINHEIRO JUNIOR"
-autor=(
-    "WILIAN SALES PINHEIRO JUNIOR"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("WILIAN SALES PINHEIRO JUNIOR")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

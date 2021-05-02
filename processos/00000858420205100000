@@ -1,10 +1,6 @@
 titulo="Metrô-DF x Romir Gonçalves - MS (multa e reintegração)"
-autor=(
-    "Companhia do Metropolitano do Distrito Federal - METRO/DF"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Companhia do Metropolitano do Distrito Federal - METRO/DF")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

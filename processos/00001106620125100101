@@ -1,10 +1,6 @@
 titulo="MARCOS VINICIUS GERMANO DE PAULA"
-autor=(
-    "MARCOS VINICIUS GERMANO DE PAULA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("MARCOS VINICIUS GERMANO DE PAULA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

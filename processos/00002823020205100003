@@ -1,10 +1,6 @@
 titulo="KELSON BRITO DE ALMEIDA"
-autor=(
-    "KELSON BRITO DE ALMEIDA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("KELSON BRITO DE ALMEIDA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

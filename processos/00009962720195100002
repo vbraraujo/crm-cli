@@ -1,10 +1,6 @@
 titulo="LUCIANO SOARES COSTA DA SILVA"
-autor=(
-    "LUCIANO SOARES COSTA DA SILVA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("LUCIANO SOARES COSTA DA SILVA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

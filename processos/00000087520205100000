@@ -1,10 +1,6 @@
 titulo="MM. Juízo da 2ª Vara do Trabalho de Brasília-DF"
-autor=(
-    "MM. Juízo da 2ª Vara do Trabalho de Brasília-DF"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("MM. Juízo da 2ª Vara do Trabalho de Brasília-DF")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

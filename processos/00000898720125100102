@@ -1,10 +1,6 @@
 titulo="MARCOS PEREIRA DE LIMA x Metro - PES 1994"
-autor=(
-    "MARCOS PEREIRA DE LIMA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("MARCOS PEREIRA DE LIMA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

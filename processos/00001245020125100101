@@ -1,10 +1,6 @@
 titulo="Carlos Alexandre Cardoso Faria x Metrô - PES 1994"
-autor=(
-    "Carlos Alexandre Cardoso Faria"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Carlos Alexandre Cardoso Faria")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

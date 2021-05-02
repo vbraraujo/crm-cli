@@ -1,10 +1,6 @@
 titulo="WELTON SANTIAGO DA SILVA x Metrô - Retroativo 2015"
-autor=(
-    "WELTON SANTIAGO DA SILVA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("WELTON SANTIAGO DA SILVA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

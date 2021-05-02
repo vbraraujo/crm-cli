@@ -1,10 +1,6 @@
 titulo="ROGERIO BARBOSA x Metrô - Retroativo 2015"
-autor=(
-    "ROGERIO BARBOSA                                             "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ROGERIO BARBOSA                                             ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

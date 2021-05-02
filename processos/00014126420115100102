@@ -1,10 +1,6 @@
 titulo="ADLER CARVALHO ROCHA"
-autor=(
-    "ADLER CARVALHO ROCHA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ADLER CARVALHO ROCHA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

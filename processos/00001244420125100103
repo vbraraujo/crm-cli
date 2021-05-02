@@ -1,10 +1,6 @@
 titulo="EDWILLIAN FREITAS DA SILVA"
-autor=(
-    "EDWILLIAN FREITAS DA SILVA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("EDWILLIAN FREITAS DA SILVA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

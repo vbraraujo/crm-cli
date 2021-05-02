@@ -1,10 +1,6 @@
 titulo="Mauricio Estevao dos Santos x Metrô-DF - PES 1994"
-autor=(
-    "Mauricio Estevao dos Santos"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Mauricio Estevao dos Santos")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

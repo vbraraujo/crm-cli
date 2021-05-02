@@ -1,10 +1,6 @@
 titulo="JOAQUIM CELSO SILVA PIRES x Metrô - Retroativo 2015"
-autor=(
-    "JOAQUIM CELSO SILVA PIRES"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("JOAQUIM CELSO SILVA PIRES")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

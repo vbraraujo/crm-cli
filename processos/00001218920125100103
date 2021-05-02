@@ -1,10 +1,6 @@
 titulo="EDMILSON PEREIRA DOS REIS X Companhia do Metropolitano do Distrito Federal - METRO/DF - PES 94"
-autor=(
-    "EDMILSON PEREIRA DOS REIS"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("EDMILSON PEREIRA DOS REIS")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

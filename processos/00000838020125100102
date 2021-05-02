@@ -1,10 +1,6 @@
 titulo="EDINIRA BARROSO ANTUNES MOREIRA x Metro - PES/94"
-autor=(
-    "Edinira Barroso Antunes Moreira"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Edinira Barroso Antunes Moreira")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

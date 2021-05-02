@@ -1,10 +1,6 @@
 titulo="NAYARA FEITOSA ANTUNES LOPES"
-autor=(
-    "NAYARA FEITOSA ANTUNES LOPES"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("NAYARA FEITOSA ANTUNES LOPES")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

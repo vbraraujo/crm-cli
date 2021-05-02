@@ -1,10 +1,6 @@
 titulo="Rafael Henrique Ferreira Caixeta x Metrô - Convocação aprovados"
-autor=(
-    "Rafael Henrique Ferreira Caixeta"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Rafael Henrique Ferreira Caixeta")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

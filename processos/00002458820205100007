@@ -1,10 +1,6 @@
 titulo="LEANDRO GOMES CORREA RODRIGUES ARAUJO"
-autor=(
-    "LEANDRO GOMES CORREA RODRIGUES ARAUJO                       "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("LEANDRO GOMES CORREA RODRIGUES ARAUJO                       ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

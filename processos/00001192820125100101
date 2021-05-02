@@ -1,10 +1,6 @@
 titulo="Monica Tenorio Almeida x Metrô - PES 1994"
-autor=(
-    "Monica Tenorio Almeida"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Monica Tenorio Almeida")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

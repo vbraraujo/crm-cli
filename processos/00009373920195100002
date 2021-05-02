@@ -1,10 +1,6 @@
 titulo="ALEX AFONSO"
-autor=(
-    "ALEX AFONSO                                                 "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ALEX AFONSO                                                 ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

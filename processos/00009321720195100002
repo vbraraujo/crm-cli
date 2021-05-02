@@ -1,10 +1,6 @@
 titulo="THENDSON GUIMARAES FERREIRA DA SILVA"
-autor=(
-    "THENDSON GUIMARAES FERREIRA DA SILVA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("THENDSON GUIMARAES FERREIRA DA SILVA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

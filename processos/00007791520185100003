@@ -1,10 +1,6 @@
 titulo="RENAN WILKER SILVA"
-autor=(
-    "RENAN WILKER SILVA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("RENAN WILKER SILVA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

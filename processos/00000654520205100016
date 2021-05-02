@@ -1,10 +1,6 @@
 titulo="ARNALDO FERREIRA DA COSTA - Anulação de demissão"
-autor=(
-    "ARNALDO FERREIRA DA COSTA                                   "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ARNALDO FERREIRA DA COSTA                                   ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

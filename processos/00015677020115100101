@@ -1,10 +1,6 @@
 titulo="Carlos Henrique dos Santos x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Carlos Henrique dos Santos"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Carlos Henrique dos Santos")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

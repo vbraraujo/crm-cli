@@ -1,10 +1,6 @@
 titulo="EDUARDO LUIS DE OLIVEIRA LOPES"
-autor=(
-    "Eduardo Luis de Oliveira Lopes"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Eduardo Luis de Oliveira Lopes")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

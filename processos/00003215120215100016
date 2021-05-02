@@ -1,10 +1,6 @@
 titulo="JOSE SERGIO DA CUNHA NETO x Metrô - Cumprimento de sentença"
-autor=(
-    "JOSE SERGIO DA CUNHA NETO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("JOSE SERGIO DA CUNHA NETO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="MIRTES RODRIGUES DE SOUSA x Metro - Reintegração aposentado"
-autor=(
-    "MIRTES RODRIGUES DE SOUSA                                   "
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("MIRTES RODRIGUES DE SOUSA                                   ")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

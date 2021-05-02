@@ -1,10 +1,6 @@
 titulo="Andre Ribeiro Ramos x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Andre Ribeiro Ramos"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Andre Ribeiro Ramos")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

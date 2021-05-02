@@ -1,10 +1,6 @@
 titulo="THIAGO BATISTA DA SILVA"
-autor=(
-    "THIAGO BATISTA DA SILVA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("THIAGO BATISTA DA SILVA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

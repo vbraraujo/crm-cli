@@ -1,10 +1,6 @@
 titulo="Ednei Silva de Siqueira x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Ednei Silva de Siqueira"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Ednei Silva de Siqueira")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

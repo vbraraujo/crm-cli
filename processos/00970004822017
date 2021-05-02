@@ -1,10 +1,6 @@
 titulo="Jonas Henrique da Silva Costa x Metro/DF - PAD"
-autor=(
-    "Jonas Henrique da Silva Costa"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Jonas Henrique da Silva Costa")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

@@ -1,10 +1,6 @@
 titulo="Walter Goncalves da Silva Neto x Companhia do Metropolitano do Distrito Federal Metro DF"
-autor=(
-    "Walter Goncalves da Silva Neto"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Walter Goncalves da Silva Neto")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

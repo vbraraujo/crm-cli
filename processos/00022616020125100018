@@ -1,10 +1,6 @@
 titulo="Alexandre Jaime dos Santos Tavares Lopes x Metrô - PES 1994"
-autor=(
-    "Alexandre Jaime dos Santos Tavares Lopes"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Alexandre Jaime dos Santos Tavares Lopes")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

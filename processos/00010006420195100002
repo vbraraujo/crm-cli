@@ -1,10 +1,6 @@
 titulo="ALEX GOMES DA SILVA"
-autor=(
-    "Alex Gomes da Silva"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Alex Gomes da Silva")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

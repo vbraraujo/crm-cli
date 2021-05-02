@@ -1,10 +1,6 @@
 titulo="PAULO ANTONIO MACEDO x Metrô - Anuênio"
-autor=(
-    "PAULO ANTONIO MACEDO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("PAULO ANTONIO MACEDO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

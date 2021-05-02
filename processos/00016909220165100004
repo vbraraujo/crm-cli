@@ -1,10 +1,6 @@
 titulo="ANDERSON PENA DE OLIVEIRA"
-autor=(
-    "ANDERSON PENA DE OLIVEIRA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ANDERSON PENA DE OLIVEIRA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

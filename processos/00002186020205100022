@@ -1,10 +1,6 @@
 titulo="FLAVIO LEMOS DAS NEVES x Metrô - Retroativo 2015"
-autor=(
-    "FLAVIO LEMOS DAS NEVES"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("FLAVIO LEMOS DAS NEVES")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

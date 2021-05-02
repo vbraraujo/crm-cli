@@ -1,10 +1,6 @@
 titulo="ANTONIO GONCALVES FILHO x Metrô - Restroativo 2015"
-autor=(
-    "ANTONIO GONCALVES FILHO"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ANTONIO GONCALVES FILHO")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

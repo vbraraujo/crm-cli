@@ -1,10 +1,6 @@
 titulo="ROMERIO ARAUJO DA SILVA x Metro-DF"
-autor=(
-    "ROMERIO ARAUJO DA SILVA"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("ROMERIO ARAUJO DA SILVA")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

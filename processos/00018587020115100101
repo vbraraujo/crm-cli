@@ -1,10 +1,6 @@
 titulo="Julio Santos Moraes x Metrô - PES 1994"
-autor=(
-    "Julio Santos Moraes"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Julio Santos Moraes")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

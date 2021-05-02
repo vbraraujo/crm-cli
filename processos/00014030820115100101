@@ -1,10 +1,6 @@
 titulo="Washington Luiz Santos de Oliveira x Metrô - PES 1994"
-autor=(
-    "Washington Luiz Santos de Oliveira"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Washington Luiz Santos de Oliveira")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()

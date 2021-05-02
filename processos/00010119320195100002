@@ -1,10 +1,6 @@
 titulo="AYLTON AZEVEDO DE MELO"
-autor=(
-    "Aylton Azevedo de Melo"
-)
-reu=(
-    "Metrô-DF"
-)
+autor=("Aylton Azevedo de Melo")
+reu=("Metrô-DF")
 juiz=()
 relator=()
 perito_jud=()
