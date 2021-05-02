@@ -1,0 +1,19 @@
+titulo="Sindmetrô x Metrô - Protesto judicial 2019 (data-base)"
+autor=(
+    "Sindicato dos Trabalhadores em Empresas de Transportes Metroviarios do DF - SINDMETRÔ-DF"
+)
+reu=(
+    "Metrô-DF"
+)
+juiz=()
+relator=()
+perito_jud=()
+perito_part=()
+valor_da_causa="R$ 3.000,00"
+distribuido="30/05/2019"
+condenacao=()
+pagamentos=()
+etiquetas=()
+tramitacao=""
+anotacoes=()
+status="ativo"

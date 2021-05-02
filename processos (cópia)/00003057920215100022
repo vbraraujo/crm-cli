@@ -1,0 +1,19 @@
+titulo="M. B. x C. M. D. F. M. D."
+autor=(
+    "M. B."
+)
+reu=(
+    "Metrô-DF"
+)
+juiz=()
+relator=()
+perito_jud=()
+perito_part=()
+valor_da_causa="R$ 0,00"
+distribuido=""
+condenacao=()
+pagamentos=()
+etiquetas=()
+tramitacao="22ª Vara do Trabalho de Brasília - DF"
+anotacoes=()
+status="ativo"

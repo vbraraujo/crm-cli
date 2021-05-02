@@ -1,0 +1,19 @@
+titulo="ALEXANDRE MONTEIRO BEZERRA"
+autor=(
+    "ALEXANDRE MONTEIRO BEZERRA"
+)
+reu=(
+    "Metrô-DF"
+)
+juiz=()
+relator=()
+perito_jud=()
+perito_part=()
+valor_da_causa="R$ 0,00"
+distribuido=""
+condenacao=()
+pagamentos=()
+etiquetas=()
+tramitacao="16ª Vara do Trabalho de Brasília - DF"
+anotacoes=()
+status="ativo"

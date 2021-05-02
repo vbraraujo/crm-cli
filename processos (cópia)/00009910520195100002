@@ -1,0 +1,19 @@
+titulo="ALEXANDRE MATROSOV DE MOURA REGO"
+autor=(
+    "ALEXANDRE MATROSOV DE MOURA REGO"
+)
+reu=(
+    "Metrô-DF"
+)
+juiz=()
+relator=()
+perito_jud=()
+perito_part=()
+valor_da_causa="R$ 0,00"
+distribuido=""
+condenacao=()
+pagamentos=()
+etiquetas=()
+tramitacao="6 Vara do Trabalho de Brasília - DF"
+anotacoes=()
+status="ativo"

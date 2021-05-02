@@ -1,0 +1,15 @@
+titulo="Processo de teste 2"
+autor=("")
+reu=()
+juiz=()
+relator=()
+perito_jud=()
+perito_part=()
+valor_da_causa="10,00"
+distribuido="02/01/2010"
+condenacao=()
+pagamentos=()
+etiquetas=()
+tramitacao="Vara de Brasília"
+anotacoes=()
+status="inativo"

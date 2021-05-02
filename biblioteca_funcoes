@@ -107,16 +107,14 @@ cadastrar_processo(){
     if [[ ! -f "$processo" ]] ; then
         local hoje="$(date +%d/%m/%Y)"
         echo "titulo=\"${4}\"
-autor=(
-    \"${3}\"
-)
+autor=(\"${3}\")
 reu=()
 juiz=()
 relator=()
 perito_jud=()
 perito_part=()
 valor_da_causa=\"\"
-ditribuido=\"${hoje}\"
+distribuido=\"${hoje}\"
 condenacao=()
 pagamentos=()
 etiquetas=()
@@ -126,6 +124,23 @@ status=\"ativo\"" > "$processo"
 
     fi
 }
+
+editar_processo(){
+    #Argumentos: 1 Processo 2 Variável editada
+    [[ "$#" < 2 ]] && echo "Não foi possível editar o arquivo, argumentos insuficientes." && read && return
+       
+    local variable="${2}"
+    local content=$(get_text "Novo valor" "${!variable}")
+    local file="${PATH_BASE}/processos/${1}"
+
+    if [ ! -f "${file}" ]; then
+        echo "Arquivo do processo não encontrado: ${file}"
+        read
+    else     
+        sed -i "s~^${variable}\=.*~${variable}=\"${content}\"~" "${file}"
+    fi
+}
+
 
 menu_processo(){
     #Argumentos: 1 Processo 2 CPF
@@ -155,6 +170,26 @@ menu_processo(){
         "Voltar")
             pesquisar_cliente "$2"
             ;;
+        "Editar status")
+            editar_processo "${1}" "status" "${2}"
+            pesquisar_processo "${1}" "${2}"
+            ;;
+        "Editar tramitação")
+            editar_processo "${1}" "tramitacao" "${2}"
+            pesquisar_processo "${1}" "${2}"
+            ;;
+        "Editar título")
+            editar_processo "${1}" "titulo" "${2}" 
+            pesquisar_processo "${1}" "${2}"
+            ;;
+        "Editar valor da causa")
+            editar_processo "${1}" "valor_da_causa" "${2}"
+            pesquisar_processo "${1}" "${2}"
+            ;;
+        "Editar distribuído") 
+            editar_processo "${1}" "distribuido" "${2}"
+            pesquisar_processo "${1}" "${2}"
+            ;;
     esac
 }
 
@@ -171,11 +206,11 @@ Título: $titulo
 Autor: ${autor[@]}
 Réu: ${reu[@]}
 Tramitação: $tramitacao
-Juiz:
-Relator:
-Perito judicial: 
-Perito particular: 
-Valor da causa: 
+Juiz: ${juiz[@]}
+Relator: ${relator[@]}
+Perito judicial: ${perito_jud[@]}
+Perito particular: ${perito_part[@]}
+Valor da causa: $valor_da_causa 
 Distribuído: $distribuido
 Status: $status
 Etiquetas: $etiquetas"

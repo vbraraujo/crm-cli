@@ -1,0 +1,19 @@
+titulo="C. M. D. F. M. D."
+autor=(
+    "Companhia do Metropolitano do Distrito Federal - METRO/DF"
+)
+reu=(
+    "Metrô-DF"
+)
+juiz=()
+relator=()
+perito_jud=()
+perito_part=()
+valor_da_causa="R$ 0,00"
+distribuido=""
+condenacao=()
+pagamentos=()
+etiquetas=()
+tramitacao="Desembargador Mário Macedo Fernandes Caron"
+anotacoes=()
+status="ativo"
