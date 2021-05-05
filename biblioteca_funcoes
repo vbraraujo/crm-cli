@@ -898,6 +898,7 @@ editar_cliente(){
 }
 
 relatorios () {
+    echo "Preparando relatórios..."
     local clientes="$(wc -l ${PATH_BASE}/clientes/.lista | cut -d' ' -f1)"
     local pendencias="$(wc -l ${PATH_BASE}/clientes/.pendencias | cut -d' ' -f1)"
     local path_funis="$(cat ${PATH_BASE}/clientes/*/funis)"
