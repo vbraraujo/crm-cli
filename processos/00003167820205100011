@@ -11,5 +11,5 @@ condenacao=()
 pagamentos=()
 etiquetas=()
 tramitacao="11 Vara do Trabalho de Brasília - DF"
-anotacoes=()
+anotacoes=( "2021-05-08: Não é necessário ED sobre reflexos, cliente não os recebeu.")
 status="ativo"

@@ -322,8 +322,6 @@
 816|2021-03-17|2021-11-12|funil_id3|52355640149|Atualizar sobre ação de Desc. 2019
 817|2021-03-17|2021-12-12|funil_id3|52355640149|Atualizar sobre ação de Desc. 2019
 818|2021-03-17|2022-01-11|funil_id3|52355640149|Atualizar sobre ação de Desc. 2019
-829|2020-12-18|2021-02-16|funil_id2|53887301153|Atualizar sobre RT - PES 1994
-830|2020-12-18|2021-04-17|funil_id2|53887301153|Atualizar sobre RT - PES 1994
 831|2020-12-18|2021-06-16|funil_id2|53887301153|Atualizar sobre RT - PES 1994
 832|2020-12-18|2021-08-15|funil_id2|53887301153|Atualizar sobre RT - PES 1994
 833|2020-12-18|2021-10-14|funil_id2|53887301153|Atualizar sobre RT - PES 1994
@@ -579,7 +577,6 @@
 1435|2020-09-17|2021-05-15|funil_id2|90029313600|Atualizar sobre ação do Anuêncio
 1436|2020-09-17|2021-06-14|funil_id2|90029313600|Atualizar sobre ação do Anuêncio
 1437|2020-09-17|2021-07-14|funil_id2|90029313600|Atualizar sobre ação do Anuêncio
-1440|2020-08-17|2021-06-13|funil_id2|91757029591|Atualizar sobre ação
 1441|2020-08-17|2021-08-12|funil_id2|91757029591|Atualizar sobre ação
 1442|2020-08-17|2021-09-21|funil_id2|91757029591|Atualizar sobre ação
 1472|2020-12-16|2021-06-14|funil_id2|95474285191|Atualizar sobre ação de Desc. 2019
@@ -1031,3 +1028,110 @@
 2346|2021-05-05|2022-03-01|funil_id1|82662991100|Atualizar sobre Revisão FGTS
 2347|2021-05-05|2022-04-30|funil_id1|82662991100|Atualizar sobre Revisão FGTS
 2348|2021-05-05|2022-06-09|funil_id1|82662991100|Atualizar sobre Revisão FGTS
+2353|2021-05-05|2021-05-19|funil_id1|71004807104|Preparar cálculos e inicial para RT - Descontos 2019
+2354|2021-05-05|2021-05-23|funil_id1|71004807104|Informar protocolo RT - Descontos 2019
+2355|2021-05-05|2021-07-04|funil_id1|71004807104|Atualizar sobre RT - Descontos 2019
+2356|2021-05-05|2021-09-02|funil_id1|71004807104|Atualizar sobre RT - Descontos 2019
+2357|2021-05-05|2021-11-01|funil_id1|71004807104|Atualizar sobre RT - Descontos 2019
+2358|2021-05-05|2021-12-01|funil_id1|71004807104|Atualizar sobre RT - Descontos 2019
+2359|2021-05-05|2021-12-31|funil_id1|71004807104|Atualizar sobre RT - Descontos 2019
+2360|2021-05-05|2022-01-30|funil_id1|71004807104|Atualizar sobre RT - Descontos 2019
+2361|2021-05-05|2022-03-01|funil_id1|71004807104|Atualizar sobre RT - Descontos 2019
+2362|2021-05-05|2021-05-12|funil_id2|82662991100|Apresentar RT - Descontos 2019
+2363|2021-05-05|2021-05-15|funil_id2|82662991100|Confirmar interesse em RT - Descontos 2019
+2364|2021-05-05|2021-05-16|funil_id2|82662991100|Enviar PDC RT - Descontos 2019
+2365|2021-05-05|2021-05-17|funil_id2|82662991100|Coletar docs. RT - Descontos 2019
+2366|2021-05-05|2021-05-19|funil_id2|82662991100|Preparar cálculos e inicial para RT - Descontos 2019
+2367|2021-05-05|2021-05-23|funil_id2|82662991100|Informar protocolo RT - Descontos 2019
+2368|2021-05-05|2021-07-04|funil_id2|82662991100|Atualizar sobre RT - Descontos 2019
+2369|2021-05-05|2021-09-02|funil_id2|82662991100|Atualizar sobre RT - Descontos 2019
+2370|2021-05-05|2021-11-01|funil_id2|82662991100|Atualizar sobre RT - Descontos 2019
+2371|2021-05-05|2021-12-01|funil_id2|82662991100|Atualizar sobre RT - Descontos 2019
+2372|2021-05-05|2021-12-31|funil_id2|82662991100|Atualizar sobre RT - Descontos 2019
+2373|2021-05-05|2022-01-30|funil_id2|82662991100|Atualizar sobre RT - Descontos 2019
+2374|2021-05-05|2022-03-01|funil_id2|82662991100|Atualizar sobre RT - Descontos 2019
+2375|2021-05-06|2021-05-13|funil_id1|72194014187|Apresentar RT - Quebra de caixa
+2376|2021-05-06|2021-05-16|funil_id1|72194014187|Confirmar interesse em RT - Quebra de caixa
+2377|2021-05-06|2021-05-17|funil_id1|72194014187|Enviar PDC RT - Quebra de caixa
+2378|2021-05-06|2021-05-18|funil_id1|72194014187|Coletar docs. RT - Quebra de caixa
+2379|2021-05-06|2021-05-20|funil_id1|72194014187|Preparar cálculos e inicial para RT - Quebra de caixa
+2380|2021-05-06|2021-05-24|funil_id1|72194014187|Informar protocolo RT - Quebra de caixa
+2381|2021-05-06|2021-07-05|funil_id1|72194014187|Atualizar sobre RT - Quebra de caixa
+2382|2021-05-06|2021-09-03|funil_id1|72194014187|Atualizar sobre RT - Quebra de caixa
+2383|2021-05-06|2021-11-02|funil_id1|72194014187|Atualizar sobre RT - Quebra de caixa
+2384|2021-05-06|2021-12-02|funil_id1|72194014187|Atualizar sobre RT - Quebra de caixa
+2385|2021-05-06|2022-01-01|funil_id1|72194014187|Atualizar sobre RT - Quebra de caixa
+2386|2021-05-06|2022-01-31|funil_id1|72194014187|Atualizar sobre RT - Quebra de caixa
+2387|2021-05-06|2022-03-02|funil_id1|72194014187|Atualizar sobre RT - Quebra de caixa
+2389|2021-05-06|2021-07-05|funil_id1|32751877320|Atualizar sobre RT -
+2390|2021-05-06|2021-09-03|funil_id1|32751877320|Atualizar sobre RT -
+2391|2021-05-06|2021-11-02|funil_id1|32751877320|Atualizar sobre RT -
+2392|2021-05-06|2022-01-01|funil_id1|32751877320|Atualizar sobre RT -
+2393|2021-05-06|2022-03-02|funil_id1|32751877320|Atualizar sobre RT -
+2394|2021-05-06|2022-05-01|funil_id1|32751877320|Atualizar sobre RT -
+2395|2021-05-06|2022-06-10|funil_id1|32751877320|Atualizar sobre RT -
+2397|2021-05-06|2021-07-05|funil_id2|11650125100|Atualizar sobre RT - Reintegração aposentado
+2398|2021-05-06|2021-09-03|funil_id2|11650125100|Atualizar sobre RT - Reintegração aposentado
+2399|2021-05-06|2021-11-02|funil_id2|11650125100|Atualizar sobre RT - Reintegração aposentado
+2400|2021-05-06|2022-01-01|funil_id2|11650125100|Atualizar sobre RT - Reintegração aposentado
+2401|2021-05-06|2022-03-02|funil_id2|11650125100|Atualizar sobre RT - Reintegração aposentado
+2402|2021-05-06|2022-05-01|funil_id2|11650125100|Atualizar sobre RT - Reintegração aposentado
+2403|2021-05-06|2022-06-10|funil_id2|11650125100|Atualizar sobre RT - Reintegração aposentado
+2408|2021-05-06|2021-05-20|funil_id1|57649570606|Preparar cálculos e inicial para RT - Descontos 2019
+2409|2021-05-06|2021-05-24|funil_id1|57649570606|Informar protocolo RT - Descontos 2019
+2410|2021-05-06|2021-07-05|funil_id1|57649570606|Atualizar sobre RT - Descontos 2019
+2411|2021-05-06|2021-09-03|funil_id1|57649570606|Atualizar sobre RT - Descontos 2019
+2412|2021-05-06|2021-11-02|funil_id1|57649570606|Atualizar sobre RT - Descontos 2019
+2413|2021-05-06|2021-12-02|funil_id1|57649570606|Atualizar sobre RT - Descontos 2019
+2414|2021-05-06|2022-01-01|funil_id1|57649570606|Atualizar sobre RT - Descontos 2019
+2415|2021-05-06|2022-01-31|funil_id1|57649570606|Atualizar sobre RT - Descontos 2019
+2416|2021-05-06|2022-03-02|funil_id1|57649570606|Atualizar sobre RT - Descontos 2019
+2417|2021-05-06|2021-05-13|funil_id2|00579317129|Apresentar RT - Quebra de caixa
+2418|2021-05-06|2021-05-16|funil_id2|00579317129|Confirmar interesse em RT - Quebra de caixa
+2419|2021-05-06|2021-05-17|funil_id2|00579317129|Enviar PDC RT - Quebra de caixa
+2420|2021-05-06|2021-05-18|funil_id2|00579317129|Coletar docs. RT - Quebra de caixa
+2421|2021-05-06|2021-05-20|funil_id2|00579317129|Preparar cálculos e inicial para RT - Quebra de caixa
+2422|2021-05-06|2021-05-24|funil_id2|00579317129|Informar protocolo RT - Quebra de caixa
+2423|2021-05-06|2021-07-05|funil_id2|00579317129|Atualizar sobre RT - Quebra de caixa
+2424|2021-05-06|2021-09-03|funil_id2|00579317129|Atualizar sobre RT - Quebra de caixa
+2425|2021-05-06|2021-11-02|funil_id2|00579317129|Atualizar sobre RT - Quebra de caixa
+2426|2021-05-06|2021-12-02|funil_id2|00579317129|Atualizar sobre RT - Quebra de caixa
+2427|2021-05-06|2022-01-01|funil_id2|00579317129|Atualizar sobre RT - Quebra de caixa
+2428|2021-05-06|2022-01-31|funil_id2|00579317129|Atualizar sobre RT - Quebra de caixa
+2429|2021-05-06|2022-03-02|funil_id2|00579317129|Atualizar sobre RT - Quebra de caixa
+2430|2021-05-06|2021-05-06|funil_id1|02450257152|Apresentação pessoal e atualização
+2431|2021-05-06|2021-07-05|funil_id1|02450257152|Atualizar sobre RT - Retroativo 2015
+2432|2021-05-06|2021-09-03|funil_id1|02450257152|Atualizar sobre RT - Retroativo 2015
+2433|2021-05-06|2021-11-02|funil_id1|02450257152|Atualizar sobre RT - Retroativo 2015
+2434|2021-05-06|2022-01-01|funil_id1|02450257152|Atualizar sobre RT - Retroativo 2015
+2435|2021-05-06|2022-03-02|funil_id1|02450257152|Atualizar sobre RT - Retroativo 2015
+2436|2021-05-06|2022-05-01|funil_id1|02450257152|Atualizar sobre RT - Retroativo 2015
+2437|2021-05-06|2022-06-10|funil_id1|02450257152|Atualizar sobre RT - Retroativo 2015
+2443|2021-05-07|2021-05-25|funil_id1|00434898180|Informar protocolo RT - Descontos 2019
+2444|2021-05-07|2021-07-06|funil_id1|00434898180|Atualizar sobre RT - Descontos 2019
+2445|2021-05-07|2021-09-04|funil_id1|00434898180|Atualizar sobre RT - Descontos 2019
+2446|2021-05-07|2021-11-03|funil_id1|00434898180|Atualizar sobre RT - Descontos 2019
+2447|2021-05-07|2021-12-03|funil_id1|00434898180|Atualizar sobre RT - Descontos 2019
+2448|2021-05-07|2022-01-02|funil_id1|00434898180|Atualizar sobre RT - Descontos 2019
+2449|2021-05-07|2022-02-01|funil_id1|00434898180|Atualizar sobre RT - Descontos 2019
+2450|2021-05-07|2022-03-03|funil_id1|00434898180|Atualizar sobre RT - Descontos 2019
+2451|2021-05-07|2021-05-14|funil_id1|70395756120|Apresentar RT - Anuênio
+2452|2021-05-07|2021-05-17|funil_id1|70395756120|Confirmar interesse em RT - Anuênio
+2453|2021-05-07|2021-05-18|funil_id1|70395756120|Enviar PDC RT - Anuênio
+2454|2021-05-07|2021-05-19|funil_id1|70395756120|Coletar docs. RT - Anuênio
+2455|2021-05-07|2021-05-21|funil_id1|70395756120|Preparar cálculos e inicial para RT - Anuênio
+2456|2021-05-07|2021-05-25|funil_id1|70395756120|Informar protocolo RT - Anuênio
+2457|2021-05-07|2021-07-06|funil_id1|70395756120|Atualizar sobre RT - Anuênio
+2458|2021-05-07|2021-09-04|funil_id1|70395756120|Atualizar sobre RT - Anuênio
+2459|2021-05-07|2021-11-03|funil_id1|70395756120|Atualizar sobre RT - Anuênio
+2460|2021-05-07|2021-12-03|funil_id1|70395756120|Atualizar sobre RT - Anuênio
+2461|2021-05-07|2022-01-02|funil_id1|70395756120|Atualizar sobre RT - Anuênio
+2462|2021-05-07|2022-02-01|funil_id1|70395756120|Atualizar sobre RT - Anuênio
+2463|2021-05-07|2022-03-03|funil_id1|70395756120|Atualizar sobre RT - Anuênio
+2465|2021-05-08|2021-07-07|funil_id1|31736211153|Atualizar sobre RT - Retroativo 2015
+2466|2021-05-08|2021-09-05|funil_id1|31736211153|Atualizar sobre RT - Retroativo 2015
+2467|2021-05-08|2021-11-04|funil_id1|31736211153|Atualizar sobre RT - Retroativo 2015
+2468|2021-05-08|2022-01-03|funil_id1|31736211153|Atualizar sobre RT - Retroativo 2015
+2469|2021-05-08|2022-03-04|funil_id1|31736211153|Atualizar sobre RT - Retroativo 2015
+2470|2021-05-08|2022-05-03|funil_id1|31736211153|Atualizar sobre RT - Retroativo 2015
+2471|2021-05-08|2022-06-12|funil_id1|31736211153|Atualizar sobre RT - Retroativo 2015

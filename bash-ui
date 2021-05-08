@@ -120,7 +120,7 @@ draw_line() {
     local char=${1::1}
     local line
     printf -v line "%${TERM_COLS}s"
-    echo -n ${line// /${char:--}}
+    echo -n ${line// /${char:-─}}
 }
 
 # Desenha uma linha simples
