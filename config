@@ -1,3 +1,4 @@
 # Variáveis do usuário
 PATH_DOCUMENTOS="${HOME}/Downloads"
+PATH_NOVA_ACAO="${HOME}/Downloads/inbox/01-com_pendencias_do_cliente"
 TERMINAL='terminator'

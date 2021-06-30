@@ -27,4 +27,4 @@ cadastrar_atualiza
 
 echo -e "${REFERENCIA}" >> ${PATH_FUNIL_CLIENTE}
 
-pesquisar_cliente "${1}"
+criar_dir_nova_acao "${1}"

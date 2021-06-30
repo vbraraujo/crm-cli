@@ -3,7 +3,7 @@ single_line
 echo "INCLUIR FUNIL" 
 
 # Variáveis do sistema
-read -e -p "Informe o título da ação: " -i "RT - " TITULO
+TITULO="$(nomear_processo "$1")"
 
 TIPO="Reclamação Trabalhista"
 COMPETENCIA="TRT10"
@@ -23,7 +23,9 @@ cadastrar_etapa 11 "Enviar PDC ${TITULO}"
 cadastrar_etapa 12 "Coletar docs. ${TITULO}"
 cadastrar_etapa 14 "Preparar cálculos e inicial para ${TITULO}"
 cadastrar_etapa 18 "Informar protocolo ${TITULO}"
+
 cadastrar_atualiza
+
 echo -e "${REFERENCIA}" >> ${PATH_FUNIL_CLIENTE}
 
-pesquisar_cliente "${1}"
+criar_dir_nova_acao "${1}"

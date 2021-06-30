@@ -29,6 +29,12 @@ gerar_csv () {
     pago[dsr]="10849|20849"
     pago[13o]="10891|10892"
     pago[ferias]="10631|10866|10870"
+    pago[desc_faltas_paral]="40003"
+    pago[desc_horas_nao_trab]="40004"
+    pago[desc_dsr]="40029"
+    pago[desc_dif_faltas_paral]="50003"
+    pago[dev_faltas]="30003"
+    pago[dev_horas]="30004"
 
     mkdir -p "$path_destino"
 

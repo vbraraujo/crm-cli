@@ -4,7 +4,7 @@ single_line
 echo "INCLUIR FUNIL" 
 
 read -e -p "Informe o número do processo: " PROCESSO
-read -e -p "Informe o título da ação: " -i "RT - " TITULO
+TITULO="$(nomear_processo "$1")"
 
 # Variáveis do sistema
 TIPO="Reclamação Trabalhista"
