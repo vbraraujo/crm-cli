@@ -91,6 +91,7 @@ cadastrar_titulo_acoes(){
 }
 
 nomear_processo(){
+    # Argumentos: 1 CPF, 2 Query para fzf
     local acoes_list selected fzf_q
     acoes_list="Voltar\nNovo\n"
     acoes_list+="$(< "${PATH_ACOES}")"
@@ -813,6 +814,7 @@ pesquisar_cliente(){
     text_color "DADOS DO CLIENTE ${pc_files}"
     single_line
     head -n13 "${path_cliente}/cadastro"
+    sed '22q;d' "${path_cliente}/cadastro" # Exibir data de demissão/falecimento
     sed '23q;d' "${path_cliente}/cadastro" # Exibir data de nascimento
     sed '24q;d' "${path_cliente}/cadastro" # Exibir data de contratação
     single_line

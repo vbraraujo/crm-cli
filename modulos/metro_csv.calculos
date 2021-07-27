@@ -29,6 +29,8 @@ gerar_csv () {
     pago[dsr]="10849|20849"
     pago[13o]="10891|10892"
     pago[ferias]="10631|10866|10870"
+    pago[creche]="10550"
+    pago[abono_salarial]="10747"
     pago[desc_faltas_paral]="40003"
     pago[desc_horas_nao_trab]="40004"
     pago[desc_dsr]="40029"
