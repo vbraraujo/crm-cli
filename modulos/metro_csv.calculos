@@ -17,6 +17,7 @@ gerar_csv () {
     declare -A pago
 
     pago[salario]="10002|20002"
+    pago[comp_salarial]="10553"
     pago[funcao]="10018|10012|10178"
     pago[titulalacao]="10677|20677|10390"
     pago[anuenio]="10502|20502"

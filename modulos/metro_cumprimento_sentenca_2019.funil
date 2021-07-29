@@ -4,7 +4,7 @@ echo "INCLUIR FUNIL"
 
 # Variáveis do sistema
 TITULO="RT - CumpSent DC2019"
-TIPO="Ação de cumprimento"
+TIPO="Cumprimento de sentença"
 COMPETENCIA="TRT10"
 ARQUIVO="$(basename ${BASH_SOURCE[0]})"
 PROCESSO=""
@@ -12,10 +12,36 @@ MAIL_TRELLO="victorbra+ykgrr4ds1afohiqdh9c1@boards.trello.com"
 
 source "${PATH_BASE}/modulos/default.funil"
 
-criar_cartao_trello "${1}" "${MAIL_TRELLO}" "CumpSentDC2019"
+create_funil_record(){
+    FUNIL_ID="$(awk -F "|" '{id=$1+1}END{print id}' ${PATH_FUNIL_CLIENTE})"
+    [[ -z "${FUNIL_ID}" ]] && FUNIL_ID=1
+    REFERENCIA="${FUNIL_ID}|${ARQUIVO}|${TITULO} ${2}|${TIPO}|${COMPETENCIA}|${PROCESSO}|${1}"
+    echo -e "${REFERENCIA}" >> ${PATH_FUNIL_CLIENTE}
+}
+
+check_caixa_transp(){
+    local trello_tag q_caixa ind_transp
+
+    q_caixa="$(pdfgrep "10019 ADIC QUEBRA CAIXA" "${PATH_BASE}/clientes/${1}/documentos/fichas_financeiras/2019.pdf")"
+    ind_transp="$(pdfgrep "10473 INDENIZACAO DE TRANSPORTE" "${PATH_BASE}/clientes/${1}/documentos/fichas_financeiras/2019.pdf")"
+    [[ -n ${q_caixa} ]] && trello_tag+="-Caixa"
+    [[ -n ${ind_transp} ]] && trello_tag+="-Transporte"
+    criar_cartao_trello "${1}" "${MAIL_TRELLO}" "CumpSentDC2019${trello_tag}"
+}
+
+TITULO="RT - CumpSent DC2019 (Reajuste)"
+criar_cartao_trello "${1}" "${MAIL_TRELLO}" "CumpSentDC2019-Reajuste"
+echo -e "${REFERENCIA}" >> ${PATH_FUNIL_CLIENTE}
+
+create_funil_record "${1}" "(Anuenio e outros)"
+criar_cartao_trello "${1}" "${MAIL_TRELLO}" "CumpSentDC2019-Anuenio-e-outros"
+
+create_funil_record "${1}" "(Caixa e transporte)"
+check_caixa_transp ${1}
 
 echo "[info] Criando tarefas..."
 
+TITULO="RT - CumpSent DC2019"
 cadastrar_etapa 7 "Apresentar ${TITULO}"
 cadastrar_etapa 10 "Confirmar interesse em ${TITULO}"
 cadastrar_etapa 11 "Enviar PDC ${TITULO}"
@@ -24,7 +50,5 @@ cadastrar_etapa 14 "Preparar cálculos e inicial para ${TITULO}"
 cadastrar_etapa 18 "Informar protocolo ${TITULO}"
 
 cadastrar_atualiza
-
-echo -e "${REFERENCIA}" >> ${PATH_FUNIL_CLIENTE}
 
 criar_dir_nova_acao "${1}"
