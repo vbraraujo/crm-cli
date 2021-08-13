@@ -11,5 +11,5 @@ condenacao=()
 pagamentos=()
 etiquetas=()
 tramitacao="2 Vara do Trabalho de Taguatinga - DF"
-anotacoes=()
+anotacoes=( "2021-08-05: Sucumbência paga: R$ 13.379,93")
 status="ativo"

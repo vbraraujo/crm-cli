@@ -4,7 +4,7 @@
 local path_cliente="${PATH_BASE}/clientes/$1"
 
 pesquisar_valores (){
-    local termo="40003|50003|40004|40029"
+    local termo="40003|50003|40004|40028|40029"
     local pesquisa=$(pdfgrep "$termo" ${path_cliente}/documentos/fichas_financeiras/2019.pdf | sed 's/\.//g; s/,/./g')
     if [[ ! -z "$pesquisa" ]] ; then 
         local resultado="$(awk 'NF > 14 { 

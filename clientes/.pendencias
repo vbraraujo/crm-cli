@@ -1578,7 +1578,6 @@
 3201|2021-06-01|2022-03-28|funil_id1|37283880178|Atualizar sobre RT - PES 1994
 3202|2021-06-01|2022-05-27|funil_id1|37283880178|Atualizar sobre RT - PES 1994
 3203|2021-06-01|2022-07-06|funil_id1|37283880178|Atualizar sobre RT - PES 1994
-3205|2021-06-01|2021-07-31|funil_id1|65827309168|Atualizar sobre RT - PES 1994
 3206|2021-06-01|2021-09-29|funil_id1|65827309168|Atualizar sobre RT - PES 1994
 3207|2021-06-01|2021-11-28|funil_id1|65827309168|Atualizar sobre RT - PES 1994
 3208|2021-06-01|2022-01-27|funil_id1|65827309168|Atualizar sobre RT - PES 1994
@@ -2651,19 +2650,6 @@
 4421|2021-07-28|2022-05-24|funil_id1|29623804172|Atualizar sobre RT - Férias
 4422|2021-07-28|2022-07-23|funil_id1|29623804172|Atualizar sobre RT - Férias
 4423|2021-07-28|2022-09-01|funil_id1|29623804172|Atualizar sobre RT - Férias
-4424|2021-07-28|2021-08-04|funil_id2|69785287149|Apresentar RT - CumpSent DC2019
-4425|2021-07-28|2021-08-07|funil_id2|69785287149|Confirmar interesse em RT - CumpSent DC2019
-4426|2021-07-28|2021-08-08|funil_id2|69785287149|Enviar PDC RT - CumpSent DC2019
-4427|2021-07-28|2021-08-09|funil_id2|69785287149|Coletar docs. RT - CumpSent DC2019
-4428|2021-07-28|2021-08-11|funil_id2|69785287149|Preparar cálculos e inicial para RT - CumpSent DC2019
-4429|2021-07-28|2021-08-15|funil_id2|69785287149|Informar protocolo RT - CumpSent DC2019
-4430|2021-07-28|2021-09-26|funil_id2|69785287149|Atualizar sobre RT - CumpSent DC2019
-4431|2021-07-28|2021-11-25|funil_id2|69785287149|Atualizar sobre RT - CumpSent DC2019
-4432|2021-07-28|2022-01-24|funil_id2|69785287149|Atualizar sobre RT - CumpSent DC2019
-4433|2021-07-28|2022-02-23|funil_id2|69785287149|Atualizar sobre RT - CumpSent DC2019
-4434|2021-07-28|2022-03-25|funil_id2|69785287149|Atualizar sobre RT - CumpSent DC2019
-4435|2021-07-28|2022-04-24|funil_id2|69785287149|Atualizar sobre RT - CumpSent DC2019
-4436|2021-07-28|2022-05-24|funil_id2|69785287149|Atualizar sobre RT - CumpSent DC2019
 4437|2021-07-29|2021-08-05|funil_id3|00209345136|Apresentar RT - CumpSent DC2019
 4438|2021-07-29|2021-08-08|funil_id3|00209345136|Confirmar interesse em RT - CumpSent DC2019
 4439|2021-07-29|2021-08-09|funil_id3|00209345136|Enviar PDC RT - CumpSent DC2019
@@ -2690,3 +2676,153 @@
 4460|2021-07-29|2022-03-26|funil_id6|00209345136|Atualizar sobre RT - CumpSent DC2019 (Reajuste)
 4461|2021-07-29|2022-04-25|funil_id6|00209345136|Atualizar sobre RT - CumpSent DC2019 (Reajuste)
 4462|2021-07-29|2022-05-25|funil_id6|00209345136|Atualizar sobre RT - CumpSent DC2019 (Reajuste)
+4463|2021-07-29|2021-08-05|funil_id4|69785287149|Apresentar RT - CumpSent DC2019
+4464|2021-07-29|2021-08-08|funil_id4|69785287149|Confirmar interesse em RT - CumpSent DC2019
+4465|2021-07-29|2021-08-09|funil_id4|69785287149|Enviar PDC RT - CumpSent DC2019
+4466|2021-07-29|2021-08-10|funil_id4|69785287149|Coletar docs. RT - CumpSent DC2019
+4467|2021-07-29|2021-08-12|funil_id4|69785287149|Preparar cálculos e inicial para RT - CumpSent DC2019
+4468|2021-07-29|2021-08-16|funil_id4|69785287149|Informar protocolo RT - CumpSent DC2019
+4469|2021-07-29|2021-09-27|funil_id4|69785287149|Atualizar sobre RT - CumpSent DC2019
+4470|2021-07-29|2021-11-26|funil_id4|69785287149|Atualizar sobre RT - CumpSent DC2019
+4471|2021-07-29|2022-01-25|funil_id4|69785287149|Atualizar sobre RT - CumpSent DC2019
+4472|2021-07-29|2022-02-24|funil_id4|69785287149|Atualizar sobre RT - CumpSent DC2019
+4473|2021-07-29|2022-03-26|funil_id4|69785287149|Atualizar sobre RT - CumpSent DC2019
+4474|2021-07-29|2022-04-25|funil_id4|69785287149|Atualizar sobre RT - CumpSent DC2019
+4475|2021-07-29|2022-05-25|funil_id4|69785287149|Atualizar sobre RT - CumpSent DC2019
+4477|2021-07-31|2021-09-29|funil_id1|33526753334|Atualizar sobre RT - Retroativo 2015
+4478|2021-07-31|2021-11-28|funil_id1|33526753334|Atualizar sobre RT - Retroativo 2015
+4479|2021-07-31|2022-01-27|funil_id1|33526753334|Atualizar sobre RT - Retroativo 2015
+4480|2021-07-31|2022-03-28|funil_id1|33526753334|Atualizar sobre RT - Retroativo 2015
+4481|2021-07-31|2022-05-27|funil_id1|33526753334|Atualizar sobre RT - Retroativo 2015
+4482|2021-07-31|2022-07-26|funil_id1|33526753334|Atualizar sobre RT - Retroativo 2015
+4483|2021-07-31|2022-09-04|funil_id1|33526753334|Atualizar sobre RT - Retroativo 2015
+4484|2021-08-02|2021-08-09|funil_id3|72542640149|Apresentar RT - Quebra de caixa
+4485|2021-08-02|2021-08-12|funil_id3|72542640149|Confirmar interesse em RT - Quebra de caixa
+4486|2021-08-02|2021-08-13|funil_id3|72542640149|Enviar PDC RT - Quebra de caixa
+4487|2021-08-02|2021-08-14|funil_id3|72542640149|Coletar docs. RT - Quebra de caixa
+4488|2021-08-02|2021-08-16|funil_id3|72542640149|Preparar cálculos e inicial para RT - Quebra de caixa
+4489|2021-08-02|2021-08-20|funil_id3|72542640149|Informar protocolo RT - Quebra de caixa
+4490|2021-08-02|2021-10-01|funil_id3|72542640149|Atualizar sobre RT - Quebra de caixa
+4491|2021-08-02|2021-11-30|funil_id3|72542640149|Atualizar sobre RT - Quebra de caixa
+4492|2021-08-02|2022-01-29|funil_id3|72542640149|Atualizar sobre RT - Quebra de caixa
+4493|2021-08-02|2022-02-28|funil_id3|72542640149|Atualizar sobre RT - Quebra de caixa
+4494|2021-08-02|2022-03-30|funil_id3|72542640149|Atualizar sobre RT - Quebra de caixa
+4495|2021-08-02|2022-04-29|funil_id3|72542640149|Atualizar sobre RT - Quebra de caixa
+4496|2021-08-02|2022-05-29|funil_id3|72542640149|Atualizar sobre RT - Quebra de caixa
+4497|2021-08-03|2021-08-10|funil_id7|46182160187|Apresentar RT - CumpSent DC2019
+4498|2021-08-03|2021-08-13|funil_id7|46182160187|Confirmar interesse em RT - CumpSent DC2019
+4499|2021-08-03|2021-08-14|funil_id7|46182160187|Enviar PDC RT - CumpSent DC2019
+4500|2021-08-03|2021-08-15|funil_id7|46182160187|Coletar docs. RT - CumpSent DC2019
+4501|2021-08-03|2021-08-17|funil_id7|46182160187|Preparar cálculos e inicial para RT - CumpSent DC2019
+4502|2021-08-03|2021-08-21|funil_id7|46182160187|Informar protocolo RT - CumpSent DC2019
+4503|2021-08-03|2021-10-02|funil_id7|46182160187|Atualizar sobre RT - CumpSent DC2019
+4504|2021-08-03|2021-12-01|funil_id7|46182160187|Atualizar sobre RT - CumpSent DC2019
+4505|2021-08-03|2022-01-30|funil_id7|46182160187|Atualizar sobre RT - CumpSent DC2019
+4506|2021-08-03|2022-03-01|funil_id7|46182160187|Atualizar sobre RT - CumpSent DC2019
+4507|2021-08-03|2022-03-31|funil_id7|46182160187|Atualizar sobre RT - CumpSent DC2019
+4508|2021-08-03|2022-04-30|funil_id7|46182160187|Atualizar sobre RT - CumpSent DC2019
+4509|2021-08-03|2022-05-30|funil_id7|46182160187|Atualizar sobre RT - CumpSent DC2019
+4510|2021-08-03|2021-08-10|funil_id1|00196582148|Apresentar CumSen - Aprovados ACP
+4511|2021-08-03|2021-08-13|funil_id1|00196582148|Confirmar interesse em CumSen - Aprovados ACP
+4512|2021-08-03|2021-08-14|funil_id1|00196582148|Enviar PDC CumSen - Aprovados ACP
+4513|2021-08-03|2021-08-15|funil_id1|00196582148|Coletar docs. CumSen - Aprovados ACP
+4514|2021-08-03|2021-08-17|funil_id1|00196582148|Preparar cálculos e inicial para CumSen - Aprovados ACP
+4515|2021-08-03|2021-08-21|funil_id1|00196582148|Informar protocolo CumSen - Aprovados ACP
+4516|2021-08-03|2021-10-02|funil_id1|00196582148|Atualizar sobre CumSen - Aprovados ACP
+4517|2021-08-03|2021-12-01|funil_id1|00196582148|Atualizar sobre CumSen - Aprovados ACP
+4518|2021-08-03|2022-01-30|funil_id1|00196582148|Atualizar sobre CumSen - Aprovados ACP
+4519|2021-08-03|2022-03-01|funil_id1|00196582148|Atualizar sobre CumSen - Aprovados ACP
+4520|2021-08-03|2022-03-31|funil_id1|00196582148|Atualizar sobre CumSen - Aprovados ACP
+4521|2021-08-03|2022-04-30|funil_id1|00196582148|Atualizar sobre CumSen - Aprovados ACP
+4522|2021-08-03|2022-05-30|funil_id1|00196582148|Atualizar sobre CumSen - Aprovados ACP
+4523|2021-08-03|2021-08-10|funil_id1|77957024149|Apresentar CumSen - Aprovados ACP
+4524|2021-08-03|2021-08-13|funil_id1|77957024149|Confirmar interesse em CumSen - Aprovados ACP
+4525|2021-08-03|2021-08-14|funil_id1|77957024149|Enviar PDC CumSen - Aprovados ACP
+4526|2021-08-03|2021-08-15|funil_id1|77957024149|Coletar docs. CumSen - Aprovados ACP
+4527|2021-08-03|2021-08-17|funil_id1|77957024149|Preparar cálculos e inicial para CumSen - Aprovados ACP
+4528|2021-08-03|2021-08-21|funil_id1|77957024149|Informar protocolo CumSen - Aprovados ACP
+4529|2021-08-03|2021-10-02|funil_id1|77957024149|Atualizar sobre CumSen - Aprovados ACP
+4530|2021-08-03|2021-12-01|funil_id1|77957024149|Atualizar sobre CumSen - Aprovados ACP
+4531|2021-08-03|2022-01-30|funil_id1|77957024149|Atualizar sobre CumSen - Aprovados ACP
+4532|2021-08-03|2022-03-01|funil_id1|77957024149|Atualizar sobre CumSen - Aprovados ACP
+4533|2021-08-03|2022-03-31|funil_id1|77957024149|Atualizar sobre CumSen - Aprovados ACP
+4534|2021-08-03|2022-04-30|funil_id1|77957024149|Atualizar sobre CumSen - Aprovados ACP
+4535|2021-08-03|2022-05-30|funil_id1|77957024149|Atualizar sobre CumSen - Aprovados ACP
+4536|2021-08-03|2021-08-10|funil_id1|02393748199|Apresentar CumSen - Aprovados ACP
+4537|2021-08-03|2021-08-13|funil_id1|02393748199|Confirmar interesse em CumSen - Aprovados ACP
+4538|2021-08-03|2021-08-14|funil_id1|02393748199|Enviar PDC CumSen - Aprovados ACP
+4539|2021-08-03|2021-08-15|funil_id1|02393748199|Coletar docs. CumSen - Aprovados ACP
+4540|2021-08-03|2021-08-17|funil_id1|02393748199|Preparar cálculos e inicial para CumSen - Aprovados ACP
+4541|2021-08-03|2021-08-21|funil_id1|02393748199|Informar protocolo CumSen - Aprovados ACP
+4542|2021-08-03|2021-10-02|funil_id1|02393748199|Atualizar sobre CumSen - Aprovados ACP
+4543|2021-08-03|2021-12-01|funil_id1|02393748199|Atualizar sobre CumSen - Aprovados ACP
+4544|2021-08-03|2022-01-30|funil_id1|02393748199|Atualizar sobre CumSen - Aprovados ACP
+4545|2021-08-03|2022-03-01|funil_id1|02393748199|Atualizar sobre CumSen - Aprovados ACP
+4546|2021-08-03|2022-03-31|funil_id1|02393748199|Atualizar sobre CumSen - Aprovados ACP
+4547|2021-08-03|2022-04-30|funil_id1|02393748199|Atualizar sobre CumSen - Aprovados ACP
+4548|2021-08-03|2022-05-30|funil_id1|02393748199|Atualizar sobre CumSen - Aprovados ACP
+4549|2021-08-03|2021-08-10|funil_id1|73337072100|Apresentar CumSen - Aprovados ACP
+4550|2021-08-03|2021-08-13|funil_id1|73337072100|Confirmar interesse em CumSen - Aprovados ACP
+4551|2021-08-03|2021-08-14|funil_id1|73337072100|Enviar PDC CumSen - Aprovados ACP
+4552|2021-08-03|2021-08-15|funil_id1|73337072100|Coletar docs. CumSen - Aprovados ACP
+4553|2021-08-03|2021-08-17|funil_id1|73337072100|Preparar cálculos e inicial para CumSen - Aprovados ACP
+4554|2021-08-03|2021-08-21|funil_id1|73337072100|Informar protocolo CumSen - Aprovados ACP
+4555|2021-08-03|2021-10-02|funil_id1|73337072100|Atualizar sobre CumSen - Aprovados ACP
+4556|2021-08-03|2021-12-01|funil_id1|73337072100|Atualizar sobre CumSen - Aprovados ACP
+4557|2021-08-03|2022-01-30|funil_id1|73337072100|Atualizar sobre CumSen - Aprovados ACP
+4558|2021-08-03|2022-03-01|funil_id1|73337072100|Atualizar sobre CumSen - Aprovados ACP
+4559|2021-08-03|2022-03-31|funil_id1|73337072100|Atualizar sobre CumSen - Aprovados ACP
+4560|2021-08-03|2022-04-30|funil_id1|73337072100|Atualizar sobre CumSen - Aprovados ACP
+4561|2021-08-03|2022-05-30|funil_id1|73337072100|Atualizar sobre CumSen - Aprovados ACP
+4562|2021-08-04|2021-08-11|funil_id1|61124850104|Apresentar CumSen - Aprovados ACP
+4563|2021-08-04|2021-08-14|funil_id1|61124850104|Confirmar interesse em CumSen - Aprovados ACP
+4564|2021-08-04|2021-08-15|funil_id1|61124850104|Enviar PDC CumSen - Aprovados ACP
+4565|2021-08-04|2021-08-16|funil_id1|61124850104|Coletar docs. CumSen - Aprovados ACP
+4566|2021-08-04|2021-08-18|funil_id1|61124850104|Preparar cálculos e inicial para CumSen - Aprovados ACP
+4567|2021-08-04|2021-08-22|funil_id1|61124850104|Informar protocolo CumSen - Aprovados ACP
+4568|2021-08-04|2021-10-03|funil_id1|61124850104|Atualizar sobre CumSen - Aprovados ACP
+4569|2021-08-04|2021-12-02|funil_id1|61124850104|Atualizar sobre CumSen - Aprovados ACP
+4570|2021-08-04|2022-01-31|funil_id1|61124850104|Atualizar sobre CumSen - Aprovados ACP
+4571|2021-08-04|2022-03-02|funil_id1|61124850104|Atualizar sobre CumSen - Aprovados ACP
+4572|2021-08-04|2022-04-01|funil_id1|61124850104|Atualizar sobre CumSen - Aprovados ACP
+4573|2021-08-04|2022-05-01|funil_id1|61124850104|Atualizar sobre CumSen - Aprovados ACP
+4574|2021-08-04|2022-05-31|funil_id1|61124850104|Atualizar sobre CumSen - Aprovados ACP
+4575|2021-08-05|2021-08-12|funil_id3|80230415172|Apresentar RT - Quebra de caixa
+4576|2021-08-05|2021-08-15|funil_id3|80230415172|Confirmar interesse em RT - Quebra de caixa
+4577|2021-08-05|2021-08-16|funil_id3|80230415172|Enviar PDC RT - Quebra de caixa
+4578|2021-08-05|2021-08-17|funil_id3|80230415172|Coletar docs. RT - Quebra de caixa
+4579|2021-08-05|2021-08-19|funil_id3|80230415172|Preparar cálculos e inicial para RT - Quebra de caixa
+4580|2021-08-05|2021-08-23|funil_id3|80230415172|Informar protocolo RT - Quebra de caixa
+4581|2021-08-05|2021-10-04|funil_id3|80230415172|Atualizar sobre RT - Quebra de caixa
+4582|2021-08-05|2021-12-03|funil_id3|80230415172|Atualizar sobre RT - Quebra de caixa
+4583|2021-08-05|2022-02-01|funil_id3|80230415172|Atualizar sobre RT - Quebra de caixa
+4584|2021-08-05|2022-03-03|funil_id3|80230415172|Atualizar sobre RT - Quebra de caixa
+4585|2021-08-05|2022-04-02|funil_id3|80230415172|Atualizar sobre RT - Quebra de caixa
+4586|2021-08-05|2022-05-02|funil_id3|80230415172|Atualizar sobre RT - Quebra de caixa
+4587|2021-08-05|2022-06-01|funil_id3|80230415172|Atualizar sobre RT - Quebra de caixa
+4588|2021-08-05|2021-08-12|funil_id1|00542006103|Apresentar CumSen - Aprovados ACP
+4589|2021-08-05|2021-08-15|funil_id1|00542006103|Confirmar interesse em CumSen - Aprovados ACP
+4590|2021-08-05|2021-08-16|funil_id1|00542006103|Enviar PDC CumSen - Aprovados ACP
+4591|2021-08-05|2021-08-17|funil_id1|00542006103|Coletar docs. CumSen - Aprovados ACP
+4592|2021-08-05|2021-08-19|funil_id1|00542006103|Preparar cálculos e inicial para CumSen - Aprovados ACP
+4593|2021-08-05|2021-08-23|funil_id1|00542006103|Informar protocolo CumSen - Aprovados ACP
+4594|2021-08-05|2021-10-04|funil_id1|00542006103|Atualizar sobre CumSen - Aprovados ACP
+4595|2021-08-05|2021-12-03|funil_id1|00542006103|Atualizar sobre CumSen - Aprovados ACP
+4596|2021-08-05|2022-02-01|funil_id1|00542006103|Atualizar sobre CumSen - Aprovados ACP
+4597|2021-08-05|2022-03-03|funil_id1|00542006103|Atualizar sobre CumSen - Aprovados ACP
+4598|2021-08-05|2022-04-02|funil_id1|00542006103|Atualizar sobre CumSen - Aprovados ACP
+4599|2021-08-05|2022-05-02|funil_id1|00542006103|Atualizar sobre CumSen - Aprovados ACP
+4600|2021-08-05|2022-06-01|funil_id1|00542006103|Atualizar sobre CumSen - Aprovados ACP
+4601|2021-08-12|2021-08-19|funil_id4|91757029591|Apresentar RT - Quebra de caixa
+4602|2021-08-12|2021-08-22|funil_id4|91757029591|Confirmar interesse em RT - Quebra de caixa
+4603|2021-08-12|2021-08-23|funil_id4|91757029591|Enviar PDC RT - Quebra de caixa
+4604|2021-08-12|2021-08-24|funil_id4|91757029591|Coletar docs. RT - Quebra de caixa
+4605|2021-08-12|2021-08-26|funil_id4|91757029591|Preparar cálculos e inicial para RT - Quebra de caixa
+4606|2021-08-12|2021-08-30|funil_id4|91757029591|Informar protocolo RT - Quebra de caixa
+4607|2021-08-12|2021-10-11|funil_id4|91757029591|Atualizar sobre RT - Quebra de caixa
+4608|2021-08-12|2021-12-10|funil_id4|91757029591|Atualizar sobre RT - Quebra de caixa
+4609|2021-08-12|2022-02-08|funil_id4|91757029591|Atualizar sobre RT - Quebra de caixa
+4610|2021-08-12|2022-03-10|funil_id4|91757029591|Atualizar sobre RT - Quebra de caixa
+4611|2021-08-12|2022-04-09|funil_id4|91757029591|Atualizar sobre RT - Quebra de caixa
+4612|2021-08-12|2022-05-09|funil_id4|91757029591|Atualizar sobre RT - Quebra de caixa
+4613|2021-08-12|2022-06-08|funil_id4|91757029591|Atualizar sobre RT - Quebra de caixa
