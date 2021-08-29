@@ -4,9 +4,7 @@
 local path_cliente="${PATH_BASE}/clientes/$1"
 
 read -p "Informe o ano inicial para apuração: " ano_inicio
-read -p "Informe o ano final para apuração: " ano_inicio
-ano_fim=$(date +%Y)
-ano_inicio=$((${ano_fim}-5))
+read -p "Informe o ano final para apuração: " ano_fim
 arquivos_pdf=$(eval echo ${path_cliente}/documentos/fichas_financeiras/{${ano_inicio}..${ano_fim}}.pdf)
 
 REFERENCIAS="10002 20002 10018 10012 10178 10677 20677 10390 10849 20849 10502 20502 10805 20805 10839 10814 20814 10802 10862 10866 10870 10631 10892 10891 10924"

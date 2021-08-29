@@ -29,7 +29,9 @@ check_caixa_transp(){
     criar_cartao_trello "${1}" "${MAIL_TRELLO}" "CumpSentDC2019${trello_tag}"
 }
 
-TITULO="RT - CumpSent DC2019 (Reajuste)"
+TITULO="RT - CumpSent DC2019"
+
+create_funil_record "${1}" "(Reajuste)"
 criar_cartao_trello "${1}" "${MAIL_TRELLO}" "CumpSentDC2019-Reajuste"
 echo -e "${REFERENCIA}" >> ${PATH_FUNIL_CLIENTE}
 
