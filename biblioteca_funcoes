@@ -806,6 +806,23 @@ exibir_icones_docs(){
     [[ -f "${path_cli_doc}/comprovante_de_residencia.pdf" ]] && pc_files+="|  "
     [[ ${check_fichas} != "vazio" ]] && pc_files+="| ﴝ "
 }
+calcula_idade(){
+    local nascimento nascimento_f hoje idade
+    if [ $# -eq 1 ]
+    then
+        cpf="${1}"
+    else
+        return
+    fi
+    nascimento="$(awk '$3=="nascimento:" { print $4 }' $PATH_BASE/clientes/$1/cadastro )"
+    
+    [[ -z $nascimento ]] && return
+
+    nascimento_f="$(busybox date -D %d/%m/%Y -d "$nascimento" +%Y%m%d)"
+    hoje="$(date "+%Y%m%d")"
+    idade=$((($hoje-$nascimento_f)/10000))
+    echo $idade
+}
 
 pesquisar_cliente(){
     if [ "$#" -eq 1 ]
@@ -828,10 +845,12 @@ pesquisar_cliente(){
         esac
     fi
 
+    local idade="| $(calcula_idade $cpf)"
+
     path_cliente="${PATH_BASE}/clientes/${cpf}"
     cls
     exibir_icones_docs "${cpf}"
-    text_color "DADOS DO CLIENTE ${pc_files}"
+    text_color "DADOS DO CLIENTE ${idade} ${pc_files}"
     single_line
     head -n13 "${path_cliente}/cadastro"
     sed '22q;d' "${path_cliente}/cadastro" # Exibir data de demissão/falecimento

@@ -26,7 +26,10 @@ check_caixa_transp(){
     ind_transp="$(pdfgrep "10473 INDENIZACAO DE TRANSPORTE" "${PATH_BASE}/clientes/${1}/documentos/fichas_financeiras/2019.pdf")"
     [[ -n ${q_caixa} ]] && trello_tag+="-Caixa"
     [[ -n ${ind_transp} ]] && trello_tag+="-Transporte"
-    criar_cartao_trello "${1}" "${MAIL_TRELLO}" "CumpSentDC2019${trello_tag}"
+    if [[ -n ${q_caixa} ]] || [[ -n ${ind_transp} ]] ; then
+        criar_cartao_trello "${1}" "${MAIL_TRELLO}" "CumpSentDC2019${trello_tag}"
+        create_funil_record "${1}" "(Caixa e transporte)"
+    fi
 }
 
 TITULO="RT - CumpSent DC2019"
@@ -37,7 +40,6 @@ criar_cartao_trello "${1}" "${MAIL_TRELLO}" "CumpSentDC2019-Reajuste"
 create_funil_record "${1}" "(Anuenio e outros)"
 criar_cartao_trello "${1}" "${MAIL_TRELLO}" "CumpSentDC2019-Anuenio-e-outros"
 
-create_funil_record "${1}" "(Caixa e transporte)"
 check_caixa_transp ${1}
 
 echo "[info] Criando tarefas..."

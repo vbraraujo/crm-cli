@@ -1,3 +1,6 @@
 2|crm_cli|RT - Descontos 2019|Ação de cumprimento|TRT10|00002863020215100004|00573327114
 3|crm_cli|RT - PES 1994|Reclamação Trabalhista|TRT10|00013667220115100103|00573327114
-4|metro_quebra_de_caixa.funil|RT - Quebra de caixa|Reclamação Trabalhista|TRT10||00573327114
+4|metro_quebra_de_caixa.funil|RT - Quebra de caixa|Reclamação Trabalhista|TRT10|00007488420215100004|00573327114
+5|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00008177120215100019|00573327114
+6|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio e outros)|Cumprimento de sentença|TRT10||00573327114
+7|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Caixa e transporte)|Cumprimento de sentença|TRT10||00573327114

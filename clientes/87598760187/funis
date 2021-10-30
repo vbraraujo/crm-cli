@@ -1,3 +1,7 @@
 1|metro_restituicao_greve_2019.funil|RT - Descontos 2019|Ação de cumprimento|TRT10|00006656920205100015|87598760187
 2|reclamacao_trabalhista_em_andamento.funil|RT - PES 1994|Reclamação Trabalhista|TRT10|00001461120125100101|87598760187
 3|reclamacao_trabalhista_em_andamento.funil|RT - Retroativo 2015|Reclamação Trabalhista|TRT10|00002335020205100015|87598760187
+4|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00008168620215100019|87598760187
+5|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio e outros)|Cumprimento de sentença|TRT10||87598760187
+6|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Caixa e transporte)|Cumprimento de sentença|TRT10||87598760187
+7|metro_quebra_de_caixa.funil|RT - Quebra de caixa|Reclamação Trabalhista|TRT10|00007848420215100018|87598760187
