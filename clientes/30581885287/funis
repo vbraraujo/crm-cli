@@ -1,3 +1,5 @@
 1|reclamacao_trabalhista_em_andamento.funil|RT - Retroativo 2015|Reclamação Trabalhista|TRT10|0000330-32.2020.5.10.0021|30581885287
 2|metro_anuenio.funil|RT - Anuênio|Reclamação trabalhista|TRT10|00010786420205100021|30581885287
 4|reclamacao_trabalhista_nova.funil|RT - Gratificação de função|Reclamação Trabalhista|TRT10|00011029220205100021|30581885287
+5|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Reajuste)|Cumprimento de sentença|TRT10||30581885287
+6|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio e outros)|Cumprimento de sentença|TRT10||30581885287

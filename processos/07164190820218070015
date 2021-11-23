@@ -1,0 +1,15 @@
+titulo="INSS - Auxílio acidente"
+autor=("Anderson Ricardo de Almeida Reis")
+reu=()
+juiz=()
+relator=()
+perito_jud=()
+perito_part=()
+valor_da_causa=""
+distribuido="10/11/2021"
+condenacao=()
+pagamentos=()
+etiquetas=()
+tramitacao=""
+anotacoes=()
+status="ativo"

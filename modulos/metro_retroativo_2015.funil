@@ -1,0 +1,30 @@
+#!/bin/bash
+single_line
+echo "INCLUIR FUNIL" 
+
+# Variáveis do sistema
+TITULO="RT - Retroativo2015"
+TIPO="Reclamação trabalhista"
+COMPETENCIA="TRT10"
+ARQUIVO="$(basename ${BASH_SOURCE[0]})"
+PROCESSO=""
+MAIL_TRELLO="victorbra+ykgrr4ds1afohiqdh9c1@boards.trello.com"
+
+source "${PATH_BASE}/modulos/default.funil"
+
+criar_cartao_trello "${1}" "${MAIL_TRELLO}" "Retroativo2015"
+
+echo "[info] Criando tarefas..."
+
+cadastrar_etapa 7 "Apresentar ${TITULO}"
+cadastrar_etapa 10 "Confirmar interesse em ${TITULO}"
+cadastrar_etapa 11 "Enviar PDC ${TITULO}"
+cadastrar_etapa 12 "Coletar docs. ${TITULO}"
+cadastrar_etapa 14 "Preparar cálculos e inicial para ${TITULO}"
+cadastrar_etapa 18 "Informar protocolo ${TITULO}"
+
+cadastrar_atualiza
+
+echo -e "${REFERENCIA}" >> ${PATH_FUNIL_CLIENTE}
+
+criar_dir_nova_acao "${1}"

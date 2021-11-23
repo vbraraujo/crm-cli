@@ -1,0 +1,15 @@
+titulo="RT - Quebra de caixa"
+autor=("HUDSON CIRILO CARDOSO")
+reu=()
+juiz=()
+relator=()
+perito_jud=()
+perito_part=()
+valor_da_causa=""
+distribuido="12/11/2021"
+condenacao=()
+pagamentos=()
+etiquetas=()
+tramitacao=""
+anotacoes=()
+status="ativo"

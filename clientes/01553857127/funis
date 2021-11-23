@@ -1,2 +1,5 @@
 1|metro_reclamacao_trabalhista.funil|Reclamação trabalhista|Reclamação Trabalhista|TRT10||01553857127
 2|metro_restituicao_greve_2019.funil|RT - Descontos 2019|Ação de cumprimento|TRT10|00001199820215100008|01553857127
+3|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Reajuste)|Cumprimento de sentença|TRT10||01553857127
+4|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio e outros)|Cumprimento de sentença|TRT10||01553857127
+5|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Caixa e transporte)|Cumprimento de sentença|TRT10||01553857127

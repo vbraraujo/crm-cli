@@ -1,0 +1,15 @@
+titulo="RT - Função incorporada"
+autor=("LUCIANO FLAVIO BAZILIO GONCALVES")
+reu=()
+juiz=()
+relator=()
+perito_jud=()
+perito_part=()
+valor_da_causa=""
+distribuido="06/11/2021"
+condenacao=()
+pagamentos=()
+etiquetas=()
+tramitacao=""
+anotacoes=()
+status="ativo"
