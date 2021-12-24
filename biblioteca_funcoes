@@ -645,7 +645,9 @@ menu_cliente(){
             ;;
         "gerar documento")
             single_line
+            LISTA_MODELOS+="\nVoltar\n"
             modelo_selected="$(printf "${LISTA_MODELOS}" | fzf $FZF_OPT --prompt 'Selecione o modelo: ')"
+            [[ $modelo_selected == "Voltar" ]] && pesquisar_cliente "${1}"
             verificar_qualificacao "${1}"
             preparar_doc "${1}" "${modelo_selected}"
             pesquisar_cliente "${1}"
