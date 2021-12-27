@@ -656,6 +656,7 @@ menu_cliente(){
         "ver arquivos")
             local path_docs="${PATH_BASE}/clientes/${1}/documentos"
             mkdir -p "${path_docs}" && mkdir -p "${path_docs}/fichas_financeiras" 
+            mkdir -p "${path_docs}/pdc"
             nohup xdg-open "${path_docs}" &>/dev/null &
             pesquisar_cliente "${1}"
             ;;
