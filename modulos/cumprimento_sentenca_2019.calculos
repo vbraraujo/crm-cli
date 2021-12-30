@@ -1,0 +1,36 @@
+#!/bin/bash
+# Módulo para cálculo dos valores a serem pedidos em execução da ação de cumprimento de 2019, com base nas fichas financeiras do Metrô-DF
+
+#local path_cliente="${PATH_BASE}/clientes/$1"
+path_cliente="/mnt/Arquivos/Nextcloud/RochaAraujo/RA-Compartilhamento/crm-cli/clientes/$1"
+ano="2019"
+
+analisa_ficha(){
+    local pesquisa
+    pesquisa=$(pdfgrep "${1}" ${path_cliente}/documentos/fichas_financeiras/${ano}.pdf | sed 's/\.//g; s/,/./g' | awk 'NF > 14 { print "07/19: "$(NF-7) " | 11/19: "$(NF-2)}')
+    [[ -n $pesquisa ]] && printf "%-25s - %s" "${1::23}" "$pesquisa"
+}
+
+pesquisar_valores (){
+    resultado+=$(analisa_ficha "10502 ANUENIO")
+    resultado+="\n"
+    resultado+=$(analisa_ficha "10473 INDENIZACAO DE TRANSPORTE")
+    resultado+="\n"
+    resultado+=$(analisa_ficha "10687 RESSARC. ASSIST.")
+    resultado+="\n"
+    resultado+=$(analisa_ficha "10682 RESSARC. ASSIST.")
+
+    printf "${resultado}\n\nPressione ENTER para continuar..." && read
+}
+
+calcular () {
+    local pdf_files="${path_cliente}/documentos/fichas_financeiras/2019.pdf"
+    echo "[info] Analisando fichas financeiras..."
+    if [[ ! -z "$pdf_files" ]] ; then 
+        pesquisar_valores "$1"
+    else
+        notify-send -t 6000 -i null -u critical "CRM-CLI" "Falha. Fichas financeiras não encontradas."
+    fi
+}
+
+calcular

@@ -39,6 +39,16 @@ check_transp(){
     fi
 }
 
+check_saude(){
+    local saude
+
+    saude="$(pdfgrep "10682 RESSARC.ASSIST.MEDICA" "${PATH_BASE}/clientes/${1}/documentos/fichas_financeiras/2019.pdf")"
+    if [[ -n ${ind_transp} ]] ; then
+        criar_cartao_trello "${1}" "${MAIL_TRELLO}" "CumpSentDC2019-Saude"
+        create_funil_record "${1}" "(Saude)"
+    fi
+}
+
 TITULO="RT - CumpSent DC2019"
 
 create_funil_record "${1}" "(Reajuste)"
@@ -48,11 +58,13 @@ create_funil_record "${1}" "(Anuenio)"
 criar_cartao_trello "${1}" "${MAIL_TRELLO}" "CumpSentDC2019-Anuenio"
 
 create_funil_record "${1}" "(Alimentação)"
-criar_cartao_trello "${1}" "${MAIL_TRELLO}" "CumpSentDC2019-Alimnetacao"
+criar_cartao_trello "${1}" "${MAIL_TRELLO}" "CumpSentDC2019-Alimentacao"
 
 check_caixa ${1}
 
 check_transp ${1}
+
+check_saude ${1}
 
 echo "[info] Criando tarefas..."
 
