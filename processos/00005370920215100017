@@ -11,5 +11,5 @@ condenacao=()
 pagamentos=()
 etiquetas=()
 tramitacao=""
-anotacoes=()
+anotacoes=( "2022-02-03: Observar que sentença determinou reflexos em titulação e anuênio")
 status="ativo"

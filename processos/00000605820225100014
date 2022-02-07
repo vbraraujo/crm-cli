@@ -1,0 +1,15 @@
+titulo="CumSen - PES 1994"
+autor=("GISLANE RODRIGUES CHAVEIRO MOURA")
+reu=()
+juiz=()
+relator=()
+perito_jud=()
+perito_part=()
+valor_da_causa=""
+distribuido="01/02/2022"
+condenacao=()
+pagamentos=()
+etiquetas=()
+tramitacao=""
+anotacoes=()
+status="ativo"

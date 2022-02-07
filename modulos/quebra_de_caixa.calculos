@@ -3,7 +3,8 @@
 
 #local path_cliente="${PATH_BASE}/clientes/$1"
 path_cliente="/mnt/Arquivos/Nextcloud/RochaAraujo/RA-Compartilhamento/crm-cli/clientes/$1"
-ano_fim=$(date +%Y)
+#ano_fim=$(date +%Y)
+ano_fim="2021"
 ano_inicio=$((${ano_fim}-6))
 declare -a periodo
 

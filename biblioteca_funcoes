@@ -392,10 +392,11 @@ informar_processos(){
 }
 
 gerar_documento(){
+    local sufixo="${12-"pdc"}"
     local path_tmp="${PATH_BASE}/documentos"
     local novo_tmp_html="${path_tmp}/tmp/${2}.tmp.html"
     local novo_tmp_pdf="${path_tmp}/tmp/${2}.tmp.pdf"
-    local novo_pdf="${PATH_DOCUMENTOS}/${2}.pdf"
+    local novo_pdf="${PATH_DOCUMENTOS}/${2} - ${sufixo}.pdf"
     local modelo="${path_tmp}/modelos/${1}"
     local timbrado="${path_tmp}/timbrado.pdf"
     local data="$(date "+%d de %B de %Y")"
@@ -458,8 +459,10 @@ preparar_doc(){
     text_color "GERAR DOCUMENTO" 2
     single_line
     qualificacao "${1}"
-    [[ "${2}" != "modelo_procuracao.html" ]] && read -e -p "Objeto do contrato: " -i "Reclamação trabalhista em face do Metrô-DF " gd_objeto
-    gerar_documento "${2}" "${q_nome}" "${q_estado_civil}" "${q_profissao}" "${q_rg}" "${q_cpf}" "${q_endereco}" "${q_cep}" "${q_telefone}" "${q_email}" "${gd_objeto}" 
+    [[ "${2}" != "modelo_procuracao.html" ]] && \
+        read -e -p "Objeto do contrato: " -i "Reclamação trabalhista em face do Metrô-DF " gd_objeto
+        read -e -p "Sufixo do arquivo: " gd_sufixo
+    gerar_documento "${2}" "${q_nome}" "${q_estado_civil}" "${q_profissao}" "${q_rg}" "${q_cpf}" "${q_endereco}" "${q_cep}" "${q_telefone}" "${q_email}" "${gd_objeto}" "${gd_sufixo}"
 }
 
 menu_cliente(){
