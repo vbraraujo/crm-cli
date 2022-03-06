@@ -3,7 +3,7 @@ single_line
 echo "INCLUIR FUNIL" 
 
 # Variáveis do sistema
-TITULO="RT - CumpSent DC2019"
+TITULO="CumSen DC2019"
 TIPO="Cumprimento de sentença"
 COMPETENCIA="TRT10"
 ARQUIVO="$(basename ${BASH_SOURCE[0]})"
@@ -19,37 +19,17 @@ create_funil_record(){
     echo -e "${REFERENCIA}" >> ${PATH_FUNIL_CLIENTE}
 }
 
-check_caixa(){
-    local q_caixa 
+check_verba(){
+    local trello_tag q_verba
 
-    q_caixa="$(pdfgrep "10019 ADIC QUEBRA CAIXA" "${PATH_BASE}/clientes/${1}/documentos/fichas_financeiras/2019.pdf")"
-    if [[ -n ${q_caixa} ]] ; then
-        criar_cartao_trello "${1}" "${MAIL_TRELLO}" "CumpSentDC2019-Caixa"
-        create_funil_record "${1}" "(Caixa)"
+    q_verba="$(pdfgrep "$3" "${PATH_BASE}/clientes/${1}/documentos/fichas_financeiras/2019.pdf")"
+    if [[ -n ${q_verba} ]] ; then
+        criar_cartao_trello "${1}" "${MAIL_TRELLO}" "CumpSentDC2019-$2"
+        create_funil_record "${1}" "($2)"
     fi
 }
 
-check_transp(){
-    local ind_transp
-
-    ind_transp="$(pdfgrep "10473 INDENIZACAO DE TRANSPORTE" "${PATH_BASE}/clientes/${1}/documentos/fichas_financeiras/2019.pdf")"
-    if [[ -n ${ind_transp} ]] ; then
-        criar_cartao_trello "${1}" "${MAIL_TRELLO}" "CumpSentDC2019-Transporte"
-        create_funil_record "${1}" "(Transporte)"
-    fi
-}
-
-check_saude(){
-    local saude
-
-    saude="$(pdfgrep "10682 RESSARC.ASSIST.MEDICA" "${PATH_BASE}/clientes/${1}/documentos/fichas_financeiras/2019.pdf")"
-    if [[ -n ${ind_transp} ]] ; then
-        criar_cartao_trello "${1}" "${MAIL_TRELLO}" "CumpSentDC2019-Saude"
-        create_funil_record "${1}" "(Saude)"
-    fi
-}
-
-TITULO="RT - CumpSent DC2019"
+TITULO="CumSen DC2019"
 
 create_funil_record "${1}" "(Reajuste)"
 criar_cartao_trello "${1}" "${MAIL_TRELLO}" "CumpSentDC2019-Reajuste"
@@ -60,15 +40,15 @@ criar_cartao_trello "${1}" "${MAIL_TRELLO}" "CumpSentDC2019-Anuenio"
 create_funil_record "${1}" "(Alimentação)"
 criar_cartao_trello "${1}" "${MAIL_TRELLO}" "CumpSentDC2019-Alimentacao"
 
-check_caixa ${1}
+check_verba "$1" "Caixa" "10019 ADIC QUEBRA CAIXA"
 
-check_transp ${1}
+check_verba "$1" "Transporte" "10473 INDENIZACAO DE TRANSPORTE"
 
-check_saude ${1}
+check_verba "$1" "Saude" "10682 RESSARC"
 
 echo "[info] Criando tarefas..."
 
-TITULO="RT - CumpSent DC2019"
+TITULO="CumSen DC2019"
 cadastrar_etapa 7 "Apresentar ${TITULO}"
 cadastrar_etapa 10 "Confirmar interesse em ${TITULO}"
 cadastrar_etapa 11 "Enviar PDC ${TITULO}"

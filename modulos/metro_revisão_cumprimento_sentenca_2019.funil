@@ -1,0 +1,54 @@
+#!/bin/bash
+single_line
+echo "INCLUIR FUNIL" 
+
+# Variáveis do sistema
+TITULO="CumSen DC2019"
+TIPO="Cumprimento de sentença"
+COMPETENCIA="TRT10"
+ARQUIVO="$(basename ${BASH_SOURCE[0]})"
+PROCESSO=""
+MAIL_TRELLO="victorbra+ykgrr4ds1afohiqdh9c1@boards.trello.com"
+
+source "${PATH_BASE}/modulos/default.funil"
+
+create_funil_record(){
+    FUNIL_ID="$(awk -F "|" '{id=$1+1}END{print id}' ${PATH_FUNIL_CLIENTE})"
+    [[ -z "${FUNIL_ID}" ]] && FUNIL_ID=1
+    REFERENCIA="${FUNIL_ID}|${ARQUIVO}|${TITULO} ${2}|${TIPO}|${COMPETENCIA}|${PROCESSO}|${1}"
+    echo -e "${REFERENCIA}" >> ${PATH_FUNIL_CLIENTE}
+}
+
+check_verba(){
+    local trello_tag q_verba
+
+    q_verba="$(pdfgrep "$3" "${PATH_BASE}/clientes/${1}/documentos/fichas_financeiras/2019.pdf")"
+    if [[ -n ${q_verba} ]] ; then
+        echo "$2"
+        criar_cartao_trello "${1}" "${MAIL_TRELLO}" "CumpSentDC2019-$2"
+        create_funil_record "${1}" "($2)"
+    fi
+}
+
+check_verba_sem_trello(){
+    local trello_tag q_verba
+
+    q_verba="$(pdfgrep "$3" "${PATH_BASE}/clientes/${1}/documentos/fichas_financeiras/2019.pdf")"
+    if [[ -n ${q_verba} ]] ; then
+        echo "$2"
+        create_funil_record "${1}" "($2)"
+    fi
+}
+
+TITULO="CumSen DC2019"
+
+echo "Reajuste"
+create_funil_record "${1}" "(Anuenio)" && echo "Anuênio"
+
+create_funil_record "${1}" "(Alimentação)" && echo "Alimentação"
+
+create_funil_record "${1}" "(Caixa)" && echo "Caixa"
+
+check_verba_sem_trello "$1" "Transporte" "10473 INDENIZACAO DE TRANSPORTE"
+
+check_verba "$1" "Saude" "10682 RESSARC"
