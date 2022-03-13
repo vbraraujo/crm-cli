@@ -1,4 +1,4 @@
-1|reclamacao_trabalhista_em_andamento.funil|RT - Retroativo 2015|Reclamação Trabalhista|TRT10|00002466420205100010|34272739115
-2|metro_anuenio.funil|RT - Anuênio|Reclamação trabalhista|TRT10|00006926720205100010|34272739115
-3|metro_reclamacao_trabalhista.funil|RT - Função incorporada|Reclamação Trabalhista|TRT10||34272739115
-4|metro_execucao_pes_1994.funil|CumSen - PES 1994|Cumprimento de sentença|TRT10|00009000520215100014|34272739115
+1|reclamacao_trabalhista_em_andamento.funil|RT - Retroativo 2015|Reclamação Trabalhista|TRT10|00002466420205100010|34272739115|Ativo
+2|metro_anuenio.funil|RT - Anuênio|Reclamação trabalhista|TRT10|00006926720205100010|34272739115|Ativo
+3|metro_reclamacao_trabalhista.funil|RT - Função incorporada|Reclamação Trabalhista|TRT10||34272739115|Ativo
+4|metro_execucao_pes_1994.funil|CumSen - PES 1994|Cumprimento de sentença|TRT10|00009000520215100014|34272739115|Ativo

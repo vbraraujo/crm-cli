@@ -1,7 +1,7 @@
-1|crm_cli|RT - PES 1994|Reclamação Trabalhista|TRT10|00013658720115100103|02224759193
-2|metro_restituicao_greve_2019.funil|RT - Descontos 2019|Ação de cumprimento|TRT10|00004014220215100007|02224759193
-3|reclamacao_trabalhista_em_andamento.funil|RT - Retroativo 2015|Reclamação Trabalhista|TRT10|00003201220205100013|02224759193
-4|metro_quebra_de_caixa.funil|RT - Quebra de caixa|Reclamação Trabalhista|TRT10|00004204820215100007|02224759193
-5|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00009008720215100019|02224759193
-6|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio e outros)|Cumprimento de sentença|TRT10||02224759193
-7|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Caixa e transporte)|Cumprimento de sentença|TRT10||02224759193
+1|crm_cli|RT - PES 1994|Reclamação Trabalhista|TRT10|00013658720115100103|02224759193|Ativo
+2|metro_restituicao_greve_2019.funil|RT - Descontos 2019|Ação de cumprimento|TRT10|00004014220215100007|02224759193|Ativo
+3|reclamacao_trabalhista_em_andamento.funil|RT - Retroativo 2015|Reclamação Trabalhista|TRT10|00003201220205100013|02224759193|Ativo
+4|metro_quebra_de_caixa.funil|RT - Quebra de caixa|Reclamação Trabalhista|TRT10|00004204820215100007|02224759193|Ativo
+5|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00009008720215100019|02224759193|Ativo
+6|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio e outros)|Cumprimento de sentença|TRT10||02224759193|Ativo
+7|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Caixa e transporte)|Cumprimento de sentença|TRT10||02224759193|Ativo

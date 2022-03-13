@@ -1,4 +1,7 @@
-1|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00009363220215100019|02484079109
-2|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio e outros)|Cumprimento de sentença|TRT10||02484079109
-3|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Caixa e transporte)|Cumprimento de sentença|TRT10||02484079109
-4|metro_reclamacao_trabalhista.funil|RT - Rescisão indireta|Reclamação Trabalhista|TRT10|00007695420215100006|02484079109
+1|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00009363220215100019|02484079109|Ativo
+4|metro_reclamacao_trabalhista.funil|RT - Rescisão indireta|Reclamação Trabalhista|TRT10|00007695420215100006|02484079109|Ativo
+5|metro_revisão_cumprimento_sentenca_2019.funil|CumSen DC2019 (Anuenio)|Cumprimento de sentença|TRT10||02484079109|Ativo
+6|metro_revisão_cumprimento_sentenca_2019.funil|CumSen DC2019 (Alimentação)|Cumprimento de sentença|TRT10|00001557320225100019|02484079109|Ativo
+7|metro_revisão_cumprimento_sentenca_2019.funil|CumSen DC2019 (Caixa)|Cumprimento de sentença|TRT10||02484079109|Ativo
+8|metro_revisão_cumprimento_sentenca_2019.funil|CumSen DC2019 (Transporte)|Cumprimento de sentença|TRT10||02484079109|Ativo
+9|metro_revisão_cumprimento_sentenca_2019.funil|CumSen DC2019 (Saude)|Cumprimento de sentença|TRT10||02484079109|Ativo

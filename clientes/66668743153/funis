@@ -1,4 +1,7 @@
-1|crm_cli|RT - Descontos 2019|Ação de cumprimento|TRT10|00002834520215100014|66668743153
-2|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00008705220215100019|66668743153
-3|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio e outros)|Cumprimento de sentença|TRT10||66668743153
-4|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Caixa e transporte)|Cumprimento de sentença|TRT10||66668743153
+1|crm_cli|RT - Descontos 2019|Ação de cumprimento|TRT10|00002834520215100014|66668743153|Ativo
+2|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00008705220215100019|66668743153|Ativo
+3|metro_revisão_cumprimento_sentenca_2019.funil|CumSen DC2019 (Anuenio)|Cumprimento de sentença|TRT10||66668743153|Ativo
+4|metro_revisão_cumprimento_sentenca_2019.funil|CumSen DC2019 (Alimentação)|Cumprimento de sentença|TRT10|00001643520225100019|66668743153|Ativo
+5|metro_revisão_cumprimento_sentenca_2019.funil|CumSen DC2019 (Caixa)|Cumprimento de sentença|TRT10||66668743153|Ativo
+6|metro_revisão_cumprimento_sentenca_2019.funil|CumSen DC2019 (Transporte)|Cumprimento de sentença|TRT10||66668743153|Ativo
+7|metro_revisão_cumprimento_sentenca_2019.funil|CumSen DC2019 (Saude)|Cumprimento de sentença|TRT10||66668743153|Ativo

@@ -1,7 +1,7 @@
-1|metro_anuenio.funil|RT - Anuênio|Reclamação trabalhista|TRT10|00001830520215100010|77008839120
-2|metro_restituicao_greve_2019.funil|RT - Descontos 2019|Ação de cumprimento|TRT10|00001978620215100010|77008839120
-3|reclamacao_trabalhista_em_andamento.funil|RT - Retroativo 2015|Reclamação Trabalhista|TRT10|00002413620205100012|77008839120
-4|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00001886320225100019|77008839120
-5|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio e outros)|Cumprimento de sentença|TRT10||77008839120
-6|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Caixa e transporte)|Cumprimento de sentença|TRT10||77008839120
-7|metro_execucao_pes_1994.funil|Execução PES 1994|Cumprimento de sentença|TRT10||77008839120
+1|metro_anuenio.funil|RT - Anuênio|Reclamação trabalhista|TRT10|00001830520215100010|77008839120|Ativo
+2|metro_restituicao_greve_2019.funil|RT - Descontos 2019|Ação de cumprimento|TRT10|00001978620215100010|77008839120|Ativo
+3|reclamacao_trabalhista_em_andamento.funil|RT - Retroativo 2015|Reclamação Trabalhista|TRT10|00002413620205100012|77008839120|Ativo
+4|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00001886320225100019|77008839120|Ativo
+5|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio e outros)|Cumprimento de sentença|TRT10||77008839120|Ativo
+6|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Caixa e transporte)|Cumprimento de sentença|TRT10||77008839120|Ativo
+7|metro_execucao_pes_1994.funil|CumSen - PES 1994|Cumprimento de sentença|TRT10|00002095420225100014|77008839120|Ativo

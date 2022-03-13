@@ -1,5 +1,5 @@
-1|metro_execucao_pes_1994.funil|CumSen - PES 1994|Cumprimento de sentença|TRT10|00000874120225100014|61879720663
-2|metro_retroativo_2015.funil|RT - Retroativo2015|Reclamação trabalhista|TRT10||61879720663
-3|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00001911820225100019|61879720663
-4|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio e outros)|Cumprimento de sentença|TRT10||61879720663
-5|metro_reclamacao_trabalhista.funil|RT - Função incorporada|Reclamação Trabalhista|TRT10||61879720663
+1|metro_execucao_pes_1994.funil|CumSen - PES 1994|Cumprimento de sentença|TRT10|00000874120225100014|61879720663|Ativo
+2|metro_retroativo_2015.funil|RT - Retroativo2015|Reclamação trabalhista|TRT10||61879720663|Ativo
+3|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00001911820225100019|61879720663|Ativo
+4|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio e outros)|Cumprimento de sentença|TRT10||61879720663|Ativo
+5|metro_reclamacao_trabalhista.funil|RT - Função incorporada|Reclamação Trabalhista|TRT10||61879720663|Ativo

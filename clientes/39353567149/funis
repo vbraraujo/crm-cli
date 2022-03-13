@@ -1,6 +1,6 @@
-1|crm_cli|RT - Reintegração aposentado|Reclamação Trabalhista|TRT10|00000658120205100004|39353567149
-2|crm_cli|RT - Retroativo 2015|Reclamação Trabalhista|TRT10|00002849420205100004|39353567149
-3|crm_cli|RT - Descontos 2019|Ação de cumprimento|TRT10|00002888820215100007|39353567149
-4|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00000985520225100019|39353567149
-5|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio e outros)|Cumprimento de sentença|TRT10||39353567149
-6|metro_execucao_pes_1994.funil|CumSen - PES 1994|Cumprimento de sentença|TRT10|00001393720225100014|39353567149
+1|crm_cli|RT - Reintegração aposentado|Reclamação Trabalhista|TRT10|00000658120205100004|39353567149|Ativo
+2|crm_cli|RT - Retroativo 2015|Reclamação Trabalhista|TRT10|00002849420205100004|39353567149|Ativo
+3|crm_cli|RT - Descontos 2019|Ação de cumprimento|TRT10|00002888820215100007|39353567149|Ativo
+4|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00000985520225100019|39353567149|Ativo
+5|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio e outros)|Cumprimento de sentença|TRT10||39353567149|Ativo
+6|metro_execucao_pes_1994.funil|CumSen - PES 1994|Cumprimento de sentença|TRT10|00001393720225100014|39353567149|Ativo

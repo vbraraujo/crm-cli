@@ -1,7 +1,7 @@
-1|reclamacao_trabalhista_em_andamento.funil|RT - PES 1994|Reclamação Trabalhista|TRT10|00015599320115100101|01439842175
-2|metro_quebra_de_caixa.funil|RT - Quebra de caixa|Reclamação Trabalhista|TRT10||01439842175
-3|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Reajuste)|Cumprimento de sentença|TRT10||01439842175
-4|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio)|Cumprimento de sentença|TRT10||01439842175
-5|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Alimentação)|Cumprimento de sentença|TRT10||01439842175
-6|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Caixa)|Cumprimento de sentença|TRT10||01439842175
-7|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Transporte)|Cumprimento de sentença|TRT10||01439842175
+1|reclamacao_trabalhista_em_andamento.funil|RT - PES 1994|Reclamação Trabalhista|TRT10|00015599320115100101|01439842175|Ativo
+2|metro_quebra_de_caixa.funil|RT - Quebra de caixa|Reclamação Trabalhista|TRT10||01439842175|Ativo
+3|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Reajuste)|Cumprimento de sentença|TRT10||01439842175|Ativo
+4|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio)|Cumprimento de sentença|TRT10||01439842175|Ativo
+5|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Alimentação)|Cumprimento de sentença|TRT10||01439842175|Ativo
+6|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Caixa)|Cumprimento de sentença|TRT10||01439842175|Ativo
+7|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Transporte)|Cumprimento de sentença|TRT10||01439842175|Ativo

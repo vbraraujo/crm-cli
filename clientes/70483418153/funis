@@ -1,4 +1,4 @@
-1|crm_cli|RT - Descontos 2019|Ação de cumprimento|TRT10|00002807820215100018|70483418153
-2|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00009025720215100019|70483418153
-3|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio e outros)|Cumprimento de sentença|TRT10||70483418153
-4|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Caixa e transporte)|Cumprimento de sentença|TRT10||70483418153
+1|crm_cli|RT - Descontos 2019|Ação de cumprimento|TRT10|00002807820215100018|70483418153|Ativo
+2|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00009025720215100019|70483418153|Ativo
+3|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio e outros)|Cumprimento de sentença|TRT10||70483418153|Ativo
+4|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Caixa e transporte)|Cumprimento de sentença|TRT10||70483418153|Ativo

@@ -1,8 +1,8 @@
-1|metro_restituicao_greve_2019.funil|RT - Descontos 2019|Ação de cumprimento|TRT10|00007508520205100005|71492666149
-2|reclamacao_trabalhista_em_andamento.funil|RT - Retroativo 2015|Reclamação Trabalhista|TRT10|0000240-72.2020.5.10.0005|71492666149
-3|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00009094920215100019|71492666149
-5|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Caixa e transporte)|Cumprimento de sentença|TRT10||71492666149
-6|metro_revisão_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio)|Cumprimento de sentença|TRT10||71492666149
-7|metro_revisão_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Alimentação)|Cumprimento de sentença|TRT10||71492666149
-8|metro_revisão_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Caixa)|Cumprimento de sentença|TRT10||71492666149
-9|metro_revisão_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Saude)|Cumprimento de sentença|TRT10||71492666149
+1|metro_restituicao_greve_2019.funil|RT - Descontos 2019|Ação de cumprimento|TRT10|00007508520205100005|71492666149|Ativo
+2|reclamacao_trabalhista_em_andamento.funil|RT - Retroativo 2015|Reclamação Trabalhista|TRT10|0000240-72.2020.5.10.0005|71492666149|Ativo
+3|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00009094920215100019|71492666149|Ativo
+5|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Caixa e transporte)|Cumprimento de sentença|TRT10||71492666149|Ativo
+6|metro_revisão_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio)|Cumprimento de sentença|TRT10||71492666149|Ativo
+7|metro_revisão_cumprimento_sentenca_2019.funil|CumSen DC2019 (Alimentação)|Cumprimento de sentença|TRT10|00001383720225100019|71492666149|Ativo
+8|metro_revisão_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Caixa)|Cumprimento de sentença|TRT10||71492666149|Ativo
+9|metro_revisão_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Saude)|Cumprimento de sentença|TRT10||71492666149|Ativo

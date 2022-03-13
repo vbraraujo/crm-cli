@@ -1,5 +1,5 @@
-1|metro_anuenio.funil|RT - Anuênio|Reclamação trabalhista|TRT10|00001708820215100015|41636473172
-2|reclamacao_trabalhista_em_andamento.funil|RT - Retroativo 2015|Reclamação Trabalhista|TRT10|00002871620205100015|41636473172
-3|metro_reclamacao_trabalhista.funil|RT - Função incorporada|Reclamação Trabalhista|TRT10|00005370920215100017|41636473172
-4|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00008973520215100019|41636473172
-5|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio e outros)|Cumprimento de sentença|TRT10||41636473172
+1|metro_anuenio.funil|RT - Anuênio|Reclamação trabalhista|TRT10|00001708820215100015|41636473172|Ativo
+2|reclamacao_trabalhista_em_andamento.funil|RT - Retroativo 2015|Reclamação Trabalhista|TRT10|00002871620205100015|41636473172|Ativo
+3|metro_reclamacao_trabalhista.funil|RT - Função incorporada|Reclamação Trabalhista|TRT10|00005370920215100017|41636473172|Ativo
+4|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00008973520215100019|41636473172|Ativo
+5|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio e outros)|Cumprimento de sentença|TRT10||41636473172|Ativo

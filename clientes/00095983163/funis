@@ -1,4 +1,4 @@
-1|crm_cli|RT - Anulação de demissão|Reclamação Trabalhista|TRT10|00004032020185100006|00095983163
-2|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00008696720215100019|00095983163
-3|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio e outros)|Cumprimento de sentença|TRT10||00095983163
-4|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Caixa e transporte)|Cumprimento de sentença|TRT10||00095983163
+1|crm_cli|RT - Anulação de demissão|Reclamação Trabalhista|TRT10|00004032020185100006|00095983163|Ativo
+2|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00008696720215100019|00095983163|Ativo
+3|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio e outros)|Cumprimento de sentença|TRT10||00095983163|Ativo
+4|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Caixa e transporte)|Cumprimento de sentença|TRT10||00095983163|Ativo

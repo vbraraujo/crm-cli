@@ -1,4 +1,4 @@
-1|reclamacao_trabalhista_em_andamento.funil|RT - PES 1994|Reclamação Trabalhista|TRT10|00001357920125100101|79838650153
-2|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00001877820225100019|79838650153
-3|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio e outros)|Cumprimento de sentença|TRT10||79838650153
-4|metro_descontos_2019.funil|RT - Descontos 2019|Ação de cumprimento|TRT10||79838650153
+1|reclamacao_trabalhista_em_andamento.funil|RT - PES 1994|Reclamação Trabalhista|TRT10|00001357920125100101|79838650153|Ativo
+2|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00001877820225100019|79838650153|Ativo
+3|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio e outros)|Cumprimento de sentença|TRT10||79838650153|Ativo
+4|metro_descontos_2019.funil|RT - Descontos 2019|Ação de cumprimento|TRT10||79838650153|Ativo
