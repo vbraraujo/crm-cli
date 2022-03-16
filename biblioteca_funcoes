@@ -385,7 +385,7 @@ copiar_dados(){
 informar_processos(){
     #Argumentos: 1 cpf, 2 titulo
     local titulo="$2"
-    texto="$(awk -F"|" -v titulo="$titulo" 'BEGIN{ line = titulo } { line = line "\n"$3 " (" $6 "): " } END{ print line }' "$PATH_BASE/clientes/$1/funis")"
+    texto="$(awk -F"|" -v titulo="$titulo" 'BEGIN{ line = titulo } $NF!="Inativo"{ if ($6 != "" ) line = line "\n"$3 " (" $6 "): " } END{ print line }' "$PATH_BASE/clientes/$1/funis")"
 
     echo "$texto" | xclip -selection clipboard && \
     notify-send "CRM-CLI" "$str_copy_clip" -u low &
@@ -704,7 +704,7 @@ menu_cliente(){
             ;;
 
         "atualização de andamentos")
-            informar_processos "${1}" "Atualização de andamentos:"
+            informar_processos "${1}" "Olá, segue atualização de andamentos:"
             pesquisar_cliente "${1}"
             ;;
         *)
