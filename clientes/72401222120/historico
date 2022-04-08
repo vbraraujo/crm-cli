@@ -56,3 +56,6 @@
 2022-02-10: Editado processo do funil id [2] para [Número 00001054720225100019 Descrição CumSen DC2019 (Reajuste)] #auto
 2022-02-10: Editado processo do funil id [5] para [Número 00001046220225100019 Descrição RT - Quebra de caixa] #auto
 2022-02-10: Editado processo do funil id [3] para [Número 00001063220225100019 Descrição CumSen DC2019 (Alimentação)] #auto
+2022-03-17: Excluído funil [RT - Descontos 2019 CumSen DC2019 (Reajuste) CumSen DC2019 (Alimentação) RT - CumpSent DC2019 (Caixa e transporte) RT - Quebra de caixa ] #funil
+2022-03-17: Editado processo do funil id [8] para [Número 00002778620225100019 Descrição CumSen DC2019 (Caixa) Status ] #auto
+2022-03-17: Excluído funil [RT - Descontos 2019 CumSen DC2019 (Reajuste) CumSen DC2019 (Alimentação) RT - Quebra de caixa CumSen DC2019 (Anuenio) CumSen DC2019 (Alimentação) CumSen DC2019 (Caixa) CumSen DC2019 (Transporte) CumSen DC2019 (Saude) ] #funil

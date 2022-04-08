@@ -704,7 +704,7 @@ menu_cliente(){
             ;;
 
         "atualização de andamentos")
-            informar_processos "${1}" "Olá, segue atualização de andamentos:"
+            informar_processos "${1}" "Segue atualização de andamentos:"
             pesquisar_cliente "${1}"
             ;;
         *)
@@ -929,7 +929,7 @@ pesquisar_cliente(){
     grep "#anotação" "${path_cliente}/historico" | tail -n3
     single_line
     text_color "HISTÓRICO"
-    grep -E -v "#auto|#anotação" "${path_cliente}/historico" | tail -n4
+    grep -E -v "#auto|#anotação" "${path_cliente}/historico" | tail -n3
     menu_cliente "${cpf}"
 }
 

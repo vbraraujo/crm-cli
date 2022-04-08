@@ -1,8 +1,11 @@
 1|reclamacao_trabalhista_em_andamento.funil|RT - Retroativo 2015|Reclamação Trabalhista|TRT10|00002563520205100002|65901096487|Ativo
-2|reclamacao_trabalhista_em_andamento.funil|RT - PES 1994|Reclamação Trabalhista|TRT10|00015884320115100102|65901096487|Ativo
+2|reclamacao_trabalhista_em_andamento.funil|RT - PES 1994|Reclamação Trabalhista|TRT10|00015884320115100102|65901096487|Inativo
 3|metro_restituicao_greve_2019.funil|RT - Descontos 2019|Ação de cumprimento|TRT10|00008175920205100002|65901096487|Ativo
 4|metro_anuenio.funil|RT - Anuênio|Reclamação trabalhista|TRT10|00008167420205100002|65901096487|Ativo
 5|crm_cli|RT - Quebra de caixa|Reclamação Trabalhista|TRT10|00003118620215100022|65901096487|Ativo
 6|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00009155620215100019|65901096487|Ativo
-7|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio e outros)|Cumprimento de sentença|TRT10||65901096487|Ativo
-8|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Caixa e transporte)|Cumprimento de sentença|TRT10||65901096487|Ativo
+7|metro_revisão_cumprimento_sentenca_2019.funil|CumSen DC2019 (Anuenio)|Cumprimento de sentença|TRT10||65901096487
+8|metro_revisão_cumprimento_sentenca_2019.funil|CumSen DC2019 (Alimentação)|Cumprimento de sentença|TRT10|00001591320225100019|65901096487
+9|metro_revisão_cumprimento_sentenca_2019.funil|CumSen DC2019 (Caixa)|Cumprimento de sentença|TRT10||65901096487
+10|metro_revisão_cumprimento_sentenca_2019.funil|CumSen DC2019 (Transporte)|Cumprimento de sentença|TRT10||65901096487
+11|metro_revisão_cumprimento_sentenca_2019.funil|CumSen DC2019 (Saude)|Cumprimento de sentença|TRT10||65901096487

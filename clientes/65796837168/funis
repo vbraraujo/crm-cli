@@ -1,7 +1,7 @@
-1|metro_quebra_de_caixa.funil|RT - Quebra de caixa|Reclamação Trabalhista|TRT10||65796837168|Ativo
-2|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Reajuste)|Cumprimento de sentença|TRT10||65796837168|Ativo
+1|metro_quebra_de_caixa.funil|RT - Quebra de caixa|Reclamação Trabalhista|TRT10|00003618720225100019|65796837168|Ativo
+2|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10|00003635720225100019|65796837168|Ativo
 3|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Anuenio)|Cumprimento de sentença|TRT10||65796837168|Ativo
-4|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Alimentação)|Cumprimento de sentença|TRT10||65796837168|Ativo
+4|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Alimentação)|Cumprimento de sentença|TRT10|00003600520225100019|65796837168|Ativo
 5|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Caixa)|Cumprimento de sentença|TRT10||65796837168|Ativo
 6|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Transporte)|Cumprimento de sentença|TRT10||65796837168|Ativo
 7|metro_cumprimento_sentenca_2019.funil|RT - CumpSent DC2019 (Saude)|Cumprimento de sentença|TRT10||65796837168|Ativo

@@ -1,2 +1,6 @@
 1|reclamacao_trabalhista_em_andamento.funil|RT - Função gratificada|Reclamação Trabalhista|TRT10|00006442020205100007|42907128191|Ativo
 2|metro_execucao_pes_1994.funil|CumSen - PES 1994|Cumprimento de sentença|TRT10|00002086920225100014|42907128191|Ativo
+3|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Reajuste)|Cumprimento de sentença|TRT10||42907128191
+4|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Anuenio)|Cumprimento de sentença|TRT10||42907128191
+5|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Alimentação)|Cumprimento de sentença|TRT10||42907128191
+6|metro_cumprimento_sentenca_2019.funil|CumSen DC2019 (Saude)|Cumprimento de sentença|TRT10||42907128191
